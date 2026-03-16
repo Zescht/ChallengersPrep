@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+vendor/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Build output
+dist/
+build/
+out/
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Environment & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+credentials.json
+secrets.json
+
+# IDE & editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# OS files
+*.lnk
+ehthumbs.db
+
+# Logs & temp
+*.log
+logs/
+tmp/
+temp/
+.cache/
+
+# Package manager locks (uncomment the one you DON'T use)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Coverage & test artifacts
+coverage/
+.nyc_output/
+*.lcov
