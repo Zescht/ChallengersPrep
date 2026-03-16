@@ -55,3 +55,6 @@ temp/
 coverage/
 .nyc_output/
 *.lcov
+
+# VLR scraper - raw HTML dumps (large, regenerable)
+data/raw/

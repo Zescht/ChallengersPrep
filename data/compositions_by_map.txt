@@ -1,0 +1,74 @@
+=== ABYSS (7W-1L, 88% WR) ===
+
+  1. Astra [C] / Sova [I] / Tejo [I] / Veto [S] / Waylay [D]
+     Played 6x  |  6W-0L  |  100% WR
+
+  2. Astra [C] / Sova [I] / Veto [S] / Waylay [D] / Yoru [D]
+     Played 1x  |  0W-1L  |  0% WR
+
+  3. Astra [C] / Cypher [S] / Sova [I] / Waylay [D] / Yoru [D]
+     Played 1x  |  1W-0L  |  100% WR
+
+
+=== SPLIT (6W-1L, 86% WR) ===
+
+  1. Cypher [S] / Fade [I] / Omen [C] / Raze [D] / Sage [S]
+     Played 7x  |  6W-1L  |  86% WR
+
+
+=== HAVEN (5W-1L, 83% WR) ===
+
+  1. Breach [I] / Cypher [S] / Neon [D] / Omen [C] / Sova [I]
+     Played 5x  |  4W-1L  |  80% WR
+
+  2. Breach [I] / Cypher [S] / Jett [D] / Omen [C] / Sova [I]
+     Played 1x  |  1W-0L  |  100% WR
+
+
+=== PEARL (2W-4L, 33% WR) ===
+
+  1. Astra [C] / Cypher [S] / Kayo [I] / Neon [D] / Tejo [I]
+     Played 4x  |  2W-2L  |  50% WR
+
+  2. Astra [C] / Cypher [S] / Neon [D] / Sova [I] / Tejo [I]
+     Played 1x  |  0W-1L  |  0% WR
+
+  3. Astra [C] / Cypher [S] / Sova [I] / Tejo [I] / Waylay [D]
+     Played 1x  |  0W-1L  |  0% WR
+
+
+=== CORRODE (2W-4L, 33% WR) ===
+
+  1. Fade [I] / Omen [C] / Sage [S] / Veto [S] / Waylay [D]
+     Played 2x  |  1W-1L  |  50% WR
+
+  2. Fade [I] / Neon [D] / Omen [C] / Phoenix [D] / Viper [C]
+     Played 2x  |  1W-1L  |  50% WR
+
+  3. Fade [I] / Neon [D] / Omen [C] / Viper [C] / Vyse [S]
+     Played 2x  |  0W-2L  |  0% WR
+
+
+=== BREEZE (2W-2L, 50% WR) ===
+
+  1. Astra [C] / Jett [D] / Sage [S] / Sova [I] / Viper [C]
+     Played 2x  |  1W-1L  |  50% WR
+
+  2. Jett [D] / Omen [C] / Skye [I] / Sova [I] / Viper [C]
+     Played 2x  |  1W-1L  |  50% WR
+
+
+=== BIND (1W-2L, 33% WR) ===
+
+  1. Brimstone [C] / Fade [I] / Raze [D] / Sage [S] / Viper [C]
+     Played 2x  |  1W-1L  |  50% WR
+
+  2. Brimstone [C] / Fade [I] / Gekko [I] / Raze [D] / Viper [C]
+     Played 1x  |  0W-1L  |  0% WR
+
+
+=== SUNSET (1W-0L, 100% WR) ===
+
+  1. Cypher [S] / Kayo [I] / Neon [D] / Omen [C] / Sova [I]
+     Played 1x  |  1W-0L  |  100% WR
+

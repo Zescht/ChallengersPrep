@@ -1,0 +1,1577 @@
+{
+  "team": {
+    "name": "CGN Esports",
+    "tag": "CGN",
+    "id": 5214,
+    "slug": "cgn-esports"
+  },
+  "url": "https://www.vlr.gg/team/stats/5214/cgn-esports/?event_id=all&core_id=all&date_start=2026-01-01&date_end=",
+  "filters": {
+    "event_id": "all",
+    "core_id": "all",
+    "date_start": "2026-01-01",
+    "date_end": ""
+  },
+  "maps": [
+    {
+      "map": "Bind",
+      "stats": {
+        "map": "Bind",
+        "total_maps": 3,
+        "win_pct": "33%",
+        "wins": 1,
+        "losses": 2,
+        "atk_first": "3",
+        "def_first": "0",
+        "atk_round_win_pct": "36%",
+        "atk_rounds_won": 13,
+        "atk_rounds_lost": 23,
+        "def_round_win_pct": "62%",
+        "def_rounds_won": 13,
+        "def_rounds_lost": 8
+      },
+      "compositions": [
+        {
+          "agents": [
+            "brimstone",
+            "fade",
+            "gekko",
+            "raze",
+            "viper"
+          ],
+          "times_played": 1,
+          "hash": "d79d5da5a935",
+          "wins": 0,
+          "losses": 1
+        },
+        {
+          "agents": [
+            "brimstone",
+            "fade",
+            "raze",
+            "sage",
+            "viper"
+          ],
+          "times_played": 2,
+          "hash": "62b0198a8c40",
+          "wins": 1,
+          "losses": 1
+        }
+      ],
+      "matches": [
+        {
+          "url": "/610391/eintracht-frankfurt-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-r2/?map=1",
+          "result": "loss",
+          "date": "2026/1/26",
+          "opponent": "Eintracht Frankfurt",
+          "score": "9/13",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "3/9"
+            },
+            {
+              "side": "def",
+              "rounds": "6/4"
+            }
+          ],
+          "event_round": "Round 2",
+          "event_stage": "Weekly #4",
+          "agents": [
+            "brimstone",
+            "fade",
+            "gekko",
+            "raze",
+            "viper"
+          ]
+        },
+        {
+          "url": "/602127/eintracht-frankfurt-vs-cgn-esports-challengers-2026-dach-evolution-split-1-r3/?map=1",
+          "result": "loss",
+          "date": "2026/1/15",
+          "opponent": "Eintracht Frankfurt",
+          "score": "4/13",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "3/9"
+            },
+            {
+              "side": "def",
+              "rounds": "1/4"
+            }
+          ],
+          "event_round": "Round 3",
+          "event_stage": "Weekly #2",
+          "agents": [
+            "brimstone",
+            "fade",
+            "raze",
+            "sage",
+            "viper"
+          ]
+        },
+        {
+          "url": "/601207/cgn-esports-vs-rizon-challengers-2026-dach-evolution-stage-1-r1/?map=3",
+          "result": "win",
+          "date": "2026/1/11",
+          "opponent": "RIZON",
+          "score": "13/5",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "7/5"
+            },
+            {
+              "side": "def",
+              "rounds": "6/0"
+            }
+          ],
+          "event_round": "Round 1",
+          "event_stage": "Group Stage",
+          "agents": [
+            "brimstone",
+            "fade",
+            "raze",
+            "sage",
+            "viper"
+          ]
+        }
+      ]
+    },
+    {
+      "map": "Haven",
+      "stats": {
+        "map": "Haven",
+        "total_maps": 6,
+        "win_pct": "83%",
+        "wins": 5,
+        "losses": 1,
+        "atk_first": "5",
+        "def_first": "1",
+        "atk_round_win_pct": "78%",
+        "atk_rounds_won": 52,
+        "atk_rounds_lost": 15,
+        "def_round_win_pct": "56%",
+        "def_rounds_won": 19,
+        "def_rounds_lost": 15
+      },
+      "compositions": [
+        {
+          "agents": [
+            "breach",
+            "cypher",
+            "neon",
+            "omen",
+            "sova"
+          ],
+          "times_played": 5,
+          "hash": "bcd1731b9ffb",
+          "wins": 4,
+          "losses": 1
+        },
+        {
+          "agents": [
+            "breach",
+            "cypher",
+            "jett",
+            "omen",
+            "sova"
+          ],
+          "times_played": 1,
+          "hash": "157d29bb0ead",
+          "wins": 1,
+          "losses": 0
+        }
+      ],
+      "matches": [
+        {
+          "url": "/633572/cgn-esports-vs-agent-x-challengers-2026-dach-evolution-vcl-emea-qualifier-ubsf/?map=2",
+          "result": "win",
+          "date": "2026/3/08",
+          "opponent": "Agent X",
+          "score": "13/3",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "9/3"
+            },
+            {
+              "side": "def",
+              "rounds": "4/0"
+            }
+          ],
+          "event_round": "Upper Semifinals",
+          "event_stage": "Playoffs",
+          "agents": [
+            "breach",
+            "cypher",
+            "neon",
+            "omen",
+            "sova"
+          ]
+        },
+        {
+          "url": "/633560/cgn-esports-vs-fokus-sakura-challengers-2026-dach-evolution-stage-1-cl-emea-qualifier-uro16/?map=1",
+          "result": "win",
+          "date": "2026/3/05",
+          "opponent": "FOKUS Sakura",
+          "score": "13/0",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "12/0"
+            },
+            {
+              "side": "def",
+              "rounds": "1/0"
+            }
+          ],
+          "event_round": "Upper Round of 16",
+          "event_stage": "Playoffs",
+          "agents": [
+            "breach",
+            "cypher",
+            "jett",
+            "omen",
+            "sova"
+          ]
+        },
+        {
+          "url": "/611684/fokus-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-ubf/?map=2",
+          "result": "win",
+          "date": "2026/2/09",
+          "opponent": "FOKUS",
+          "score": "13/7",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "9/3"
+            },
+            {
+              "side": "def",
+              "rounds": "4/4"
+            }
+          ],
+          "event_round": "Upper Final",
+          "event_stage": "Playoffs",
+          "agents": [
+            "breach",
+            "cypher",
+            "neon",
+            "omen",
+            "sova"
+          ]
+        },
+        {
+          "url": "/611683/eintracht-frankfurt-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-ubsf/?map=1",
+          "result": "loss",
+          "date": "2026/2/08",
+          "opponent": "Eintracht Frankfurt",
+          "score": "6/13",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "2/10"
+            },
+            {
+              "side": "atk",
+              "rounds": "4/3"
+            }
+          ],
+          "event_round": "Upper Semifinals",
+          "event_stage": "Playoffs",
+          "agents": [
+            "breach",
+            "cypher",
+            "neon",
+            "omen",
+            "sova"
+          ]
+        },
+        {
+          "url": "/611681/cgn-esports-vs-dortmund-esports-challengers-2026-dach-evolution-stage-1-ur1/?map=2",
+          "result": "win",
+          "date": "2026/2/07",
+          "opponent": "Dortmund eSports",
+          "score": "13/3",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "9/3"
+            },
+            {
+              "side": "def",
+              "rounds": "4/0"
+            }
+          ],
+          "event_round": "Upper Round 1",
+          "event_stage": "Playoffs",
+          "agents": [
+            "breach",
+            "cypher",
+            "neon",
+            "omen",
+            "sova"
+          ]
+        },
+        {
+          "url": "/602124/rizon-vs-cgn-esports-challengers-2026-dach-evolution-split-1-r2/?map=1",
+          "result": "win",
+          "date": "2026/1/15",
+          "opponent": "RIZON",
+          "score": "13/4",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "9/3"
+            },
+            {
+              "side": "def",
+              "rounds": "4/1"
+            }
+          ],
+          "event_round": "Round 2",
+          "event_stage": "Weekly #2",
+          "agents": [
+            "breach",
+            "cypher",
+            "neon",
+            "omen",
+            "sova"
+          ]
+        }
+      ]
+    },
+    {
+      "map": "Split",
+      "stats": {
+        "map": "Split",
+        "total_maps": 7,
+        "win_pct": "86%",
+        "wins": 6,
+        "losses": 1,
+        "atk_first": "6",
+        "def_first": "1",
+        "atk_round_win_pct": "70%",
+        "atk_rounds_won": 56,
+        "atk_rounds_lost": 24,
+        "def_round_win_pct": "65%",
+        "def_rounds_won": 28,
+        "def_rounds_lost": 15
+      },
+      "compositions": [
+        {
+          "agents": [
+            "cypher",
+            "fade",
+            "omen",
+            "raze",
+            "sage"
+          ],
+          "times_played": 7,
+          "hash": "00a7a6042e34",
+          "wins": 6,
+          "losses": 1
+        }
+      ],
+      "matches": [
+        {
+          "url": "/633568/cgn-esports-vs-valorando-challengers-2026-dach-evolution-vcl-emea-qualifier-ubqf/?map=1",
+          "result": "win",
+          "date": "2026/3/06",
+          "opponent": "Valorando",
+          "score": "13/7",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "8/4"
+            },
+            {
+              "side": "atk",
+              "rounds": "5/3"
+            }
+          ],
+          "event_round": "Upper Quarterfinals",
+          "event_stage": "Playoffs",
+          "agents": [
+            "cypher",
+            "fade",
+            "omen",
+            "raze",
+            "sage"
+          ]
+        },
+        {
+          "url": "/611681/cgn-esports-vs-dortmund-esports-challengers-2026-dach-evolution-stage-1-ur1/?map=1",
+          "result": "win",
+          "date": "2026/2/07",
+          "opponent": "Dortmund eSports",
+          "score": "13/0",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "12/0"
+            },
+            {
+              "side": "def",
+              "rounds": "1/0"
+            }
+          ],
+          "event_round": "Upper Round 1",
+          "event_stage": "Playoffs",
+          "agents": [
+            "cypher",
+            "fade",
+            "omen",
+            "raze",
+            "sage"
+          ]
+        },
+        {
+          "url": "/603386/fokus-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-r3/?map=1",
+          "result": "loss",
+          "date": "2026/1/25",
+          "opponent": "FOKUS",
+          "score": "6/13",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "4/8"
+            },
+            {
+              "side": "def",
+              "rounds": "2/5"
+            }
+          ],
+          "event_round": "Round 3",
+          "event_stage": "Group Stage",
+          "agents": [
+            "cypher",
+            "fade",
+            "omen",
+            "raze",
+            "sage"
+          ]
+        },
+        {
+          "url": "/605522/cgn-esports-vs-bodax-gaming-challengers-2026-dach-evolution-stage-1-r3/?map=1",
+          "result": "win",
+          "date": "2026/1/19",
+          "opponent": "Bodax Gaming",
+          "score": "13/1",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "11/1"
+            },
+            {
+              "side": "def",
+              "rounds": "2/0"
+            }
+          ],
+          "event_round": "Round 3",
+          "event_stage": "Weekly #3",
+          "agents": [
+            "cypher",
+            "fade",
+            "omen",
+            "raze",
+            "sage"
+          ]
+        },
+        {
+          "url": "/603380/cgn-esports-vs-dortmund-esports-challengers-2026-dach-evolution-stage-1-r2/?map=2",
+          "result": "win",
+          "date": "2026/1/17",
+          "opponent": "Dortmund eSports",
+          "score": "13/1",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "11/1"
+            },
+            {
+              "side": "def",
+              "rounds": "2/0"
+            }
+          ],
+          "event_round": "Round 2",
+          "event_stage": "Group Stage",
+          "agents": [
+            "cypher",
+            "fade",
+            "omen",
+            "raze",
+            "sage"
+          ]
+        },
+        {
+          "url": "/602121/bodax-gaming-vs-cgn-esports-challengers-2026-dach-evolution-split-1-r1/?map=1",
+          "result": "win",
+          "date": "2026/1/15",
+          "opponent": "Bodax Gaming",
+          "score": "13/9",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "6/6"
+            },
+            {
+              "side": "def",
+              "rounds": "7/3"
+            }
+          ],
+          "event_round": "Round 1",
+          "event_stage": "Weekly #2",
+          "agents": [
+            "cypher",
+            "fade",
+            "omen",
+            "raze",
+            "sage"
+          ]
+        },
+        {
+          "url": "/601207/cgn-esports-vs-rizon-challengers-2026-dach-evolution-stage-1-r1/?map=2",
+          "result": "win",
+          "date": "2026/1/11",
+          "opponent": "RIZON",
+          "score": "13/8",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "7/5"
+            },
+            {
+              "side": "def",
+              "rounds": "6/3"
+            }
+          ],
+          "event_round": "Round 1",
+          "event_stage": "Group Stage",
+          "agents": [
+            "cypher",
+            "fade",
+            "omen",
+            "raze",
+            "sage"
+          ]
+        }
+      ]
+    },
+    {
+      "map": "Ascent",
+      "stats": {
+        "map": "Ascent",
+        "total_maps": 0,
+        "win_pct": "-",
+        "wins": 0,
+        "losses": 0,
+        "atk_first": "0",
+        "def_first": "0",
+        "atk_round_win_pct": "-",
+        "atk_rounds_won": 0,
+        "atk_rounds_lost": 0,
+        "def_round_win_pct": "-",
+        "def_rounds_won": 0,
+        "def_rounds_lost": 0
+      },
+      "compositions": [],
+      "matches": []
+    },
+    {
+      "map": "Icebox",
+      "stats": {
+        "map": "Icebox",
+        "total_maps": 0,
+        "win_pct": "-",
+        "wins": 0,
+        "losses": 0,
+        "atk_first": "0",
+        "def_first": "0",
+        "atk_round_win_pct": "-",
+        "atk_rounds_won": 0,
+        "atk_rounds_lost": 0,
+        "def_round_win_pct": "-",
+        "def_rounds_won": 0,
+        "def_rounds_lost": 0
+      },
+      "compositions": [],
+      "matches": []
+    },
+    {
+      "map": "Breeze",
+      "stats": {
+        "map": "Breeze",
+        "total_maps": 4,
+        "win_pct": "50%",
+        "wins": 2,
+        "losses": 2,
+        "atk_first": "3",
+        "def_first": "1",
+        "atk_round_win_pct": "52%",
+        "atk_rounds_won": 25,
+        "atk_rounds_lost": 23,
+        "def_round_win_pct": "47%",
+        "def_rounds_won": 21,
+        "def_rounds_lost": 24
+      },
+      "compositions": [
+        {
+          "agents": [
+            "astra",
+            "jett",
+            "sage",
+            "sova",
+            "viper"
+          ],
+          "times_played": 2,
+          "hash": "8fad009b4d97",
+          "wins": 1,
+          "losses": 1
+        },
+        {
+          "agents": [
+            "jett",
+            "omen",
+            "skye",
+            "sova",
+            "viper"
+          ],
+          "times_played": 2,
+          "hash": "f7879d9f07a9",
+          "wins": 1,
+          "losses": 1
+        }
+      ],
+      "matches": [
+        {
+          "url": "/633587/cgn-esports-vs-fokus-challengers-2026-dach-evolution-vcl-emea-qualifier-lr5/?map=1",
+          "result": "loss",
+          "date": "2026/3/10",
+          "opponent": "FOKUS",
+          "score": "11/13",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "7/5"
+            },
+            {
+              "side": "def",
+              "rounds": "4/8"
+            }
+          ],
+          "event_round": "Lower Round 5",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "jett",
+            "sage",
+            "sova",
+            "viper"
+          ]
+        },
+        {
+          "url": "/633585/cgn-esports-vs-rizon-challengers-2026-dach-evolution-vcl-emea-qualifier-lr4/?map=1",
+          "result": "win",
+          "date": "2026/3/09",
+          "opponent": "RIZON",
+          "score": "13/10",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "6/6"
+            },
+            {
+              "side": "def",
+              "rounds": "7/4"
+            }
+          ],
+          "event_round": "Lower Round 4",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "jett",
+            "sage",
+            "sova",
+            "viper"
+          ]
+        },
+        {
+          "url": "/611684/fokus-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-ubf/?map=1",
+          "result": "loss",
+          "date": "2026/2/09",
+          "opponent": "FOKUS",
+          "score": "9/13",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "5/7"
+            },
+            {
+              "side": "def",
+              "rounds": "4/6"
+            }
+          ],
+          "event_round": "Upper Final",
+          "event_stage": "Playoffs",
+          "agents": [
+            "jett",
+            "omen",
+            "skye",
+            "sova",
+            "viper"
+          ]
+        },
+        {
+          "url": "/611683/eintracht-frankfurt-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-ubsf/?map=2",
+          "result": "win",
+          "date": "2026/2/08",
+          "opponent": "Eintracht Frankfurt",
+          "score": "13/11",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "6/6"
+            },
+            {
+              "side": "atk",
+              "rounds": "7/5"
+            }
+          ],
+          "event_round": "Upper Semifinals",
+          "event_stage": "Playoffs",
+          "agents": [
+            "jett",
+            "omen",
+            "skye",
+            "sova",
+            "viper"
+          ]
+        }
+      ]
+    },
+    {
+      "map": "Fracture",
+      "stats": {
+        "map": "Fracture",
+        "total_maps": 0,
+        "win_pct": "-",
+        "wins": 0,
+        "losses": 0,
+        "atk_first": "0",
+        "def_first": "0",
+        "atk_round_win_pct": "-",
+        "atk_rounds_won": 0,
+        "atk_rounds_lost": 0,
+        "def_round_win_pct": "-",
+        "def_rounds_won": 0,
+        "def_rounds_lost": 0
+      },
+      "compositions": [],
+      "matches": []
+    },
+    {
+      "map": "Pearl",
+      "stats": {
+        "map": "Pearl",
+        "total_maps": 6,
+        "win_pct": "33%",
+        "wins": 2,
+        "losses": 4,
+        "atk_first": "1",
+        "def_first": "5",
+        "atk_round_win_pct": "48%",
+        "atk_rounds_won": 32,
+        "atk_rounds_lost": 34,
+        "def_round_win_pct": "51%",
+        "def_rounds_won": 32,
+        "def_rounds_lost": 31
+      },
+      "compositions": [
+        {
+          "agents": [
+            "astra",
+            "cypher",
+            "kayo",
+            "neon",
+            "tejo"
+          ],
+          "times_played": 4,
+          "hash": "e2ad071fba6c",
+          "wins": 2,
+          "losses": 2
+        },
+        {
+          "agents": [
+            "astra",
+            "cypher",
+            "neon",
+            "sova",
+            "tejo"
+          ],
+          "times_played": 1,
+          "hash": "559c2185ad44",
+          "wins": 0,
+          "losses": 1
+        },
+        {
+          "agents": [
+            "astra",
+            "cypher",
+            "sova",
+            "tejo",
+            "waylay"
+          ],
+          "times_played": 1,
+          "hash": "856b05f78132",
+          "wins": 0,
+          "losses": 1
+        }
+      ],
+      "matches": [
+        {
+          "url": "/633587/cgn-esports-vs-fokus-challengers-2026-dach-evolution-vcl-emea-qualifier-lr5/?map=2",
+          "result": "loss",
+          "date": "2026/3/10",
+          "opponent": "FOKUS",
+          "score": "7/13",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "3/9"
+            },
+            {
+              "side": "atk",
+              "rounds": "4/4"
+            }
+          ],
+          "event_round": "Lower Round 5",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "cypher",
+            "kayo",
+            "neon",
+            "tejo"
+          ]
+        },
+        {
+          "url": "/633572/cgn-esports-vs-agent-x-challengers-2026-dach-evolution-vcl-emea-qualifier-ubsf/?map=3",
+          "result": "loss",
+          "date": "2026/3/08",
+          "opponent": "Agent X",
+          "score": "11/13",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "7/5"
+            },
+            {
+              "side": "atk",
+              "rounds": "4/8"
+            }
+          ],
+          "event_round": "Upper Semifinals",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "cypher",
+            "kayo",
+            "neon",
+            "tejo"
+          ]
+        },
+        {
+          "url": "/633560/cgn-esports-vs-fokus-sakura-challengers-2026-dach-evolution-stage-1-cl-emea-qualifier-uro16/?map=2",
+          "result": "win",
+          "date": "2026/3/05",
+          "opponent": "FOKUS Sakura",
+          "score": "13/1",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "11/1"
+            },
+            {
+              "side": "def",
+              "rounds": "2/0"
+            }
+          ],
+          "event_round": "Upper Round of 16",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "cypher",
+            "kayo",
+            "neon",
+            "tejo"
+          ]
+        },
+        {
+          "url": "/611685/cgn-esports-vs-eintracht-frankfurt-challengers-2026-dach-evolution-stage-1-gf/?map=2",
+          "result": "win",
+          "date": "2026/3/01",
+          "opponent": "Eintracht Frankfurt",
+          "score": "14/12",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "8/4"
+            },
+            {
+              "side": "atk",
+              "rounds": "4/8"
+            },
+            {
+              "side": "OT",
+              "rounds": "2/0"
+            }
+          ],
+          "event_round": "Grand Final",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "cypher",
+            "kayo",
+            "neon",
+            "tejo"
+          ]
+        },
+        {
+          "url": "/604047/eintracht-frankfurt-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-r1/?map=1",
+          "result": "loss",
+          "date": "2026/1/19",
+          "opponent": "Eintracht Frankfurt",
+          "score": "8/13",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "4/8"
+            },
+            {
+              "side": "atk",
+              "rounds": "4/5"
+            }
+          ],
+          "event_round": "Round 1",
+          "event_stage": "Weekly #3",
+          "agents": [
+            "astra",
+            "cypher",
+            "neon",
+            "sova",
+            "tejo"
+          ]
+        },
+        {
+          "url": "/601829/cgn-esports-vs-eintracht-frankfurt-challengers-2026-dach-evolution-stage-1-r2/?map=1",
+          "result": "loss",
+          "date": "2026/1/12",
+          "opponent": "Eintracht Frankfurt",
+          "score": "11/13",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "7/5"
+            },
+            {
+              "side": "atk",
+              "rounds": "4/8"
+            }
+          ],
+          "event_round": "Round 2",
+          "event_stage": "Weekly #1",
+          "agents": [
+            "astra",
+            "cypher",
+            "sova",
+            "tejo",
+            "waylay"
+          ]
+        }
+      ]
+    },
+    {
+      "map": "Lotus",
+      "stats": {
+        "map": "Lotus",
+        "total_maps": 0,
+        "win_pct": "-",
+        "wins": 0,
+        "losses": 0,
+        "atk_first": "0",
+        "def_first": "0",
+        "atk_round_win_pct": "-",
+        "atk_rounds_won": 0,
+        "atk_rounds_lost": 0,
+        "def_round_win_pct": "-",
+        "def_rounds_won": 0,
+        "def_rounds_lost": 0
+      },
+      "compositions": [],
+      "matches": []
+    },
+    {
+      "map": "Sunset",
+      "stats": {
+        "map": "Sunset",
+        "total_maps": 1,
+        "win_pct": "100%",
+        "wins": 1,
+        "losses": 0,
+        "atk_first": "0",
+        "def_first": "1",
+        "atk_round_win_pct": "50%",
+        "atk_rounds_won": 5,
+        "atk_rounds_lost": 5,
+        "def_round_win_pct": "67%",
+        "def_rounds_won": 8,
+        "def_rounds_lost": 4
+      },
+      "compositions": [
+        {
+          "agents": [
+            "cypher",
+            "kayo",
+            "neon",
+            "omen",
+            "sova"
+          ],
+          "times_played": 1,
+          "hash": "c61dfba5936b",
+          "wins": 1,
+          "losses": 0
+        }
+      ],
+      "matches": [
+        {
+          "url": "/608588/6gpa-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-r1/?map=1",
+          "result": "win",
+          "date": "2026/1/26",
+          "opponent": "6GPA",
+          "score": "13/9",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "8/4"
+            },
+            {
+              "side": "atk",
+              "rounds": "5/5"
+            }
+          ],
+          "event_round": "Round 1",
+          "event_stage": "Weekly #4",
+          "agents": [
+            "cypher",
+            "kayo",
+            "neon",
+            "omen",
+            "sova"
+          ]
+        }
+      ]
+    },
+    {
+      "map": "Abyss",
+      "stats": {
+        "map": "Abyss",
+        "total_maps": 8,
+        "win_pct": "88%",
+        "wins": 7,
+        "losses": 1,
+        "atk_first": "2",
+        "def_first": "6",
+        "atk_round_win_pct": "62%",
+        "atk_rounds_won": 45,
+        "atk_rounds_lost": 28,
+        "def_round_win_pct": "59%",
+        "def_rounds_won": 52,
+        "def_rounds_lost": 36
+      },
+      "compositions": [
+        {
+          "agents": [
+            "astra",
+            "sova",
+            "tejo",
+            "veto",
+            "waylay"
+          ],
+          "times_played": 6,
+          "hash": "09fea2e97576",
+          "wins": 6,
+          "losses": 0
+        },
+        {
+          "agents": [
+            "astra",
+            "sova",
+            "veto",
+            "waylay",
+            "yoru"
+          ],
+          "times_played": 1,
+          "hash": "7ee233be52e7",
+          "wins": 0,
+          "losses": 1
+        },
+        {
+          "agents": [
+            "astra",
+            "cypher",
+            "sova",
+            "waylay",
+            "yoru"
+          ],
+          "times_played": 1,
+          "hash": "4cc1abd80baa",
+          "wins": 1,
+          "losses": 0
+        }
+      ],
+      "matches": [
+        {
+          "url": "/633585/cgn-esports-vs-rizon-challengers-2026-dach-evolution-vcl-emea-qualifier-lr4/?map=2",
+          "result": "win",
+          "date": "2026/3/09",
+          "opponent": "RIZON",
+          "score": "13/2",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "10/2"
+            },
+            {
+              "side": "def",
+              "rounds": "3/0"
+            }
+          ],
+          "event_round": "Lower Round 4",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "sova",
+            "tejo",
+            "veto",
+            "waylay"
+          ]
+        },
+        {
+          "url": "/633568/cgn-esports-vs-valorando-challengers-2026-dach-evolution-vcl-emea-qualifier-ubqf/?map=2",
+          "result": "win",
+          "date": "2026/3/06",
+          "opponent": "Valorando",
+          "score": "13/5",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "9/3"
+            },
+            {
+              "side": "atk",
+              "rounds": "4/2"
+            }
+          ],
+          "event_round": "Upper Quarterfinals",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "sova",
+            "tejo",
+            "veto",
+            "waylay"
+          ]
+        },
+        {
+          "url": "/611685/cgn-esports-vs-eintracht-frankfurt-challengers-2026-dach-evolution-stage-1-gf/?map=3",
+          "result": "win",
+          "date": "2026/3/01",
+          "opponent": "Eintracht Frankfurt",
+          "score": "13/8",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "7/5"
+            },
+            {
+              "side": "atk",
+              "rounds": "6/3"
+            }
+          ],
+          "event_round": "Grand Final",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "sova",
+            "tejo",
+            "veto",
+            "waylay"
+          ]
+        },
+        {
+          "url": "/611684/fokus-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-ubf/?map=3",
+          "result": "win",
+          "date": "2026/2/09",
+          "opponent": "FOKUS",
+          "score": "14/12",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "8/4"
+            },
+            {
+              "side": "atk",
+              "rounds": "4/8"
+            },
+            {
+              "side": "OT",
+              "rounds": "2/0"
+            }
+          ],
+          "event_round": "Upper Final",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "sova",
+            "tejo",
+            "veto",
+            "waylay"
+          ]
+        },
+        {
+          "url": "/611683/eintracht-frankfurt-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-ubsf/?map=3",
+          "result": "win",
+          "date": "2026/2/08",
+          "opponent": "Eintracht Frankfurt",
+          "score": "13/9",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "7/5"
+            },
+            {
+              "side": "atk",
+              "rounds": "6/4"
+            }
+          ],
+          "event_round": "Upper Semifinals",
+          "event_stage": "Playoffs",
+          "agents": [
+            "astra",
+            "sova",
+            "tejo",
+            "veto",
+            "waylay"
+          ]
+        },
+        {
+          "url": "/610396/cgn-esports-vs-bodax-gaming-challengers-2026-dach-evolution-stage-1-r3/?map=1",
+          "result": "win",
+          "date": "2026/1/26",
+          "opponent": "Bodax Gaming",
+          "score": "13/4",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "10/2"
+            },
+            {
+              "side": "atk",
+              "rounds": "3/2"
+            }
+          ],
+          "event_round": "Round 3",
+          "event_stage": "Weekly #4",
+          "agents": [
+            "astra",
+            "sova",
+            "tejo",
+            "veto",
+            "waylay"
+          ]
+        },
+        {
+          "url": "/603386/fokus-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-r3/?map=2",
+          "result": "loss",
+          "date": "2026/1/25",
+          "opponent": "FOKUS",
+          "score": "5/13",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "3/9"
+            },
+            {
+              "side": "atk",
+              "rounds": "2/4"
+            }
+          ],
+          "event_round": "Round 3",
+          "event_stage": "Group Stage",
+          "agents": [
+            "astra",
+            "sova",
+            "veto",
+            "waylay",
+            "yoru"
+          ]
+        },
+        {
+          "url": "/601766/alternate-attax-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-r1/?map=1",
+          "result": "win",
+          "date": "2026/1/12",
+          "opponent": "ALTERNATE aTTaX",
+          "score": "13/11",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "9/3"
+            },
+            {
+              "side": "def",
+              "rounds": "4/8"
+            }
+          ],
+          "event_round": "Round 1",
+          "event_stage": "Weekly #1",
+          "agents": [
+            "astra",
+            "cypher",
+            "sova",
+            "waylay",
+            "yoru"
+          ]
+        }
+      ]
+    },
+    {
+      "map": "Corrode",
+      "stats": {
+        "map": "Corrode",
+        "total_maps": 6,
+        "win_pct": "33%",
+        "wins": 2,
+        "losses": 4,
+        "atk_first": "4",
+        "def_first": "2",
+        "atk_round_win_pct": "54%",
+        "atk_rounds_won": 38,
+        "atk_rounds_lost": 33,
+        "def_round_win_pct": "45%",
+        "def_rounds_won": 32,
+        "def_rounds_lost": 39
+      },
+      "compositions": [
+        {
+          "agents": [
+            "fade",
+            "omen",
+            "sage",
+            "veto",
+            "waylay"
+          ],
+          "times_played": 2,
+          "hash": "23b3766fad24",
+          "wins": 1,
+          "losses": 1
+        },
+        {
+          "agents": [
+            "fade",
+            "neon",
+            "omen",
+            "phoenix",
+            "viper"
+          ],
+          "times_played": 2,
+          "hash": "a4d84639d98e",
+          "wins": 1,
+          "losses": 1
+        },
+        {
+          "agents": [
+            "fade",
+            "neon",
+            "omen",
+            "viper",
+            "vyse"
+          ],
+          "times_played": 2,
+          "hash": "048d5a72794d",
+          "wins": 0,
+          "losses": 2
+        }
+      ],
+      "matches": [
+        {
+          "url": "/633572/cgn-esports-vs-agent-x-challengers-2026-dach-evolution-vcl-emea-qualifier-ubsf/?map=1",
+          "result": "loss",
+          "date": "2026/3/08",
+          "opponent": "Agent X",
+          "score": "9/13",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "1/11"
+            },
+            {
+              "side": "atk",
+              "rounds": "8/2"
+            }
+          ],
+          "event_round": "Upper Semifinals",
+          "event_stage": "Playoffs",
+          "agents": [
+            "fade",
+            "omen",
+            "sage",
+            "veto",
+            "waylay"
+          ]
+        },
+        {
+          "url": "/611685/cgn-esports-vs-eintracht-frankfurt-challengers-2026-dach-evolution-stage-1-gf/?map=1",
+          "result": "win",
+          "date": "2026/3/01",
+          "opponent": "Eintracht Frankfurt",
+          "score": "13/8",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "8/4"
+            },
+            {
+              "side": "def",
+              "rounds": "5/4"
+            }
+          ],
+          "event_round": "Grand Final",
+          "event_stage": "Playoffs",
+          "agents": [
+            "fade",
+            "omen",
+            "sage",
+            "veto",
+            "waylay"
+          ]
+        },
+        {
+          "url": "/605517/dortmund-esports-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-r2/?map=1",
+          "result": "loss",
+          "date": "2026/1/19",
+          "opponent": "Dortmund eSports",
+          "score": "12/14",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "9/3"
+            },
+            {
+              "side": "def",
+              "rounds": "3/9"
+            },
+            {
+              "side": "OT",
+              "rounds": "0/2"
+            }
+          ],
+          "event_round": "Round 2",
+          "event_stage": "Weekly #3",
+          "agents": [
+            "fade",
+            "neon",
+            "omen",
+            "phoenix",
+            "viper"
+          ]
+        },
+        {
+          "url": "/603380/cgn-esports-vs-dortmund-esports-challengers-2026-dach-evolution-stage-1-r2/?map=1",
+          "result": "win",
+          "date": "2026/1/17",
+          "opponent": "Dortmund eSports",
+          "score": "13/10",
+          "halves": [
+            {
+              "side": "def",
+              "rounds": "8/4"
+            },
+            {
+              "side": "atk",
+              "rounds": "5/6"
+            }
+          ],
+          "event_round": "Round 2",
+          "event_stage": "Group Stage",
+          "agents": [
+            "fade",
+            "neon",
+            "omen",
+            "phoenix",
+            "viper"
+          ]
+        },
+        {
+          "url": "/601916/rizon-vs-cgn-esports-challengers-2026-dach-evolution-stage-1-r3/?map=1",
+          "result": "loss",
+          "date": "2026/1/12",
+          "opponent": "RIZON",
+          "score": "12/14",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "1/11"
+            },
+            {
+              "side": "def",
+              "rounds": "11/1"
+            },
+            {
+              "side": "OT",
+              "rounds": "0/2"
+            }
+          ],
+          "event_round": "Round 3",
+          "event_stage": "Weekly #1",
+          "agents": [
+            "fade",
+            "neon",
+            "omen",
+            "viper",
+            "vyse"
+          ]
+        },
+        {
+          "url": "/601207/cgn-esports-vs-rizon-challengers-2026-dach-evolution-stage-1-r1/?map=1",
+          "result": "loss",
+          "date": "2026/1/11",
+          "opponent": "RIZON",
+          "score": "11/13",
+          "halves": [
+            {
+              "side": "atk",
+              "rounds": "7/5"
+            },
+            {
+              "side": "def",
+              "rounds": "4/8"
+            }
+          ],
+          "event_round": "Round 1",
+          "event_stage": "Group Stage",
+          "agents": [
+            "fade",
+            "neon",
+            "omen",
+            "viper",
+            "vyse"
+          ]
+        }
+      ]
+    }
+  ],
+  "scraped_at": "2026-03-16T08:45:37.896419Z"
+}
