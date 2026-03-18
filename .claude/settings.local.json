@@ -1,14 +1,39 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git init:*)",
-      "Bash(git add:*)",
-      "Bash(git branch:*)",
-      "WebFetch(domain:www.vlr.gg)",
-      "Bash(pip:*)",
+      "Bash(curl:*)",
       "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(git:*)",
+      "Bash(cat:*)",
+      "Bash(cd:*)",
+      "Bash(wc:*)",
+      "Bash(head:*)",
+      "Bash(grep:*)",
+      "Bash(echo:*)",
+      "Bash(ls:*)",
+      "Bash(tail:*)",
+      "Bash(sort:*)",
+      "Bash(API_KEY:*)",
+      "Bash(APIKEY:*)",
+      "Bash(for:*)",
+      "Bash(while:*)",
+      "Bash(declare:*)",
+      "Edit(**)",
+      "Write(**)",
+      "WebFetch(domain:api.valolytics.gg)",
+      "WebFetch(domain:valolytics.gg)",
+      "WebFetch(domain:www.vlr.gg)",
+      "WebFetch(domain:liquipedia.net)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebSearch",
+      "Skill(update-config)",
       "WebFetch(domain:docs.google.com)",
-      "WebFetch(domain:api.valolytics.gg)"
+      "Bash(python3:*)",
+      "WebFetch(domain:valorant.fandom.com)",
+      "WebFetch(domain:valorant-api.com)",
+      "Bash(python -c \":*)"
     ]
   }
 }
