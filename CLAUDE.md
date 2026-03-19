@@ -6,6 +6,8 @@ When compacting, always preserve the full list of modified files and any test co
 ## Project Overview
 Valorant Challengers League (VCL) EMEA 2026 stats analysis tool. Scrapes and processes match data from the Valolytics API and VLR.gg to produce team/player statistics spreadsheets.
 
+**IMPORTANT:** Read `PRD.md` at the start of every session. It contains the full product requirements for the VCL Broadcast Stats Dashboard (React frontend), including page specs, data model, design directives, and tech stack.
+
 ## Valolytics API
 
 ### Authentication

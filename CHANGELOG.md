@@ -20,6 +20,17 @@ This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
 
 ---
 
+## [0.4.0] - 2026-03-19
+
+### Added
+- `Data_Catalog.xlsx` + `build_data_catalog.py` — comprehensive catalog of all 207 available stats (team, player, derived)
+- `Suspicious_Matches.xlsx` + `build_suspicious_tab2.py` — 32 identified forfeit/tech issue matches with score-based validation
+- `PRD.md` — full product requirements for VCL Broadcast Stats Dashboard (React frontend)
+- `VCL_Stats.xlsx` — updated multi-team stats workbook
+
+### Changed
+- `CLAUDE.md` — added PRD.md startup reference
+
 ## [0.3.0] - 2026-03-19
 
 ### Added
