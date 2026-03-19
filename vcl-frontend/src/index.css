@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #0a0a0f;
+  --color-nav: #12121a;
+  --color-card: #1a1a28;
+  --color-border: #1e1e2e;
+  --color-text: #dddddd;
+  --color-text-muted: #888888;
+  --color-text-dim: #555555;
+  --color-primary: #C800DF;
+  --color-secondary: #E60076;
+  --color-success: #16A34A;
+  --color-danger: #DC2626;
+
+  --font-sans: 'Jost', sans-serif;
+  --font-mono: 'Overpass Mono', monospace;
+}
+
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  margin: 0;
+}
