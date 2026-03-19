@@ -1,9 +1,9 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { StatsProvider, useStats } from './context/StatsContext'
 import Navbar from './components/Navbar'
+import TeamOverview from './pages/TeamOverview'
 
 // Placeholder pages — will be replaced in later tasks
-function TeamOverview() { return <div className="p-4">Team Overview (TODO)</div> }
 function PlayerProfile() { return <div className="p-4">Player Profile (TODO)</div> }
 function Leaderboards() { return <div className="p-4">Leaderboards (TODO)</div> }
 function Versus() { return <div className="p-4">Versus (TODO)</div> }
