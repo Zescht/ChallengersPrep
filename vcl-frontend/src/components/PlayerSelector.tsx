@@ -2,10 +2,10 @@ import { useNavigate } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
 
 interface PlayerSelectorProps {
-  currentIgm: string
+  currentIgn: string
 }
 
-export default function PlayerSelector({ currentIgm }: PlayerSelectorProps) {
+export default function PlayerSelector({ currentIgn }: PlayerSelectorProps) {
   const { data } = useStats()
   const navigate = useNavigate()
 
@@ -24,7 +24,7 @@ export default function PlayerSelector({ currentIgm }: PlayerSelectorProps) {
 
   return (
     <select
-      value={currentIgm}
+      value={currentIgn}
       onChange={e => navigate(`/player/${encodeURIComponent(e.target.value)}`)}
       className="bg-card border border-border rounded px-3 py-1.5 text-sm text-text focus:outline-none focus:border-primary"
     >

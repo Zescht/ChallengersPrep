@@ -5,7 +5,7 @@ import AgentIcon from '../components/AgentIcon'
 import FormStrip from '../components/FormStrip'
 import XvYMatrix from '../components/XvYMatrix'
 import { formatPct, formatRatio, formatCount } from '../utils/format'
-import type { Team, Player } from '../types'
+import type { Team, Player, StatsData, Match } from '../types'
 
 type Mode = 'team' | 'player'
 
@@ -20,18 +20,13 @@ export default function Versus() {
   if (!data || !averages) return null
 
   const teams = [...data.teams].sort((a, b) => a.name.localeCompare(b.name))
+  const sortedPlayers = [...data.players].sort((a, b) => a.ign.localeCompare(b.ign))
 
-  // Initialize defaults
-  if (!teamA && teams.length >= 2) {
-    setTeamA(teams[0].name)
-    setTeamB(teams[1].name)
-    return null
-  }
-  if (!playerA && data.players.length >= 2) {
-    setPlayerA(data.players[0].ign)
-    setPlayerB(data.players[1].ign)
-    return null
-  }
+  // Resolve effective selections (fall back to first entries if state is empty)
+  const effTeamA = teamA || teams[0]?.name || ''
+  const effTeamB = teamB || (teams.find(t => t.name !== effTeamA)?.name ?? '')
+  const effPlayerA = playerA || sortedPlayers[0]?.ign || ''
+  const effPlayerB = playerB || (sortedPlayers.find(p => p.ign !== effPlayerA)?.ign ?? '')
 
   return (
     <div className="p-4">
@@ -54,16 +49,16 @@ export default function Versus() {
       {mode === 'team' ? (
         <TeamVsTeam
           teams={teams}
-          teamAName={teamA}
-          teamBName={teamB}
+          teamAName={effTeamA}
+          teamBName={effTeamB}
           onChangeA={setTeamA}
           onChangeB={setTeamB}
           data={data}
         />
       ) : (
         <PlayerVsPlayer
-          playerAIgn={playerA}
-          playerBIgn={playerB}
+          playerAIgn={effPlayerA}
+          playerBIgn={effPlayerB}
           onChangeA={setPlayerA}
           onChangeB={setPlayerB}
           data={data}
@@ -81,10 +76,10 @@ function TeamVsTeam({ teams, teamAName, teamBName, onChangeA, onChangeB, data }:
   teamBName: string
   onChangeA: (v: string) => void
   onChangeB: (v: string) => void
-  data: any
+  data: StatsData
 }) {
-  const tA = data.teams.find((t: Team) => t.name === teamAName)
-  const tB = data.teams.find((t: Team) => t.name === teamBName)
+  const tA = data.teams.find(t => t.name === teamAName)
+  const tB = data.teams.find(t => t.name === teamBName)
 
   return (
     <div>
@@ -167,11 +162,11 @@ function TeamRecordCard({ team }: { team: Team }) {
   )
 }
 
-function HeadToHead({ teamA, teamB, matches }: { teamA: Team; teamB: Team; matches: any[] }) {
-  const h2h = matches.filter((m: any) =>
+function HeadToHead({ teamA, teamB, matches }: { teamA: Team; teamB: Team; matches: Match[] }) {
+  const h2h = matches.filter(m =>
     (m.team1 === teamA.name && m.team2 === teamB.name) ||
     (m.team1 === teamB.name && m.team2 === teamA.name)
-  ).sort((a: any, b: any) => b.date.localeCompare(a.date))
+  ).sort((a, b) => b.date.localeCompare(a.date))
 
   return (
     <div>
@@ -189,7 +184,7 @@ function HeadToHead({ teamA, teamB, matches }: { teamA: Team; teamB: Team; match
             </tr>
           </thead>
           <tbody>
-            {h2h.map((m: any, i: number) => (
+            {h2h.map((m, i) => (
               <tr key={i} className="border-b border-border">
                 <td className="px-2 py-1 text-text-muted">{m.date}</td>
                 <td className="px-2 py-1">{m.map}</td>
@@ -402,11 +397,11 @@ function PlayerVsPlayer({ playerAIgn, playerBIgn, onChangeA, onChangeB, data }: 
   playerBIgn: string
   onChangeA: (v: string) => void
   onChangeB: (v: string) => void
-  data: any
+  data: StatsData
 }) {
-  const teams = [...data.teams].sort((a: Team, b: Team) => a.name.localeCompare(b.name))
-  const pA = data.players.find((p: Player) => p.ign === playerAIgn)
-  const pB = data.players.find((p: Player) => p.ign === playerBIgn)
+  const teams = [...data.teams].sort((a, b) => a.name.localeCompare(b.name))
+  const pA = data.players.find(p => p.ign === playerAIgn)
+  const pB = data.players.find(p => p.ign === playerBIgn)
 
   function PlayerDropdown({ value, onChange, exclude }: { value: string; onChange: (v: string) => void; exclude: string }) {
     return (
@@ -415,12 +410,12 @@ function PlayerVsPlayer({ playerAIgn, playerBIgn, onChangeA, onChangeB, data }: 
         onChange={e => onChange(e.target.value)}
         className="bg-card border border-border rounded px-3 py-1.5 text-sm text-text focus:outline-none focus:border-primary"
       >
-        {teams.map((t: Team) => (
+        {teams.map(t => (
           <optgroup key={t.name} label={t.name}>
             {data.players
-              .filter((p: Player) => p.team === t.name)
-              .sort((a: Player, b: Player) => a.ign.localeCompare(b.ign))
-              .map((p: Player) => (
+              .filter(p => p.team === t.name)
+              .sort((a, b) => a.ign.localeCompare(b.ign))
+              .map(p => (
                 <option key={p.ign} value={p.ign} disabled={p.ign === exclude}>
                   {p.ign}
                 </option>

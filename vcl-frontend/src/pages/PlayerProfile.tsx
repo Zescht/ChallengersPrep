@@ -9,7 +9,6 @@ interface StatCardProps {
   value: string
   rank?: number
   total?: number
-  invertRank?: boolean
 }
 
 function StatCard({ label, value, rank, total }: StatCardProps) {
@@ -78,7 +77,7 @@ export default function PlayerProfile() {
         >
           &larr; {player.team}
         </Link>
-        <PlayerSelector currentIgm={player.ign} />
+        <PlayerSelector currentIgn={player.ign} />
       </div>
 
       <div className="mb-6">

@@ -139,7 +139,7 @@ export default function TeamOverview() {
           <table className="border-collapse text-xs w-full">
             <thead>
               <tr>
-                <th colSpan={12} className="px-1 py-1 text-center font-semibold text-xs border border-border" style={{ backgroundColor: '#2d5a27', color: '#c4e8be' }}>Statistics Per Player</th>
+                <th colSpan={11} className="px-1 py-1 text-center font-semibold text-xs border border-border" style={{ backgroundColor: '#2d5a27', color: '#c4e8be' }}>Statistics Per Player</th>
               </tr>
               <tr className="bg-nav">
                 <th className="px-1.5 py-1 text-left text-text-muted font-medium border border-border">Players</th>
