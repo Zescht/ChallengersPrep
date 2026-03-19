@@ -304,11 +304,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "pa1ze",
         "MOLSI",
-        "pyrolll",
+        "pa1ze",
+        "shinnok",
         "Serial",
-        "shinnok"
+        "pyrolll"
       ],
       "xvy": [
         {
@@ -803,11 +803,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "MONSTEERR",
-        "musashi",
-        "azury",
         "Fizzy",
-        "Jamelinho"
+        "musashi",
+        "MONSTEERR",
+        "Jamelinho",
+        "azury"
       ],
       "xvy": [
         {
@@ -1341,10 +1341,10 @@
       },
       "players": [
         "Kamyk",
-        "Runner",
-        "Enzo ",
+        "Chiwa",
         "Doma",
-        "Chiwa"
+        "Enzo ",
+        "Runner"
       ],
       "xvy": [
         {
@@ -1841,9 +1841,9 @@
       "players": [
         "Sevire",
         "Takaas",
-        "kAdavra",
         "Sh1n",
-        "Natank"
+        "Natank",
+        "kAdavra"
       ],
       "xvy": [
         {
@@ -2262,12 +2262,12 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "kozzy",
-        "MAGNUM",
         "iluri",
+        "MAGNUM",
+        "kozzy",
         "Lime",
-        "Proxh",
-        "swagzor"
+        "swagzor",
+        "Proxh"
       ],
       "xvy": [
         {
@@ -2761,15 +2761,15 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Kicks",
-        "Wanzeru",
-        "rexxtoned",
-        "kamo",
         "nAts",
         "purp0",
+        "rexxtoned",
+        "Kicks",
+        "Wanzeru",
+        "GSR",
         "MiniBoo",
         "prti",
-        "GSR"
+        "kamo"
       ],
       "xvy": [
         {
@@ -3150,11 +3150,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Leare",
-        "Chaza",
-        "Szimpli",
+        "elllement",
         "kya",
-        "elllement"
+        "Leare",
+        "Szimpli",
+        "Chaza"
       ],
       "xvy": [
         {
@@ -3611,11 +3611,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Raz",
-        "Bishepss",
         "reblyik",
+        "kospa1n",
+        "Raz",
         "Redgar",
-        "kospa1n"
+        "Bishepss"
       ],
       "xvy": [
         {
@@ -4110,11 +4110,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Fit1nho",
-        "Stonezy",
+        "globeX",
         "Guardy",
         "Kajuks",
-        "globeX"
+        "Fit1nho",
+        "Stonezy"
       ],
       "xvy": [
         {
@@ -4609,11 +4609,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "OLIZERA",
-        "B1SK",
-        "Jesse",
         "BULD",
-        "Famsii"
+        "OLIZERA",
+        "Jesse",
+        "Famsii",
+        "B1SK"
       ],
       "xvy": [
         {
@@ -5108,11 +5108,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
+        "Brave",
         "Elite",
         "QutionerX",
-        "pAura",
         "burzzy",
-        "Brave"
+        "pAura"
       ],
       "xvy": [
         {
@@ -5607,10 +5607,10 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
+        "Deadink",
+        "hezacoil",
         "Kachoww",
         "reazy",
-        "hezacoil",
-        "Deadink",
         "batujnax"
       ],
       "xvy": [
@@ -6106,13 +6106,13 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Akai",
-        "br1ckzl",
-        "AL7B",
-        "Susano",
         "Saud",
+        "Avvix",
+        "br1ckzl",
+        "Susano",
         "Koji",
-        "Avvix"
+        "AL7B",
+        "Akai"
       ],
       "xvy": [
         {
@@ -6536,76 +6536,6 @@
           "ret_rW_event_avg": 0.342
         },
         {
-          "map": "Skirmish B",
-          "comp": [
-            "Astra",
-            "KAY/O"
-          ],
-          "plays": 1,
-          "wins": 1,
-          "losses": 0,
-          "rW_pct": 0.538,
-          "atk_rW_pct": 0.615,
-          "def_rW_pct": 0.462,
-          "pistol_rW_pct": 0.0,
-          "pistol_atk_rW_pct": 0.0,
-          "pistol_def_rW_pct": 0.0,
-          "gun_rW_pct": 0,
-          "gun_atk_rW_pct": 0,
-          "gun_def_rW_pct": 0,
-          "antieco_rW_pct": 0.5,
-          "antieco_atk_rW_pct": 1.0,
-          "antieco_def_rW_pct": 0.0,
-          "eco_rW_pct": 0.591,
-          "eco_atk_rW_pct": 0.636,
-          "eco_def_rW_pct": 0.545,
-          "post_scens": 0,
-          "post_per_map": 0.0,
-          "post_rW_pct": 0,
-          "ret_scens": 0,
-          "ret_per_map": 0.0,
-          "ret_rW_pct": 0,
-          "post_rank": 0,
-          "post_rW_event_avg": 0,
-          "ret_rank": 0,
-          "ret_rW_event_avg": 0
-        },
-        {
-          "map": "Skirmish C",
-          "comp": [
-            "Sova",
-            "Waylay"
-          ],
-          "plays": 1,
-          "wins": 1,
-          "losses": 0,
-          "rW_pct": 0.542,
-          "atk_rW_pct": 0.5,
-          "def_rW_pct": 0.583,
-          "pistol_rW_pct": 1.0,
-          "pistol_atk_rW_pct": 1.0,
-          "pistol_def_rW_pct": 1.0,
-          "gun_rW_pct": 0,
-          "gun_atk_rW_pct": 0,
-          "gun_def_rW_pct": 0,
-          "antieco_rW_pct": 0.0,
-          "antieco_atk_rW_pct": 0.0,
-          "antieco_def_rW_pct": 0.0,
-          "eco_rW_pct": 0.55,
-          "eco_atk_rW_pct": 0.5,
-          "eco_def_rW_pct": 0.6,
-          "post_scens": 0,
-          "post_per_map": 0.0,
-          "post_rW_pct": 0,
-          "ret_scens": 0,
-          "ret_per_map": 0.0,
-          "ret_rW_pct": 0,
-          "post_rank": 0,
-          "post_rW_event_avg": 0,
-          "ret_rank": 0,
-          "ret_rW_event_avg": 0
-        },
-        {
           "map": "Split",
           "comp": [
             "Astra",
@@ -6647,29 +6577,29 @@
       "allMaps": {
         "map": "All Maps",
         "comp": [],
-        "plays": 34,
-        "wins": 19,
+        "plays": 32,
+        "wins": 17,
         "losses": 15,
-        "rW_pct": 0.5,
-        "atk_rW_pct": 0.526,
-        "def_rW_pct": 0.475,
-        "pistol_rW_pct": 0.471,
-        "pistol_atk_rW_pct": 0.588,
-        "pistol_def_rW_pct": 0.353,
+        "rW_pct": 0.497,
+        "atk_rW_pct": 0.523,
+        "def_rW_pct": 0.471,
+        "pistol_rW_pct": 0.469,
+        "pistol_atk_rW_pct": 0.594,
+        "pistol_def_rW_pct": 0.344,
         "gun_rW_pct": 0.515,
         "gun_atk_rW_pct": 0.52,
         "gun_def_rW_pct": 0.511,
-        "antieco_rW_pct": 0.441,
+        "antieco_rW_pct": 0.453,
         "antieco_atk_rW_pct": 0.5,
-        "antieco_def_rW_pct": 0.382,
-        "eco_rW_pct": 0.453,
-        "eco_atk_rW_pct": 0.545,
-        "eco_def_rW_pct": 0.387,
+        "antieco_def_rW_pct": 0.406,
+        "eco_rW_pct": 0.0,
+        "eco_atk_rW_pct": 0.0,
+        "eco_def_rW_pct": 0.0,
         "post_scens": 205,
-        "post_per_map": 6.0,
+        "post_per_map": 6.4,
         "post_rW_pct": 0.707,
         "ret_scens": 208,
-        "ret_per_map": 6.1,
+        "ret_per_map": 6.5,
         "ret_rW_pct": 0.312,
         "post_rank": 10,
         "post_rW_event_avg": 0.747,
@@ -6677,12 +6607,12 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "OUKA",
-        "LOOP",
-        "Tenkai",
         "Snop",
         "MonOkson",
-        "CUNHA"
+        "OUKA",
+        "CUNHA",
+        "Tenkai",
+        "LOOP"
       ],
       "xvy": [
         {
@@ -6837,7 +6767,7 @@
         }
       ],
       "series_record": {
-        "wins": 8,
+        "wins": 6,
         "losses": 4
       },
       "form": [
@@ -10442,67 +10372,67 @@
     {
       "ign": "Tenkai",
       "team": "GnG Amazigh",
-      "acs_split": 183,
-      "acs_year": 183,
-      "rounds": 507,
-      "kills": 335,
-      "deaths": 355,
+      "acs_split": 193,
+      "acs_year": 193,
+      "rounds": 481,
+      "kills": 321,
+      "deaths": 343,
       "assists": 138,
-      "fk": 69,
-      "fd": 79,
-      "kd": 0.944,
-      "kad": 1.332,
-      "first_pct": 0.466,
-      "fk_pct": 0.1361,
-      "fd_pct": 0.1558,
-      "first_conversion": 0.466,
+      "fk": 55,
+      "fd": 67,
+      "kd": 0.936,
+      "kad": 1.338,
+      "first_pct": 0.451,
+      "fk_pct": 0.1143,
+      "fd_pct": 0.1393,
+      "first_conversion": 0.451,
       "clutch_scens": 34,
       "clutches": 6,
       "clutch_pct": 0.176,
-      "kast": 0.74,
-      "awp_pct": 0.033,
+      "kast": 0.751,
+      "awp_pct": 0.034,
       "agents": [
         {
           "agent": "Neon",
           "picks": 209,
           "matches": 10,
-          "pct": 41.7
+          "pct": 43.5
         },
         {
           "agent": "KAY/O",
-          "picks": 106,
-          "matches": 5,
-          "pct": 20.8
+          "picks": 80,
+          "matches": 4,
+          "pct": 17.4
         },
         {
           "agent": "Skye",
           "picks": 66,
           "matches": 3,
-          "pct": 12.5
+          "pct": 13.0
         },
         {
           "agent": "Sova",
           "picks": 58,
           "matches": 3,
-          "pct": 12.5
+          "pct": 13.0
         },
         {
           "agent": "Chamber",
           "picks": 26,
           "matches": 1,
-          "pct": 4.2
+          "pct": 4.3
         },
         {
           "agent": "Sage",
           "picks": 22,
           "matches": 1,
-          "pct": 4.2
+          "pct": 4.3
         },
         {
           "agent": "Tejo",
           "picks": 20,
           "matches": 1,
-          "pct": 4.2
+          "pct": 4.3
         }
       ]
     },
@@ -10643,116 +10573,104 @@
     {
       "ign": "CUNHA",
       "team": "GnG Amazigh",
-      "acs_split": 194,
-      "acs_year": 194,
-      "rounds": 714,
-      "kills": 531,
-      "deaths": 450,
+      "acs_split": 201,
+      "acs_year": 201,
+      "rounds": 690,
+      "kills": 518,
+      "deaths": 439,
       "assists": 262,
-      "fk": 56,
-      "fd": 52,
+      "fk": 43,
+      "fd": 41,
       "kd": 1.18,
-      "kad": 1.762,
-      "first_pct": 0.519,
-      "fk_pct": 0.0784,
-      "fd_pct": 0.0728,
-      "first_conversion": 0.519,
+      "kad": 1.777,
+      "first_pct": 0.512,
+      "fk_pct": 0.0623,
+      "fd_pct": 0.0594,
+      "first_conversion": 0.512,
       "clutch_scens": 102,
       "clutches": 26,
       "clutch_pct": 0.255,
-      "kast": 0.745,
+      "kast": 0.752,
       "awp_pct": 0.008,
       "agents": [
         {
           "agent": "Omen",
           "picks": 260,
           "matches": 12,
-          "pct": 36.4
+          "pct": 37.5
         },
         {
           "agent": "Astra",
           "picks": 228,
           "matches": 11,
-          "pct": 33.3
+          "pct": 34.4
         },
         {
           "agent": "Brimstone",
           "picks": 180,
           "matches": 8,
-          "pct": 24.2
-        },
-        {
-          "agent": "Waylay",
-          "picks": 24,
-          "matches": 1,
-          "pct": 3.0
+          "pct": 25.0
         },
         {
           "agent": "Neon",
           "picks": 22,
           "matches": 1,
-          "pct": 3.0
+          "pct": 3.1
         }
       ]
     },
     {
       "ign": "LOOP",
       "team": "GnG Amazigh",
-      "acs_split": 182,
-      "acs_year": 182,
-      "rounds": 740,
-      "kills": 482,
-      "deaths": 516,
+      "acs_split": 195,
+      "acs_year": 195,
+      "rounds": 690,
+      "kills": 459,
+      "deaths": 489,
       "assists": 174,
-      "fk": 74,
-      "fd": 73,
-      "kd": 0.934,
-      "kad": 1.271,
-      "first_pct": 0.503,
-      "fk_pct": 0.1,
-      "fd_pct": 0.0986,
-      "first_conversion": 0.503,
+      "fk": 51,
+      "fd": 46,
+      "kd": 0.939,
+      "kad": 1.294,
+      "first_pct": 0.526,
+      "fk_pct": 0.0739,
+      "fd_pct": 0.0667,
+      "first_conversion": 0.526,
       "clutch_scens": 85,
       "clutches": 11,
       "clutch_pct": 0.129,
-      "kast": 0.731,
+      "kast": 0.751,
       "awp_pct": 0.002,
       "agents": [
         {
           "agent": "Sova",
-          "picks": 384,
-          "matches": 18,
-          "pct": 52.9
+          "picks": 360,
+          "matches": 17,
+          "pct": 53.1
         },
         {
           "agent": "Fade",
           "picks": 132,
           "matches": 6,
-          "pct": 17.6
+          "pct": 18.8
         },
         {
           "agent": "Tejo",
           "picks": 124,
           "matches": 6,
-          "pct": 17.6
+          "pct": 18.8
         },
         {
           "agent": "Skye",
           "picks": 52,
           "matches": 2,
-          "pct": 5.9
-        },
-        {
-          "agent": "Astra",
-          "picks": 26,
-          "matches": 1,
-          "pct": 2.9
+          "pct": 6.2
         },
         {
           "agent": "Waylay",
           "picks": 22,
           "matches": 1,
-          "pct": 2.9
+          "pct": 3.1
         }
       ]
     },
@@ -12623,33 +12541,6 @@
       "team1_def_wins": 3,
       "team1_def_losses": 9,
       "winner": "GLS",
-      "date": "2026-03-05"
-    },
-    {
-      "match_id": "b914bd71-71f1-4737-a059-fb92d2d0e85f",
-      "series_id": "3d3ac727",
-      "event": "VCL EMEA 2026 Stage 1",
-      "map": "Skirmish C",
-      "team1": "GnG Amazigh",
-      "team2": "???",
-      "team1_agents": [
-        "Sova",
-        "Waylay"
-      ],
-      "team2_agents": [],
-      "team1_score": 13,
-      "team2_score": 11,
-      "team1_score_at_half": 6,
-      "team2_score_at_half": 6,
-      "team1_atk_pistol_wins": 1,
-      "team1_def_pistol_wins": 1,
-      "team2_atk_pistol_wins": 0,
-      "team2_def_pistol_wins": 0,
-      "team1_atk_wins": 6,
-      "team1_atk_losses": 6,
-      "team1_def_wins": 7,
-      "team1_def_losses": 5,
-      "winner": "GnG Amazigh",
       "date": "2026-03-05"
     },
     {
@@ -17041,33 +16932,6 @@
       "team1_atk_losses": 7,
       "team1_def_wins": 9,
       "team1_def_losses": 3,
-      "winner": "GnG Amazigh",
-      "date": "2026-02-10"
-    },
-    {
-      "match_id": "0c57c810-8a19-44bb-a72b-646e15d6a651",
-      "series_id": "c6e30561",
-      "event": "VCL EMEA 2026 Stage 1",
-      "map": "Skirmish B",
-      "team1": "GnG Amazigh",
-      "team2": "???",
-      "team1_agents": [
-        "Astra",
-        "KAY/O"
-      ],
-      "team2_agents": [],
-      "team1_score": 14,
-      "team2_score": 12,
-      "team1_score_at_half": 7,
-      "team2_score_at_half": 5,
-      "team1_atk_pistol_wins": 0,
-      "team1_def_pistol_wins": 0,
-      "team2_atk_pistol_wins": 1,
-      "team2_def_pistol_wins": 1,
-      "team1_atk_wins": 8,
-      "team1_atk_losses": 5,
-      "team1_def_wins": 6,
-      "team1_def_losses": 7,
       "winner": "GnG Amazigh",
       "date": "2026-02-10"
     },
@@ -24421,157 +24285,157 @@
         },
         {
           "rank": 37,
+          "ign": "CUNHA",
+          "team": "GnG Amazigh",
+          "value": 201,
+          "rounds": 690
+        },
+        {
+          "rank": 38,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 198,
           "rounds": 528
         },
         {
-          "rank": 38,
+          "rank": 39,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 198,
           "rounds": 690
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "OLIZERA",
           "team": "UCAM Esports",
           "value": 197,
           "rounds": 963
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 197,
           "rounds": 497
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "Leare",
           "team": "Pixel Lumina",
           "value": 196,
           "rounds": 255
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 195,
           "rounds": 901
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "Doma",
           "team": "Joblife",
           "value": 195,
           "rounds": 683
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 195,
           "rounds": 255
         },
         {
-          "rank": 45,
+          "rank": 46,
+          "ign": "LOOP",
+          "team": "GnG Amazigh",
+          "value": 195,
+          "rounds": 690
+        },
+        {
+          "rank": 47,
           "ign": "shinnok",
           "team": "FOKUS",
           "value": 194,
           "rounds": 998
         },
         {
-          "rank": 46,
-          "ign": "CUNHA",
-          "team": "GnG Amazigh",
-          "value": 194,
-          "rounds": 714
-        },
-        {
-          "rank": 47,
+          "rank": 48,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 193,
           "rounds": 963
         },
         {
-          "rank": 48,
+          "rank": 49,
+          "ign": "Tenkai",
+          "team": "GnG Amazigh",
+          "value": 193,
+          "rounds": 481
+        },
+        {
+          "rank": 50,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 192,
           "rounds": 590
         },
         {
-          "rank": 49,
+          "rank": 51,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 192,
           "rounds": 641
         },
         {
-          "rank": 50,
+          "rank": 52,
           "ign": "Runner",
           "team": "Joblife",
           "value": 190,
           "rounds": 683
         },
         {
-          "rank": 51,
+          "rank": 53,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 188,
           "rounds": 901
         },
         {
-          "rank": 52,
+          "rank": 54,
           "ign": "Redgar",
           "team": "MIR",
           "value": 186,
           "rounds": 218
         },
         {
-          "rank": 53,
+          "rank": 55,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 186,
           "rounds": 963
         },
         {
-          "rank": 54,
+          "rank": 56,
           "ign": "BULD",
           "team": "UCAM Esports",
           "value": 184,
           "rounds": 963
         },
         {
-          "rank": 55,
+          "rank": 57,
           "ign": "Enzo ",
           "team": "Joblife",
           "value": 183,
           "rounds": 683
         },
         {
-          "rank": 56,
-          "ign": "Tenkai",
-          "team": "GnG Amazigh",
-          "value": 183,
-          "rounds": 507
-        },
-        {
-          "rank": 57,
+          "rank": 58,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 182,
           "rounds": 478
-        },
-        {
-          "rank": 58,
-          "ign": "LOOP",
-          "team": "GnG Amazigh",
-          "value": 182,
-          "rounds": 740
         },
         {
           "rank": 59,
@@ -24679,7 +24543,7 @@
           "rounds": 200
         }
       ],
-      "tournament_avg": 200.055
+      "tournament_avg": 200.466
     },
     "kills": {
       "entries": [
@@ -24818,24 +24682,24 @@
         },
         {
           "rank": 20,
-          "ign": "CUNHA",
-          "team": "GnG Amazigh",
-          "value": 531,
-          "rounds": 714
-        },
-        {
-          "rank": 21,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 526,
           "rounds": 683
         },
         {
-          "rank": 22,
+          "rank": 21,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 522,
           "rounds": 683
+        },
+        {
+          "rank": 22,
+          "ign": "CUNHA",
+          "team": "GnG Amazigh",
+          "value": 518,
+          "rounds": 690
         },
         {
           "rank": 23,
@@ -24860,59 +24724,59 @@
         },
         {
           "rank": 26,
-          "ign": "LOOP",
-          "team": "GnG Amazigh",
-          "value": 482,
-          "rounds": 740
-        },
-        {
-          "rank": 27,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 478,
           "rounds": 690
         },
         {
-          "rank": 28,
+          "rank": 27,
           "ign": "Runner",
           "team": "Joblife",
           "value": 476,
           "rounds": 683
         },
         {
-          "rank": 29,
+          "rank": 28,
           "ign": "Koji",
           "team": "Stallions Esports",
           "value": 475,
           "rounds": 641
         },
         {
-          "rank": 30,
+          "rank": 29,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 472,
           "rounds": 637
         },
         {
-          "rank": 31,
+          "rank": 30,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 467,
           "rounds": 641
         },
         {
-          "rank": 32,
+          "rank": 31,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 466,
           "rounds": 590
         },
         {
-          "rank": 33,
+          "rank": 32,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 459,
           "rounds": 590
+        },
+        {
+          "rank": 33,
+          "ign": "LOOP",
+          "team": "GnG Amazigh",
+          "value": 459,
+          "rounds": 690
         },
         {
           "rank": 34,
@@ -25056,31 +24920,31 @@
         },
         {
           "rank": 54,
-          "ign": "Tenkai",
-          "team": "GnG Amazigh",
-          "value": 335,
-          "rounds": 507
-        },
-        {
-          "rank": 55,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 328,
           "rounds": 421
         },
         {
-          "rank": 56,
+          "rank": 55,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 327,
           "rounds": 537
         },
         {
-          "rank": 57,
+          "rank": 56,
           "ign": "AL7B",
           "team": "Stallions Esports",
           "value": 321,
           "rounds": 515
+        },
+        {
+          "rank": 57,
+          "ign": "Tenkai",
+          "team": "GnG Amazigh",
+          "value": 321,
+          "rounds": 481
         },
         {
           "rank": 58,
@@ -25195,7 +25059,7 @@
           "rounds": 126
         }
       ],
-      "tournament_avg": 435.301
+      "tournament_avg": 434.616
     },
     "deaths": {
       "entries": [
@@ -25369,24 +25233,24 @@
         },
         {
           "rank": 25,
+          "ign": "Tenkai",
+          "team": "GnG Amazigh",
+          "value": 343,
+          "rounds": 481
+        },
+        {
+          "rank": 26,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 345,
           "rounds": 478
         },
         {
-          "rank": 26,
+          "rank": 27,
           "ign": "QutionerX",
           "team": "Misa Esports",
           "value": 355,
           "rounds": 497
-        },
-        {
-          "rank": 27,
-          "ign": "Tenkai",
-          "team": "GnG Amazigh",
-          "value": 355,
-          "rounds": 507
         },
         {
           "rank": 28,
@@ -25551,31 +25415,31 @@
         },
         {
           "rank": 51,
+          "ign": "CUNHA",
+          "team": "GnG Amazigh",
+          "value": 439,
+          "rounds": 690
+        },
+        {
+          "rank": 52,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 441,
           "rounds": 590
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 441,
           "rounds": 641
         },
         {
-          "rank": 53,
+          "rank": 54,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 449,
           "rounds": 641
-        },
-        {
-          "rank": 54,
-          "ign": "CUNHA",
-          "team": "GnG Amazigh",
-          "value": 450,
-          "rounds": 714
         },
         {
           "rank": 55,
@@ -25602,8 +25466,8 @@
           "rank": 58,
           "ign": "LOOP",
           "team": "GnG Amazigh",
-          "value": 516,
-          "rounds": 740
+          "value": 489,
+          "rounds": 690
         },
         {
           "rank": 59,
@@ -25711,7 +25575,7 @@
           "rounds": 998
         }
       ],
-      "tournament_avg": 396.342
+      "tournament_avg": 395.658
     },
     "assists": {
       "entries": [
@@ -25762,7 +25626,7 @@
           "ign": "CUNHA",
           "team": "GnG Amazigh",
           "value": 262,
-          "rounds": 714
+          "rounds": 690
         },
         {
           "rank": 8,
@@ -25937,7 +25801,7 @@
           "ign": "LOOP",
           "team": "GnG Amazigh",
           "value": 174,
-          "rounds": 740
+          "rounds": 690
         },
         {
           "rank": 33,
@@ -26028,7 +25892,7 @@
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 138,
-          "rounds": 507
+          "rounds": 481
         },
         {
           "rank": 46,
@@ -26362,7 +26226,7 @@
           "ign": "CUNHA",
           "team": "GnG Amazigh",
           "value": 1.18,
-          "rounds": 714
+          "rounds": 690
         },
         {
           "rank": 20,
@@ -26681,17 +26545,17 @@
         },
         {
           "rank": 65,
-          "ign": "Tenkai",
+          "ign": "LOOP",
           "team": "GnG Amazigh",
-          "value": 0.944,
-          "rounds": 507
+          "value": 0.939,
+          "rounds": 690
         },
         {
           "rank": 66,
-          "ign": "LOOP",
+          "ign": "Tenkai",
           "team": "GnG Amazigh",
-          "value": 0.934,
-          "rounds": 740
+          "value": 0.936,
+          "rounds": 481
         },
         {
           "rank": 67,
@@ -26966,122 +26830,122 @@
         },
         {
           "rank": 32,
+          "ign": "CUNHA",
+          "team": "GnG Amazigh",
+          "value": 0.752,
+          "rounds": 690
+        },
+        {
+          "rank": 33,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 0.751,
           "rounds": 497
         },
         {
-          "rank": 33,
+          "rank": 34,
+          "ign": "Tenkai",
+          "team": "GnG Amazigh",
+          "value": 0.751,
+          "rounds": 481
+        },
+        {
+          "rank": 35,
+          "ign": "LOOP",
+          "team": "GnG Amazigh",
+          "value": 0.751,
+          "rounds": 690
+        },
+        {
+          "rank": 36,
           "ign": "Redgar",
           "team": "MIR",
           "value": 0.748,
           "rounds": 218
         },
         {
-          "rank": 34,
+          "rank": 37,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 0.747,
           "rounds": 901
         },
         {
-          "rank": 35,
+          "rank": 38,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 0.747,
           "rounds": 590
         },
         {
-          "rank": 36,
+          "rank": 39,
           "ign": "pyrolll",
           "team": "FOKUS",
           "value": 0.746,
           "rounds": 998
         },
         {
-          "rank": 37,
+          "rank": 40,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 0.746,
           "rounds": 637
         },
         {
-          "rank": 38,
+          "rank": 41,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 0.745,
           "rounds": 963
         },
         {
-          "rank": 39,
-          "ign": "CUNHA",
-          "team": "GnG Amazigh",
-          "value": 0.745,
-          "rounds": 714
-        },
-        {
-          "rank": 40,
+          "rank": 42,
           "ign": "iluri",
           "team": "Enterprise Esports",
           "value": 0.744,
           "rounds": 528
         },
         {
-          "rank": 41,
+          "rank": 43,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 0.741,
           "rounds": 537
         },
         {
-          "rank": 42,
-          "ign": "Tenkai",
-          "team": "GnG Amazigh",
-          "value": 0.74,
-          "rounds": 507
-        },
-        {
-          "rank": 43,
+          "rank": 44,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 0.739,
           "rounds": 637
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 0.738,
           "rounds": 641
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 0.736,
           "rounds": 637
         },
         {
-          "rank": 46,
+          "rank": 47,
           "ign": "reblyik",
           "team": "MIR",
           "value": 0.734,
           "rounds": 218
         },
         {
-          "rank": 47,
+          "rank": 48,
           "ign": "B1SK",
           "team": "UCAM Esports",
           "value": 0.734,
           "rounds": 963
-        },
-        {
-          "rank": 48,
-          "ign": "LOOP",
-          "team": "GnG Amazigh",
-          "value": 0.731,
-          "rounds": 740
         },
         {
           "rank": 49,
@@ -27259,7 +27123,7 @@
           "rounds": 255
         }
       ],
-      "tournament_avg": 0.745
+      "tournament_avg": 0.746
     },
     "fk": {
       "entries": [
@@ -27412,220 +27276,220 @@
         },
         {
           "rank": 22,
-          "ign": "LOOP",
-          "team": "GnG Amazigh",
-          "value": 74,
-          "rounds": 740
-        },
-        {
-          "rank": 23,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 71,
           "rounds": 421
         },
         {
-          "rank": 24,
+          "rank": 23,
           "ign": "Fizzy",
           "team": "Eintracht Frankfurt",
           "value": 70,
           "rounds": 901
         },
         {
-          "rank": 25,
+          "rank": 24,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 70,
           "rounds": 478
         },
         {
-          "rank": 26,
+          "rank": 25,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 69,
           "rounds": 528
         },
         {
-          "rank": 27,
-          "ign": "Tenkai",
-          "team": "GnG Amazigh",
-          "value": 69,
-          "rounds": 507
-        },
-        {
-          "rank": 28,
+          "rank": 26,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 67,
           "rounds": 683
         },
         {
-          "rank": 29,
+          "rank": 27,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 67,
           "rounds": 590
         },
         {
-          "rank": 30,
+          "rank": 28,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 67,
           "rounds": 637
         },
         {
-          "rank": 31,
+          "rank": 29,
           "ign": "OLIZERA",
           "team": "UCAM Esports",
           "value": 65,
           "rounds": 963
         },
         {
-          "rank": 32,
+          "rank": 30,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 63,
           "rounds": 998
         },
         {
-          "rank": 33,
+          "rank": 31,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 60,
           "rounds": 901
         },
         {
-          "rank": 34,
+          "rank": 32,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 60,
           "rounds": 683
         },
         {
-          "rank": 35,
+          "rank": 33,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 60,
           "rounds": 641
         },
         {
-          "rank": 36,
+          "rank": 34,
           "ign": "Koji",
           "team": "Stallions Esports",
           "value": 59,
           "rounds": 641
         },
         {
-          "rank": 37,
+          "rank": 35,
           "ign": "rexxtoned",
           "team": "Team Liquid Academy",
           "value": 57,
           "rounds": 591
         },
         {
-          "rank": 38,
+          "rank": 36,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 56,
           "rounds": 637
         },
         {
-          "rank": 39,
+          "rank": 37,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 56,
           "rounds": 690
         },
         {
-          "rank": 40,
-          "ign": "CUNHA",
-          "team": "GnG Amazigh",
-          "value": 56,
-          "rounds": 714
-        },
-        {
-          "rank": 41,
+          "rank": 38,
           "ign": "MAGNUM",
           "team": "Enterprise Esports",
           "value": 55,
           "rounds": 528
         },
         {
-          "rank": 42,
+          "rank": 39,
+          "ign": "Tenkai",
+          "team": "GnG Amazigh",
+          "value": 55,
+          "rounds": 481
+        },
+        {
+          "rank": 40,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 53,
           "rounds": 637
         },
         {
-          "rank": 43,
+          "rank": 41,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 53,
           "rounds": 497
         },
         {
-          "rank": 44,
+          "rank": 42,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 52,
           "rounds": 590
         },
         {
-          "rank": 45,
+          "rank": 43,
           "ign": "shinnok",
           "team": "FOKUS",
           "value": 51,
           "rounds": 998
         },
         {
-          "rank": 46,
+          "rank": 44,
+          "ign": "LOOP",
+          "team": "GnG Amazigh",
+          "value": 51,
+          "rounds": 690
+        },
+        {
+          "rank": 45,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 50,
           "rounds": 963
         },
         {
-          "rank": 47,
+          "rank": 46,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 49,
           "rounds": 590
         },
         {
-          "rank": 48,
+          "rank": 47,
           "ign": "burzzy",
           "team": "Misa Esports",
           "value": 46,
           "rounds": 497
         },
         {
-          "rank": 49,
+          "rank": 48,
           "ign": "Elite",
           "team": "Misa Esports",
           "value": 46,
           "rounds": 497
         },
         {
-          "rank": 50,
+          "rank": 49,
           "ign": "Enzo ",
           "team": "Joblife",
           "value": 44,
           "rounds": 683
         },
         {
-          "rank": 51,
+          "rank": 50,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 44,
           "rounds": 537
         },
         {
-          "rank": 52,
+          "rank": 51,
           "ign": "kAdavra",
           "team": "Mandatory",
           "value": 43,
           "rounds": 590
+        },
+        {
+          "rank": 52,
+          "ign": "CUNHA",
+          "team": "GnG Amazigh",
+          "value": 43,
+          "rounds": 690
         },
         {
           "rank": 53,
@@ -27775,7 +27639,7 @@
           "rounds": 126
         }
       ],
-      "tournament_avg": 63.507
+      "tournament_avg": 62.822
     },
     "fd": {
       "entries": [
@@ -27949,248 +27813,248 @@
         },
         {
           "rank": 25,
+          "ign": "CUNHA",
+          "team": "GnG Amazigh",
+          "value": 41,
+          "rounds": 690
+        },
+        {
+          "rank": 26,
           "ign": "kozzy",
           "team": "Enterprise Esports",
           "value": 43,
           "rounds": 373
         },
         {
-          "rank": 26,
+          "rank": 27,
           "ign": "Elite",
           "team": "Misa Esports",
           "value": 43,
           "rounds": 497
         },
         {
-          "rank": 27,
+          "rank": 28,
           "ign": "rexxtoned",
           "team": "Team Liquid Academy",
           "value": 44,
           "rounds": 591
         },
         {
-          "rank": 28,
+          "rank": 29,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 44,
           "rounds": 690
         },
         {
-          "rank": 29,
+          "rank": 30,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 45,
           "rounds": 683
         },
         {
-          "rank": 30,
+          "rank": 31,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 46,
           "rounds": 537
         },
         {
-          "rank": 31,
+          "rank": 32,
+          "ign": "LOOP",
+          "team": "GnG Amazigh",
+          "value": 46,
+          "rounds": 690
+        },
+        {
+          "rank": 33,
           "ign": "MAGNUM",
           "team": "Enterprise Esports",
           "value": 47,
           "rounds": 528
         },
         {
-          "rank": 32,
+          "rank": 34,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 48,
           "rounds": 683
         },
         {
-          "rank": 33,
+          "rank": 35,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 48,
           "rounds": 637
         },
         {
-          "rank": 34,
+          "rank": 36,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 49,
           "rounds": 590
         },
         {
-          "rank": 35,
+          "rank": 37,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 51,
           "rounds": 637
         },
         {
-          "rank": 36,
+          "rank": 38,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 52,
           "rounds": 590
         },
         {
-          "rank": 37,
-          "ign": "CUNHA",
-          "team": "GnG Amazigh",
-          "value": 52,
-          "rounds": 714
-        },
-        {
-          "rank": 38,
+          "rank": 39,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 53,
           "rounds": 641
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 54,
           "rounds": 590
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "QutionerX",
           "team": "Misa Esports",
           "value": 55,
           "rounds": 497
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 55,
           "rounds": 497
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 56,
           "rounds": 641
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 58,
           "rounds": 497
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "Doma",
           "team": "Joblife",
           "value": 59,
           "rounds": 683
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 60,
           "rounds": 637
         },
         {
-          "rank": 46,
+          "rank": 47,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 61,
           "rounds": 998
         },
         {
-          "rank": 47,
+          "rank": 48,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 61,
           "rounds": 963
         },
         {
-          "rank": 48,
+          "rank": 49,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 63,
           "rounds": 901
         },
         {
-          "rank": 49,
+          "rank": 50,
           "ign": "Fizzy",
           "team": "Eintracht Frankfurt",
           "value": 63,
           "rounds": 901
         },
         {
-          "rank": 50,
+          "rank": 51,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 63,
           "rounds": 528
         },
         {
-          "rank": 51,
+          "rank": 52,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 64,
           "rounds": 421
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 65,
           "rounds": 478
         },
         {
-          "rank": 53,
+          "rank": 54,
+          "ign": "Tenkai",
+          "team": "GnG Amazigh",
+          "value": 67,
+          "rounds": 481
+        },
+        {
+          "rank": 55,
           "ign": "GSR",
           "team": "Team Liquid Academy",
           "value": 72,
           "rounds": 591
         },
         {
-          "rank": 54,
+          "rank": 56,
           "ign": "globeX",
           "team": "Bar\u00e7a eSports",
           "value": 73,
           "rounds": 637
         },
         {
-          "rank": 55,
-          "ign": "LOOP",
-          "team": "GnG Amazigh",
-          "value": 73,
-          "rounds": 740
-        },
-        {
-          "rank": 56,
+          "rank": 57,
           "ign": "Kachoww",
           "team": "S2G Esports",
           "value": 75,
           "rounds": 641
         },
         {
-          "rank": 57,
+          "rank": 58,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 76,
           "rounds": 641
         },
         {
-          "rank": 58,
+          "rank": 59,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 78,
           "rounds": 901
-        },
-        {
-          "rank": 59,
-          "ign": "Tenkai",
-          "team": "GnG Amazigh",
-          "value": 79,
-          "rounds": 507
         },
         {
           "rank": 60,
@@ -28291,7 +28155,7 @@
           "rounds": 901
         }
       ],
-      "tournament_avg": 56.877
+      "tournament_avg": 56.192
     },
     "fk_pct": {
       "entries": [
@@ -28444,38 +28308,38 @@
         },
         {
           "rank": 22,
-          "ign": "Tenkai",
-          "team": "GnG Amazigh",
-          "value": 0.1361,
-          "rounds": 507
-        },
-        {
-          "rank": 23,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 0.1307,
           "rounds": 528
         },
         {
-          "rank": 24,
+          "rank": 23,
           "ign": "Doma",
           "team": "Joblife",
           "value": 0.1303,
           "rounds": 683
         },
         {
-          "rank": 25,
+          "rank": 24,
           "ign": "Serial",
           "team": "FOKUS",
           "value": 0.1253,
           "rounds": 998
         },
         {
-          "rank": 26,
+          "rank": 25,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 0.1216,
           "rounds": 255
+        },
+        {
+          "rank": 26,
+          "ign": "Tenkai",
+          "team": "GnG Amazigh",
+          "value": 0.1143,
+          "rounds": 481
         },
         {
           "rank": 27,
@@ -28521,206 +28385,206 @@
         },
         {
           "rank": 33,
-          "ign": "LOOP",
-          "team": "GnG Amazigh",
-          "value": 0.1,
-          "rounds": 740
-        },
-        {
-          "rank": 34,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 0.0981,
           "rounds": 683
         },
         {
-          "rank": 35,
+          "rank": 34,
           "ign": "rexxtoned",
           "team": "Team Liquid Academy",
           "value": 0.0964,
           "rounds": 591
         },
         {
-          "rank": 36,
+          "rank": 35,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 0.0936,
           "rounds": 641
         },
         {
-          "rank": 37,
+          "rank": 36,
           "ign": "burzzy",
           "team": "Misa Esports",
           "value": 0.0926,
           "rounds": 497
         },
         {
-          "rank": 38,
+          "rank": 37,
           "ign": "Elite",
           "team": "Misa Esports",
           "value": 0.0926,
           "rounds": 497
         },
         {
-          "rank": 39,
+          "rank": 38,
           "ign": "BULD",
           "team": "UCAM Esports",
           "value": 0.0924,
           "rounds": 963
         },
         {
-          "rank": 40,
+          "rank": 39,
           "ign": "Koji",
           "team": "Stallions Esports",
           "value": 0.092,
           "rounds": 641
         },
         {
-          "rank": 41,
+          "rank": 40,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 0.0881,
           "rounds": 590
         },
         {
-          "rank": 42,
+          "rank": 41,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 0.0879,
           "rounds": 637
         },
         {
-          "rank": 43,
+          "rank": 42,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 0.0878,
           "rounds": 683
         },
         {
-          "rank": 44,
+          "rank": 43,
           "ign": "MONSTEERR",
           "team": "Eintracht Frankfurt",
           "value": 0.0855,
           "rounds": 901
         },
         {
-          "rank": 45,
+          "rank": 44,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 0.0832,
           "rounds": 901
         },
         {
-          "rank": 46,
+          "rank": 45,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 0.0832,
           "rounds": 637
         },
         {
-          "rank": 47,
+          "rank": 46,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 0.0831,
           "rounds": 590
         },
         {
-          "rank": 48,
+          "rank": 47,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 0.0819,
           "rounds": 537
         },
         {
-          "rank": 49,
+          "rank": 48,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 0.0812,
           "rounds": 690
         },
         {
-          "rank": 50,
+          "rank": 49,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 0.08,
           "rounds": 963
         },
         {
-          "rank": 51,
-          "ign": "CUNHA",
-          "team": "GnG Amazigh",
-          "value": 0.0784,
-          "rounds": 714
-        },
-        {
-          "rank": 52,
+          "rank": 50,
           "ign": "Fizzy",
           "team": "Eintracht Frankfurt",
           "value": 0.0777,
           "rounds": 901
         },
         {
-          "rank": 53,
+          "rank": 51,
           "ign": "elllement",
           "team": "Pixel Lumina",
           "value": 0.0745,
           "rounds": 255
         },
         {
-          "rank": 54,
+          "rank": 52,
+          "ign": "LOOP",
+          "team": "GnG Amazigh",
+          "value": 0.0739,
+          "rounds": 690
+        },
+        {
+          "rank": 53,
           "ign": "kAdavra",
           "team": "Mandatory",
           "value": 0.0729,
           "rounds": 590
         },
         {
-          "rank": 55,
+          "rank": 54,
           "ign": "Proxh",
           "team": "Enterprise Esports",
           "value": 0.072,
           "rounds": 528
         },
         {
-          "rank": 56,
+          "rank": 55,
           "ign": "OLIZERA",
           "team": "UCAM Esports",
           "value": 0.0675,
           "rounds": 963
         },
         {
-          "rank": 57,
+          "rank": 56,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 0.0666,
           "rounds": 901
         },
         {
-          "rank": 58,
+          "rank": 57,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 0.0664,
           "rounds": 497
         },
         {
-          "rank": 59,
+          "rank": 58,
           "ign": "Enzo ",
           "team": "Joblife",
           "value": 0.0644,
           "rounds": 683
         },
         {
-          "rank": 60,
+          "rank": 59,
           "ign": "Kicks",
           "team": "Team Liquid Academy",
           "value": 0.0633,
           "rounds": 663
         },
         {
-          "rank": 61,
+          "rank": 60,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 0.0631,
           "rounds": 998
+        },
+        {
+          "rank": 61,
+          "ign": "CUNHA",
+          "team": "GnG Amazigh",
+          "value": 0.0623,
+          "rounds": 690
         },
         {
           "rank": 62,
@@ -28807,7 +28671,7 @@
           "rounds": 218
         }
       ],
-      "tournament_avg": 0.107
+      "tournament_avg": 0.106
     },
     "fd_pct": {
       "entries": [
@@ -28897,241 +28761,241 @@
         },
         {
           "rank": 13,
+          "ign": "CUNHA",
+          "team": "GnG Amazigh",
+          "value": 0.0594,
+          "rounds": 690
+        },
+        {
+          "rank": 14,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 0.0611,
           "rounds": 998
         },
         {
-          "rank": 14,
+          "rank": 15,
           "ign": "burzzy",
           "team": "Misa Esports",
           "value": 0.0624,
           "rounds": 497
         },
         {
-          "rank": 15,
+          "rank": 16,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 0.0633,
           "rounds": 963
         },
         {
-          "rank": 16,
+          "rank": 17,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 0.0638,
           "rounds": 690
         },
         {
-          "rank": 17,
+          "rank": 18,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 0.0659,
           "rounds": 683
         },
         {
-          "rank": 18,
+          "rank": 19,
+          "ign": "LOOP",
+          "team": "GnG Amazigh",
+          "value": 0.0667,
+          "rounds": 690
+        },
+        {
+          "rank": 20,
           "ign": "Redgar",
           "team": "MIR",
           "value": 0.0688,
           "rounds": 218
         },
         {
-          "rank": 19,
+          "rank": 21,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 0.0699,
           "rounds": 901
         },
         {
-          "rank": 20,
+          "rank": 22,
           "ign": "Fizzy",
           "team": "Eintracht Frankfurt",
           "value": 0.0699,
           "rounds": 901
         },
         {
-          "rank": 21,
+          "rank": 23,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 0.0703,
           "rounds": 683
         },
         {
-          "rank": 22,
-          "ign": "CUNHA",
-          "team": "GnG Amazigh",
-          "value": 0.0728,
-          "rounds": 714
-        },
-        {
-          "rank": 23,
+          "rank": 24,
           "ign": "rexxtoned",
           "team": "Team Liquid Academy",
           "value": 0.0745,
           "rounds": 591
         },
         {
-          "rank": 24,
+          "rank": 25,
           "ign": "elllement",
           "team": "Pixel Lumina",
           "value": 0.0745,
           "rounds": 255
         },
         {
-          "rank": 25,
+          "rank": 26,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 0.0754,
           "rounds": 637
         },
         {
-          "rank": 26,
+          "rank": 27,
           "ign": "kya",
           "team": "Pixel Lumina",
           "value": 0.0784,
           "rounds": 255
         },
         {
-          "rank": 27,
+          "rank": 28,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 0.0801,
           "rounds": 637
         },
         {
-          "rank": 28,
+          "rank": 29,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 0.0827,
           "rounds": 641
         },
         {
-          "rank": 29,
+          "rank": 30,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 0.0831,
           "rounds": 590
         },
         {
-          "rank": 30,
+          "rank": 31,
           "ign": "prti",
           "team": "Team Liquid Academy",
           "value": 0.085,
           "rounds": 200
         },
         {
-          "rank": 31,
+          "rank": 32,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 0.0857,
           "rounds": 537
         },
         {
-          "rank": 32,
+          "rank": 33,
           "ign": "Doma",
           "team": "Joblife",
           "value": 0.0864,
           "rounds": 683
         },
         {
-          "rank": 33,
+          "rank": 34,
           "ign": "Elite",
           "team": "Misa Esports",
           "value": 0.0865,
           "rounds": 497
         },
         {
-          "rank": 34,
+          "rank": 35,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 0.0866,
           "rounds": 901
         },
         {
-          "rank": 35,
+          "rank": 36,
           "ign": "kospa1n",
           "team": "MIR",
           "value": 0.0872,
           "rounds": 218
         },
         {
-          "rank": 36,
+          "rank": 37,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 0.0874,
           "rounds": 641
         },
         {
-          "rank": 37,
+          "rank": 38,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 0.0881,
           "rounds": 590
         },
         {
-          "rank": 38,
+          "rank": 39,
           "ign": "MAGNUM",
           "team": "Enterprise Esports",
           "value": 0.089,
           "rounds": 528
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 0.0893,
           "rounds": 963
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "MONSTEERR",
           "team": "Eintracht Frankfurt",
           "value": 0.0899,
           "rounds": 901
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 0.0915,
           "rounds": 590
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "reblyik",
           "team": "MIR",
           "value": 0.0917,
           "rounds": 218
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "pyrolll",
           "team": "FOKUS",
           "value": 0.0942,
           "rounds": 998
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 0.0942,
           "rounds": 637
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "Bishepss",
           "team": "MIR",
           "value": 0.0963,
           "rounds": 218
-        },
-        {
-          "rank": 46,
-          "ign": "LOOP",
-          "team": "GnG Amazigh",
-          "value": 0.0986,
-          "rounds": 740
         },
         {
           "rank": 47,
@@ -29233,45 +29097,45 @@
         },
         {
           "rank": 61,
+          "ign": "Tenkai",
+          "team": "GnG Amazigh",
+          "value": 0.1393,
+          "rounds": 481
+        },
+        {
+          "rank": 62,
           "ign": "Szimpli",
           "team": "Pixel Lumina",
           "value": 0.1451,
           "rounds": 255
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 0.149,
           "rounds": 255
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "Wanzeru",
           "team": "Team Liquid Academy",
           "value": 0.1506,
           "rounds": 591
         },
         {
-          "rank": 64,
+          "rank": 65,
           "ign": "Susano",
           "team": "Stallions Esports",
           "value": 0.1513,
           "rounds": 641
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 0.152,
           "rounds": 421
-        },
-        {
-          "rank": 66,
-          "ign": "Tenkai",
-          "team": "GnG Amazigh",
-          "value": 0.1558,
-          "rounds": 507
         },
         {
           "rank": 67,
@@ -29323,7 +29187,7 @@
           "rounds": 901
         }
       ],
-      "tournament_avg": 0.096
+      "tournament_avg": 0.095
     },
     "cl_pct": {
       "entries": [
@@ -29416,7 +29280,7 @@
           "ign": "CUNHA",
           "team": "GnG Amazigh",
           "value": 0.255,
-          "rounds": 714
+          "rounds": 690
         },
         {
           "rank": 14,
@@ -29535,7 +29399,7 @@
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 0.176,
-          "rounds": 507
+          "rounds": 481
         },
         {
           "rank": 31,
@@ -29738,7 +29602,7 @@
           "ign": "LOOP",
           "team": "GnG Amazigh",
           "value": 0.129,
-          "rounds": 740
+          "rounds": 690
         },
         {
           "rank": 60,

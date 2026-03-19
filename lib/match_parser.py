@@ -62,7 +62,9 @@ def load_team_matches(team_tag, team_name, data_file):
             else:
                 opp_score = t['roundsWon']
 
-        is_tech = max(team_score, opp_score) < 13
+        # Filter out tech issues (incomplete scores) and non-standard maps (skirmishes, etc.)
+        BAD_MAPS = {'Piazza', 'Skirmish', 'Skirmish B', 'Skirmish C', ''}
+        is_tech = max(team_score, opp_score) < 13 or map_name in BAD_MAPS
 
         md = MatchData()
         md.match_id = mi['matchId']
