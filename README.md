@@ -2,7 +2,7 @@
 
 VCL EMEA 2026 stats analysis tool for broadcast preparation. Pulls match data from the Valolytics API and produces team/player statistics for all 14 VCL teams.
 
-**Current version: 0.4.0**
+**Current version: 0.5.0**
 
 ## What's in here
 
@@ -26,6 +26,7 @@ See [CHANGELOG.md](CHANGELOG.md) for full details.
 
 | Version | Date | Highlights |
 |---------|------|------------|
+| 0.5.0 | 2026-03-19 | JSONL → JSON data pipeline, shared lib, anomaly tracking |
 | 0.4.0 | 2026-03-19 | Data catalog (207 stats), suspicious match detection, PRD for dashboard |
 | 0.3.0 | 2026-03-19 | GitHub repo setup, proper .gitignore |
 | 0.2.0 | 2026-03-18 | All 14 teams, stats workbook, data collection pipeline |

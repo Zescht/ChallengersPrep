@@ -20,6 +20,22 @@ This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
 
 ---
 
+## [0.5.0] - 2026-03-19
+
+### Added
+- **Data pipeline**: `scripts/build_json.py` — converts raw JSONL → `stats.json` for frontend
+- **Shared library** `lib/` — extracted from `build_fokus_sheet.py`:
+  - `lib/constants.py` — agent/weapon UUID maps, team registry
+  - `lib/match_parser.py` — JSONL loading, team resolution, tech-issue filtering
+  - `lib/stats_engine.py` — core stat computation (economy, XvY, post-plant, KAST, FK/FD, clutch)
+  - `lib/json_builder.py` — assembles PRD-compliant JSON (teams, players, matches, leaderboards)
+- `DATA_ANOMALIES.md` — log of data quirks (5 entries: TL multi-PUUID, forfeits, name casing, etc.)
+- Output: `public/data/stats.json` (712 KB, 14 teams, 78 players, 372 matches, 11 leaderboards)
+
+### Fixed
+- Player deduplication: TL roster members with multiple PUUIDs merged by name+team
+- Case-insensitive player name matching (WanZeru/Wanzeru)
+
 ## [0.4.0] - 2026-03-19
 
 ### Added
