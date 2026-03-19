@@ -8,6 +8,12 @@ Valorant Challengers League (VCL) EMEA 2026 stats analysis tool. Scrapes and pro
 
 **IMPORTANT:** Read `PRD.md` at the start of every session. It contains the full product requirements for the VCL Broadcast Stats Dashboard (React frontend), including page specs, data model, design directives, and tech stack.
 
+## Session Start Reminder — Plan Writing Efficiency
+Last plan-writing session cost ~40k tokens. Before writing the next plan, discuss these options with the user:
+1. **Skip inline code for simple components** — describe behavior instead of writing full JSX. The implementing agent can write it from description + types.
+2. **Only write full code for complex/tricky logic** — things like average computation, heat-map colors, matrix parsing where getting it wrong is costly.
+3. **Trust the implementing agent more** — keep the plan as a structural blueprint, not a near-complete codebase.
+
 ## Valolytics API
 
 ### Authentication
