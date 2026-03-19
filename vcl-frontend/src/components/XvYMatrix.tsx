@@ -52,9 +52,9 @@ export default function XvYMatrix({ title, entries, averages, mode }: XvYMatrixP
             </th>
           </tr>
           <tr className="bg-nav">
-            <th className="px-1.5 py-1 text-center text-text-muted font-medium text-sm border border-border">XvY</th>
+            <th className="px-1.5 py-1 text-center text-text font-medium text-sm border border-border">XvY</th>
             {labels.map(n => (
-              <th key={n} className="px-1.5 py-1 text-center text-text-muted font-medium text-sm border border-border w-12">{n}</th>
+              <th key={n} className="px-1.5 py-1 text-center text-text font-medium text-sm border border-border w-12">{n}</th>
             ))}
           </tr>
         </thead>
@@ -65,7 +65,7 @@ export default function XvYMatrix({ title, entries, averages, mode }: XvYMatrixP
               {labels.map((_, colIdx) => {
                 const val = displayMatrix[rowIdx][colIdx]
                 if (val == null) {
-                  return <td key={colIdx} className="px-1.5 py-0.5 text-center text-text-dim border border-border">-</td>
+                  return <td key={colIdx} className="px-1.5 py-0.5 text-center text-text border border-border">-</td>
                 }
 
                 const bg = mode === 'delta' ? deltaColor(val) : deltaColor(val - 0.5)

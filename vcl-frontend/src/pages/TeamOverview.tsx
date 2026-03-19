@@ -63,31 +63,31 @@ export default function TeamOverview() {
               </tr>
               {/* Column headers */}
               <tr className="bg-nav">
-                <th className="px-1 py-0.5 text-left text-text-muted font-medium border border-border">Map</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">Comp</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">P</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">W</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">L</th>
+                <th className="px-1 py-0.5 text-left text-text font-medium border border-border">Map</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">Comp</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">P</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">W</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">L</th>
                 {/* All rounds */}
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">rW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">aW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">dW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">rW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">aW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">dW%</th>
                 {/* Pistols */}
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">rW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">aW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">dW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">rW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">aW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">dW%</th>
                 {/* Gun */}
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">rW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">aW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">dW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">rW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">aW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">dW%</th>
                 {/* Anti Eco */}
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">rW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">aW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">dW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">rW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">aW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">dW%</th>
                 {/* Eco */}
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">rW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">aW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">dW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">rW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">aW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">dW%</th>
               </tr>
             </thead>
             <tbody>
@@ -109,17 +109,17 @@ export default function TeamOverview() {
                 <th colSpan={5} className="px-1 py-1 text-center font-semibold text-sm border border-border" style={{ backgroundColor: '#f8d8d8', color: '#7a2020' }}>Retake</th>
               </tr>
               <tr className="bg-nav">
-                <th className="px-1 py-0.5 text-left text-text-muted font-medium border border-border">Map</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">Scens</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">/Map</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">rW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">Avg</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">Rk</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">Scens</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">/Map</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">rW%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">Avg</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">Rk</th>
+                <th className="px-1 py-0.5 text-left text-text font-medium border border-border">Map</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">Scens</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">/Map</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">rW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">Avg</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">Rk</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">Scens</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">/Map</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">rW%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">Avg</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">Rk</th>
               </tr>
             </thead>
             <tbody>
@@ -142,17 +142,17 @@ export default function TeamOverview() {
                 <th colSpan={11} className="px-1 py-1 text-center font-semibold text-sm border border-border" style={{ backgroundColor: '#d4edcf', color: '#1a4a14' }}>Statistics Per Player</th>
               </tr>
               <tr className="bg-nav">
-                <th className="px-1 py-0.5 text-left text-text-muted font-medium border border-border">Players</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">Agents</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">r</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">K/D</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">KA/D</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">KAST</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">fk/r</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">fd/r</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">fk/fd</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">CL%</th>
-                <th className="px-1 py-0.5 text-center text-text-muted font-medium border border-border">AWP%</th>
+                <th className="px-1 py-0.5 text-left text-text font-medium border border-border">Players</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">Agents</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">r</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">K/D</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">KA/D</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">KAST</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">fk/r</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">fd/r</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">fk/fd</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">CL%</th>
+                <th className="px-1 py-0.5 text-center text-text font-medium border border-border">AWP%</th>
               </tr>
             </thead>
             <tbody>
@@ -194,7 +194,7 @@ function MapStatsRow({ ms, avgs, isAggregate = false }: { ms: MapStats; avgs?: R
 
   return (
     <tr className={cls}>
-      <td className="px-1.5 py-0.5 text-left border border-border whitespace-nowrap">{isAggregate ? 'All Maps' : ms.map}</td>
+      <td className="px-1.5 py-0.5 text-left font-bold border border-border whitespace-nowrap">{isAggregate ? 'All Maps' : ms.map}</td>
       <td className="px-1.5 py-0.5 text-center border border-border">
         <div className="flex gap-0.5 justify-center">
           {ms.comp.slice(0, 5).map((agent, i) => (
@@ -235,16 +235,16 @@ function PostPlantRow({ ms, avgs, isAggregate = false }: { ms: MapStats; avgs?: 
 
   return (
     <tr className={cls}>
-      <td className="px-1.5 py-0.5 text-left border border-border whitespace-nowrap">{isAggregate ? 'All Maps' : ms.map}</td>
+      <td className="px-1.5 py-0.5 text-left font-bold border border-border whitespace-nowrap">{isAggregate ? 'All Maps' : ms.map}</td>
       <td className="px-1.5 py-0.5 text-center font-mono border border-border">{ms.post_scens}</td>
       <td className="px-1.5 py-0.5 text-center font-mono border border-border">{formatRatio(ms.post_per_map)}</td>
       <StatCell value={ms.post_rW_pct} mean={a.post_rW_pct?.mean} std={a.post_rW_pct?.std} format={formatPct} />
-      <td className="px-1.5 py-0.5 text-center font-mono text-text-muted border border-border">{formatPct(ms.post_rW_event_avg)}</td>
+      <td className="px-1.5 py-0.5 text-center font-mono border border-border">{formatPct(ms.post_rW_event_avg)}</td>
       <td className="px-1.5 py-0.5 text-center font-mono border border-border">{ms.post_rank}</td>
       <td className="px-1.5 py-0.5 text-center font-mono border border-border">{ms.ret_scens}</td>
       <td className="px-1.5 py-0.5 text-center font-mono border border-border">{formatRatio(ms.ret_per_map)}</td>
       <StatCell value={ms.ret_rW_pct} mean={a.ret_rW_pct?.mean} std={a.ret_rW_pct?.std} format={formatPct} />
-      <td className="px-1.5 py-0.5 text-center font-mono text-text-muted border border-border">{formatPct(ms.ret_rW_event_avg)}</td>
+      <td className="px-1.5 py-0.5 text-center font-mono border border-border">{formatPct(ms.ret_rW_event_avg)}</td>
       <td className="px-1.5 py-0.5 text-center font-mono border border-border">{ms.ret_rank}</td>
     </tr>
   )
@@ -258,7 +258,7 @@ function PlayerRow({ player, avgP }: { player: Player; avgP: Record<string, { me
 
   return (
     <tr className="border-b border-border">
-      <td className="px-1.5 py-0.5 text-left border border-border whitespace-nowrap">
+      <td className="px-1.5 py-0.5 text-left font-bold border border-border whitespace-nowrap">
         <Link to={`/player/${encodeURIComponent(player.ign)}`} className="text-primary hover:underline">
           {player.ign}
         </Link>
