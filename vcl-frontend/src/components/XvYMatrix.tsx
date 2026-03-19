@@ -39,22 +39,22 @@ export default function XvYMatrix({ title, entries, averages, mode }: XvYMatrixP
   const displayMatrix = deltaMatrix || matrix
 
   const headerStyle = mode === 'delta'
-    ? { backgroundColor: '#5a5a27', color: '#e8e4a0' }
-    : { backgroundColor: '#4a3080', color: '#c4a8f0' }
+    ? { backgroundColor: '#f0edd0', color: '#5a5a10' }
+    : { backgroundColor: '#e8ddf8', color: '#4a2080' }
 
   return (
     <div>
-      <table className="border-collapse text-xs">
+      <table className="border-collapse text-sm">
         <thead>
           <tr>
-            <th colSpan={6} className="px-1 py-1 text-center font-semibold text-xs border border-border" style={headerStyle}>
+            <th colSpan={6} className="px-1 py-1 text-center font-semibold text-sm border border-border" style={headerStyle}>
               {title}
             </th>
           </tr>
           <tr className="bg-nav">
-            <th className="px-1.5 py-1 text-center text-text-muted font-medium text-xs border border-border">XvY</th>
+            <th className="px-1.5 py-1 text-center text-text-muted font-medium text-sm border border-border">XvY</th>
             {labels.map(n => (
-              <th key={n} className="px-1.5 py-1 text-center text-text-muted font-medium text-xs border border-border w-12">{n}</th>
+              <th key={n} className="px-1.5 py-1 text-center text-text-muted font-medium text-sm border border-border w-12">{n}</th>
             ))}
           </tr>
         </thead>
@@ -72,7 +72,7 @@ export default function XvYMatrix({ title, entries, averages, mode }: XvYMatrixP
                 const text = mode === 'delta' ? formatDelta(val) : formatPct(val)
 
                 return (
-                  <td key={colIdx} className="px-1.5 py-0.5 text-center font-mono text-xs border border-border" style={{ backgroundColor: bg }}>
+                  <td key={colIdx} className="px-1.5 py-0.5 text-center font-mono text-sm border border-border" style={{ backgroundColor: bg }}>
                     {text}
                   </td>
                 )

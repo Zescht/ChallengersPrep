@@ -11,7 +11,7 @@ interface StatCellProps {
 
 export default function StatCell({ value, mean, std, format, invert = false, className = '' }: StatCellProps) {
   if (value == null || isNaN(value)) {
-    return <td className={`px-1.5 py-0.5 text-center text-text-dim ${className}`}>-</td>
+    return <td className={`px-1 py-0.5 text-center text-text-dim border border-border ${className}`}>-</td>
   }
 
   const bg = mean != null && std != null && std > 0
@@ -20,7 +20,7 @@ export default function StatCell({ value, mean, std, format, invert = false, cla
 
   return (
     <td
-      className={`px-1.5 py-0.5 text-center font-mono text-sm ${className}`}
+      className={`px-1 py-0.5 text-center font-mono text-sm whitespace-nowrap border border-border ${className}`}
       style={{ backgroundColor: bg }}
     >
       {format(value)}
