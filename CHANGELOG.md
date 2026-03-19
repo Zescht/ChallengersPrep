@@ -1,12 +1,57 @@
 # Changelog
 
 All notable changes to this project will be documented in this file.
-Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Versioning Scheme
+
+This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
+
+| Component | When to bump | Example |
+|-----------|-------------|---------|
+| **MAJOR** | Full rebuild or breaking changes to spreadsheet structure / data pipeline | `1.0.0` → `2.0.0` |
+| **MINOR** | New team added, new stat category, new feature (e.g. post-plant analysis) | `0.2.0` → `0.3.0` |
+| **PATCH** | Bug fixes, data corrections, formatting tweaks, refactors | `0.2.1` → `0.2.2` |
+
+### Milestone targets
+
+- **0.x.x** — Development phase: building tooling, data pipeline, single-team proof of concept
+- **1.0.0** — All 14 VCL teams with complete stats spreadsheet matching VCL3 template
+- **2.0.0** — Reserved for major structural changes (new stage, new league, full rewrite)
+
+---
+
+## [0.3.0] - 2026-03-19
+
+### Added
+- GitHub repository (private) at `Zescht/ChallengersPrep`
+- Proper `.gitignore` (Excel temp files, `.env`, raw data, IDE files)
+
+### Fixed
+- Removed tracked files that should be ignored (`~$FOKUS_Stats.xlsx`, `.claude/settings.local.json`)
+
+## [0.2.0] - 2026-03-18
+
+### Added
+- `build_fokus_sheet.py` — generates FOKUS team stats spreadsheet from API data
+- `collect_team_data.py` — fetches and stores match data for any VCL team
+- `VCL_Stats.xlsx` — multi-team stats workbook with dropdown-driven team selector
+- `VCL3_Stats_2026.xlsx` — 2026 season stats output
+- `FOKUS_Stats.xlsx` — dedicated FOKUS stats sheet (proof of concept)
+- All 14 VCL EMEA 2026 teams registered in `CLAUDE.md`
+- Agent icon images for all agents (`data/icons/`)
+- XvX clutch analysis (`XvX.png`)
+
+### Changed
+- Expanded `CLAUDE.md` with full API reference, match data structure, economy classification, and team registry
 
 ## [0.1.0] - 2026-03-16
 
 ### Added
-- Initial project setup
-- Git repository with .gitignore
-- Semantic versioning (MAJOR.MINOR.PATCH)
+- Initial project setup with git repository
+- VLR.gg web scraper (`scraper/vlr_scraper.py`, `scraper/display.py`)
+- API reference documentation (`API_REFERENCE.md`)
+- CGN Esports scraped data (`data/cgn-esports_20260316_094537.json`)
+- CGN composition summary (`data/compositions_by_map.txt`)
+- VCL3 Stats template spreadsheet (`VCL3 Stats.xlsx`)
+- `requirements.txt` (requests, bs4, lxml)
+- `VERSION` file

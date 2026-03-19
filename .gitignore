@@ -1,20 +1,3 @@
-# Dependencies
-node_modules/
-vendor/
-.venv/
-venv/
-__pycache__/
-*.pyc
-
-# Build output
-dist/
-build/
-out/
-*.exe
-*.dll
-*.so
-*.dylib
-
 # Environment & secrets
 .env
 .env.*
@@ -25,19 +8,33 @@ out/
 credentials.json
 secrets.json
 
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Excel temp/lock files
+~$*.xlsx
+~$*.xls
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+ehthumbs.db
+
 # IDE & editor
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
-.DS_Store
-Thumbs.db
-desktop.ini
 
-# OS files
-*.lnk
-ehthumbs.db
+# Claude Code local settings
+.claude/settings.local.json
 
 # Logs & temp
 *.log
@@ -46,15 +43,5 @@ tmp/
 temp/
 .cache/
 
-# Package manager locks (uncomment the one you DON'T use)
-# package-lock.json
-# yarn.lock
-# pnpm-lock.yaml
-
-# Coverage & test artifacts
-coverage/
-.nyc_output/
-*.lcov
-
-# VLR scraper - raw HTML dumps (large, regenerable)
+# Raw match data (large JSONL files, regenerable via API)
 data/raw/
