@@ -52,6 +52,10 @@ Github.png
 stitch_new_screens.zip
 tla_included_matches.csv
 
+# Non-project folders
+GoogleStitch/
+backups/
+
 # Logs & temp
 *.log
 logs/

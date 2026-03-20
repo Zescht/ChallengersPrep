@@ -1,4 +1,4 @@
-import React, { useState, useMemo, type ReactNode } from 'react'
+import { Fragment, useState, useMemo, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
 import { formatRatio, formatPct } from '../utils/format'
@@ -231,7 +231,7 @@ export default function Leaderboards() {
               <th className={`${thBase} text-left`}>Agents</th>
               <th className={`${thBase} text-right border-r-[3px] !border-r-black`}>Rnds</th>
               {COLUMNS.map(c => (
-                <React.Fragment key={c.key}>
+                <Fragment key={c.key}>
                   <th className={`${thBase} text-right select-none`}>
                     <span className="inline-flex items-center gap-1">
                       {c.label}
@@ -283,7 +283,7 @@ export default function Leaderboards() {
                       </th>
                     </>
                   )}
-                </React.Fragment>
+                </Fragment>
               ))}
             </tr>
           </thead>
@@ -333,7 +333,7 @@ export default function Leaderboards() {
                     const pct = getPercentile(val, allVals, c.invertColor ?? false)
                     const bg = percentileToColor(pct)
                     return (
-                      <React.Fragment key={c.key}>
+                      <Fragment key={c.key}>
                         <td
                           className={`${tdBase} text-right`}
                           style={{ backgroundColor: bg }}
@@ -346,7 +346,7 @@ export default function Leaderboards() {
                             <td className={`${tdBase} text-right`}>{p.clutches}</td>
                           </>
                         )}
-                      </React.Fragment>
+                      </Fragment>
                     )
                   })}
                 </tr>
