@@ -50,24 +50,25 @@ export default function SearchBar() {
 
   return (
     <div ref={ref} className="relative">
+      <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-base">search</span>
       <input
         type="text"
         value={query}
         onChange={e => { setQuery(e.target.value); setOpen(true); setSelectedIndex(0) }}
         onFocus={() => setOpen(true)}
         onKeyDown={handleKeyDown}
-        placeholder="Search teams or players..."
-        className="bg-card border border-border rounded px-3 py-1.5 text-sm text-text placeholder-text-dim w-64 focus:outline-none focus:border-primary"
+        placeholder="Search parameters..."
+        className="bg-surface-container-highest/50 border border-white/5 rounded-full pl-9 pr-4 py-1.5 text-xs text-on-surface placeholder-text-dim w-64 focus:outline-none focus:ring-1 focus:ring-tertiary transition-all"
       />
       {open && allResults.length > 0 && (
-        <div className="absolute top-full mt-1 left-0 w-full bg-card border border-border rounded shadow-lg z-50 max-h-80 overflow-y-auto">
+        <div className="absolute top-full mt-1 left-0 w-full bg-surface-container-high border border-white/10 rounded-lg shadow-[0_12px_32px_rgba(0,0,0,0.4)] z-50 max-h-80 overflow-y-auto">
           {teamResults.length > 0 && (
             <>
-              <div className="px-3 py-1 text-xs text-text-muted uppercase tracking-wider">Teams</div>
+              <div className="px-3 py-1.5 scannable-label text-text-dim">Teams</div>
               {teamResults.map((t, i) => (
                 <button
                   key={t.name}
-                  className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-border ${selectedIndex === i ? 'bg-border' : ''}`}
+                  className={`block w-full text-left px-3 py-1.5 text-xs text-on-surface transition-colors ${selectedIndex === i ? 'bg-white/10' : 'hover:bg-white/5'}`}
                   onClick={() => { navigate(`/team/${encodeURIComponent(t.name)}`); setQuery(''); setOpen(false) }}
                 >
                   {t.name}
@@ -77,16 +78,16 @@ export default function SearchBar() {
           )}
           {playerResults.length > 0 && (
             <>
-              <div className="px-3 py-1 text-xs text-text-muted uppercase tracking-wider">Players</div>
+              <div className="px-3 py-1.5 scannable-label text-text-dim">Players</div>
               {playerResults.map((p, j) => {
                 const idx = teamResults.length + j
                 return (
                   <button
                     key={p.ign}
-                    className={`block w-full text-left px-3 py-1.5 text-sm hover:bg-border ${selectedIndex === idx ? 'bg-border' : ''}`}
+                    className={`block w-full text-left px-3 py-1.5 text-xs text-on-surface transition-colors ${selectedIndex === idx ? 'bg-white/10' : 'hover:bg-white/5'}`}
                     onClick={() => { navigate(`/player/${encodeURIComponent(p.ign)}`); setQuery(''); setOpen(false) }}
                   >
-                    {p.ign} <span className="text-text-muted">— {p.team}</span>
+                    {p.ign} <span className="text-text-dim">— {p.team}</span>
                   </button>
                 )
               })}

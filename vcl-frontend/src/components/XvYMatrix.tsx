@@ -38,41 +38,42 @@ export default function XvYMatrix({ title, entries, averages, mode }: XvYMatrixP
 
   const displayMatrix = deltaMatrix || matrix
 
-  const headerStyle = mode === 'delta'
-    ? { backgroundColor: '#f0edd0', color: '#5a5a10' }
-    : { backgroundColor: '#e8ddf8', color: '#4a2080' }
-
   return (
-    <div>
-      <table className="border-collapse text-sm">
+    <div className="bg-surface-container-low rounded-xl overflow-hidden border border-white/5">
+      <div className="px-3 py-2 bg-surface-container-high/60 border-b border-white/5">
+        <h4 className="font-headline font-bold text-[10px] text-on-surface uppercase tracking-wider">{title}</h4>
+      </div>
+      <table className="w-full text-xs">
         <thead>
-          <tr>
-            <th colSpan={6} className="px-1 py-1 text-center font-semibold text-sm border border-border" style={headerStyle}>
-              {title}
-            </th>
-          </tr>
-          <tr className="bg-nav">
-            <th className="px-1.5 py-1 text-center text-text font-medium text-sm border border-border">XvY</th>
+          <tr className="bg-surface-container/60">
+            <th className="px-2 py-1.5 text-center scannable-label">XvY</th>
             {labels.map(n => (
-              <th key={n} className="px-1.5 py-1 text-center text-text font-medium text-sm border border-border w-12">{n}</th>
+              <th key={n} className="px-2 py-1.5 text-center scannable-label w-11">{n}</th>
             ))}
           </tr>
         </thead>
-        <tbody>
+        <tbody className="divide-y divide-white/5">
           {labels.map((rowLabel, rowIdx) => (
-            <tr key={rowLabel} className="border-b border-border">
-              <td className="px-1.5 py-0.5 text-center font-medium text-text-muted border border-border">{rowLabel}</td>
+            <tr key={rowLabel} className="hover:bg-white/5 transition-colors">
+              <td className="px-2 py-1 text-center font-medium text-text-muted text-[10px]">{rowLabel}</td>
               {labels.map((_, colIdx) => {
                 const val = displayMatrix[rowIdx][colIdx]
                 if (val == null) {
-                  return <td key={colIdx} className="px-1.5 py-0.5 text-center text-text border border-border">-</td>
+                  return <td key={colIdx} className="px-2 py-1 text-center text-text-dim text-[10px]">-</td>
                 }
 
                 const bg = mode === 'delta' ? deltaColor(val) : deltaColor(val - 0.5)
                 const text = mode === 'delta' ? formatDelta(val) : formatPct(val)
+                const textColor = mode === 'delta'
+                  ? val > 0.01 ? 'text-primary' : val < -0.01 ? 'text-error' : 'text-on-surface'
+                  : val > 0.5 ? 'text-primary' : val < 0.5 ? 'text-error' : 'text-on-surface'
 
                 return (
-                  <td key={colIdx} className="px-1.5 py-0.5 text-center font-mono text-sm border border-border" style={{ backgroundColor: bg }}>
+                  <td
+                    key={colIdx}
+                    className={`px-2 py-1 text-center font-mono text-[10px] ${textColor}`}
+                    style={{ backgroundColor: bg }}
+                  >
                     {text}
                   </td>
                 )

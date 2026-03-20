@@ -2,7 +2,7 @@
  * Returns a CSS background-color string for a stat cell based on how its value
  * compares to the tournament average, using standard deviations.
  *
- * Light-mode scale: red tint (below avg) → white (at avg) → green tint (above avg)
+ * Dark-mode scale: dim red (below avg) → transparent (at avg) → neon green (above avg)
  */
 export function heatColor(value: number, mean: number, std: number, invert = false): string {
   if (std === 0 || isNaN(value)) return 'transparent'
@@ -13,26 +13,20 @@ export function heatColor(value: number, mean: number, std: number, invert = fal
   if (invert) z = -z
 
   if (z > 0) {
-    // Green scale — light tint
+    // Green scale — neon tint on dark
     const t = z / 2
-    const r = Math.round(255 - t * 90)
-    const g = Math.round(255 - t * 30)
-    const b = Math.round(255 - t * 90)
-    return `rgb(${r}, ${g}, ${b})`
+    return `rgba(161, 255, 194, ${(t * 0.25).toFixed(3)})`
   } else if (z < 0) {
-    // Red scale — light tint
+    // Red scale — dim red tint on dark
     const t = Math.abs(z) / 2
-    const r = Math.round(255 - t * 20)
-    const g = Math.round(255 - t * 80)
-    const b = Math.round(255 - t * 80)
-    return `rgb(${r}, ${g}, ${b})`
+    return `rgba(255, 113, 108, ${(t * 0.25).toFixed(3)})`
   }
   return 'transparent' // neutral — no tint
 }
 
-/** Simple green/red for delta values (light mode) */
+/** Simple green/red for delta values (dark mode) */
 export function deltaColor(value: number): string {
-  if (value > 0.01) return 'rgb(200, 240, 200)' // light green
-  if (value < -0.01) return 'rgb(245, 200, 200)' // light red
-  return 'rgb(245, 240, 210)' // neutral yellowish
+  if (value > 0.01) return 'rgba(161, 255, 194, 0.15)' // green tint
+  if (value < -0.01) return 'rgba(255, 113, 108, 0.15)' // red tint
+  return 'rgba(255, 255, 255, 0.03)' // neutral
 }

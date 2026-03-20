@@ -114,9 +114,9 @@
           "ret_per_map": 6.8,
           "ret_rW_pct": 0.278,
           "post_rank": 8,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 9,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 8,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -152,9 +152,9 @@
           "ret_per_map": 5.3,
           "ret_rW_pct": 0.25,
           "post_rank": 7,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 10,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -190,9 +190,9 @@
           "ret_per_map": 4.3,
           "ret_rW_pct": 0.333,
           "post_rank": 12,
-          "post_rW_event_avg": 0.81,
+          "post_rW_event_avg": 0.815,
           "ret_rank": 7,
-          "ret_rW_event_avg": 0.362
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -228,9 +228,9 @@
           "ret_per_map": 8.0,
           "ret_rW_pct": 0.188,
           "post_rank": 4,
-          "post_rW_event_avg": 0.716,
+          "post_rW_event_avg": 0.715,
           "ret_rank": 10,
-          "ret_rW_event_avg": 0.344
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -266,9 +266,9 @@
           "ret_per_map": 5.5,
           "ret_rW_pct": 0.273,
           "post_rank": 4,
-          "post_rW_event_avg": 0.741,
+          "post_rW_event_avg": 0.745,
           "ret_rank": 9,
-          "ret_rW_event_avg": 0.307
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -299,16 +299,16 @@
         "ret_per_map": 5.7,
         "ret_rW_pct": 0.358,
         "post_rank": 9,
-        "post_rW_event_avg": 0.748,
-        "ret_rank": 5,
-        "ret_rW_event_avg": 0.33
+        "post_rW_event_avg": 0.747,
+        "ret_rank": 4,
+        "ret_rW_event_avg": 0.322
       },
       "players": [
+        "MOLSI",
         "pa1ze",
-        "pyrolll",
         "shinnok",
         "Serial",
-        "MOLSI"
+        "pyrolll"
       ],
       "xvy": [
         {
@@ -613,9 +613,9 @@
           "ret_per_map": 5.8,
           "ret_rW_pct": 0.343,
           "post_rank": 2,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 6,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 5,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -651,9 +651,9 @@
           "ret_per_map": 8.0,
           "ret_rW_pct": 0.312,
           "post_rank": 9,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 9,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -689,9 +689,9 @@
           "ret_per_map": 4.1,
           "ret_rW_pct": 0.455,
           "post_rank": 2,
-          "post_rW_event_avg": 0.81,
-          "ret_rank": 4,
-          "ret_rW_event_avg": 0.362
+          "post_rW_event_avg": 0.815,
+          "ret_rank": 3,
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -727,9 +727,9 @@
           "ret_per_map": 7.8,
           "ret_rW_pct": 0.385,
           "post_rank": 7,
-          "post_rW_event_avg": 0.716,
-          "ret_rank": 6,
-          "ret_rW_event_avg": 0.344
+          "post_rW_event_avg": 0.715,
+          "ret_rank": 5,
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -765,9 +765,9 @@
           "ret_per_map": 7.0,
           "ret_rW_pct": 0.4,
           "post_rank": 8,
-          "post_rW_event_avg": 0.741,
-          "ret_rank": 4,
-          "ret_rW_event_avg": 0.307
+          "post_rW_event_avg": 0.745,
+          "ret_rank": 3,
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -798,16 +798,16 @@
         "ret_per_map": 6.8,
         "ret_rW_pct": 0.38,
         "post_rank": 7,
-        "post_rW_event_avg": 0.748,
-        "ret_rank": 3,
-        "ret_rW_event_avg": 0.33
+        "post_rW_event_avg": 0.747,
+        "ret_rank": 1,
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "Fizzy",
-        "azury",
-        "Jamelinho",
         "MONSTEERR",
-        "musashi"
+        "musashi",
+        "Jamelinho",
+        "azury",
+        "Fizzy"
       ],
       "xvy": [
         {
@@ -1150,9 +1150,9 @@
           "ret_per_map": 8.0,
           "ret_rW_pct": 0.125,
           "post_rank": 10,
-          "post_rW_event_avg": 0.743,
+          "post_rW_event_avg": 0.731,
           "ret_rank": 12,
-          "ret_rW_event_avg": 0.328
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -1187,10 +1187,10 @@
           "ret_scens": 53,
           "ret_per_map": 7.6,
           "ret_rW_pct": 0.321,
-          "post_rank": 2,
-          "post_rW_event_avg": 0.687,
+          "post_rank": 1,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 8,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -1226,9 +1226,9 @@
           "ret_per_map": 3.5,
           "ret_rW_pct": 0.286,
           "post_rank": 9,
-          "post_rW_event_avg": 0.81,
+          "post_rW_event_avg": 0.815,
           "ret_rank": 9,
-          "ret_rW_event_avg": 0.362
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -1264,9 +1264,9 @@
           "ret_per_map": 8.6,
           "ret_rW_pct": 0.233,
           "post_rank": 9,
-          "post_rW_event_avg": 0.716,
+          "post_rW_event_avg": 0.715,
           "ret_rank": 8,
-          "ret_rW_event_avg": 0.344
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -1302,9 +1302,9 @@
           "ret_per_map": 6.8,
           "ret_rW_pct": 0.324,
           "post_rank": 3,
-          "post_rW_event_avg": 0.741,
-          "ret_rank": 6,
-          "ret_rW_event_avg": 0.307
+          "post_rW_event_avg": 0.745,
+          "ret_rank": 4,
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -1335,16 +1335,16 @@
         "ret_per_map": 6.4,
         "ret_rW_pct": 0.288,
         "post_rank": 3,
-        "post_rW_event_avg": 0.748,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 11,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "Enzo ",
         "Doma",
         "Runner",
+        "Chiwa",
         "Kamyk",
-        "Chiwa"
+        "Enzo "
       ],
       "xvy": [
         {
@@ -1649,9 +1649,9 @@
           "ret_per_map": 6.2,
           "ret_rW_pct": 0.4,
           "post_rank": 4,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 3,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -1687,9 +1687,9 @@
           "ret_per_map": 5.3,
           "ret_rW_pct": 0.216,
           "post_rank": 8,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 12,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -1724,10 +1724,10 @@
           "ret_scens": 24,
           "ret_per_map": 3.0,
           "ret_rW_pct": 0.5,
-          "post_rank": 7,
-          "post_rW_event_avg": 0.81,
+          "post_rank": 8,
+          "post_rW_event_avg": 0.815,
           "ret_rank": 1,
-          "ret_rW_event_avg": 0.362
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -1763,9 +1763,9 @@
           "ret_per_map": 6.3,
           "ret_rW_pct": 0.158,
           "post_rank": 6,
-          "post_rW_event_avg": 0.716,
+          "post_rW_event_avg": 0.715,
           "ret_rank": 12,
-          "ret_rW_event_avg": 0.344
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -1801,9 +1801,9 @@
           "ret_per_map": 5.8,
           "ret_rW_pct": 0.174,
           "post_rank": 11,
-          "post_rW_event_avg": 0.741,
+          "post_rW_event_avg": 0.745,
           "ret_rank": 14,
-          "ret_rW_event_avg": 0.307
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -1834,16 +1834,16 @@
         "ret_per_map": 5.2,
         "ret_rW_pct": 0.288,
         "post_rank": 8,
-        "post_rW_event_avg": 0.748,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 12,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "kAdavra",
+        "Sh1n",
+        "Takaas",
         "Natank",
         "Sevire",
-        "Sh1n",
-        "Takaas"
+        "kAdavra"
       ],
       "xvy": [
         {
@@ -2110,9 +2110,9 @@
           "ret_per_map": 8.0,
           "ret_rW_pct": 0.188,
           "post_rank": 4,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 13,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -2148,9 +2148,9 @@
           "ret_per_map": 3.5,
           "ret_rW_pct": 0.357,
           "post_rank": 3,
-          "post_rW_event_avg": 0.81,
+          "post_rW_event_avg": 0.815,
           "ret_rank": 6,
-          "ret_rW_event_avg": 0.362
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -2185,10 +2185,10 @@
           "ret_scens": 23,
           "ret_per_map": 4.6,
           "ret_rW_pct": 0.478,
-          "post_rank": 2,
-          "post_rW_event_avg": 0.716,
-          "ret_rank": 3,
-          "ret_rW_event_avg": 0.344
+          "post_rank": 1,
+          "post_rW_event_avg": 0.715,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -2224,9 +2224,9 @@
           "ret_per_map": 4.3,
           "ret_rW_pct": 0.423,
           "post_rank": 2,
-          "post_rW_event_avg": 0.741,
-          "ret_rank": 3,
-          "ret_rW_event_avg": 0.307
+          "post_rW_event_avg": 0.745,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -2257,17 +2257,17 @@
         "ret_per_map": 5.8,
         "ret_rW_pct": 0.316,
         "post_rank": 1,
-        "post_rW_event_avg": 0.748,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 8,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "swagzor",
-        "kozzy",
+        "MAGNUM",
         "Lime",
+        "swagzor",
         "iluri",
-        "Proxh",
-        "MAGNUM"
+        "kozzy",
+        "Proxh"
       ],
       "xvy": [
         {
@@ -2543,6 +2543,7 @@
           "comp": [
             "Astra",
             "Neon",
+            "Sova",
             "Viper",
             "Yoru"
           ],
@@ -2564,16 +2565,16 @@
           "eco_rW_pct": 0.0,
           "eco_atk_rW_pct": 0,
           "eco_def_rW_pct": 0.0,
-          "post_scens": 3,
-          "post_per_map": 3.0,
-          "post_rW_pct": 1.0,
-          "ret_scens": 12,
-          "ret_per_map": 12.0,
-          "ret_rW_pct": 0.417,
+          "post_scens": 7,
+          "post_per_map": 7.0,
+          "post_rW_pct": 0.857,
+          "ret_scens": 8,
+          "ret_per_map": 8.0,
+          "ret_rW_pct": 0.25,
           "post_rank": 1,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 2,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 10,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -2588,30 +2589,30 @@
           "wins": 9,
           "losses": 1,
           "rW_pct": 0.62,
-          "atk_rW_pct": 0.72,
-          "def_rW_pct": 0.528,
+          "atk_rW_pct": 0.641,
+          "def_rW_pct": 0.6,
           "pistol_rW_pct": 0.55,
           "pistol_atk_rW_pct": 0.6,
           "pistol_def_rW_pct": 0.5,
-          "gun_rW_pct": 0.645,
-          "gun_atk_rW_pct": 0.772,
-          "gun_def_rW_pct": 0.529,
+          "gun_rW_pct": 0.637,
+          "gun_atk_rW_pct": 0.651,
+          "gun_def_rW_pct": 0.624,
           "antieco_rW_pct": 0.55,
-          "antieco_atk_rW_pct": 0.5,
-          "antieco_def_rW_pct": 0.6,
-          "eco_rW_pct": 0.0,
-          "eco_atk_rW_pct": 0.0,
-          "eco_def_rW_pct": 0.0,
-          "post_scens": 61,
-          "post_per_map": 6.1,
-          "post_rW_pct": 0.852,
-          "ret_scens": 80,
-          "ret_per_map": 8.0,
-          "ret_rW_pct": 0.45,
-          "post_rank": 1,
-          "post_rW_event_avg": 0.687,
-          "ret_rank": 1,
-          "ret_rW_event_avg": 0.322
+          "antieco_atk_rW_pct": 0.6,
+          "antieco_def_rW_pct": 0.5,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 75,
+          "post_per_map": 7.5,
+          "post_rW_pct": 0.827,
+          "ret_scens": 66,
+          "ret_per_map": 6.6,
+          "ret_rW_pct": 0.394,
+          "post_rank": 2,
+          "post_rW_event_avg": 0.685,
+          "ret_rank": 3,
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -2640,16 +2641,16 @@
           "eco_rW_pct": 0.0,
           "eco_atk_rW_pct": 0,
           "eco_def_rW_pct": 0.0,
-          "post_scens": 13,
-          "post_per_map": 3.2,
-          "post_rW_pct": 0.769,
-          "ret_scens": 18,
-          "ret_per_map": 4.5,
-          "ret_rW_pct": 0.5,
-          "post_rank": 8,
-          "post_rW_event_avg": 0.81,
-          "ret_rank": 2,
-          "ret_rW_event_avg": 0.362
+          "post_scens": 16,
+          "post_per_map": 4.0,
+          "post_rW_pct": 0.812,
+          "ret_scens": 15,
+          "ret_per_map": 3.8,
+          "ret_rW_pct": 0.4,
+          "post_rank": 6,
+          "post_rW_event_avg": 0.815,
+          "ret_rank": 5,
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -2664,30 +2665,30 @@
           "wins": 7,
           "losses": 1,
           "rW_pct": 0.632,
-          "atk_rW_pct": 0.642,
-          "def_rW_pct": 0.622,
+          "atk_rW_pct": 0.667,
+          "def_rW_pct": 0.595,
           "pistol_rW_pct": 0.562,
-          "pistol_atk_rW_pct": 0.75,
-          "pistol_def_rW_pct": 0.375,
+          "pistol_atk_rW_pct": 0.5,
+          "pistol_def_rW_pct": 0.625,
           "gun_rW_pct": 0.654,
-          "gun_atk_rW_pct": 0.609,
-          "gun_def_rW_pct": 0.697,
+          "gun_atk_rW_pct": 0.691,
+          "gun_def_rW_pct": 0.613,
           "antieco_rW_pct": 0.6,
-          "antieco_atk_rW_pct": 0.875,
-          "antieco_def_rW_pct": 0.286,
+          "antieco_atk_rW_pct": 0.625,
+          "antieco_def_rW_pct": 0.571,
           "eco_rW_pct": 0.0,
-          "eco_atk_rW_pct": 0.0,
+          "eco_atk_rW_pct": 0,
           "eco_def_rW_pct": 0.0,
-          "post_scens": 50,
-          "post_per_map": 6.2,
-          "post_rW_pct": 0.86,
-          "ret_scens": 61,
-          "ret_per_map": 7.6,
-          "ret_rW_pct": 0.41,
-          "post_rank": 1,
-          "post_rW_event_avg": 0.716,
-          "ret_rank": 5,
-          "ret_rW_event_avg": 0.344
+          "post_scens": 66,
+          "post_per_map": 8.2,
+          "post_rW_pct": 0.818,
+          "ret_scens": 45,
+          "ret_per_map": 5.6,
+          "ret_rW_pct": 0.311,
+          "post_rank": 3,
+          "post_rW_event_avg": 0.715,
+          "ret_rank": 7,
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -2716,16 +2717,16 @@
           "eco_rW_pct": 0,
           "eco_atk_rW_pct": 0,
           "eco_def_rW_pct": 0,
-          "post_scens": 20,
-          "post_per_map": 5.0,
-          "post_rW_pct": 0.75,
-          "ret_scens": 28,
-          "ret_per_map": 7.0,
-          "ret_rW_pct": 0.464,
+          "post_scens": 28,
+          "post_per_map": 7.0,
+          "post_rW_pct": 0.786,
+          "ret_scens": 20,
+          "ret_per_map": 5.0,
+          "ret_rW_pct": 0.3,
           "post_rank": 5,
-          "post_rW_event_avg": 0.741,
-          "ret_rank": 1,
-          "ret_rW_event_avg": 0.307
+          "post_rW_event_avg": 0.745,
+          "ret_rank": 5,
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -2735,192 +2736,192 @@
         "wins": 23,
         "losses": 6,
         "rW_pct": 0.607,
-        "atk_rW_pct": 0.644,
-        "def_rW_pct": 0.573,
+        "atk_rW_pct": 0.624,
+        "def_rW_pct": 0.591,
         "pistol_rW_pct": 0.552,
-        "pistol_atk_rW_pct": 0.655,
-        "pistol_def_rW_pct": 0.448,
-        "gun_rW_pct": 0.628,
-        "gun_atk_rW_pct": 0.646,
-        "gun_def_rW_pct": 0.61,
+        "pistol_atk_rW_pct": 0.586,
+        "pistol_def_rW_pct": 0.517,
+        "gun_rW_pct": 0.625,
+        "gun_atk_rW_pct": 0.629,
+        "gun_def_rW_pct": 0.621,
         "antieco_rW_pct": 0.561,
-        "antieco_atk_rW_pct": 0.655,
-        "antieco_def_rW_pct": 0.464,
+        "antieco_atk_rW_pct": 0.621,
+        "antieco_def_rW_pct": 0.5,
         "eco_rW_pct": 0.0,
-        "eco_atk_rW_pct": 0.0,
+        "eco_atk_rW_pct": 0,
         "eco_def_rW_pct": 0.0,
-        "post_scens": 159,
-        "post_per_map": 5.5,
-        "post_rW_pct": 0.836,
-        "ret_scens": 212,
-        "ret_per_map": 7.3,
-        "ret_rW_pct": 0.429,
+        "post_scens": 204,
+        "post_per_map": 7.0,
+        "post_rW_pct": 0.819,
+        "ret_scens": 167,
+        "ret_per_map": 5.8,
+        "ret_rW_pct": 0.341,
         "post_rank": 2,
-        "post_rW_event_avg": 0.748,
-        "ret_rank": 1,
-        "ret_rW_event_avg": 0.33
+        "post_rW_event_avg": 0.747,
+        "ret_rank": 6,
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "Kicks",
-        "Wanzeru",
         "GSR",
-        "rexxtoned",
-        "prti"
+        "TLA prti",
+        "Wanzeru",
+        "Kicks",
+        "rexxtoned"
       ],
       "xvy": [
         {
           "situation": "5v1",
-          "wins": 13,
+          "wins": 45,
           "losses": 0,
           "win_pct": 1.0
         },
         {
           "situation": "5v2",
-          "wins": 25,
+          "wins": 94,
           "losses": 1,
-          "win_pct": 0.9615384615384616
+          "win_pct": 0.9894736842105263
         },
         {
           "situation": "5v3",
-          "wins": 44,
-          "losses": 5,
-          "win_pct": 0.8979591836734694
+          "wins": 158,
+          "losses": 11,
+          "win_pct": 0.9349112426035503
         },
         {
           "situation": "5v4",
-          "wins": 74,
-          "losses": 24,
-          "win_pct": 0.7551020408163265
+          "wins": 253,
+          "losses": 64,
+          "win_pct": 0.7981072555205048
         },
         {
           "situation": "5v5",
-          "wins": 112,
-          "losses": 88,
-          "win_pct": 0.56
+          "wins": 359,
+          "losses": 232,
+          "win_pct": 0.6074450084602369
         },
         {
           "situation": "4v1",
-          "wins": 77,
-          "losses": 1,
-          "win_pct": 0.9871794871794872
+          "wins": 135,
+          "losses": 2,
+          "win_pct": 0.9854014598540146
         },
         {
           "situation": "4v2",
-          "wins": 110,
-          "losses": 6,
-          "win_pct": 0.9482758620689655
+          "wins": 186,
+          "losses": 13,
+          "win_pct": 0.9346733668341709
         },
         {
           "situation": "4v3",
-          "wins": 154,
-          "losses": 18,
-          "win_pct": 0.8953488372093024
+          "wins": 194,
+          "losses": 42,
+          "win_pct": 0.8220338983050848
         },
         {
           "situation": "4v4",
-          "wins": 202,
-          "losses": 51,
-          "win_pct": 0.7984189723320159
+          "wins": 183,
+          "losses": 114,
+          "win_pct": 0.6161616161616161
         },
         {
           "situation": "4v5",
-          "wins": 229,
-          "losses": 119,
-          "win_pct": 0.6580459770114943
+          "wins": 106,
+          "losses": 168,
+          "win_pct": 0.38686131386861317
         },
         {
           "situation": "3v1",
-          "wins": 123,
-          "losses": 4,
-          "win_pct": 0.968503937007874
+          "wins": 124,
+          "losses": 7,
+          "win_pct": 0.9465648854961832
         },
         {
           "situation": "3v2",
-          "wins": 149,
-          "losses": 24,
-          "win_pct": 0.861271676300578
+          "wins": 134,
+          "losses": 36,
+          "win_pct": 0.788235294117647
         },
         {
           "situation": "3v3",
-          "wins": 170,
-          "losses": 50,
-          "win_pct": 0.7727272727272727
+          "wins": 102,
+          "losses": 76,
+          "win_pct": 0.5730337078651685
         },
         {
           "situation": "3v4",
-          "wins": 146,
-          "losses": 98,
-          "win_pct": 0.5983606557377049
+          "wins": 64,
+          "losses": 127,
+          "win_pct": 0.33507853403141363
         },
         {
           "situation": "3v5",
-          "wins": 106,
-          "losses": 141,
-          "win_pct": 0.4291497975708502
+          "wins": 18,
+          "losses": 107,
+          "win_pct": 0.144
         },
         {
           "situation": "2v1",
-          "wins": 114,
-          "losses": 11,
-          "win_pct": 0.912
+          "wins": 103,
+          "losses": 16,
+          "win_pct": 0.865546218487395
         },
         {
           "situation": "2v2",
-          "wins": 123,
-          "losses": 44,
-          "win_pct": 0.7365269461077845
+          "wins": 84,
+          "losses": 63,
+          "win_pct": 0.5714285714285714
         },
         {
           "situation": "2v3",
-          "wins": 94,
-          "losses": 72,
-          "win_pct": 0.5662650602409639
+          "wins": 45,
+          "losses": 87,
+          "win_pct": 0.3409090909090909
         },
         {
           "situation": "2v4",
-          "wins": 55,
-          "losses": 101,
-          "win_pct": 0.3525641025641026
+          "wins": 19,
+          "losses": 99,
+          "win_pct": 0.16101694915254236
         },
         {
           "situation": "2v5",
-          "wins": 32,
-          "losses": 101,
-          "win_pct": 0.24060150375939848
+          "wins": 6,
+          "losses": 62,
+          "win_pct": 0.08823529411764706
         },
         {
           "situation": "1v1",
-          "wins": 59,
-          "losses": 37,
-          "win_pct": 0.6145833333333334
+          "wins": 51,
+          "losses": 41,
+          "win_pct": 0.5543478260869565
         },
         {
           "situation": "1v2",
-          "wins": 47,
-          "losses": 70,
-          "win_pct": 0.4017094017094017
+          "wins": 25,
+          "losses": 78,
+          "win_pct": 0.24271844660194175
         },
         {
           "situation": "1v3",
-          "wins": 26,
-          "losses": 94,
-          "win_pct": 0.21666666666666667
+          "wins": 7,
+          "losses": 80,
+          "win_pct": 0.08045977011494253
         },
         {
           "situation": "1v4",
-          "wins": 15,
-          "losses": 84,
-          "win_pct": 0.15151515151515152
+          "wins": 3,
+          "losses": 65,
+          "win_pct": 0.04411764705882353
         },
         {
           "situation": "1v5",
-          "wins": 4,
-          "losses": 66,
-          "win_pct": 0.05714285714285714
+          "wins": 0,
+          "losses": 38,
+          "win_pct": 0.0
         }
       ],
       "series_record": {
-        "wins": 14,
+        "wins": 11,
         "losses": 2
       },
       "form": [
@@ -3032,9 +3033,9 @@
           "ret_per_map": 7.5,
           "ret_rW_pct": 0.267,
           "post_rank": 11,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 10,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 9,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Pearl",
@@ -3070,9 +3071,9 @@
           "ret_per_map": 9.0,
           "ret_rW_pct": 0.167,
           "post_rank": 8,
-          "post_rW_event_avg": 0.716,
+          "post_rW_event_avg": 0.715,
           "ret_rank": 11,
-          "ret_rW_event_avg": 0.344
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -3108,9 +3109,9 @@
           "ret_per_map": 6.8,
           "ret_rW_pct": 0.265,
           "post_rank": 10,
-          "post_rW_event_avg": 0.741,
+          "post_rW_event_avg": 0.745,
           "ret_rank": 10,
-          "ret_rW_event_avg": 0.307
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -3141,16 +3142,16 @@
         "ret_per_map": 7.8,
         "ret_rW_pct": 0.266,
         "post_rank": 6,
-        "post_rW_event_avg": 0.748,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 13,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "Chaza",
         "Leare",
-        "Szimpli",
         "elllement",
-        "kya"
+        "Chaza",
+        "kya",
+        "Szimpli"
       ],
       "xvy": [
         {
@@ -3455,9 +3456,9 @@
           "ret_per_map": 7.3,
           "ret_rW_pct": 0.364,
           "post_rank": 6,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 5,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 4,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -3493,9 +3494,9 @@
           "ret_per_map": 3.0,
           "ret_rW_pct": 0.333,
           "post_rank": 13,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 6,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -3531,9 +3532,9 @@
           "ret_per_map": 9.0,
           "ret_rW_pct": 0.333,
           "post_rank": 1,
-          "post_rW_event_avg": 0.81,
+          "post_rW_event_avg": 0.815,
           "ret_rank": 8,
-          "ret_rW_event_avg": 0.362
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Split",
@@ -3569,9 +3570,9 @@
           "ret_per_map": 7.0,
           "ret_rW_pct": 0.286,
           "post_rank": 14,
-          "post_rW_event_avg": 0.741,
+          "post_rW_event_avg": 0.745,
           "ret_rank": 7,
-          "ret_rW_event_avg": 0.307
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -3602,16 +3603,16 @@
         "ret_per_map": 5.7,
         "ret_rW_pct": 0.333,
         "post_rank": 14,
-        "post_rW_event_avg": 0.748,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 7,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "kospa1n",
         "Raz",
+        "Redgar",
+        "kospa1n",
         "reblyik",
-        "Bishepss",
-        "Redgar"
+        "Bishepss"
       ],
       "xvy": [
         {
@@ -3916,9 +3917,9 @@
           "ret_per_map": 5.3,
           "ret_rW_pct": 0.375,
           "post_rank": 3,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 4,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 3,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -3954,9 +3955,9 @@
           "ret_per_map": 4.5,
           "ret_rW_pct": 0.222,
           "post_rank": 11,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 11,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -3985,16 +3986,16 @@
           "eco_rW_pct": 0,
           "eco_atk_rW_pct": 0,
           "eco_def_rW_pct": 0,
-          "post_scens": 15,
-          "post_per_map": 3.0,
-          "post_rW_pct": 0.8,
-          "ret_scens": 29,
-          "ret_per_map": 5.8,
-          "ret_rW_pct": 0.448,
-          "post_rank": 6,
-          "post_rW_event_avg": 0.81,
-          "ret_rank": 5,
-          "ret_rW_event_avg": 0.362
+          "post_scens": 16,
+          "post_per_map": 3.2,
+          "post_rW_pct": 0.812,
+          "ret_scens": 28,
+          "ret_per_map": 5.6,
+          "ret_rW_pct": 0.429,
+          "post_rank": 7,
+          "post_rW_event_avg": 0.815,
+          "ret_rank": 4,
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -4023,16 +4024,16 @@
           "eco_rW_pct": 0.0,
           "eco_atk_rW_pct": 0.0,
           "eco_def_rW_pct": 0,
-          "post_scens": 33,
-          "post_per_map": 5.5,
-          "post_rW_pct": 0.576,
-          "ret_scens": 39,
-          "ret_per_map": 6.5,
-          "ret_rW_pct": 0.487,
-          "post_rank": 11,
-          "post_rW_event_avg": 0.716,
-          "ret_rank": 2,
-          "ret_rW_event_avg": 0.344
+          "post_scens": 36,
+          "post_per_map": 6.0,
+          "post_rW_pct": 0.611,
+          "ret_scens": 36,
+          "ret_per_map": 6.0,
+          "ret_rW_pct": 0.444,
+          "post_rank": 10,
+          "post_rW_event_avg": 0.715,
+          "ret_rank": 3,
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -4052,25 +4053,25 @@
           "pistol_rW_pct": 0.562,
           "pistol_atk_rW_pct": 0.625,
           "pistol_def_rW_pct": 0.5,
-          "gun_rW_pct": 0.503,
-          "gun_atk_rW_pct": 0.581,
-          "gun_def_rW_pct": 0.427,
+          "gun_rW_pct": 0.507,
+          "gun_atk_rW_pct": 0.573,
+          "gun_def_rW_pct": 0.442,
           "antieco_rW_pct": 0.625,
           "antieco_atk_rW_pct": 0.625,
           "antieco_def_rW_pct": 0.625,
-          "eco_rW_pct": 0.667,
-          "eco_atk_rW_pct": 0.0,
-          "eco_def_rW_pct": 1.0,
-          "post_scens": 60,
-          "post_per_map": 7.5,
-          "post_rW_pct": 0.75,
-          "ret_scens": 73,
-          "ret_per_map": 9.1,
-          "ret_rW_pct": 0.329,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 64,
+          "post_per_map": 8.0,
+          "post_rW_pct": 0.766,
+          "ret_scens": 69,
+          "ret_per_map": 8.6,
+          "ret_rW_pct": 0.29,
           "post_rank": 6,
-          "post_rW_event_avg": 0.741,
-          "ret_rank": 5,
-          "ret_rW_event_avg": 0.307
+          "post_rW_event_avg": 0.745,
+          "ret_rank": 6,
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -4085,183 +4086,184 @@
         "pistol_rW_pct": 0.617,
         "pistol_atk_rW_pct": 0.533,
         "pistol_def_rW_pct": 0.7,
-        "gun_rW_pct": 0.557,
-        "gun_atk_rW_pct": 0.515,
-        "gun_def_rW_pct": 0.59,
+        "gun_rW_pct": 0.558,
+        "gun_atk_rW_pct": 0.513,
+        "gun_def_rW_pct": 0.593,
         "antieco_rW_pct": 0.633,
         "antieco_atk_rW_pct": 0.5,
         "antieco_def_rW_pct": 0.767,
-        "eco_rW_pct": 0.429,
+        "eco_rW_pct": 0.25,
         "eco_atk_rW_pct": 0.0,
-        "eco_def_rW_pct": 0.75,
-        "post_scens": 186,
-        "post_per_map": 6.2,
-        "post_rW_pct": 0.683,
-        "ret_scens": 208,
-        "ret_per_map": 6.9,
-        "ret_rW_pct": 0.399,
-        "post_rank": 13,
-        "post_rW_event_avg": 0.748,
+        "eco_def_rW_pct": 0.5,
+        "post_scens": 194,
+        "post_per_map": 6.5,
+        "post_rW_pct": 0.696,
+        "ret_scens": 200,
+        "ret_per_map": 6.7,
+        "ret_rW_pct": 0.375,
+        "post_rank": 12,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 2,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "Guardy",
-        "Kajuks",
         "globeX",
+        "Barca 2",
+        "Guardy",
+        "Fit1nho",
         "Stonezy",
-        "Fit1nho"
+        "Kajuks"
       ],
       "xvy": [
         {
           "situation": "5v1",
-          "wins": 62,
+          "wins": 72,
           "losses": 0,
           "win_pct": 1.0
         },
         {
           "situation": "5v2",
-          "wins": 97,
+          "wins": 116,
           "losses": 2,
-          "win_pct": 0.9797979797979798
+          "win_pct": 0.9830508474576272
         },
         {
           "situation": "5v3",
-          "wins": 154,
-          "losses": 16,
-          "win_pct": 0.9058823529411765
+          "wins": 185,
+          "losses": 17,
+          "win_pct": 0.9158415841584159
         },
         {
           "situation": "5v4",
-          "wins": 218,
-          "losses": 78,
-          "win_pct": 0.7364864864864865
+          "wins": 265,
+          "losses": 83,
+          "win_pct": 0.7614942528735632
         },
         {
           "situation": "5v5",
-          "wins": 298,
-          "losses": 239,
-          "win_pct": 0.5549348230912476
+          "wins": 362,
+          "losses": 275,
+          "win_pct": 0.5682888540031397
         },
         {
           "situation": "4v1",
-          "wins": 116,
+          "wins": 128,
           "losses": 0,
           "win_pct": 1.0
         },
         {
           "situation": "4v2",
-          "wins": 156,
+          "wins": 166,
           "losses": 11,
-          "win_pct": 0.9341317365269461
+          "win_pct": 0.9378531073446328
         },
         {
           "situation": "4v3",
-          "wins": 180,
-          "losses": 46,
-          "win_pct": 0.7964601769911505
+          "wins": 187,
+          "losses": 51,
+          "win_pct": 0.7857142857142857
         },
         {
           "situation": "4v4",
-          "wins": 164,
-          "losses": 120,
-          "win_pct": 0.5774647887323944
+          "wins": 156,
+          "losses": 133,
+          "win_pct": 0.5397923875432526
         },
         {
           "situation": "4v5",
-          "wins": 130,
-          "losses": 174,
-          "win_pct": 0.4276315789473684
+          "wins": 97,
+          "losses": 192,
+          "win_pct": 0.3356401384083045
         },
         {
           "situation": "3v1",
-          "wins": 145,
+          "wins": 146,
           "losses": 3,
-          "win_pct": 0.9797297297297297
+          "win_pct": 0.9798657718120806
         },
         {
           "situation": "3v2",
-          "wins": 151,
+          "wins": 147,
           "losses": 30,
-          "win_pct": 0.8342541436464088
+          "win_pct": 0.8305084745762712
         },
         {
           "situation": "3v3",
-          "wins": 118,
-          "losses": 81,
-          "win_pct": 0.592964824120603
+          "wins": 109,
+          "losses": 89,
+          "win_pct": 0.5505050505050505
         },
         {
           "situation": "3v4",
-          "wins": 75,
-          "losses": 142,
-          "win_pct": 0.3456221198156682
+          "wins": 55,
+          "losses": 150,
+          "win_pct": 0.2682926829268293
         },
         {
           "situation": "3v5",
-          "wins": 41,
-          "losses": 129,
-          "win_pct": 0.2411764705882353
+          "wins": 21,
+          "losses": 125,
+          "win_pct": 0.14383561643835616
         },
         {
           "situation": "2v1",
-          "wins": 108,
+          "wins": 107,
           "losses": 12,
-          "win_pct": 0.9
+          "win_pct": 0.8991596638655462
         },
         {
           "situation": "2v2",
-          "wins": 82,
-          "losses": 71,
-          "win_pct": 0.5359477124183006
+          "wins": 78,
+          "losses": 76,
+          "win_pct": 0.5064935064935064
         },
         {
           "situation": "2v3",
-          "wins": 45,
-          "losses": 116,
-          "win_pct": 0.2795031055900621
+          "wins": 38,
+          "losses": 126,
+          "win_pct": 0.23170731707317074
         },
         {
           "situation": "2v4",
-          "wins": 17,
-          "losses": 132,
-          "win_pct": 0.11409395973154363
+          "wins": 9,
+          "losses": 133,
+          "win_pct": 0.06338028169014084
         },
         {
           "situation": "2v5",
-          "wins": 7,
-          "losses": 80,
-          "win_pct": 0.08045977011494253
+          "wins": 2,
+          "losses": 71,
+          "win_pct": 0.0273972602739726
         },
         {
           "situation": "1v1",
-          "wins": 63,
-          "losses": 39,
-          "win_pct": 0.6176470588235294
+          "wins": 69,
+          "losses": 40,
+          "win_pct": 0.6330275229357798
         },
         {
           "situation": "1v2",
-          "wins": 27,
-          "losses": 97,
-          "win_pct": 0.21774193548387097
+          "wins": 25,
+          "losses": 102,
+          "win_pct": 0.1968503937007874
         },
         {
           "situation": "1v3",
-          "wins": 10,
-          "losses": 110,
-          "win_pct": 0.08333333333333333
+          "wins": 4,
+          "losses": 109,
+          "win_pct": 0.035398230088495575
         },
         {
           "situation": "1v4",
-          "wins": 6,
-          "losses": 93,
-          "win_pct": 0.06060606060606061
+          "wins": 1,
+          "losses": 87,
+          "win_pct": 0.011363636363636364
         },
         {
           "situation": "1v5",
-          "wins": 4,
-          "losses": 47,
-          "win_pct": 0.0784313725490196
+          "wins": 1,
+          "losses": 39,
+          "win_pct": 0.025
         }
       ],
       "series_record": {
@@ -4415,9 +4417,9 @@
           "ret_per_map": 6.5,
           "ret_rW_pct": 0.308,
           "post_rank": 12,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 8,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 7,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -4453,9 +4455,9 @@
           "ret_per_map": 6.9,
           "ret_rW_pct": 0.421,
           "post_rank": 5,
-          "post_rW_event_avg": 0.687,
-          "ret_rank": 2,
-          "ret_rW_event_avg": 0.322
+          "post_rW_event_avg": 0.685,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -4491,9 +4493,9 @@
           "ret_per_map": 4.2,
           "ret_rW_pct": 0.478,
           "post_rank": 11,
-          "post_rW_event_avg": 0.81,
-          "ret_rank": 3,
-          "ret_rW_event_avg": 0.362
+          "post_rW_event_avg": 0.815,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -4529,9 +4531,9 @@
           "ret_per_map": 4.7,
           "ret_rW_pct": 0.643,
           "post_rank": 12,
-          "post_rW_event_avg": 0.716,
+          "post_rW_event_avg": 0.715,
           "ret_rank": 1,
-          "ret_rW_event_avg": 0.344
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -4567,9 +4569,9 @@
           "ret_per_map": 9.0,
           "ret_rW_pct": 0.25,
           "post_rank": 12,
-          "post_rW_event_avg": 0.741,
+          "post_rW_event_avg": 0.745,
           "ret_rank": 11,
-          "ret_rW_event_avg": 0.307
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -4599,17 +4601,17 @@
         "ret_scens": 290,
         "ret_per_map": 6.3,
         "ret_rW_pct": 0.352,
-        "post_rank": 12,
-        "post_rW_event_avg": 0.748,
-        "ret_rank": 6,
-        "ret_rW_event_avg": 0.33
+        "post_rank": 13,
+        "post_rW_event_avg": 0.747,
+        "ret_rank": 5,
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "BULD",
+        "OLIZERA",
         "Famsii",
         "Jesse",
-        "OLIZERA",
-        "B1SK"
+        "B1SK",
+        "BULD"
       ],
       "xvy": [
         {
@@ -4914,9 +4916,9 @@
           "ret_per_map": 8.0,
           "ret_rW_pct": 0.5,
           "post_rank": 7,
-          "post_rW_event_avg": 0.743,
+          "post_rW_event_avg": 0.731,
           "ret_rank": 1,
-          "ret_rW_event_avg": 0.328
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -4952,9 +4954,9 @@
           "ret_per_map": 6.8,
           "ret_rW_pct": 0.407,
           "post_rank": 10,
-          "post_rW_event_avg": 0.687,
-          "ret_rank": 3,
-          "ret_rW_event_avg": 0.322
+          "post_rW_event_avg": 0.685,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -4990,9 +4992,9 @@
           "ret_per_map": 4.5,
           "ret_rW_pct": 0.185,
           "post_rank": 10,
-          "post_rW_event_avg": 0.81,
+          "post_rW_event_avg": 0.815,
           "ret_rank": 12,
-          "ret_rW_event_avg": 0.362
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -5028,9 +5030,9 @@
           "ret_per_map": 8.3,
           "ret_rW_pct": 0.44,
           "post_rank": 5,
-          "post_rW_event_avg": 0.716,
+          "post_rW_event_avg": 0.715,
           "ret_rank": 4,
-          "ret_rW_event_avg": 0.344
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -5066,9 +5068,9 @@
           "ret_per_map": 9.8,
           "ret_rW_pct": 0.286,
           "post_rank": 1,
-          "post_rW_event_avg": 0.741,
+          "post_rW_event_avg": 0.745,
           "ret_rank": 8,
-          "ret_rW_event_avg": 0.307
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -5099,16 +5101,16 @@
         "ret_per_map": 7.4,
         "ret_rW_pct": 0.36,
         "post_rank": 5,
-        "post_rW_event_avg": 0.748,
-        "ret_rank": 4,
-        "ret_rW_event_avg": 0.33
+        "post_rW_event_avg": 0.747,
+        "ret_rank": 3,
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "Elite",
+        "pAura",
         "burzzy",
         "QutionerX",
-        "Brave",
-        "pAura"
+        "Elite",
+        "Brave"
       ],
       "xvy": [
         {
@@ -5413,9 +5415,9 @@
           "ret_per_map": 8.2,
           "ret_rW_pct": 0.327,
           "post_rank": 9,
-          "post_rW_event_avg": 0.743,
-          "ret_rank": 7,
-          "ret_rW_event_avg": 0.328
+          "post_rW_event_avg": 0.731,
+          "ret_rank": 6,
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -5451,9 +5453,9 @@
           "ret_per_map": 7.5,
           "ret_rW_pct": 0.333,
           "post_rank": 6,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 7,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -5489,9 +5491,9 @@
           "ret_per_map": 4.5,
           "ret_rW_pct": 0.222,
           "post_rank": 4,
-          "post_rW_event_avg": 0.81,
+          "post_rW_event_avg": 0.815,
           "ret_rank": 11,
-          "ret_rW_event_avg": 0.362
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -5526,10 +5528,10 @@
           "ret_scens": 35,
           "ret_per_map": 8.8,
           "ret_rW_pct": 0.314,
-          "post_rank": 10,
-          "post_rW_event_avg": 0.716,
-          "ret_rank": 7,
-          "ret_rW_event_avg": 0.344
+          "post_rank": 11,
+          "post_rW_event_avg": 0.715,
+          "ret_rank": 6,
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -5565,9 +5567,9 @@
           "ret_per_map": 6.2,
           "ret_rW_pct": 0.2,
           "post_rank": 13,
-          "post_rW_event_avg": 0.741,
+          "post_rW_event_avg": 0.745,
           "ret_rank": 12,
-          "ret_rW_event_avg": 0.307
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -5598,16 +5600,16 @@
         "ret_per_map": 7.0,
         "ret_rW_pct": 0.304,
         "post_rank": 11,
-        "post_rW_event_avg": 0.748,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 10,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "Deadink",
-        "hezacoil",
         "Kachoww",
         "reazy",
-        "batujnax"
+        "hezacoil",
+        "batujnax",
+        "Deadink"
       ],
       "xvy": [
         {
@@ -5950,9 +5952,9 @@
           "ret_per_map": 6.5,
           "ret_rW_pct": 0.231,
           "post_rank": 5,
-          "post_rW_event_avg": 0.743,
+          "post_rW_event_avg": 0.731,
           "ret_rank": 11,
-          "ret_rW_event_avg": 0.328
+          "ret_rW_event_avg": 0.314
         },
         {
           "map": "Corrode",
@@ -5988,9 +5990,9 @@
           "ret_per_map": 6.4,
           "ret_rW_pct": 0.353,
           "post_rank": 3,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 5,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Split",
@@ -6026,9 +6028,9 @@
           "ret_per_map": 5.0,
           "ret_rW_pct": 0.2,
           "post_rank": 9,
-          "post_rW_event_avg": 0.741,
+          "post_rW_event_avg": 0.745,
           "ret_rank": 13,
-          "ret_rW_event_avg": 0.307
+          "ret_rW_event_avg": 0.293
         },
         {
           "map": "Sunset",
@@ -6097,15 +6099,15 @@
         "ret_per_map": 5.5,
         "ret_rW_pct": 0.234,
         "post_rank": 4,
-        "post_rW_event_avg": 0.748,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 14,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
         "br1ckzl",
         "Koji",
-        "Susano",
         "Akai",
+        "Susano",
         "Saud",
         "Avvix",
         "AL7B"
@@ -6451,9 +6453,9 @@
           "ret_per_map": 7.8,
           "ret_rW_pct": 0.383,
           "post_rank": 12,
-          "post_rW_event_avg": 0.687,
+          "post_rW_event_avg": 0.685,
           "ret_rank": 4,
-          "ret_rW_event_avg": 0.322
+          "ret_rW_event_avg": 0.318
         },
         {
           "map": "Haven",
@@ -6489,9 +6491,9 @@
           "ret_per_map": 4.0,
           "ret_rW_pct": 0.25,
           "post_rank": 5,
-          "post_rW_event_avg": 0.81,
+          "post_rW_event_avg": 0.815,
           "ret_rank": 10,
-          "ret_rW_event_avg": 0.362
+          "ret_rW_event_avg": 0.352
         },
         {
           "map": "Pearl",
@@ -6526,10 +6528,10 @@
           "ret_scens": 44,
           "ret_per_map": 8.8,
           "ret_rW_pct": 0.227,
-          "post_rank": 3,
-          "post_rW_event_avg": 0.716,
+          "post_rank": 2,
+          "post_rW_event_avg": 0.715,
           "ret_rank": 9,
-          "ret_rW_event_avg": 0.344
+          "ret_rW_event_avg": 0.332
         },
         {
           "map": "Split",
@@ -6565,9 +6567,9 @@
           "ret_per_map": 7.0,
           "ret_rW_pct": 0.429,
           "post_rank": 7,
-          "post_rW_event_avg": 0.741,
-          "ret_rank": 2,
-          "ret_rW_event_avg": 0.307
+          "post_rW_event_avg": 0.745,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.293
         }
       ],
       "allMaps": {
@@ -6598,17 +6600,17 @@
         "ret_per_map": 6.5,
         "ret_rW_pct": 0.312,
         "post_rank": 10,
-        "post_rW_event_avg": 0.748,
+        "post_rW_event_avg": 0.747,
         "ret_rank": 9,
-        "ret_rW_event_avg": 0.33
+        "ret_rW_event_avg": 0.322
       },
       "players": [
-        "MonOkson",
-        "Tenkai",
-        "LOOP",
-        "Snop",
         "CUNHA",
-        "OUKA"
+        "OUKA",
+        "Tenkai",
+        "MonOkson",
+        "LOOP",
+        "Snop"
       ],
       "xvy": [
         {
@@ -8181,9 +8183,9 @@
       "fk_pct": 0.0626,
       "fd_pct": 0.0423,
       "first_conversion": 0.597,
-      "clutch_scens": 93,
-      "clutches": 29,
-      "clutch_pct": 0.312,
+      "clutch_scens": 76,
+      "clutches": 19,
+      "clutch_pct": 0.25,
       "kast": 0.765,
       "awp_pct": 0.0,
       "vlr_rating": 1.18,
@@ -8215,47 +8217,53 @@
       ]
     },
     {
-      "ign": "prti",
+      "ign": "TLA prti",
       "team": "Team Liquid Academy",
-      "acs_split": 132,
-      "acs_year": 132,
-      "adr": 90.4,
-      "rounds": 200,
-      "kills": 89,
-      "deaths": 142,
-      "assists": 64,
-      "fk": 11,
-      "fd": 17,
-      "kd": 0.627,
-      "kad": 1.077,
-      "first_pct": 0.393,
-      "fk_pct": 0.055,
-      "fd_pct": 0.085,
-      "first_conversion": 0.393,
-      "clutch_scens": 19,
-      "clutches": 5,
-      "clutch_pct": 0.263,
-      "kast": 0.695,
-      "awp_pct": 0.022,
-      "vlr_rating": 0.707,
+      "acs_split": 156,
+      "acs_year": 156,
+      "adr": 112.6,
+      "rounds": 591,
+      "kills": 321,
+      "deaths": 377,
+      "assists": 227,
+      "fk": 34,
+      "fd": 44,
+      "kd": 0.851,
+      "kad": 1.454,
+      "first_pct": 0.436,
+      "fk_pct": 0.0575,
+      "fd_pct": 0.0745,
+      "first_conversion": 0.436,
+      "clutch_scens": 50,
+      "clutches": 10,
+      "clutch_pct": 0.2,
+      "kast": 0.748,
+      "awp_pct": 0.009,
+      "vlr_rating": 0.899,
       "agents": [
         {
           "agent": "Omen",
-          "picks": 160,
+          "picks": 386,
+          "matches": 19,
+          "pct": 65.5
+        },
+        {
+          "agent": "Astra",
+          "picks": 163,
           "matches": 8,
-          "pct": 80.0
+          "pct": 27.6
+        },
+        {
+          "agent": "Sova",
+          "picks": 22,
+          "matches": 1,
+          "pct": 3.4
         },
         {
           "agent": "Brimstone",
           "picks": 20,
           "matches": 1,
-          "pct": 10.0
-        },
-        {
-          "agent": "Astra",
-          "picks": 20,
-          "matches": 1,
-          "pct": 10.0
+          "pct": 3.4
         }
       ]
     },
@@ -8277,9 +8285,9 @@
       "fk_pct": 0.1692,
       "fd_pct": 0.1506,
       "first_conversion": 0.529,
-      "clutch_scens": 44,
-      "clutches": 12,
-      "clutch_pct": 0.273,
+      "clutch_scens": 32,
+      "clutches": 7,
+      "clutch_pct": 0.219,
       "kast": 0.729,
       "awp_pct": 0.094,
       "vlr_rating": 0.853,
@@ -8328,9 +8336,9 @@
       "fk_pct": 0.0964,
       "fd_pct": 0.0745,
       "first_conversion": 0.564,
-      "clutch_scens": 83,
-      "clutches": 11,
-      "clutch_pct": 0.133,
+      "clutch_scens": 67,
+      "clutches": 8,
+      "clutch_pct": 0.119,
       "kast": 0.758,
       "awp_pct": 0.007,
       "vlr_rating": 1.157,
@@ -8379,9 +8387,9 @@
       "fk_pct": 0.1506,
       "fd_pct": 0.1218,
       "first_conversion": 0.553,
-      "clutch_scens": 50,
-      "clutches": 13,
-      "clutch_pct": 0.26,
+      "clutch_scens": 45,
+      "clutches": 10,
+      "clutch_pct": 0.222,
       "kast": 0.775,
       "awp_pct": 0.095,
       "vlr_rating": 1.269,
@@ -8880,9 +8888,9 @@
       "fk_pct": 0.1931,
       "fd_pct": 0.1146,
       "first_conversion": 0.628,
-      "clutch_scens": 49,
-      "clutches": 13,
-      "clutch_pct": 0.265,
+      "clutch_scens": 45,
+      "clutches": 11,
+      "clutch_pct": 0.244,
       "kast": 0.754,
       "awp_pct": 0.112,
       "vlr_rating": 1.194,
@@ -8925,9 +8933,9 @@
       "fk_pct": 0.1052,
       "fd_pct": 0.0942,
       "first_conversion": 0.528,
-      "clutch_scens": 64,
-      "clutches": 14,
-      "clutch_pct": 0.219,
+      "clutch_scens": 60,
+      "clutches": 10,
+      "clutch_pct": 0.167,
       "kast": 0.739,
       "awp_pct": 0.0,
       "vlr_rating": 1.098,
@@ -8982,9 +8990,9 @@
       "fk_pct": 0.0879,
       "fd_pct": 0.0801,
       "first_conversion": 0.523,
-      "clutch_scens": 81,
-      "clutches": 17,
-      "clutch_pct": 0.21,
+      "clutch_scens": 77,
+      "clutches": 16,
+      "clutch_pct": 0.208,
       "kast": 0.736,
       "awp_pct": 0.097,
       "vlr_rating": 1.046,
@@ -9078,9 +9086,9 @@
       "fk_pct": 0.0832,
       "fd_pct": 0.0754,
       "first_conversion": 0.525,
-      "clutch_scens": 79,
-      "clutches": 18,
-      "clutch_pct": 0.228,
+      "clutch_scens": 71,
+      "clutches": 15,
+      "clutch_pct": 0.211,
       "kast": 0.746,
       "awp_pct": 0.01,
       "vlr_rating": 0.971,
@@ -9108,6 +9116,45 @@
           "picks": 22,
           "matches": 1,
           "pct": 3.3
+        }
+      ]
+    },
+    {
+      "ign": "Barca 2",
+      "team": "Bar\u00e7a eSports",
+      "acs_split": 206,
+      "acs_year": 206,
+      "adr": 132.6,
+      "rounds": 100,
+      "kills": 76,
+      "deaths": 65,
+      "assists": 43,
+      "fk": 4,
+      "fd": 11,
+      "kd": 1.169,
+      "kad": 1.831,
+      "first_pct": 0.267,
+      "fk_pct": 0.04,
+      "fd_pct": 0.11,
+      "first_conversion": 0.267,
+      "clutch_scens": 18,
+      "clutches": 8,
+      "clutch_pct": 0.444,
+      "kast": 0.78,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.188,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 59,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Astra",
+          "picks": 41,
+          "matches": 2,
+          "pct": 40.0
         }
       ]
     },
@@ -12701,9 +12748,9 @@
       "fk_pct": 0.0615,
       "fd_pct": 0.0404,
       "first_conversion": 0.603,
-      "clutch_scens": 90,
-      "clutches": 28,
-      "clutch_pct": 0.311,
+      "clutch_scens": 74,
+      "clutches": 19,
+      "clutch_pct": 0.257,
       "kast": 0.768,
       "awp_pct": 0.0,
       "vlr_rating": 1.195,
@@ -12747,9 +12794,9 @@
       "fk_pct": 0.0909,
       "fd_pct": 0.0909,
       "first_conversion": 0.5,
-      "clutch_scens": 3,
-      "clutches": 1,
-      "clutch_pct": 0.333,
+      "clutch_scens": 2,
+      "clutches": 0,
+      "clutch_pct": 0.0,
       "kast": 0.682,
       "awp_pct": 0.0,
       "vlr_rating": 0.801,
@@ -12764,50 +12811,84 @@
       "role": "Controller"
     },
     {
-      "ign": "prti",
+      "ign": "TLA prti",
       "team": "Team Liquid Academy",
-      "acs_split": 132,
-      "acs_year": 132,
-      "adr": 90.4,
-      "rounds": 200,
-      "kills": 89,
-      "deaths": 142,
-      "assists": 64,
-      "fk": 11,
-      "fd": 17,
-      "kd": 0.627,
-      "kad": 1.077,
-      "first_pct": 0.393,
-      "fk_pct": 0.055,
-      "fd_pct": 0.085,
-      "first_conversion": 0.393,
-      "clutch_scens": 19,
-      "clutches": 5,
-      "clutch_pct": 0.263,
-      "kast": 0.695,
-      "awp_pct": 0.022,
-      "vlr_rating": 0.707,
+      "acs_split": 156,
+      "acs_year": 156,
+      "adr": 112.5,
+      "rounds": 569,
+      "kills": 308,
+      "deaths": 361,
+      "assists": 223,
+      "fk": 33,
+      "fd": 43,
+      "kd": 0.853,
+      "kad": 1.471,
+      "first_pct": 0.434,
+      "fk_pct": 0.058,
+      "fd_pct": 0.0756,
+      "first_conversion": 0.434,
+      "clutch_scens": 49,
+      "clutches": 10,
+      "clutch_pct": 0.204,
+      "kast": 0.754,
+      "awp_pct": 0.01,
+      "vlr_rating": 0.902,
       "agents": [
         {
           "agent": "Omen",
-          "picks": 160,
+          "picks": 386,
+          "matches": 19,
+          "pct": 67.9
+        },
+        {
+          "agent": "Astra",
+          "picks": 163,
           "matches": 8,
-          "pct": 80.0
+          "pct": 28.6
         },
         {
           "agent": "Brimstone",
           "picks": 20,
           "matches": 1,
-          "pct": 10.0
-        },
-        {
-          "agent": "Astra",
-          "picks": 20,
-          "matches": 1,
-          "pct": 10.0
+          "pct": 3.6
         }
       ],
       "role": "Controller"
+    },
+    {
+      "ign": "TLA prti",
+      "team": "Team Liquid Academy",
+      "acs_split": 172,
+      "acs_year": 172,
+      "adr": 113.8,
+      "rounds": 22,
+      "kills": 13,
+      "deaths": 16,
+      "assists": 4,
+      "fk": 1,
+      "fd": 1,
+      "kd": 0.812,
+      "kad": 1.062,
+      "first_pct": 0.5,
+      "fk_pct": 0.0455,
+      "fd_pct": 0.0455,
+      "first_conversion": 0.5,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.591,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.816,
+      "agents": [
+        {
+          "agent": "Sova",
+          "picks": 22,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "role": "Initiator"
     },
     {
       "ign": "WanZeru",
@@ -12827,8 +12908,8 @@
       "fk_pct": 0.165,
       "fd_pct": 0.145,
       "first_conversion": 0.532,
-      "clutch_scens": 44,
-      "clutches": 12,
+      "clutch_scens": 32,
+      "clutches": 7,
       "clutch_pct": 0.1,
       "kast": 0.64,
       "awp_pct": 0.102,
@@ -12879,8 +12960,8 @@
       "fk_pct": 0.1349,
       "fd_pct": 0.0794,
       "first_conversion": 0.63,
-      "clutch_scens": 64,
-      "clutches": 10,
+      "clutch_scens": 50,
+      "clutches": 8,
       "clutch_pct": 0.15,
       "kast": 0.77,
       "awp_pct": 0.0,
@@ -12919,8 +13000,8 @@
       "fk_pct": 0.0541,
       "fd_pct": 0.0676,
       "first_conversion": 0.444,
-      "clutch_scens": 19,
-      "clutches": 1,
+      "clutch_scens": 17,
+      "clutches": 0,
       "clutch_pct": 0.0,
       "kast": 0.716,
       "awp_pct": 0.0,
@@ -12959,8 +13040,8 @@
       "fk_pct": 0.1519,
       "fd_pct": 0.1709,
       "first_conversion": 0.471,
-      "clutch_scens": 34,
-      "clutches": 8,
+      "clutch_scens": 30,
+      "clutches": 5,
       "clutch_pct": 0.2,
       "kast": 0.734,
       "awp_pct": 0.032,
@@ -12999,7 +13080,7 @@
       "fk_pct": 0.05,
       "fd_pct": 0.1,
       "first_conversion": 0.333,
-      "clutch_scens": 15,
+      "clutch_scens": 14,
       "clutches": 4,
       "clutch_pct": 0,
       "kast": 0.85,
@@ -13639,9 +13720,9 @@
       "fk_pct": 0.1931,
       "fd_pct": 0.1146,
       "first_conversion": 0.628,
-      "clutch_scens": 49,
-      "clutches": 13,
-      "clutch_pct": 0.265,
+      "clutch_scens": 45,
+      "clutches": 11,
+      "clutch_pct": 0.244,
       "kast": 0.754,
       "awp_pct": 0.112,
       "vlr_rating": 1.194,
@@ -13719,9 +13800,9 @@
       "fk_pct": 0.1058,
       "fd_pct": 0.1031,
       "first_conversion": 0.507,
-      "clutch_scens": 36,
-      "clutches": 8,
-      "clutch_pct": 0.222,
+      "clutch_scens": 32,
+      "clutches": 4,
+      "clutch_pct": 0.125,
       "kast": 0.727,
       "awp_pct": 0.0,
       "vlr_rating": 1.018,
@@ -13799,9 +13880,9 @@
       "fk_pct": 0.0602,
       "fd_pct": 0.0556,
       "first_conversion": 0.52,
-      "clutch_scens": 24,
-      "clutches": 6,
-      "clutch_pct": 0.25,
+      "clutch_scens": 22,
+      "clutches": 5,
+      "clutch_pct": 0.227,
       "kast": 0.704,
       "awp_pct": 0.012,
       "vlr_rating": 1.156,
@@ -13873,9 +13954,9 @@
       "fk_pct": 0.0655,
       "fd_pct": 0.083,
       "first_conversion": 0.441,
-      "clutch_scens": 33,
+      "clutch_scens": 31,
       "clutches": 5,
-      "clutch_pct": 0.152,
+      "clutch_pct": 0.161,
       "kast": 0.734,
       "awp_pct": 0.02,
       "vlr_rating": 0.896,
@@ -13953,9 +14034,9 @@
       "fk_pct": 0.0832,
       "fd_pct": 0.0754,
       "first_conversion": 0.525,
-      "clutch_scens": 79,
-      "clutches": 18,
-      "clutch_pct": 0.228,
+      "clutch_scens": 71,
+      "clutches": 15,
+      "clutch_pct": 0.211,
       "kast": 0.746,
       "awp_pct": 0.01,
       "vlr_rating": 0.971,
@@ -13986,6 +14067,46 @@
         }
       ],
       "role": "Initiator"
+    },
+    {
+      "ign": "Barca 2",
+      "team": "Bar\u00e7a eSports",
+      "acs_split": 206,
+      "acs_year": 206,
+      "adr": 132.6,
+      "rounds": 100,
+      "kills": 76,
+      "deaths": 65,
+      "assists": 43,
+      "fk": 4,
+      "fd": 11,
+      "kd": 1.169,
+      "kad": 1.831,
+      "first_pct": 0.267,
+      "fk_pct": 0.04,
+      "fd_pct": 0.11,
+      "first_conversion": 0.267,
+      "clutch_scens": 18,
+      "clutches": 8,
+      "clutch_pct": 0.444,
+      "kast": 0.78,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.188,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 59,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Astra",
+          "picks": 41,
+          "matches": 2,
+          "pct": 40.0
+        }
+      ],
+      "role": "Controller"
     },
     {
       "ign": "Jesse",
@@ -19705,13 +19826,13 @@
       "team1_agents": [
         "Killjoy",
         "Neon",
+        "Omen",
         "Sova",
         "Viper"
       ],
       "team2_agents": [
         "Killjoy",
         "Neon",
-        "Omen",
         "Omen",
         "Sova",
         "Viper"
@@ -19739,13 +19860,13 @@
       "team1": "Bar\u00e7a eSports",
       "team2": "NOVO",
       "team1_agents": [
+        "Astra",
         "Killjoy",
         "Sova",
         "Tejo",
         "Waylay"
       ],
       "team2_agents": [
-        "Astra",
         "Astra",
         "Chamber",
         "Neon",
@@ -19776,13 +19897,13 @@
       "team2": "NOVO",
       "team1_agents": [
         "Breach",
+        "Omen",
         "Skye",
         "Viper",
         "Waylay"
       ],
       "team2_agents": [
         "Chamber",
-        "Omen",
         "Omen",
         "Skye",
         "Viper",
@@ -20388,6 +20509,7 @@
       "team2": "OTK",
       "team1_agents": [
         "Breach",
+        "Omen",
         "Skye",
         "Viper",
         "Waylay"
@@ -20395,7 +20517,6 @@
       "team2_agents": [
         "Fade",
         "Neon",
-        "Omen",
         "Omen",
         "Viper",
         "Yoru"
@@ -20423,13 +20544,13 @@
       "team1": "Bar\u00e7a eSports",
       "team2": "OTK",
       "team1_agents": [
+        "Astra",
         "Killjoy",
         "Sova",
         "Tejo",
         "Waylay"
       ],
       "team2_agents": [
-        "Astra",
         "Astra",
         "Chamber",
         "Neon",
@@ -22073,19 +22194,19 @@
     },
     {
       "match_id": "1a24593b-b41f-43d6-a1b9-8755ba4dae66",
-      "series_id": "6ae09ac9",
+      "series_id": "d6798d10",
       "event": "VCL EMEA 2026 Stage 1",
       "map": "Pearl",
       "team1": "Team Liquid Academy",
-      "team2": "TLA",
+      "team2": "CTRL",
       "team1_agents": [
+        "Astra",
         "Fade",
         "Sage",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Astra",
         "Astra",
         "Killjoy",
         "Neon",
@@ -22117,13 +22238,13 @@
       "team1_agents": [
         "Fade",
         "Neon",
+        "Omen",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
         "Astra",
         "Chamber",
-        "Omen",
         "Phoenix",
         "Sova",
         "Yoru"
@@ -22151,13 +22272,13 @@
       "team1": "Team Liquid Academy",
       "team2": "UNI",
       "team1_agents": [
+        "Astra",
         "Fade",
         "Sage",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Astra",
         "Astra",
         "Fade",
         "Killjoy",
@@ -22189,13 +22310,13 @@
       "team1_agents": [
         "Astra",
         "Neon",
+        "Sova",
         "Viper",
         "Yoru"
       ],
       "team2_agents": [
         "Jett",
         "Omen",
-        "Sova",
         "Sova",
         "Viper",
         "Yoru"
@@ -22297,12 +22418,12 @@
       "team1_agents": [
         "Fade",
         "Neon",
+        "Omen",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
         "Chamber",
-        "Omen",
         "Omen",
         "Reyna",
         "Sova",
@@ -22312,14 +22433,14 @@
       "team2_score": 11,
       "team1_score_at_half": 4,
       "team2_score_at_half": 8,
-      "team1_atk_pistol_wins": 1,
-      "team1_def_pistol_wins": 0,
-      "team2_atk_pistol_wins": 1,
-      "team2_def_pistol_wins": 0,
-      "team1_atk_wins": 9,
-      "team1_atk_losses": 3,
-      "team1_def_wins": 4,
-      "team1_def_losses": 8,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 4,
+      "team1_atk_losses": 8,
+      "team1_def_wins": 9,
+      "team1_def_losses": 3,
       "winner": "Team Liquid Academy",
       "date": "2026-02-14"
     },
@@ -22333,13 +22454,13 @@
       "team1_agents": [
         "Cypher",
         "Neon",
+        "Omen",
         "Sova",
         "Yoru"
       ],
       "team2_agents": [
         "Cypher",
         "Neon",
-        "Omen",
         "Omen",
         "Sova",
         "Yoru"
@@ -22361,20 +22482,20 @@
     },
     {
       "match_id": "7e082984-0bc6-44a1-9ffc-f0c817b5e9db",
-      "series_id": "4eab3cef",
+      "series_id": "1beac517",
       "event": "VCL EMEA 2026 Stage 1",
       "map": "Corrode",
       "team1": "Team Liquid Academy",
-      "team2": "TLA",
+      "team2": "FRG",
       "team1_agents": [
         "Fade",
         "Neon",
+        "Omen",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
         "KAY/O",
-        "Omen",
         "Omen",
         "Sova",
         "Viper",
@@ -22403,13 +22524,13 @@
       "team1": "Team Liquid Academy",
       "team2": "FRG",
       "team1_agents": [
+        "Astra",
         "Fade",
         "Sage",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Astra",
         "Fade",
         "Killjoy",
         "Omen",
@@ -22619,13 +22740,13 @@
       "team1": "Team Liquid Academy",
       "team2": "BONK",
       "team1_agents": [
+        "Astra",
         "Fade",
         "Sage",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Astra",
         "Astra",
         "Fade",
         "Jett",
@@ -22636,14 +22757,14 @@
       "team2_score": 8,
       "team1_score_at_half": 6,
       "team2_score_at_half": 6,
-      "team1_atk_pistol_wins": 1,
-      "team1_def_pistol_wins": 0,
-      "team2_atk_pistol_wins": 1,
-      "team2_def_pistol_wins": 0,
-      "team1_atk_wins": 7,
-      "team1_atk_losses": 2,
-      "team1_def_wins": 6,
-      "team1_def_losses": 6,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 6,
+      "team1_atk_losses": 6,
+      "team1_def_wins": 7,
+      "team1_def_losses": 2,
       "winner": "Team Liquid Academy",
       "date": "2026-02-11"
     },
@@ -22657,13 +22778,13 @@
       "team1_agents": [
         "Cypher",
         "Neon",
+        "Omen",
         "Sova",
         "Yoru"
       ],
       "team2_agents": [
         "Killjoy",
         "Neon",
-        "Omen",
         "Omen",
         "Sova",
         "Yoru"
@@ -23441,19 +23562,19 @@
     },
     {
       "match_id": "979a7952-f8f3-4ea1-8d97-a4ee90e5c118",
-      "series_id": "8d9647bb",
+      "series_id": "90cc1d39",
       "event": "VCL EMEA 2026 Stage 1",
       "map": "Corrode",
       "team1": "Team Liquid Academy",
-      "team2": "TLA",
+      "team2": "LEO",
       "team1_agents": [
         "Fade",
         "Neon",
+        "Omen",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Omen",
         "Omen",
         "Phoenix",
         "Sova",
@@ -23483,13 +23604,13 @@
       "team1": "Team Liquid Academy",
       "team2": "LEO",
       "team1_agents": [
+        "Astra",
         "Fade",
         "Sage",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Astra",
         "Astra",
         "Killjoy",
         "Neon",
@@ -23909,21 +24030,21 @@
     },
     {
       "match_id": "ddd0aa57-4ff7-487b-9175-544561f4943b",
-      "series_id": "fbd73edb",
+      "series_id": "a9a22f86",
       "event": "VCL EMEA 2026 Stage 1",
       "map": "Corrode",
       "team1": "Team Liquid Academy",
-      "team2": "TLA",
+      "team2": "FMG",
       "team1_agents": [
         "Fade",
         "Neon",
+        "Omen",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
         "Cypher",
         "Fade",
-        "Omen",
         "Omen",
         "Tejo",
         "Waylay"
@@ -23932,33 +24053,33 @@
       "team2_score": 8,
       "team1_score_at_half": 6,
       "team2_score_at_half": 6,
-      "team1_atk_pistol_wins": 0,
-      "team1_def_pistol_wins": 1,
-      "team2_atk_pistol_wins": 0,
-      "team2_def_pistol_wins": 1,
-      "team1_atk_wins": 7,
-      "team1_atk_losses": 2,
-      "team1_def_wins": 6,
-      "team1_def_losses": 6,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 0,
+      "team2_atk_pistol_wins": 1,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 6,
+      "team1_atk_losses": 6,
+      "team1_def_wins": 7,
+      "team1_def_losses": 2,
       "winner": "Team Liquid Academy",
       "date": "2026-02-07"
     },
     {
       "match_id": "70ba3485-ddcd-484d-85f9-77c1d13c8d6a",
-      "series_id": "fbd73edb",
+      "series_id": "a9a22f86",
       "event": "VCL EMEA 2026 Stage 1",
       "map": "Split",
       "team1": "Team Liquid Academy",
-      "team2": "TLA",
+      "team2": "FMG",
       "team1_agents": [
         "Fade",
+        "Omen",
         "Raze",
         "Viper",
         "Yoru"
       ],
       "team2_agents": [
         "Fade",
-        "Omen",
         "Omen",
         "Raze",
         "Viper",
@@ -24923,13 +25044,13 @@
       "team1": "Team Liquid Academy",
       "team2": "Pixel Lumina",
       "team1_agents": [
+        "Astra",
         "Fade",
         "Sage",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Astra",
         "Astra",
         "Killjoy",
         "Neon",
@@ -24940,14 +25061,14 @@
       "team2_score": 13,
       "team1_score_at_half": 8,
       "team2_score_at_half": 4,
-      "team1_atk_pistol_wins": 1,
-      "team1_def_pistol_wins": 0,
-      "team2_atk_pistol_wins": 1,
-      "team2_def_pistol_wins": 0,
-      "team1_atk_wins": 3,
-      "team1_atk_losses": 9,
-      "team1_def_wins": 8,
-      "team1_def_losses": 4,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 8,
+      "team1_atk_losses": 4,
+      "team1_def_wins": 3,
+      "team1_def_losses": 9,
       "winner": "Pixel Lumina",
       "date": "2026-01-31"
     },
@@ -24961,11 +25082,11 @@
       "team1_agents": [
         "Fade",
         "Neon",
+        "Omen",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Omen",
         "Omen",
         "Sova",
         "Tejo",
@@ -24989,20 +25110,20 @@
     },
     {
       "match_id": "04958079-f139-415c-a934-8fd64d6c9644",
-      "series_id": "8af9fe02",
+      "series_id": "abb65587",
       "event": "VCL EMEA 2026 Stage 1",
       "map": "Split",
       "team1": "Team Liquid Academy",
-      "team2": "TLA",
+      "team2": "Pixel Lumina",
       "team1_agents": [
         "Fade",
+        "Omen",
         "Raze",
         "Viper",
         "Yoru"
       ],
       "team2_agents": [
         "Fade",
-        "Omen",
         "Omen",
         "Raze",
         "Viper",
@@ -25020,7 +25141,7 @@
       "team1_atk_losses": 9,
       "team1_def_wins": 8,
       "team1_def_losses": 7,
-      "winner": "TLA",
+      "winner": "Pixel Lumina",
       "date": "2026-01-31"
     },
     {
@@ -25177,11 +25298,11 @@
       "team1_agents": [
         "Fade",
         "Neon",
+        "Omen",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Omen",
         "Omen",
         "Phoenix",
         "Sova",
@@ -25211,13 +25332,13 @@
       "team1": "Team Liquid Academy",
       "team2": "LEO",
       "team1_agents": [
+        "Astra",
         "Fade",
         "Sage",
         "Vyse",
         "Yoru"
       ],
       "team2_agents": [
-        "Astra",
         "Astra",
         "Killjoy",
         "Neon",
@@ -29984,314 +30105,321 @@
         },
         {
           "rank": 30,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 206,
+          "rounds": 100
+        },
+        {
+          "rank": 31,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 205,
           "rounds": 683
         },
         {
-          "rank": 31,
+          "rank": 32,
           "ign": "Raz",
           "team": "MIR",
           "value": 205,
           "rounds": 218
         },
         {
-          "rank": 32,
+          "rank": 33,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 203,
           "rounds": 683
         },
         {
-          "rank": 33,
+          "rank": 34,
           "ign": "rexxtoned",
           "team": "Team Liquid Academy",
           "value": 203,
           "rounds": 591
         },
         {
-          "rank": 34,
+          "rank": 35,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 202,
           "rounds": 641
         },
         {
-          "rank": 35,
+          "rank": 36,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 201,
           "rounds": 637
         },
         {
-          "rank": 36,
+          "rank": 37,
           "ign": "Koji",
           "team": "Stallions Esports",
           "value": 201,
           "rounds": 641
         },
         {
-          "rank": 37,
+          "rank": 38,
           "ign": "CUNHA",
           "team": "GnG Amazigh",
           "value": 201,
           "rounds": 690
         },
         {
-          "rank": 38,
+          "rank": 39,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 198,
           "rounds": 528
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 198,
           "rounds": 690
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "OLIZERA",
           "team": "UCAM Esports",
           "value": 197,
           "rounds": 963
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 197,
           "rounds": 497
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "Leare",
           "team": "Pixel Lumina",
           "value": 196,
           "rounds": 255
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 195,
           "rounds": 901
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "Doma",
           "team": "Joblife",
           "value": 195,
           "rounds": 683
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 195,
           "rounds": 255
         },
         {
-          "rank": 46,
+          "rank": 47,
           "ign": "LOOP",
           "team": "GnG Amazigh",
           "value": 195,
           "rounds": 690
         },
         {
-          "rank": 47,
+          "rank": 48,
           "ign": "shinnok",
           "team": "FOKUS",
           "value": 194,
           "rounds": 998
         },
         {
-          "rank": 48,
+          "rank": 49,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 193,
           "rounds": 963
         },
         {
-          "rank": 49,
+          "rank": 50,
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 193,
           "rounds": 481
         },
         {
-          "rank": 50,
+          "rank": 51,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 192,
           "rounds": 590
         },
         {
-          "rank": 51,
+          "rank": 52,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 192,
           "rounds": 641
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "Runner",
           "team": "Joblife",
           "value": 190,
           "rounds": 683
         },
         {
-          "rank": 53,
+          "rank": 54,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 188,
           "rounds": 901
         },
         {
-          "rank": 54,
+          "rank": 55,
           "ign": "Redgar",
           "team": "MIR",
           "value": 186,
           "rounds": 218
         },
         {
-          "rank": 55,
+          "rank": 56,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 186,
           "rounds": 963
         },
         {
-          "rank": 56,
+          "rank": 57,
           "ign": "BULD",
           "team": "UCAM Esports",
           "value": 184,
           "rounds": 963
         },
         {
-          "rank": 57,
+          "rank": 58,
           "ign": "Enzo ",
           "team": "Joblife",
           "value": 183,
           "rounds": 683
         },
         {
-          "rank": 58,
+          "rank": 59,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 182,
           "rounds": 478
         },
         {
-          "rank": 59,
+          "rank": 60,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 181,
           "rounds": 998
         },
         {
-          "rank": 60,
+          "rank": 61,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 181,
           "rounds": 637
         },
         {
-          "rank": 61,
+          "rank": 62,
           "ign": "kAdavra",
           "team": "Mandatory",
           "value": 180,
           "rounds": 590
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 180,
           "rounds": 641
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "hezacoil",
           "team": "S2G Esports",
           "value": 177,
           "rounds": 641
         },
         {
-          "rank": 64,
+          "rank": 65,
           "ign": "elllement",
           "team": "Pixel Lumina",
           "value": 173,
           "rounds": 255
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 172,
           "rounds": 537
         },
         {
-          "rank": 66,
+          "rank": 67,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 171,
           "rounds": 497
         },
         {
-          "rank": 67,
+          "rank": 68,
           "ign": "AL7B",
           "team": "Stallions Esports",
           "value": 171,
           "rounds": 515
         },
         {
-          "rank": 68,
+          "rank": 69,
           "ign": "Avvix",
           "team": "Stallions Esports",
           "value": 168,
           "rounds": 641
         },
         {
-          "rank": 69,
+          "rank": 70,
           "ign": "kya",
           "team": "Pixel Lumina",
           "value": 167,
           "rounds": 255
         },
         {
-          "rank": 70,
+          "rank": 71,
           "ign": "iluri",
           "team": "Enterprise Esports",
           "value": 158,
           "rounds": 528
         },
         {
-          "rank": 71,
+          "rank": 72,
           "ign": "Bishepss",
           "team": "MIR",
           "value": 158,
           "rounds": 218
         },
         {
-          "rank": 72,
+          "rank": 73,
+          "ign": "TLA prti",
+          "team": "Team Liquid Academy",
+          "value": 156,
+          "rounds": 591
+        },
+        {
+          "rank": 74,
           "ign": "br1ckzl",
           "team": "Stallions Esports",
           "value": 152,
           "rounds": 126
-        },
-        {
-          "rank": 73,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 132,
-          "rounds": 200
         }
       ],
-      "tournament_avg": 200.534
+      "tournament_avg": 200.932
     },
     "kills": {
       "entries": [
@@ -30682,155 +30810,162 @@
         },
         {
           "rank": 56,
+          "ign": "TLA prti",
+          "team": "Team Liquid Academy",
+          "value": 321,
+          "rounds": 591
+        },
+        {
+          "rank": 57,
           "ign": "AL7B",
           "team": "Stallions Esports",
           "value": 321,
           "rounds": 515
         },
         {
-          "rank": 57,
+          "rank": 58,
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 321,
           "rounds": 481
         },
         {
-          "rank": 58,
+          "rank": 59,
           "ign": "iluri",
           "team": "Enterprise Esports",
           "value": 314,
           "rounds": 528
         },
         {
-          "rank": 59,
+          "rank": 60,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 310,
           "rounds": 478
         },
         {
-          "rank": 60,
+          "rank": 61,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 298,
           "rounds": 497
         },
         {
-          "rank": 61,
+          "rank": 62,
           "ign": "Szimpli",
           "team": "Pixel Lumina",
           "value": 188,
           "rounds": 255
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "reblyik",
           "team": "MIR",
           "value": 186,
           "rounds": 218
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 178,
           "rounds": 255
         },
         {
-          "rank": 64,
+          "rank": 65,
           "ign": "Leare",
           "team": "Pixel Lumina",
           "value": 175,
           "rounds": 255
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "Raz",
           "team": "MIR",
           "value": 160,
           "rounds": 218
         },
         {
-          "rank": 66,
+          "rank": 67,
           "ign": "elllement",
           "team": "Pixel Lumina",
           "value": 158,
           "rounds": 255
         },
         {
-          "rank": 67,
+          "rank": 68,
           "ign": "kospa1n",
           "team": "MIR",
           "value": 157,
           "rounds": 218
         },
         {
-          "rank": 68,
+          "rank": 69,
           "ign": "kya",
           "team": "Pixel Lumina",
           "value": 151,
           "rounds": 255
         },
         {
-          "rank": 69,
+          "rank": 70,
           "ign": "Redgar",
           "team": "MIR",
           "value": 150,
           "rounds": 218
         },
         {
-          "rank": 70,
+          "rank": 71,
           "ign": "swagzor",
           "team": "Enterprise Esports",
           "value": 132,
           "rounds": 155
         },
         {
-          "rank": 71,
+          "rank": 72,
           "ign": "Bishepss",
           "team": "MIR",
           "value": 124,
           "rounds": 218
         },
         {
-          "rank": 72,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 89,
-          "rounds": 200
+          "rank": 73,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 76,
+          "rounds": 100
         },
         {
-          "rank": 73,
+          "rank": 74,
           "ign": "br1ckzl",
           "team": "Stallions Esports",
           "value": 74,
           "rounds": 126
         }
       ],
-      "tournament_avg": 434.041
+      "tournament_avg": 432.338
     },
     "deaths": {
       "entries": [
         {
           "rank": 1,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 65,
+          "rounds": 100
+        },
+        {
+          "rank": 2,
           "ign": "br1ckzl",
           "team": "Stallions Esports",
           "value": 69,
           "rounds": 126
         },
         {
-          "rank": 2,
+          "rank": 3,
           "ign": "swagzor",
           "team": "Enterprise Esports",
           "value": 108,
           "rounds": 155
-        },
-        {
-          "rank": 3,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 142,
-          "rounds": 200
         },
         {
           "rank": 4,
@@ -31058,272 +31193,279 @@
         },
         {
           "rank": 36,
+          "ign": "TLA prti",
+          "team": "Team Liquid Academy",
+          "value": 377,
+          "rounds": 591
+        },
+        {
+          "rank": 37,
           "ign": "Koji",
           "team": "Stallions Esports",
           "value": 382,
           "rounds": 641
         },
         {
-          "rank": 37,
+          "rank": 38,
           "ign": "Wanzeru",
           "team": "Team Liquid Academy",
           "value": 390,
           "rounds": 591
         },
         {
-          "rank": 38,
+          "rank": 39,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 395,
           "rounds": 590
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "hezacoil",
           "team": "S2G Esports",
           "value": 411,
           "rounds": 641
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 412,
           "rounds": 637
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "Enzo ",
           "team": "Joblife",
           "value": 415,
           "rounds": 683
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 415,
           "rounds": 637
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 420,
           "rounds": 683
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "Akai",
           "team": "Stallions Esports",
           "value": 422,
           "rounds": 576
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 423,
           "rounds": 683
         },
         {
-          "rank": 46,
+          "rank": 47,
           "ign": "Doma",
           "team": "Joblife",
           "value": 431,
           "rounds": 683
         },
         {
-          "rank": 47,
+          "rank": 48,
           "ign": "globeX",
           "team": "Bar\u00e7a eSports",
           "value": 432,
           "rounds": 637
         },
         {
-          "rank": 48,
+          "rank": 49,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 436,
           "rounds": 641
         },
         {
-          "rank": 49,
+          "rank": 50,
           "ign": "Susano",
           "team": "Stallions Esports",
           "value": 436,
           "rounds": 641
         },
         {
-          "rank": 50,
+          "rank": 51,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 437,
           "rounds": 637
         },
         {
-          "rank": 51,
+          "rank": 52,
           "ign": "CUNHA",
           "team": "GnG Amazigh",
           "value": 439,
           "rounds": 690
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 441,
           "rounds": 590
         },
         {
-          "rank": 53,
+          "rank": 54,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 441,
           "rounds": 641
         },
         {
-          "rank": 54,
+          "rank": 55,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 449,
           "rounds": 641
         },
         {
-          "rank": 55,
+          "rank": 56,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 452,
           "rounds": 690
         },
         {
-          "rank": 56,
+          "rank": 57,
           "ign": "Runner",
           "team": "Joblife",
           "value": 469,
           "rounds": 683
         },
         {
-          "rank": 57,
+          "rank": 58,
           "ign": "Kachoww",
           "team": "S2G Esports",
           "value": 473,
           "rounds": 641
         },
         {
-          "rank": 58,
+          "rank": 59,
           "ign": "LOOP",
           "team": "GnG Amazigh",
           "value": 489,
           "rounds": 690
         },
         {
-          "rank": 59,
+          "rank": 60,
           "ign": "Fizzy",
           "team": "Eintracht Frankfurt",
           "value": 559,
           "rounds": 901
         },
         {
-          "rank": 60,
+          "rank": 61,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 573,
           "rounds": 901
         },
         {
-          "rank": 61,
+          "rank": 62,
           "ign": "shinnok",
           "team": "FOKUS",
           "value": 580,
           "rounds": 998
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 588,
           "rounds": 901
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "MONSTEERR",
           "team": "Eintracht Frankfurt",
           "value": 605,
           "rounds": 901
         },
         {
-          "rank": 64,
+          "rank": 65,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 625,
           "rounds": 963
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "pyrolll",
           "team": "FOKUS",
           "value": 628,
           "rounds": 998
         },
         {
-          "rank": 66,
+          "rank": 67,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 634,
           "rounds": 998
         },
         {
-          "rank": 67,
+          "rank": 68,
           "ign": "BULD",
           "team": "UCAM Esports",
           "value": 662,
           "rounds": 963
         },
         {
-          "rank": 68,
+          "rank": 69,
           "ign": "Jamelinho",
           "team": "Eintracht Frankfurt",
           "value": 666,
           "rounds": 901
         },
         {
-          "rank": 69,
+          "rank": 70,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 670,
           "rounds": 963
         },
         {
-          "rank": 70,
+          "rank": 71,
           "ign": "B1SK",
           "team": "UCAM Esports",
           "value": 670,
           "rounds": 963
         },
         {
-          "rank": 71,
+          "rank": 72,
           "ign": "Serial",
           "team": "FOKUS",
           "value": 678,
           "rounds": 998
         },
         {
-          "rank": 72,
+          "rank": 73,
           "ign": "OLIZERA",
           "team": "UCAM Esports",
           "value": 680,
           "rounds": 963
         },
         {
-          "rank": 73,
+          "rank": 74,
           "ign": "pa1ze",
           "team": "FOKUS",
           "value": 720,
           "rounds": 998
         }
       ],
-      "tournament_avg": 395.068
+      "tournament_avg": 393.784
     },
     "assists": {
       "entries": [
@@ -31413,367 +31555,367 @@
         },
         {
           "rank": 13,
+          "ign": "TLA prti",
+          "team": "Team Liquid Academy",
+          "value": 227,
+          "rounds": 591
+        },
+        {
+          "rank": 14,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 218,
           "rounds": 683
         },
         {
-          "rank": 14,
+          "rank": 15,
           "ign": "Proxh",
           "team": "Enterprise Esports",
           "value": 218,
           "rounds": 528
         },
         {
-          "rank": 15,
+          "rank": 16,
           "ign": "Serial",
           "team": "FOKUS",
           "value": 208,
           "rounds": 998
         },
         {
-          "rank": 16,
+          "rank": 17,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 204,
           "rounds": 637
         },
         {
-          "rank": 17,
+          "rank": 18,
           "ign": "MONSTEERR",
           "team": "Eintracht Frankfurt",
           "value": 197,
           "rounds": 901
         },
         {
-          "rank": 18,
+          "rank": 19,
           "ign": "pyrolll",
           "team": "FOKUS",
           "value": 189,
           "rounds": 998
         },
         {
-          "rank": 19,
+          "rank": 20,
           "ign": "burzzy",
           "team": "Misa Esports",
           "value": 188,
           "rounds": 497
         },
         {
-          "rank": 20,
+          "rank": 21,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 187,
           "rounds": 590
         },
         {
-          "rank": 21,
+          "rank": 22,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 186,
           "rounds": 637
         },
         {
-          "rank": 22,
+          "rank": 23,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 186,
           "rounds": 641
         },
         {
-          "rank": 23,
+          "rank": 24,
           "ign": "pa1ze",
           "team": "FOKUS",
           "value": 184,
           "rounds": 998
         },
         {
-          "rank": 24,
+          "rank": 25,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 184,
           "rounds": 590
         },
         {
-          "rank": 25,
+          "rank": 26,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 181,
           "rounds": 641
         },
         {
-          "rank": 26,
+          "rank": 27,
           "ign": "Doma",
           "team": "Joblife",
           "value": 180,
           "rounds": 683
         },
         {
-          "rank": 27,
+          "rank": 28,
           "ign": "Avvix",
           "team": "Stallions Esports",
           "value": 180,
           "rounds": 641
         },
         {
-          "rank": 28,
+          "rank": 29,
           "ign": "AL7B",
           "team": "Stallions Esports",
           "value": 179,
           "rounds": 515
         },
         {
-          "rank": 29,
+          "rank": 30,
           "ign": "B1SK",
           "team": "UCAM Esports",
           "value": 175,
           "rounds": 963
         },
         {
-          "rank": 30,
+          "rank": 31,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 174,
           "rounds": 690
         },
         {
-          "rank": 31,
+          "rank": 32,
           "ign": "LOOP",
           "team": "GnG Amazigh",
           "value": 174,
           "rounds": 690
         },
         {
-          "rank": 32,
+          "rank": 33,
           "ign": "Kachoww",
           "team": "S2G Esports",
           "value": 171,
           "rounds": 641
         },
         {
-          "rank": 33,
+          "rank": 34,
           "ign": "Jamelinho",
           "team": "Eintracht Frankfurt",
           "value": 169,
           "rounds": 901
         },
         {
-          "rank": 34,
+          "rank": 35,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 168,
           "rounds": 537
         },
         {
-          "rank": 35,
+          "rank": 36,
           "ign": "Kicks",
           "team": "Team Liquid Academy",
           "value": 164,
           "rounds": 591
         },
         {
-          "rank": 36,
+          "rank": 37,
           "ign": "kAdavra",
           "team": "Mandatory",
           "value": 160,
           "rounds": 590
         },
         {
-          "rank": 37,
+          "rank": 38,
           "ign": "rexxtoned",
           "team": "Team Liquid Academy",
           "value": 150,
           "rounds": 591
         },
         {
-          "rank": 38,
+          "rank": 39,
           "ign": "globeX",
           "team": "Bar\u00e7a eSports",
           "value": 148,
           "rounds": 637
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 147,
           "rounds": 590
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "Runner",
           "team": "Joblife",
           "value": 146,
           "rounds": 683
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 144,
           "rounds": 497
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 140,
           "rounds": 590
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "MAGNUM",
           "team": "Enterprise Esports",
           "value": 139,
           "rounds": 528
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "GSR",
           "team": "Team Liquid Academy",
           "value": 138,
           "rounds": 591
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 138,
           "rounds": 481
         },
         {
-          "rank": 46,
+          "rank": 47,
           "ign": "Elite",
           "team": "Misa Esports",
           "value": 137,
           "rounds": 497
         },
         {
-          "rank": 47,
+          "rank": 48,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 134,
           "rounds": 497
         },
         {
-          "rank": 48,
+          "rank": 49,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 134,
           "rounds": 641
         },
         {
-          "rank": 49,
+          "rank": 50,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 133,
           "rounds": 528
         },
         {
-          "rank": 50,
+          "rank": 51,
           "ign": "Wanzeru",
           "team": "Team Liquid Academy",
           "value": 131,
           "rounds": 591
         },
         {
-          "rank": 51,
+          "rank": 52,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 131,
           "rounds": 637
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 127,
           "rounds": 683
         },
         {
-          "rank": 53,
+          "rank": 54,
           "ign": "iluri",
           "team": "Enterprise Esports",
           "value": 127,
           "rounds": 528
         },
         {
-          "rank": 54,
+          "rank": 55,
           "ign": "Susano",
           "team": "Stallions Esports",
           "value": 122,
           "rounds": 641
         },
         {
-          "rank": 55,
+          "rank": 56,
           "ign": "Akai",
           "team": "Stallions Esports",
           "value": 108,
           "rounds": 576
         },
         {
-          "rank": 56,
+          "rank": 57,
           "ign": "Koji",
           "team": "Stallions Esports",
           "value": 100,
           "rounds": 641
         },
         {
-          "rank": 57,
+          "rank": 58,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 95,
           "rounds": 478
         },
         {
-          "rank": 58,
+          "rank": 59,
           "ign": "QutionerX",
           "team": "Misa Esports",
           "value": 83,
           "rounds": 497
         },
         {
-          "rank": 59,
+          "rank": 60,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 82,
           "rounds": 421
         },
         {
-          "rank": 60,
+          "rank": 61,
           "ign": "Leare",
           "team": "Pixel Lumina",
           "value": 78,
           "rounds": 255
         },
         {
-          "rank": 61,
+          "rank": 62,
           "ign": "kozzy",
           "team": "Enterprise Esports",
           "value": 76,
           "rounds": 373
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "Bishepss",
           "team": "MIR",
           "value": 68,
           "rounds": 218
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "Redgar",
           "team": "MIR",
           "value": 65,
           "rounds": 218
-        },
-        {
-          "rank": 64,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 64,
-          "rounds": 200
         },
         {
           "rank": 65,
@@ -31812,34 +31954,41 @@
         },
         {
           "rank": 70,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 43,
+          "rounds": 100
+        },
+        {
+          "rank": 71,
           "ign": "Raz",
           "team": "MIR",
           "value": 40,
           "rounds": 218
         },
         {
-          "rank": 71,
+          "rank": 72,
           "ign": "br1ckzl",
           "team": "Stallions Esports",
           "value": 38,
           "rounds": 126
         },
         {
-          "rank": 72,
+          "rank": 73,
           "ign": "kospa1n",
           "team": "MIR",
           "value": 35,
           "rounds": 218
         },
         {
-          "rank": 73,
+          "rank": 74,
           "ign": "swagzor",
           "team": "Enterprise Esports",
           "value": 30,
           "rounds": 155
         }
       ],
-      "tournament_avg": 155.932
+      "tournament_avg": 156.608
     },
     "kd": {
       "entries": [
@@ -31999,363 +32148,370 @@
         },
         {
           "rank": 23,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 1.169,
+          "rounds": 100
+        },
+        {
+          "rank": 24,
           "ign": "QutionerX",
           "team": "Misa Esports",
           "value": 1.169,
           "rounds": 497
         },
         {
-          "rank": 24,
+          "rank": 25,
           "ign": "B1SK",
           "team": "UCAM Esports",
           "value": 1.167,
           "rounds": 963
         },
         {
-          "rank": 25,
+          "rank": 26,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 1.165,
           "rounds": 637
         },
         {
-          "rank": 26,
+          "rank": 27,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 1.155,
           "rounds": 590
         },
         {
-          "rank": 27,
+          "rank": 28,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 1.153,
           "rounds": 528
         },
         {
-          "rank": 28,
+          "rank": 29,
           "ign": "pa1ze",
           "team": "FOKUS",
           "value": 1.146,
           "rounds": 998
         },
         {
-          "rank": 29,
+          "rank": 30,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 1.146,
           "rounds": 637
         },
         {
-          "rank": 30,
+          "rank": 31,
           "ign": "Doma",
           "team": "Joblife",
           "value": 1.13,
           "rounds": 683
         },
         {
-          "rank": 31,
+          "rank": 32,
           "ign": "burzzy",
           "team": "Misa Esports",
           "value": 1.128,
           "rounds": 497
         },
         {
-          "rank": 32,
+          "rank": 33,
           "ign": "Kachoww",
           "team": "S2G Esports",
           "value": 1.127,
           "rounds": 641
         },
         {
-          "rank": 33,
+          "rank": 34,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 1.119,
           "rounds": 901
         },
         {
-          "rank": 34,
+          "rank": 35,
           "ign": "Avvix",
           "team": "Stallions Esports",
           "value": 1.107,
           "rounds": 641
         },
         {
-          "rank": 35,
+          "rank": 36,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 1.099,
           "rounds": 590
         },
         {
-          "rank": 36,
+          "rank": 37,
           "ign": "Jamelinho",
           "team": "Eintracht Frankfurt",
           "value": 1.083,
           "rounds": 901
         },
         {
-          "rank": 37,
+          "rank": 38,
           "ign": "br1ckzl",
           "team": "Stallions Esports",
           "value": 1.072,
           "rounds": 126
         },
         {
-          "rank": 38,
+          "rank": 39,
           "ign": "Akai",
           "team": "Stallions Esports",
           "value": 1.071,
           "rounds": 576
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 1.058,
           "rounds": 690
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 1.057,
           "rounds": 590
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "kAdavra",
           "team": "Mandatory",
           "value": 1.054,
           "rounds": 590
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 1.04,
           "rounds": 641
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 1.038,
           "rounds": 963
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 1.031,
           "rounds": 421
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "iluri",
           "team": "Enterprise Esports",
           "value": 1.03,
           "rounds": 528
         },
         {
-          "rank": 46,
+          "rank": 47,
           "ign": "Raz",
           "team": "MIR",
           "value": 1.026,
           "rounds": 218
         },
         {
-          "rank": 47,
+          "rank": 48,
           "ign": "kospa1n",
           "team": "MIR",
           "value": 1.026,
           "rounds": 218
         },
         {
-          "rank": 48,
+          "rank": 49,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 1.025,
           "rounds": 998
         },
         {
-          "rank": 49,
+          "rank": 50,
           "ign": "Enzo ",
           "team": "Joblife",
           "value": 1.017,
           "rounds": 683
         },
         {
-          "rank": 50,
+          "rank": 51,
           "ign": "Runner",
           "team": "Joblife",
           "value": 1.015,
           "rounds": 683
         },
         {
-          "rank": 51,
+          "rank": 52,
           "ign": "Redgar",
           "team": "MIR",
           "value": 1.014,
           "rounds": 218
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 1.009,
           "rounds": 901
         },
         {
-          "rank": 53,
+          "rank": 54,
           "ign": "AL7B",
           "team": "Stallions Esports",
           "value": 0.997,
           "rounds": 515
         },
         {
-          "rank": 54,
+          "rank": 55,
           "ign": "hezacoil",
           "team": "S2G Esports",
           "value": 0.995,
           "rounds": 641
         },
         {
-          "rank": 55,
+          "rank": 56,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 0.991,
           "rounds": 963
         },
         {
-          "rank": 56,
+          "rank": 57,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 0.988,
           "rounds": 637
         },
         {
-          "rank": 57,
+          "rank": 58,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 0.978,
           "rounds": 255
         },
         {
-          "rank": 58,
+          "rank": 59,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 0.978,
           "rounds": 497
         },
         {
-          "rank": 59,
+          "rank": 60,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 0.972,
           "rounds": 641
         },
         {
-          "rank": 60,
+          "rank": 61,
           "ign": "OLIZERA",
           "team": "UCAM Esports",
           "value": 0.966,
           "rounds": 963
         },
         {
-          "rank": 61,
+          "rank": 62,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 0.962,
           "rounds": 537
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "BULD",
           "team": "UCAM Esports",
           "value": 0.962,
           "rounds": 963
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "Leare",
           "team": "Pixel Lumina",
           "value": 0.956,
           "rounds": 255
         },
         {
-          "rank": 64,
+          "rank": 65,
           "ign": "Szimpli",
           "team": "Pixel Lumina",
           "value": 0.949,
           "rounds": 255
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "LOOP",
           "team": "GnG Amazigh",
           "value": 0.939,
           "rounds": 690
         },
         {
-          "rank": 66,
+          "rank": 67,
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 0.936,
           "rounds": 481
         },
         {
-          "rank": 67,
+          "rank": 68,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 0.909,
           "rounds": 497
         },
         {
-          "rank": 68,
+          "rank": 69,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 0.899,
           "rounds": 478
         },
         {
-          "rank": 69,
+          "rank": 70,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 0.896,
           "rounds": 641
         },
         {
-          "rank": 70,
+          "rank": 71,
           "ign": "elllement",
           "team": "Pixel Lumina",
           "value": 0.873,
           "rounds": 255
         },
         {
-          "rank": 71,
+          "rank": 72,
+          "ign": "TLA prti",
+          "team": "Team Liquid Academy",
+          "value": 0.851,
+          "rounds": 591
+        },
+        {
+          "rank": 73,
           "ign": "kya",
           "team": "Pixel Lumina",
           "value": 0.848,
           "rounds": 255
         },
         {
-          "rank": 72,
+          "rank": 74,
           "ign": "Bishepss",
           "team": "MIR",
           "value": 0.821,
           "rounds": 218
-        },
-        {
-          "rank": 73,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 0.627,
-          "rounds": 200
         }
       ],
-      "tournament_avg": 1.089
+      "tournament_avg": 1.093
     },
     "kast": {
       "entries": [
@@ -32403,475 +32559,482 @@
         },
         {
           "rank": 7,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 0.78,
+          "rounds": 100
+        },
+        {
+          "rank": 8,
           "ign": "Enzo ",
           "team": "Joblife",
           "value": 0.779,
           "rounds": 683
         },
         {
-          "rank": 8,
+          "rank": 9,
           "ign": "burzzy",
           "team": "Misa Esports",
           "value": 0.779,
           "rounds": 497
         },
         {
-          "rank": 9,
+          "rank": 10,
           "ign": "GSR",
           "team": "Team Liquid Academy",
           "value": 0.775,
           "rounds": 591
         },
         {
-          "rank": 10,
+          "rank": 11,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 0.774,
           "rounds": 998
         },
         {
-          "rank": 11,
+          "rank": 12,
           "ign": "shinnok",
           "team": "FOKUS",
           "value": 0.773,
           "rounds": 998
         },
         {
-          "rank": 12,
+          "rank": 13,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 0.771,
           "rounds": 590
         },
         {
-          "rank": 13,
+          "rank": 14,
           "ign": "MAGNUM",
           "team": "Enterprise Esports",
           "value": 0.767,
           "rounds": 528
         },
         {
-          "rank": 14,
+          "rank": 15,
           "ign": "AL7B",
           "team": "Stallions Esports",
           "value": 0.767,
           "rounds": 515
         },
         {
-          "rank": 15,
+          "rank": 16,
           "ign": "Koji",
           "team": "Stallions Esports",
           "value": 0.766,
           "rounds": 641
         },
         {
-          "rank": 16,
+          "rank": 17,
           "ign": "Kicks",
           "team": "Team Liquid Academy",
           "value": 0.765,
           "rounds": 591
         },
         {
-          "rank": 17,
+          "rank": 18,
           "ign": "Elite",
           "team": "Misa Esports",
           "value": 0.765,
           "rounds": 497
         },
         {
-          "rank": 18,
+          "rank": 19,
           "ign": "hezacoil",
           "team": "S2G Esports",
           "value": 0.764,
           "rounds": 641
         },
         {
-          "rank": 19,
+          "rank": 20,
           "ign": "Avvix",
           "team": "Stallions Esports",
           "value": 0.763,
           "rounds": 641
         },
         {
-          "rank": 20,
+          "rank": 21,
           "ign": "Raz",
           "team": "MIR",
           "value": 0.761,
           "rounds": 218
         },
         {
-          "rank": 21,
+          "rank": 22,
           "ign": "QutionerX",
           "team": "Misa Esports",
           "value": 0.761,
           "rounds": 497
         },
         {
-          "rank": 22,
+          "rank": 23,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 0.76,
           "rounds": 641
         },
         {
-          "rank": 23,
+          "rank": 24,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 0.759,
           "rounds": 963
         },
         {
-          "rank": 24,
+          "rank": 25,
           "ign": "rexxtoned",
           "team": "Team Liquid Academy",
           "value": 0.758,
           "rounds": 591
         },
         {
-          "rank": 25,
+          "rank": 26,
           "ign": "Fizzy",
           "team": "Eintracht Frankfurt",
           "value": 0.757,
           "rounds": 901
         },
         {
-          "rank": 26,
+          "rank": 27,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 0.757,
           "rounds": 683
         },
         {
-          "rank": 27,
+          "rank": 28,
           "ign": "Kachoww",
           "team": "S2G Esports",
           "value": 0.757,
           "rounds": 641
         },
         {
-          "rank": 28,
+          "rank": 29,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 0.757,
           "rounds": 690
         },
         {
-          "rank": 29,
+          "rank": 30,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 0.754,
           "rounds": 901
         },
         {
-          "rank": 30,
+          "rank": 31,
           "ign": "globeX",
           "team": "Bar\u00e7a eSports",
           "value": 0.754,
           "rounds": 637
         },
         {
-          "rank": 31,
+          "rank": 32,
           "ign": "kAdavra",
           "team": "Mandatory",
           "value": 0.753,
           "rounds": 590
         },
         {
-          "rank": 32,
+          "rank": 33,
           "ign": "CUNHA",
           "team": "GnG Amazigh",
           "value": 0.752,
           "rounds": 690
         },
         {
-          "rank": 33,
+          "rank": 34,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 0.751,
           "rounds": 497
         },
         {
-          "rank": 34,
+          "rank": 35,
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 0.751,
           "rounds": 481
         },
         {
-          "rank": 35,
+          "rank": 36,
           "ign": "LOOP",
           "team": "GnG Amazigh",
           "value": 0.751,
           "rounds": 690
         },
         {
-          "rank": 36,
+          "rank": 37,
+          "ign": "TLA prti",
+          "team": "Team Liquid Academy",
+          "value": 0.748,
+          "rounds": 591
+        },
+        {
+          "rank": 38,
           "ign": "Redgar",
           "team": "MIR",
           "value": 0.748,
           "rounds": 218
         },
         {
-          "rank": 37,
+          "rank": 39,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 0.747,
           "rounds": 901
         },
         {
-          "rank": 38,
+          "rank": 40,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 0.747,
           "rounds": 590
         },
         {
-          "rank": 39,
+          "rank": 41,
           "ign": "pyrolll",
           "team": "FOKUS",
           "value": 0.746,
           "rounds": 998
         },
         {
-          "rank": 40,
+          "rank": 42,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 0.746,
           "rounds": 637
         },
         {
-          "rank": 41,
+          "rank": 43,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 0.745,
           "rounds": 963
         },
         {
-          "rank": 42,
+          "rank": 44,
           "ign": "iluri",
           "team": "Enterprise Esports",
           "value": 0.744,
           "rounds": 528
         },
         {
-          "rank": 43,
+          "rank": 45,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 0.741,
           "rounds": 537
         },
         {
-          "rank": 44,
+          "rank": 46,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 0.739,
           "rounds": 637
         },
         {
-          "rank": 45,
+          "rank": 47,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 0.738,
           "rounds": 641
         },
         {
-          "rank": 46,
+          "rank": 48,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 0.736,
           "rounds": 637
         },
         {
-          "rank": 47,
+          "rank": 49,
           "ign": "reblyik",
           "team": "MIR",
           "value": 0.734,
           "rounds": 218
         },
         {
-          "rank": 48,
+          "rank": 50,
           "ign": "B1SK",
           "team": "UCAM Esports",
           "value": 0.734,
           "rounds": 963
         },
         {
-          "rank": 49,
+          "rank": 51,
           "ign": "swagzor",
           "team": "Enterprise Esports",
           "value": 0.729,
           "rounds": 155
         },
         {
-          "rank": 50,
+          "rank": 52,
           "ign": "Wanzeru",
           "team": "Team Liquid Academy",
           "value": 0.729,
           "rounds": 591
         },
         {
-          "rank": 51,
+          "rank": 53,
           "ign": "Leare",
           "team": "Pixel Lumina",
           "value": 0.729,
           "rounds": 255
         },
         {
-          "rank": 52,
+          "rank": 54,
           "ign": "BULD",
           "team": "UCAM Esports",
           "value": 0.729,
           "rounds": 963
         },
         {
-          "rank": 53,
+          "rank": 55,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 0.727,
           "rounds": 590
         },
         {
-          "rank": 54,
+          "rank": 56,
           "ign": "Akai",
           "team": "Stallions Esports",
           "value": 0.726,
           "rounds": 576
         },
         {
-          "rank": 55,
+          "rank": 57,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 0.724,
           "rounds": 641
         },
         {
-          "rank": 56,
+          "rank": 58,
           "ign": "Szimpli",
           "team": "Pixel Lumina",
           "value": 0.722,
           "rounds": 255
         },
         {
-          "rank": 57,
+          "rank": 59,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 0.722,
           "rounds": 478
         },
         {
-          "rank": 58,
+          "rank": 60,
           "ign": "Susano",
           "team": "Stallions Esports",
           "value": 0.721,
           "rounds": 641
         },
         {
-          "rank": 59,
+          "rank": 61,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 0.719,
           "rounds": 590
         },
         {
-          "rank": 60,
+          "rank": 62,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 0.718,
           "rounds": 497
         },
         {
-          "rank": 61,
+          "rank": 63,
           "ign": "Serial",
           "team": "FOKUS",
           "value": 0.717,
           "rounds": 998
         },
         {
-          "rank": 62,
+          "rank": 64,
           "ign": "MONSTEERR",
           "team": "Eintracht Frankfurt",
           "value": 0.717,
           "rounds": 901
         },
         {
-          "rank": 63,
+          "rank": 65,
           "ign": "Runner",
           "team": "Joblife",
           "value": 0.716,
           "rounds": 683
         },
         {
-          "rank": 64,
+          "rank": 66,
           "ign": "kospa1n",
           "team": "MIR",
           "value": 0.716,
           "rounds": 218
         },
         {
-          "rank": 65,
+          "rank": 67,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 0.713,
           "rounds": 421
         },
         {
-          "rank": 66,
+          "rank": 68,
           "ign": "pa1ze",
           "team": "FOKUS",
           "value": 0.71,
           "rounds": 998
         },
         {
-          "rank": 67,
+          "rank": 69,
           "ign": "OLIZERA",
           "team": "UCAM Esports",
           "value": 0.709,
           "rounds": 963
         },
         {
-          "rank": 68,
+          "rank": 70,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 0.706,
           "rounds": 255
         },
         {
-          "rank": 69,
+          "rank": 71,
           "ign": "Bishepss",
           "team": "MIR",
           "value": 0.702,
           "rounds": 218
         },
         {
-          "rank": 70,
+          "rank": 72,
           "ign": "Jamelinho",
           "team": "Eintracht Frankfurt",
           "value": 0.696,
           "rounds": 901
         },
         {
-          "rank": 71,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 0.695,
-          "rounds": 200
-        },
-        {
-          "rank": 72,
+          "rank": 73,
           "ign": "elllement",
           "team": "Pixel Lumina",
           "value": 0.675,
           "rounds": 255
         },
         {
-          "rank": 73,
+          "rank": 74,
           "ign": "kya",
           "team": "Pixel Lumina",
           "value": 0.671,
           "rounds": 255
         }
       ],
-      "tournament_avg": 0.746
+      "tournament_avg": 0.747
     },
     "fk": {
       "entries": [
@@ -33276,94 +33439,94 @@
         },
         {
           "rank": 58,
+          "ign": "TLA prti",
+          "team": "Team Liquid Academy",
+          "value": 34,
+          "rounds": 591
+        },
+        {
+          "rank": 59,
           "ign": "Raz",
           "team": "MIR",
           "value": 33,
           "rounds": 218
         },
         {
-          "rank": 59,
+          "rank": 60,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 33,
           "rounds": 497
         },
         {
-          "rank": 60,
+          "rank": 61,
           "ign": "swagzor",
           "team": "Enterprise Esports",
           "value": 32,
           "rounds": 155
         },
         {
-          "rank": 61,
+          "rank": 62,
           "ign": "kospa1n",
           "team": "MIR",
           "value": 32,
           "rounds": 218
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 31,
           "rounds": 255
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "Avvix",
           "team": "Stallions Esports",
           "value": 30,
           "rounds": 641
         },
         {
-          "rank": 64,
+          "rank": 65,
           "ign": "Leare",
           "team": "Pixel Lumina",
           "value": 26,
           "rounds": 255
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "AL7B",
           "team": "Stallions Esports",
           "value": 25,
           "rounds": 515
         },
         {
-          "rank": 66,
+          "rank": 67,
           "ign": "iluri",
           "team": "Enterprise Esports",
           "value": 24,
           "rounds": 528
         },
         {
-          "rank": 67,
+          "rank": 68,
           "ign": "reblyik",
           "team": "MIR",
           "value": 22,
           "rounds": 218
         },
         {
-          "rank": 68,
+          "rank": 69,
           "ign": "elllement",
           "team": "Pixel Lumina",
           "value": 19,
           "rounds": 255
         },
         {
-          "rank": 69,
+          "rank": 70,
           "ign": "kya",
           "team": "Pixel Lumina",
           "value": 15,
           "rounds": 255
-        },
-        {
-          "rank": 70,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 11,
-          "rounds": 200
         },
         {
           "rank": 71,
@@ -33385,9 +33548,16 @@
           "team": "Stallions Esports",
           "value": 6,
           "rounds": 126
+        },
+        {
+          "rank": 74,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 4,
+          "rounds": 100
         }
       ],
-      "tournament_avg": 62.753
+      "tournament_avg": 62.27
     },
     "fd": {
       "entries": [
@@ -33400,24 +33570,24 @@
         },
         {
           "rank": 2,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 11,
+          "rounds": 100
+        },
+        {
+          "rank": 3,
           "ign": "Leare",
           "team": "Pixel Lumina",
           "value": 13,
           "rounds": 255
         },
         {
-          "rank": 3,
+          "rank": 4,
           "ign": "Redgar",
           "team": "MIR",
           "value": 15,
           "rounds": 218
-        },
-        {
-          "rank": 4,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 17,
-          "rounds": 200
         },
         {
           "rank": 5,
@@ -33582,328 +33752,335 @@
         },
         {
           "rank": 28,
-          "ign": "rexxtoned",
+          "ign": "TLA prti",
           "team": "Team Liquid Academy",
           "value": 44,
           "rounds": 591
         },
         {
           "rank": 29,
+          "ign": "rexxtoned",
+          "team": "Team Liquid Academy",
+          "value": 44,
+          "rounds": 591
+        },
+        {
+          "rank": 30,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 44,
           "rounds": 690
         },
         {
-          "rank": 30,
+          "rank": 31,
           "ign": "Chiwa",
           "team": "Joblife",
           "value": 45,
           "rounds": 683
         },
         {
-          "rank": 31,
+          "rank": 32,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 46,
           "rounds": 537
         },
         {
-          "rank": 32,
+          "rank": 33,
           "ign": "LOOP",
           "team": "GnG Amazigh",
           "value": 46,
           "rounds": 690
         },
         {
-          "rank": 33,
+          "rank": 34,
           "ign": "MAGNUM",
           "team": "Enterprise Esports",
           "value": 47,
           "rounds": 528
         },
         {
-          "rank": 34,
+          "rank": 35,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 48,
           "rounds": 683
         },
         {
-          "rank": 35,
+          "rank": 36,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 48,
           "rounds": 637
         },
         {
-          "rank": 36,
+          "rank": 37,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 49,
           "rounds": 590
         },
         {
-          "rank": 37,
+          "rank": 38,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 51,
           "rounds": 637
         },
         {
-          "rank": 38,
+          "rank": 39,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 52,
           "rounds": 590
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 53,
           "rounds": 641
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 54,
           "rounds": 590
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "QutionerX",
           "team": "Misa Esports",
           "value": 55,
           "rounds": 497
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 55,
           "rounds": 497
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "reazy",
           "team": "S2G Esports",
           "value": 56,
           "rounds": 641
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 58,
           "rounds": 497
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "Doma",
           "team": "Joblife",
           "value": 59,
           "rounds": 683
         },
         {
-          "rank": 46,
+          "rank": 47,
           "ign": "Guardy",
           "team": "Bar\u00e7a eSports",
           "value": 60,
           "rounds": 637
         },
         {
-          "rank": 47,
+          "rank": 48,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 61,
           "rounds": 998
         },
         {
-          "rank": 48,
+          "rank": 49,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 61,
           "rounds": 963
         },
         {
-          "rank": 49,
+          "rank": 50,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 63,
           "rounds": 901
         },
         {
-          "rank": 50,
+          "rank": 51,
           "ign": "Fizzy",
           "team": "Eintracht Frankfurt",
           "value": 63,
           "rounds": 901
         },
         {
-          "rank": 51,
+          "rank": 52,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 63,
           "rounds": 528
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 64,
           "rounds": 421
         },
         {
-          "rank": 53,
+          "rank": 54,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 65,
           "rounds": 478
         },
         {
-          "rank": 54,
+          "rank": 55,
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 67,
           "rounds": 481
         },
         {
-          "rank": 55,
+          "rank": 56,
           "ign": "GSR",
           "team": "Team Liquid Academy",
           "value": 72,
           "rounds": 591
         },
         {
-          "rank": 56,
+          "rank": 57,
           "ign": "globeX",
           "team": "Bar\u00e7a eSports",
           "value": 73,
           "rounds": 637
         },
         {
-          "rank": 57,
+          "rank": 58,
           "ign": "Kachoww",
           "team": "S2G Esports",
           "value": 75,
           "rounds": 641
         },
         {
-          "rank": 58,
+          "rank": 59,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 76,
           "rounds": 641
         },
         {
-          "rank": 59,
+          "rank": 60,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 78,
           "rounds": 901
         },
         {
-          "rank": 60,
+          "rank": 61,
           "ign": "MONSTEERR",
           "team": "Eintracht Frankfurt",
           "value": 81,
           "rounds": 901
         },
         {
-          "rank": 61,
+          "rank": 62,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 86,
           "rounds": 963
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "Wanzeru",
           "team": "Team Liquid Academy",
           "value": 89,
           "rounds": 591
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "Akai",
           "team": "Stallions Esports",
           "value": 91,
           "rounds": 576
         },
         {
-          "rank": 64,
+          "rank": 65,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 93,
           "rounds": 590
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "pyrolll",
           "team": "FOKUS",
           "value": 94,
           "rounds": 998
         },
         {
-          "rank": 66,
+          "rank": 67,
           "ign": "Susano",
           "team": "Stallions Esports",
           "value": 97,
           "rounds": 641
         },
         {
-          "rank": 67,
+          "rank": 68,
           "ign": "Serial",
           "team": "FOKUS",
           "value": 99,
           "rounds": 998
         },
         {
-          "rank": 68,
+          "rank": 69,
           "ign": "BULD",
           "team": "UCAM Esports",
           "value": 99,
           "rounds": 963
         },
         {
-          "rank": 69,
+          "rank": 70,
           "ign": "OLIZERA",
           "team": "UCAM Esports",
           "value": 100,
           "rounds": 963
         },
         {
-          "rank": 70,
+          "rank": 71,
           "ign": "Runner",
           "team": "Joblife",
           "value": 120,
           "rounds": 683
         },
         {
-          "rank": 71,
+          "rank": 72,
           "ign": "B1SK",
           "team": "UCAM Esports",
           "value": 134,
           "rounds": 963
         },
         {
-          "rank": 72,
+          "rank": 73,
           "ign": "pa1ze",
           "team": "FOKUS",
           "value": 166,
           "rounds": 998
         },
         {
-          "rank": 73,
+          "rank": 74,
           "ign": "Jamelinho",
           "team": "Eintracht Frankfurt",
           "value": 166,
           "rounds": 901
         }
       ],
-      "tournament_avg": 56.164
+      "tournament_avg": 55.919
     },
     "fk_pct": {
       "entries": [
@@ -34357,10 +34534,10 @@
         },
         {
           "rank": 65,
-          "ign": "prti",
+          "ign": "TLA prti",
           "team": "Team Liquid Academy",
-          "value": 0.055,
-          "rounds": 200
+          "value": 0.0575,
+          "rounds": 591
         },
         {
           "rank": 66,
@@ -34413,13 +34590,20 @@
         },
         {
           "rank": 73,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 0.04,
+          "rounds": 100
+        },
+        {
+          "rank": 74,
           "ign": "Redgar",
           "team": "MIR",
           "value": 0.0367,
           "rounds": 218
         }
       ],
-      "tournament_avg": 0.106
+      "tournament_avg": 0.105
     },
     "fd_pct": {
       "entries": [
@@ -34586,59 +34770,59 @@
         },
         {
           "rank": 24,
-          "ign": "rexxtoned",
+          "ign": "TLA prti",
           "team": "Team Liquid Academy",
           "value": 0.0745,
           "rounds": 591
         },
         {
           "rank": 25,
+          "ign": "rexxtoned",
+          "team": "Team Liquid Academy",
+          "value": 0.0745,
+          "rounds": 591
+        },
+        {
+          "rank": 26,
           "ign": "elllement",
           "team": "Pixel Lumina",
           "value": 0.0745,
           "rounds": 255
         },
         {
-          "rank": 26,
+          "rank": 27,
           "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
           "value": 0.0754,
           "rounds": 637
         },
         {
-          "rank": 27,
+          "rank": 28,
           "ign": "kya",
           "team": "Pixel Lumina",
           "value": 0.0784,
           "rounds": 255
         },
         {
-          "rank": 28,
+          "rank": 29,
           "ign": "Stonezy",
           "team": "Bar\u00e7a eSports",
           "value": 0.0801,
           "rounds": 637
         },
         {
-          "rank": 29,
+          "rank": 30,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 0.0827,
           "rounds": 641
         },
         {
-          "rank": 30,
+          "rank": 31,
           "ign": "Sh1n",
           "team": "Mandatory",
           "value": 0.0831,
           "rounds": 590
-        },
-        {
-          "rank": 31,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 0.085,
-          "rounds": 200
         },
         {
           "rank": 32,
@@ -34768,167 +34952,174 @@
         },
         {
           "rank": 50,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 0.11,
+          "rounds": 100
+        },
+        {
+          "rank": 51,
           "ign": "QutionerX",
           "team": "Misa Esports",
           "value": 0.1107,
           "rounds": 497
         },
         {
-          "rank": 51,
+          "rank": 52,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 0.1107,
           "rounds": 497
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "globeX",
           "team": "Bar\u00e7a eSports",
           "value": 0.1146,
           "rounds": 637
         },
         {
-          "rank": 53,
+          "rank": 54,
           "ign": "kozzy",
           "team": "Enterprise Esports",
           "value": 0.1153,
           "rounds": 373
         },
         {
-          "rank": 54,
+          "rank": 55,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 0.1167,
           "rounds": 497
         },
         {
-          "rank": 55,
+          "rank": 56,
           "ign": "Kachoww",
           "team": "S2G Esports",
           "value": 0.117,
           "rounds": 641
         },
         {
-          "rank": 56,
+          "rank": 57,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 0.1186,
           "rounds": 641
         },
         {
-          "rank": 57,
+          "rank": 58,
           "ign": "Lime",
           "team": "Enterprise Esports",
           "value": 0.1193,
           "rounds": 528
         },
         {
-          "rank": 58,
+          "rank": 59,
           "ign": "GSR",
           "team": "Team Liquid Academy",
           "value": 0.1218,
           "rounds": 591
         },
         {
-          "rank": 59,
+          "rank": 60,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 0.136,
           "rounds": 478
         },
         {
-          "rank": 60,
+          "rank": 61,
           "ign": "B1SK",
           "team": "UCAM Esports",
           "value": 0.1391,
           "rounds": 963
         },
         {
-          "rank": 61,
+          "rank": 62,
           "ign": "Tenkai",
           "team": "GnG Amazigh",
           "value": 0.1393,
           "rounds": 481
         },
         {
-          "rank": 62,
+          "rank": 63,
           "ign": "Szimpli",
           "team": "Pixel Lumina",
           "value": 0.1451,
           "rounds": 255
         },
         {
-          "rank": 63,
+          "rank": 64,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 0.149,
           "rounds": 255
         },
         {
-          "rank": 64,
+          "rank": 65,
           "ign": "Wanzeru",
           "team": "Team Liquid Academy",
           "value": 0.1506,
           "rounds": 591
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "Susano",
           "team": "Stallions Esports",
           "value": 0.1513,
           "rounds": 641
         },
         {
-          "rank": 66,
+          "rank": 67,
           "ign": "OUKA",
           "team": "GnG Amazigh",
           "value": 0.152,
           "rounds": 421
         },
         {
-          "rank": 67,
+          "rank": 68,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 0.1576,
           "rounds": 590
         },
         {
-          "rank": 68,
+          "rank": 69,
           "ign": "Akai",
           "team": "Stallions Esports",
           "value": 0.158,
           "rounds": 576
         },
         {
-          "rank": 69,
+          "rank": 70,
           "ign": "pa1ze",
           "team": "FOKUS",
           "value": 0.1663,
           "rounds": 998
         },
         {
-          "rank": 70,
+          "rank": 71,
           "ign": "Raz",
           "team": "MIR",
           "value": 0.1697,
           "rounds": 218
         },
         {
-          "rank": 71,
+          "rank": 72,
           "ign": "swagzor",
           "team": "Enterprise Esports",
           "value": 0.1742,
           "rounds": 155
         },
         {
-          "rank": 72,
+          "rank": 73,
           "ign": "Runner",
           "team": "Joblife",
           "value": 0.1757,
           "rounds": 683
         },
         {
-          "rank": 73,
+          "rank": 74,
           "ign": "Jamelinho",
           "team": "Eintracht Frankfurt",
           "value": 0.1842,
@@ -34948,17 +35139,17 @@
         },
         {
           "rank": 2,
+          "ign": "Barca 2",
+          "team": "Bar\u00e7a eSports",
+          "value": 0.444,
+          "rounds": 100
+        },
+        {
+          "rank": 3,
           "ign": "burzzy",
           "team": "Misa Esports",
           "value": 0.366,
           "rounds": 497
-        },
-        {
-          "rank": 3,
-          "ign": "Kicks",
-          "team": "Team Liquid Academy",
-          "value": 0.312,
-          "rounds": 591
         },
         {
           "rank": 4,
@@ -34976,115 +35167,115 @@
         },
         {
           "rank": 6,
-          "ign": "Wanzeru",
-          "team": "Team Liquid Academy",
-          "value": 0.273,
-          "rounds": 591
-        },
-        {
-          "rank": 7,
-          "ign": "globeX",
-          "team": "Bar\u00e7a eSports",
-          "value": 0.265,
-          "rounds": 637
-        },
-        {
-          "rank": 8,
-          "ign": "prti",
-          "team": "Team Liquid Academy",
-          "value": 0.263,
-          "rounds": 200
-        },
-        {
-          "rank": 9,
           "ign": "pa1ze",
           "team": "FOKUS",
           "value": 0.261,
           "rounds": 998
         },
         {
-          "rank": 10,
-          "ign": "GSR",
-          "team": "Team Liquid Academy",
-          "value": 0.26,
-          "rounds": 591
-        },
-        {
-          "rank": 11,
+          "rank": 7,
           "ign": "Famsii",
           "team": "UCAM Esports",
           "value": 0.258,
           "rounds": 963
         },
         {
-          "rank": 12,
+          "rank": 8,
           "ign": "Elite",
           "team": "Misa Esports",
           "value": 0.257,
           "rounds": 497
         },
         {
-          "rank": 13,
+          "rank": 9,
           "ign": "CUNHA",
           "team": "GnG Amazigh",
           "value": 0.255,
           "rounds": 690
         },
         {
-          "rank": 14,
+          "rank": 10,
+          "ign": "Kicks",
+          "team": "Team Liquid Academy",
+          "value": 0.25,
+          "rounds": 591
+        },
+        {
+          "rank": 11,
+          "ign": "globeX",
+          "team": "Bar\u00e7a eSports",
+          "value": 0.244,
+          "rounds": 637
+        },
+        {
+          "rank": 12,
           "ign": "Deadink",
           "team": "S2G Esports",
           "value": 0.238,
           "rounds": 641
         },
         {
-          "rank": 15,
-          "ign": "Fit1nho",
-          "team": "Bar\u00e7a eSports",
-          "value": 0.228,
-          "rounds": 637
-        },
-        {
-          "rank": 16,
+          "rank": 13,
           "ign": "Natank",
           "team": "Mandatory",
           "value": 0.226,
           "rounds": 590
         },
         {
-          "rank": 17,
-          "ign": "Guardy",
-          "team": "Bar\u00e7a eSports",
-          "value": 0.219,
-          "rounds": 637
+          "rank": 14,
+          "ign": "GSR",
+          "team": "Team Liquid Academy",
+          "value": 0.222,
+          "rounds": 591
         },
         {
-          "rank": 18,
+          "rank": 15,
+          "ign": "Wanzeru",
+          "team": "Team Liquid Academy",
+          "value": 0.219,
+          "rounds": 591
+        },
+        {
+          "rank": 16,
           "ign": "Runner",
           "team": "Joblife",
           "value": 0.214,
           "rounds": 683
         },
         {
-          "rank": 19,
-          "ign": "Stonezy",
+          "rank": 17,
+          "ign": "Fit1nho",
           "team": "Bar\u00e7a eSports",
-          "value": 0.21,
+          "value": 0.211,
           "rounds": 637
         },
         {
-          "rank": 20,
+          "rank": 18,
           "ign": "MAGNUM",
           "team": "Enterprise Esports",
           "value": 0.208,
           "rounds": 528
         },
         {
-          "rank": 21,
+          "rank": 19,
+          "ign": "Stonezy",
+          "team": "Bar\u00e7a eSports",
+          "value": 0.208,
+          "rounds": 637
+        },
+        {
+          "rank": 20,
           "ign": "Sevire",
           "team": "Mandatory",
           "value": 0.2,
           "rounds": 590
+        },
+        {
+          "rank": 21,
+          "ign": "TLA prti",
+          "team": "Team Liquid Academy",
+          "value": 0.2,
+          "rounds": 591
         },
         {
           "rank": 22,
@@ -35165,164 +35356,164 @@
         },
         {
           "rank": 33,
+          "ign": "Guardy",
+          "team": "Bar\u00e7a eSports",
+          "value": 0.167,
+          "rounds": 637
+        },
+        {
+          "rank": 34,
           "ign": "Jesse",
           "team": "UCAM Esports",
           "value": 0.167,
           "rounds": 963
         },
         {
-          "rank": 34,
+          "rank": 35,
           "ign": "batujnax",
           "team": "S2G Esports",
           "value": 0.167,
           "rounds": 641
         },
         {
-          "rank": 35,
+          "rank": 36,
           "ign": "br1ckzl",
           "team": "Stallions Esports",
           "value": 0.167,
           "rounds": 126
         },
         {
-          "rank": 36,
+          "rank": 37,
           "ign": "Snop",
           "team": "GnG Amazigh",
           "value": 0.167,
           "rounds": 478
         },
         {
-          "rank": 37,
+          "rank": 38,
           "ign": "Susano",
           "team": "Stallions Esports",
           "value": 0.161,
           "rounds": 641
         },
         {
-          "rank": 38,
+          "rank": 39,
           "ign": "BULD",
           "team": "UCAM Esports",
           "value": 0.16,
           "rounds": 963
         },
         {
-          "rank": 39,
+          "rank": 40,
           "ign": "azury",
           "team": "Eintracht Frankfurt",
           "value": 0.159,
           "rounds": 901
         },
         {
-          "rank": 40,
+          "rank": 41,
           "ign": "Kajuks",
           "team": "Bar\u00e7a eSports",
           "value": 0.159,
           "rounds": 537
         },
         {
-          "rank": 41,
+          "rank": 42,
           "ign": "kAdavra",
           "team": "Mandatory",
           "value": 0.154,
           "rounds": 590
         },
         {
-          "rank": 42,
+          "rank": 43,
           "ign": "Bishepss",
           "team": "MIR",
           "value": 0.154,
           "rounds": 218
         },
         {
-          "rank": 43,
+          "rank": 44,
           "ign": "pAura",
           "team": "Misa Esports",
           "value": 0.148,
           "rounds": 497
         },
         {
-          "rank": 44,
+          "rank": 45,
           "ign": "Brave",
           "team": "Misa Esports",
           "value": 0.146,
           "rounds": 497
         },
         {
-          "rank": 45,
+          "rank": 46,
           "ign": "MONSTEERR",
           "team": "Eintracht Frankfurt",
           "value": 0.143,
           "rounds": 901
         },
         {
-          "rank": 46,
+          "rank": 47,
           "ign": "musashi",
           "team": "Eintracht Frankfurt",
           "value": 0.143,
           "rounds": 901
         },
         {
-          "rank": 47,
+          "rank": 48,
           "ign": "Redgar",
           "team": "MIR",
           "value": 0.143,
           "rounds": 218
         },
         {
-          "rank": 48,
+          "rank": 49,
           "ign": "Serial",
           "team": "FOKUS",
           "value": 0.141,
           "rounds": 998
         },
         {
-          "rank": 49,
+          "rank": 50,
           "ign": "B1SK",
           "team": "UCAM Esports",
           "value": 0.14,
           "rounds": 963
         },
         {
-          "rank": 50,
+          "rank": 51,
           "ign": "Doma",
           "team": "Joblife",
           "value": 0.139,
           "rounds": 683
         },
         {
-          "rank": 51,
+          "rank": 52,
           "ign": "Enzo ",
           "team": "Joblife",
           "value": 0.139,
           "rounds": 683
         },
         {
-          "rank": 52,
+          "rank": 53,
           "ign": "MOLSI",
           "team": "FOKUS",
           "value": 0.138,
           "rounds": 998
         },
         {
-          "rank": 53,
+          "rank": 54,
           "ign": "Chaza",
           "team": "Pixel Lumina",
           "value": 0.136,
           "rounds": 255
         },
         {
-          "rank": 54,
+          "rank": 55,
           "ign": "AL7B",
           "team": "Stallions Esports",
           "value": 0.134,
           "rounds": 515
-        },
-        {
-          "rank": 55,
-          "ign": "rexxtoned",
-          "team": "Team Liquid Academy",
-          "value": 0.133,
-          "rounds": 591
         },
         {
           "rank": 56,
@@ -35382,76 +35573,83 @@
         },
         {
           "rank": 64,
+          "ign": "rexxtoned",
+          "team": "Team Liquid Academy",
+          "value": 0.119,
+          "rounds": 591
+        },
+        {
+          "rank": 65,
           "ign": "iluri",
           "team": "Enterprise Esports",
           "value": 0.106,
           "rounds": 528
         },
         {
-          "rank": 65,
+          "rank": 66,
           "ign": "Kamyk",
           "team": "Joblife",
           "value": 0.105,
           "rounds": 683
         },
         {
-          "rank": 66,
+          "rank": 67,
           "ign": "MonOkson",
           "team": "GnG Amazigh",
           "value": 0.103,
           "rounds": 690
         },
         {
-          "rank": 67,
+          "rank": 68,
           "ign": "kya",
           "team": "Pixel Lumina",
           "value": 0.091,
           "rounds": 255
         },
         {
-          "rank": 68,
+          "rank": 69,
           "ign": "kospa1n",
           "team": "MIR",
           "value": 0.077,
           "rounds": 218
         },
         {
-          "rank": 69,
+          "rank": 70,
           "ign": "Takaas",
           "team": "Mandatory",
           "value": 0.071,
           "rounds": 590
         },
         {
-          "rank": 70,
+          "rank": 71,
           "ign": "Kachoww",
           "team": "S2G Esports",
           "value": 0.062,
           "rounds": 641
         },
         {
-          "rank": 71,
+          "rank": 72,
           "ign": "Akai",
           "team": "Stallions Esports",
           "value": 0.057,
           "rounds": 576
         },
         {
-          "rank": 72,
+          "rank": 73,
           "ign": "kozzy",
           "team": "Enterprise Esports",
           "value": 0.04,
           "rounds": 373
         },
         {
-          "rank": 73,
+          "rank": 74,
           "ign": "Raz",
           "team": "MIR",
           "value": 0.0,
           "rounds": 218
         }
       ],
-      "tournament_avg": 0.174
+      "tournament_avg": 0.173
     }
   },
   "agent_stats": [
@@ -35780,21 +35978,21 @@
       "kills_ultimate": 3
     },
     {
-      "ign": "prti",
+      "ign": "TLA prti",
       "team": "Team Liquid Academy",
       "agent": "Omen",
-      "rounds": 160,
-      "casts_grenade": 62,
-      "casts_grenade_per_round": 0.388,
+      "rounds": 386,
+      "casts_grenade": 149,
+      "casts_grenade_per_round": 0.386,
       "kills_grenade": 0,
-      "casts_ability1": 96,
-      "casts_ability1_per_round": 0.6,
+      "casts_ability1": 238,
+      "casts_ability1_per_round": 0.617,
       "kills_ability1": 0,
-      "casts_ability2": 349,
-      "casts_ability2_per_round": 2.181,
+      "casts_ability2": 891,
+      "casts_ability2_per_round": 2.308,
       "kills_ability2": 0,
-      "casts_ultimate": 15,
-      "casts_ultimate_per_round": 0.094,
+      "casts_ultimate": 38,
+      "casts_ultimate_per_round": 0.098,
       "kills_ultimate": 0
     },
     {
@@ -35814,6 +36012,24 @@
       "casts_ultimate": 10,
       "casts_ultimate_per_round": 0.125,
       "kills_ultimate": 6
+    },
+    {
+      "ign": "TLA prti",
+      "team": "Team Liquid Academy",
+      "agent": "Sova",
+      "rounds": 22,
+      "casts_grenade": 15,
+      "casts_grenade_per_round": 0.682,
+      "kills_grenade": 0,
+      "casts_ability1": 12,
+      "casts_ability1_per_round": 0.545,
+      "kills_ability1": 0,
+      "casts_ability2": 20,
+      "casts_ability2_per_round": 0.909,
+      "kills_ability2": 0,
+      "casts_ultimate": 2,
+      "casts_ultimate_per_round": 0.091,
+      "kills_ultimate": 2
     },
     {
       "ign": "kya",
@@ -35958,6 +36174,24 @@
       "casts_ultimate": 26,
       "casts_ultimate_per_round": 0.103,
       "kills_ultimate": 3
+    },
+    {
+      "ign": "Barca 2",
+      "team": "Bar\u00e7a eSports",
+      "agent": "Omen",
+      "rounds": 59,
+      "casts_grenade": 39,
+      "casts_grenade_per_round": 0.661,
+      "kills_grenade": 0,
+      "casts_ability1": 32,
+      "casts_ability1_per_round": 0.542,
+      "kills_ability1": 0,
+      "casts_ability2": 143,
+      "casts_ability2_per_round": 2.424,
+      "kills_ability2": 0,
+      "casts_ultimate": 4,
+      "casts_ultimate_per_round": 0.068,
+      "kills_ultimate": 0
     },
     {
       "ign": "Famsii",

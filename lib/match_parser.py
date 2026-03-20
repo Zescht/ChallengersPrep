@@ -33,10 +33,9 @@ def load_team_matches(team_tag, team_name, data_file):
         dt = datetime.datetime.fromtimestamp(mi['gameStartMillis'] / 1000, tz=datetime.timezone.utc)
         map_name = mi['map'].split('/')[-1]
 
+        # First pass: identify team_id by finding any player whose name tag matches
         team_id = None
         opp_tag = None
-        team_players = []
-        opp_players = []
 
         for p in m['players']:
             if p.get('isObserver'):
@@ -45,14 +44,25 @@ def load_team_matches(team_tag, team_name, data_file):
             tag = name.split(' ')[0] if ' ' in name else name
             if tag == team_tag:
                 team_id = p['teamId']
-                team_players.append(p)
-            else:
-                if opp_tag is None and tag:
-                    opp_tag = tag
-                opp_players.append(p)
+                break
 
         if team_id is None:
             continue
+
+        # Second pass: assign players by teamId (not name prefix)
+        team_players = []
+        opp_players = []
+        for p in m['players']:
+            if p.get('isObserver'):
+                continue
+            if p['teamId'] == team_id:
+                team_players.append(p)
+            else:
+                name = p.get('gameName', '')
+                tag = name.split(' ')[0] if ' ' in name else name
+                if opp_tag is None and tag:
+                    opp_tag = tag
+                opp_players.append(p)
 
         opp_team_id = 'Blue' if team_id == 'Red' else 'Red'
         team_score = opp_score = 0

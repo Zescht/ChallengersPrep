@@ -37,16 +37,18 @@ export default function Navbar() {
   }
 
   const tabClass = (active: boolean) =>
-    `px-3 py-1.5 rounded text-sm font-medium transition-colors ${
+    `px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-widest transition-colors ${
       active
-        ? 'bg-primary/20 text-primary'
-        : 'text-text-muted hover:text-text hover:bg-card'
+        ? 'bg-primary/10 text-primary'
+        : 'text-text-dim hover:text-text hover:bg-white/5'
     }`
 
   return (
-    <nav className="bg-nav border-b border-border px-4 h-12 flex items-center justify-between sticky top-0 z-40">
-      <div className="flex items-center gap-6">
-        <span className="font-bold text-primary tracking-wide text-lg">VCL STATS</span>
+    <nav className="bg-surface-dim/50 backdrop-blur-md border-b border-white/5 px-6 h-14 flex items-center justify-between sticky top-0 z-40">
+      <div className="flex items-center gap-10">
+        <span className="font-headline font-black text-lg tracking-tight text-on-surface uppercase">
+          VCL <span className="text-primary">Stats</span>
+        </span>
         <div className="flex gap-1">
           {tabs.slice(0, 1).map(tab => (
             <NavLink key={tab.label} to={tab.path} className={tabClass(tab.active)}>
@@ -67,14 +69,14 @@ export default function Navbar() {
               Leaderboards
             </NavLink>
             {dropdownOpen && (
-              <div className="absolute top-full left-0 mt-0.5 bg-nav border border-border rounded shadow-lg z-50 min-w-[140px]">
+              <div className="absolute top-full left-0 mt-1 bg-surface-container-high border border-white/10 rounded-lg shadow-[0_12px_32px_rgba(0,0,0,0.4)] z-50 min-w-[140px] overflow-hidden">
                 <NavLink
                   to="/leaderboards/agents"
                   onClick={() => setDropdownOpen(false)}
-                  className={`block px-3 py-1.5 text-sm font-medium transition-colors ${
+                  className={`block px-4 py-2 text-[11px] font-bold uppercase tracking-widest transition-colors ${
                     location.pathname === '/leaderboards/agents'
-                      ? 'bg-primary/20 text-primary'
-                      : 'text-text-muted hover:text-text hover:bg-card'
+                      ? 'bg-primary/10 text-primary'
+                      : 'text-text-dim hover:text-text hover:bg-white/5'
                   }`}
                 >
                   Agent Stats
