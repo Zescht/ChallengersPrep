@@ -1,5 +1,19 @@
 import type { Team, StatsData, TournamentAverages } from '../types'
 
+const STAT_LABELS: Record<string, string> = {
+  acs: 'ACS',
+  kills: 'Kills',
+  deaths: 'Deaths',
+  assists: 'Assists',
+  kd: 'K/D',
+  kast: 'KAST',
+  fk: 'First Kills',
+  fd: 'First Deaths',
+  fk_pct: 'First Kill %',
+  fd_pct: 'First Death %',
+  cl_pct: 'Clutch %',
+}
+
 export function generateTalkingPoints(team: Team, data: StatsData, averages: TournamentAverages): string[] {
   const points: string[] = []
 
@@ -38,15 +52,16 @@ export function generateTalkingPoints(team: Team, data: StatsData, averages: Tou
   }
 
   for (const [stat, lb] of Object.entries(data.leaderboards)) {
+    const label = STAT_LABELS[stat] || stat
     const lastRank = lb.entries.length
     for (const player of teamPlayers) {
       const entry = lb.entries.find(e => e.ign === player.ign)
       if (entry?.rank === 1) {
-        points.push(`Best ${stat.toUpperCase()} in the tournament: ${player.ign}`)
+        points.push(`Best ${label} in the tournament: ${player.ign}`)
       } else if (entry?.rank === 2) {
-        points.push(`${player.ign} ranks 2nd in ${stat.toUpperCase()}`)
+        points.push(`${player.ign} ranks 2nd in ${label}`)
       } else if (entry?.rank === lastRank) {
-        points.push(`Lowest ${stat.toUpperCase()} in the tournament: ${player.ign}`)
+        points.push(`Lowest ${label} in the tournament: ${player.ign}`)
       }
     }
   }
