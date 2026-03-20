@@ -42,6 +42,16 @@ ehthumbs.db
 prompt-master-main.zip
 Github.png
 
+# Screenshot references & temp docs
+*.png
+!vcl-frontend/public/logos/*.png
+!data/icons/*.png
+*.docx
+~$*.docx
+~WRL*.tmp
+stitch_new_screens.zip
+tla_included_matches.csv
+
 # Logs & temp
 *.log
 logs/

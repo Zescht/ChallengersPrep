@@ -68,6 +68,7 @@ export interface Player {
   team: string
   acs_split: number
   acs_year: number
+  adr: number
   rounds: number
   kills: number
   deaths: number
@@ -85,6 +86,7 @@ export interface Player {
   clutch_pct: number
   kast: number
   awp_pct: number
+  vlr_rating: number
   agents: AgentPick[]
 }
 
@@ -126,9 +128,14 @@ export interface Leaderboard {
   tournament_avg: number
 }
 
+export interface RolePlayer extends Player {
+  role: string
+}
+
 export interface StatsData {
   teams: Team[]
   players: Player[]
+  players_by_role: RolePlayer[]
   matches: Match[]
   leaderboards: Record<string, Leaderboard>
 }

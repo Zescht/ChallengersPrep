@@ -20,6 +20,31 @@ This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
 
 ---
 
+## [0.6.0] - 2026-03-20
+
+### Added
+- **Leaderboards rewrite**: sortable columns with stacked ▲/▼ arrows, color-coded cells (red→green→purple percentile gradient)
+- **VLR Rating**: weighted average of `vlrRating2` from raw match data, added to pipeline and leaderboard
+- **ADR**: average damage per round computed from per-round `damage[]` array
+- **Role filter**: dropdown (Duelist/Initiator/Controller/Sentinel) — filters players who play any agent of that role
+- **Role stats toggle**: checkbox that switches between overall stats and role-only stats (per-role accumulation in pipeline)
+- **Expandable CL-WIN%**: `+` button expands inline ATMP/WON sub-columns to the right
+- **Team logos**: downloaded from Liquipedia, stored locally at `vcl-frontend/public/logos/`
+- **Agent role mapping**: `AGENT_ROLE` in `lib/constants.py` (all 28 agents)
+- **Per-role pipeline**: `role_accum` in stats_engine, `players_by_role` array in stats.json
+- `compact.md` — session summary for context continuity
+
+### Changed
+- Leaderboard columns: removed Kills/Deaths/Assists/KA/D individual tabs; added VLR, ADR, FK/FD (merged), FK%, CL-WIN%, OP% Kill
+- Team column shows logo + tag abbreviation instead of full team name
+- Sort: click toggles asc/desc per column; columns have sensible defaults (Deaths ascending, etc.)
+- Thick 3px separator between identity columns and stat columns
+- `.gitignore`: added superpowers skills, misc non-project files
+
+### Fixed
+- **TLA data contamination**: removed 3 matches (2026-01-23) where TL main roster (nAts, Miniboo, kamo, purp0) was mixed with TLA; exported `TLA_Included_Matches.xlsx` for transparency
+- Player count: 78 → 74 (removed 4 TL main roster players from TLA data)
+
 ## [0.5.0] - 2026-03-19
 
 ### Added

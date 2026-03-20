@@ -34,6 +34,17 @@ AGENT_MAP = {
     'f94c3b30-42be-e959-889c-5aa313dba261': 'Raze',
 }
 
+AGENT_ROLE = {
+    'Iso': 'Duelist', 'Jett': 'Duelist', 'Neon': 'Duelist', 'Phoenix': 'Duelist',
+    'Raze': 'Duelist', 'Reyna': 'Duelist', 'Waylay': 'Duelist', 'Yoru': 'Duelist',
+    'Breach': 'Initiator', 'Fade': 'Initiator', 'Gekko': 'Initiator', 'KAY/O': 'Initiator',
+    'Skye': 'Initiator', 'Sova': 'Initiator', 'Tejo': 'Initiator',
+    'Astra': 'Controller', 'Brimstone': 'Controller', 'Clove': 'Controller', 'Harbor': 'Controller',
+    'Omen': 'Controller', 'Miks': 'Controller', 'Viper': 'Controller',
+    'Chamber': 'Sentinel', 'Cypher': 'Sentinel', 'Deadlock': 'Sentinel', 'Killjoy': 'Sentinel',
+    'Sage': 'Sentinel', 'Vyse': 'Sentinel', 'Veto': 'Sentinel',
+}
+
 WEAPON_MAP = {
     '29A0CFAB-485B-F5D5-779A-B59F85E204A8': 'Classic',
     '42DA8CCC-40D5-AFFC-BEEC-15AA47B42EDA': 'Shorty',

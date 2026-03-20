@@ -1,7 +1,7 @@
 """Core stat computation: economy, sides, player stats, XvY, post-plant."""
 
 from collections import defaultdict, Counter
-from .constants import AGENT_MAP, WEAPON_MAP, OPERATOR_UUID
+from .constants import AGENT_MAP, AGENT_ROLE, WEAPON_MAP, OPERATOR_UUID
 
 
 def get_team_side_per_round(md, team_puuids):
@@ -76,15 +76,21 @@ def compute_team_stats(matches, team_tag, team_name):
     econ_accum = defaultdict(lambda: {'w': 0, 'l': 0})
     xvy_accum = defaultdict(lambda: {'wins': 0, 'total': 0})
     pp_accum = defaultdict(lambda: {'plants': 0, 'wins': 0, 'losses': 0})
-    player_accum = defaultdict(lambda: {
-        'name': '', 'team': team_name, 'agents': Counter(), 'rounds': 0,
-        'kills': 0, 'deaths': 0, 'assists': 0, 'score': 0,
-        'first_kills': 0, 'first_deaths': 0,
-        'operator_kills': 0, 'total_kills_for_awp': 0,
-        'clutch_wins': 0, 'clutch_attempts': 0,
-        'kast_rounds': 0, 'maps_played': 0,
-        'weapons': Counter(),
-    })
+    def _new_accum():
+        return {
+            'name': '', 'team': team_name, 'agents': Counter(), 'rounds': 0,
+            'kills': 0, 'deaths': 0, 'assists': 0, 'score': 0,
+            'total_damage': 0,
+            'first_kills': 0, 'first_deaths': 0,
+            'operator_kills': 0, 'total_kills_for_awp': 0,
+            'clutch_wins': 0, 'clutch_attempts': 0,
+            'kast_rounds': 0, 'maps_played': 0,
+            'vlr_rating_sum': 0.0, 'vlr_rating_rounds': 0,
+            'weapons': Counter(),
+        }
+    player_accum = defaultdict(_new_accum)
+    # Per-role accumulators: role_accum[puuid][role] = same shape as player_accum
+    role_accum = defaultdict(lambda: defaultdict(_new_accum))
 
     for md in matches:
         team_puuids = {p['puuid'] for p in md.team_players}
@@ -200,41 +206,61 @@ def compute_team_stats(matches, team_tag, team_name):
                 pa = player_accum[puuid]
                 pa['name'] = pname
 
-                pa['rounds'] += 1
-
+                # Determine agent and role for this match
+                agent = '?'
                 for p in md.team_players:
                     if p['puuid'] == puuid:
                         agent = AGENT_MAP.get(p.get('characterId', ''), '?')
-                        pa['agents'][agent] += 1
+                        break
+                role = AGENT_ROLE.get(agent, 'Unknown')
+                ra = role_accum[puuid][role]
+                ra['name'] = pname
+                targets = [pa, ra]  # write stats to both overall and role-specific
+
+                for t in targets:
+                    t['rounds'] += 1
+                pa['agents'][agent] += 1
+                ra['agents'][agent] += 1
 
                 kills = ps.get('kills', [])
-                pa['kills'] += len(kills)
-                pa['score'] += ps.get('score', 0)
+                kill_count = len(kills)
+                score = ps.get('score', 0)
+                dmg_total = sum(d.get('damage', 0) for d in ps.get('damage', []))
+                for t in targets:
+                    t['kills'] += kill_count
+                    t['score'] += score
+                    t['total_damage'] += dmg_total
 
                 is_dead = puuid in all_victims
                 if is_dead:
-                    pa['deaths'] += 1
+                    for t in targets:
+                        t['deaths'] += 1
 
                 assists = sum(1 for k in all_kills_in_round
                               if k['killer'] != puuid and puuid in k.get('assistants', []))
-                pa['assists'] += assists
+                for t in targets:
+                    t['assists'] += assists
 
                 if first_kill_puuid == puuid:
-                    pa['first_kills'] += 1
+                    for t in targets:
+                        t['first_kills'] += 1
                 if first_death_puuid == puuid:
-                    pa['first_deaths'] += 1
+                    for t in targets:
+                        t['first_deaths'] += 1
 
                 for k in kills:
-                    pa['total_kills_for_awp'] += 1
                     dmg_item = k.get('finishingDamage', {}).get('damageItem', '').upper()
-                    if dmg_item == OPERATOR_UUID:
-                        pa['operator_kills'] += 1
+                    is_op = dmg_item == OPERATOR_UUID
                     weapon_name = WEAPON_MAP.get(dmg_item, None)
-                    if weapon_name:
-                        pa['weapons'][weapon_name] += 1
+                    for t in targets:
+                        t['total_kills_for_awp'] += 1
+                        if is_op:
+                            t['operator_kills'] += 1
+                        if weapon_name:
+                            t['weapons'][weapon_name] += 1
 
                 # KAST
-                has_kill = len(kills) > 0
+                has_kill = kill_count > 0
                 has_assist = assists > 0
                 survived = puuid in survivors
                 traded = False
@@ -246,7 +272,8 @@ def compute_team_stats(matches, team_tag, team_name):
                         if 0 <= kdt - dt_ms <= 5000:
                             traded = True
                 if has_kill or has_assist or survived or traded:
-                    pa['kast_rounds'] += 1
+                    for t in targets:
+                        t['kast_rounds'] += 1
 
             # XvY
             team_alive = {p for p in team_puuids if p in all_player_puuids}
@@ -297,12 +324,29 @@ def compute_team_stats(matches, team_tag, team_name):
                     cp = list(t_track)[0]
                     if cp in team_puuids:
                         player_accum[cp]['clutch_attempts'] += 1
+                        # Also accumulate into role-specific bucket
+                        cp_agent = AGENT_MAP.get(
+                            next((p.get('characterId', '') for p in md.team_players if p['puuid'] == cp), ''), '?')
+                        cp_role = AGENT_ROLE.get(cp_agent, 'Unknown')
+                        role_accum[cp][cp_role]['clutch_attempts'] += 1
                         if won:
                             player_accum[cp]['clutch_wins'] += 1
+                            role_accum[cp][cp_role]['clutch_wins'] += 1
                     break
 
         for p in md.team_players:
-            player_accum[p['puuid']]['maps_played'] += 1
+            puuid = p['puuid']
+            agent = AGENT_MAP.get(p.get('characterId', ''), '?')
+            role = AGENT_ROLE.get(agent, 'Unknown')
+            player_accum[puuid]['maps_played'] += 1
+            role_accum[puuid][role]['maps_played'] += 1
+            vlr_r = p.get('stats', {}).get('vlrRating2')
+            rp = p.get('stats', {}).get('roundsPlayed', 0)
+            if vlr_r is not None and rp > 0:
+                player_accum[puuid]['vlr_rating_sum'] += vlr_r * rp
+                player_accum[puuid]['vlr_rating_rounds'] += rp
+                role_accum[puuid][role]['vlr_rating_sum'] += vlr_r * rp
+                role_accum[puuid][role]['vlr_rating_rounds'] += rp
 
         match_rows.append({
             'match_id': md.match_id,
@@ -357,13 +401,9 @@ def compute_team_stats(matches, team_tag, team_name):
             'pct': data['wins'] / data['plants'] if data['plants'] > 0 else 0,
         })
 
-    # Build player rows
-    player_rows = []
-    for puuid, pa in player_accum.items():
-        if pa['rounds'] == 0:
-            continue
+    def _build_row(puuid, pa, role_label=None):
         fk, fd = pa['first_kills'], pa['first_deaths']
-        player_rows.append({
+        row = {
             'puuid': puuid,
             'team': team_name,
             'team_tag': team_tag,
@@ -373,6 +413,7 @@ def compute_team_stats(matches, team_tag, team_name):
             'deaths': pa['deaths'],
             'assists': pa['assists'],
             'acs': round(pa['score'] / pa['rounds']) if pa['rounds'] > 0 else 0,
+            'adr': round(pa['total_damage'] / pa['rounds'], 1) if pa['rounds'] > 0 else 0,
             'fk': fk,
             'fd': fd,
             'kd': round(pa['kills'] / max(pa['deaths'], 1), 3),
@@ -387,10 +428,29 @@ def compute_team_stats(matches, team_tag, team_name):
             'kast': round(pa['kast_rounds'] / pa['rounds'], 3) if pa['rounds'] > 0 else 0,
             'op_kills': pa['operator_kills'],
             'op_pct': round(pa['operator_kills'] / pa['total_kills_for_awp'], 3) if pa['total_kills_for_awp'] > 0 else 0,
+            'vlr_rating': round(pa['vlr_rating_sum'] / pa['vlr_rating_rounds'], 3) if pa['vlr_rating_rounds'] > 0 else 0,
             'maps': pa['maps_played'],
             'agents': dict(pa['agents']),
             'weapons': dict(pa['weapons']),
-        })
+        }
+        if role_label:
+            row['role'] = role_label
+        return row
+
+    # Build player rows (overall)
+    player_rows = []
+    for puuid, pa in player_accum.items():
+        if pa['rounds'] == 0:
+            continue
+        player_rows.append(_build_row(puuid, pa))
+
+    # Build per-role player rows
+    player_role_rows = []
+    for puuid, roles in role_accum.items():
+        for role_name, ra in roles.items():
+            if ra['rounds'] == 0:
+                continue
+            player_role_rows.append(_build_row(puuid, ra, role_label=role_name))
 
     print(f"  {team_name} ({team_tag}): {len(matches)} valid maps, {len(player_rows)} players")
 
@@ -400,4 +460,5 @@ def compute_team_stats(matches, team_tag, team_name):
         'xvy_rows': xvy_rows,
         'post_plant_rows': post_plant_rows,
         'player_rows': player_rows,
+        'player_role_rows': player_role_rows,
     }

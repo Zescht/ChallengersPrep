@@ -261,6 +261,7 @@ def _build_player(pr):
         'team': pr['team'],
         'acs_split': pr['acs'],
         'acs_year': pr['acs'],
+        'adr': pr.get('adr', 0),
         'rounds': pr['rounds'],
         'kills': pr['kills'],
         'deaths': pr['deaths'],
@@ -278,6 +279,7 @@ def _build_player(pr):
         'clutch_pct': pr['clutch_pct'],
         'kast': pr['kast'],
         'awp_pct': pr['op_pct'],
+        'vlr_rating': pr.get('vlr_rating', 0),
         'agents': agents,
     }
 
@@ -412,6 +414,7 @@ def build_stats_json(all_team_data):
     all_players_out = []
     all_match_rows = []
     all_player_rows = []
+    all_role_players_out = []
 
     # First pass: build team objects (without rankings)
     for tag, td in all_team_data.items():
@@ -442,6 +445,33 @@ def build_stats_json(all_team_data):
             all_players_out.append(_build_player(pr))
             all_player_rows.append(pr)
 
+        # Build per-role player entries (merge by name+team+role)
+        role_merged = {}
+        for pr in td.get('player_role_rows', []):
+            key = (pr['name'].lower(), pr['team'], pr.get('role', 'Unknown'))
+            if key not in role_merged:
+                role_merged[key] = dict(pr)
+                role_merged[key]['agents'] = dict(pr['agents'])
+                role_merged[key]['weapons'] = dict(pr['weapons'])
+            else:
+                # Same merge logic but role-aware (rare: only for account changes)
+                m = role_merged[key]
+                m['rounds'] += pr['rounds']
+                m['kills'] += pr['kills']
+                m['deaths'] += pr['deaths']
+                m['assists'] += pr['assists']
+                m['fk'] = m.get('first_kills', 0) + pr.get('first_kills', 0)
+                m['fd'] = m.get('first_deaths', 0) + pr.get('first_deaths', 0)
+                m['clutch_wins'] += pr['clutch_wins']
+                m['clutch_attempts'] += pr['clutch_attempts']
+                m['kast_rounds'] = m.get('kast_rounds', 0) + pr.get('kast_rounds', 0)
+                m['operator_kills'] = m.get('operator_kills', 0) + pr.get('operator_kills', 0)
+                m['total_kills_for_awp'] = m.get('total_kills_for_awp', 0) + pr.get('total_kills_for_awp', 0)
+        for (_, _, role_name), pr in role_merged.items():
+            rp = _build_player(pr)
+            rp['role'] = role_name
+            all_role_players_out.append(rp)
+
         all_match_rows.extend(td['match_rows'])
 
     # Compute tournament-wide post-plant/retake rankings per map
@@ -461,6 +491,7 @@ def build_stats_json(all_team_data):
     return {
         'teams': teams_out,
         'players': all_players_out,
+        'players_by_role': all_role_players_out,
         'matches': unique_matches,
         'leaderboards': leaderboards,
     }

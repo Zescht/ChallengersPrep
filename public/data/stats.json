@@ -304,11 +304,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "MOLSI",
+        "Serial",
         "pa1ze",
         "shinnok",
-        "Serial",
-        "pyrolll"
+        "pyrolll",
+        "MOLSI"
       ],
       "xvy": [
         {
@@ -804,10 +804,10 @@
       },
       "players": [
         "Fizzy",
-        "musashi",
+        "azury",
         "MONSTEERR",
         "Jamelinho",
-        "azury"
+        "musashi"
       ],
       "xvy": [
         {
@@ -1343,8 +1343,8 @@
         "Kamyk",
         "Chiwa",
         "Doma",
-        "Enzo ",
-        "Runner"
+        "Runner",
+        "Enzo "
       ],
       "xvy": [
         {
@@ -1839,11 +1839,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Sevire",
         "Takaas",
-        "Sh1n",
         "Natank",
-        "kAdavra"
+        "Sevire",
+        "kAdavra",
+        "Sh1n"
       ],
       "xvy": [
         {
@@ -2262,12 +2262,12 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "iluri",
         "MAGNUM",
-        "kozzy",
+        "Proxh",
         "Lime",
-        "swagzor",
-        "Proxh"
+        "kozzy",
+        "iluri",
+        "swagzor"
       ],
       "xvy": [
         {
@@ -2763,13 +2763,13 @@
       "players": [
         "nAts",
         "purp0",
-        "rexxtoned",
         "Kicks",
-        "Wanzeru",
-        "GSR",
         "MiniBoo",
-        "prti",
-        "kamo"
+        "kamo",
+        "GSR",
+        "rexxtoned",
+        "Wanzeru",
+        "prti"
       ],
       "xvy": [
         {
@@ -3150,11 +3150,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "elllement",
-        "kya",
         "Leare",
         "Szimpli",
-        "Chaza"
+        "Chaza",
+        "elllement",
+        "kya"
       ],
       "xvy": [
         {
@@ -3612,10 +3612,10 @@
       },
       "players": [
         "reblyik",
+        "Bishepss",
         "kospa1n",
         "Raz",
-        "Redgar",
-        "Bishepss"
+        "Redgar"
       ],
       "xvy": [
         {
@@ -4110,9 +4110,9 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
+        "Kajuks",
         "globeX",
         "Guardy",
-        "Kajuks",
         "Fit1nho",
         "Stonezy"
       ],
@@ -4609,11 +4609,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "BULD",
         "OLIZERA",
+        "B1SK",
+        "BULD",
         "Jesse",
-        "Famsii",
-        "B1SK"
+        "Famsii"
       ],
       "xvy": [
         {
@@ -5108,11 +5108,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Brave",
-        "Elite",
-        "QutionerX",
         "burzzy",
-        "pAura"
+        "pAura",
+        "QutionerX",
+        "Brave",
+        "Elite"
       ],
       "xvy": [
         {
@@ -5607,11 +5607,11 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Deadink",
-        "hezacoil",
-        "Kachoww",
         "reazy",
-        "batujnax"
+        "batujnax",
+        "Kachoww",
+        "Deadink",
+        "hezacoil"
       ],
       "xvy": [
         {
@@ -6106,13 +6106,13 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
-        "Saud",
-        "Avvix",
+        "Akai",
+        "Koji",
         "br1ckzl",
         "Susano",
-        "Koji",
+        "Saud",
         "AL7B",
-        "Akai"
+        "Avvix"
       ],
       "xvy": [
         {
@@ -6607,12 +6607,12 @@
         "ret_rW_event_avg": 0.328
       },
       "players": [
+        "Tenkai",
         "Snop",
         "MonOkson",
         "OUKA",
-        "CUNHA",
-        "Tenkai",
-        "LOOP"
+        "LOOP",
+        "CUNHA"
       ],
       "xvy": [
         {
@@ -6827,6 +6827,7 @@
       "clutch_pct": 0.141,
       "kast": 0.717,
       "awp_pct": 0.0,
+      "vlr_rating": 1.069,
       "agents": [
         {
           "agent": "Viper",
@@ -6888,6 +6889,7 @@
       "clutch_pct": 0.261,
       "kast": 0.71,
       "awp_pct": 0.025,
+      "vlr_rating": 1.05,
       "agents": [
         {
           "agent": "Neon",
@@ -6931,6 +6933,7 @@
       "clutch_pct": 0.177,
       "kast": 0.746,
       "awp_pct": 0.105,
+      "vlr_rating": 1.151,
       "agents": [
         {
           "agent": "Yoru",
@@ -6980,6 +6983,7 @@
       "clutch_pct": 0.138,
       "kast": 0.774,
       "awp_pct": 0.002,
+      "vlr_rating": 1.009,
       "agents": [
         {
           "agent": "Omen",
@@ -7041,6 +7045,7 @@
       "clutch_pct": 0.124,
       "kast": 0.773,
       "awp_pct": 0.003,
+      "vlr_rating": 1.147,
       "agents": [
         {
           "agent": "Sova",
@@ -7084,6 +7089,7 @@
       "clutch_pct": 0.125,
       "kast": 0.696,
       "awp_pct": 0.097,
+      "vlr_rating": 0.996,
       "agents": [
         {
           "agent": "Neon",
@@ -7127,6 +7133,7 @@
       "clutch_pct": 0.143,
       "kast": 0.717,
       "awp_pct": 0.001,
+      "vlr_rating": 1.12,
       "agents": [
         {
           "agent": "Viper",
@@ -7176,6 +7183,7 @@
       "clutch_pct": 0.143,
       "kast": 0.747,
       "awp_pct": 0.002,
+      "vlr_rating": 0.999,
       "agents": [
         {
           "agent": "Sova",
@@ -7213,6 +7221,7 @@
       "clutch_pct": 0.159,
       "kast": 0.754,
       "awp_pct": 0.033,
+      "vlr_rating": 1.045,
       "agents": [
         {
           "agent": "Yoru",
@@ -7262,6 +7271,7 @@
       "clutch_pct": 0.186,
       "kast": 0.757,
       "awp_pct": 0.026,
+      "vlr_rating": 1.16,
       "agents": [
         {
           "agent": "Omen",
@@ -7311,6 +7321,7 @@
       "clutch_pct": 0.283,
       "kast": 0.757,
       "awp_pct": 0.021,
+      "vlr_rating": 1.108,
       "agents": [
         {
           "agent": "Viper",
@@ -7366,6 +7377,7 @@
       "clutch_pct": 0.139,
       "kast": 0.785,
       "awp_pct": 0.086,
+      "vlr_rating": 1.053,
       "agents": [
         {
           "agent": "Yoru",
@@ -7421,6 +7433,7 @@
       "clutch_pct": 0.105,
       "kast": 0.796,
       "awp_pct": 0.006,
+      "vlr_rating": 1.12,
       "agents": [
         {
           "agent": "Astra",
@@ -7476,6 +7489,7 @@
       "clutch_pct": 0.214,
       "kast": 0.716,
       "awp_pct": 0.05,
+      "vlr_rating": 0.957,
       "agents": [
         {
           "agent": "Waylay",
@@ -7519,6 +7533,7 @@
       "clutch_pct": 0.139,
       "kast": 0.779,
       "awp_pct": 0.005,
+      "vlr_rating": 1.035,
       "agents": [
         {
           "agent": "Sova",
@@ -7574,6 +7589,7 @@
       "clutch_pct": 0.179,
       "kast": 0.771,
       "awp_pct": 0.002,
+      "vlr_rating": 1.148,
       "agents": [
         {
           "agent": "Omen",
@@ -7623,6 +7639,7 @@
       "clutch_pct": 0.154,
       "kast": 0.753,
       "awp_pct": 0.005,
+      "vlr_rating": 1.01,
       "agents": [
         {
           "agent": "Sova",
@@ -7672,6 +7689,7 @@
       "clutch_pct": 0.2,
       "kast": 0.727,
       "awp_pct": 0.048,
+      "vlr_rating": 1.053,
       "agents": [
         {
           "agent": "Omen",
@@ -7745,6 +7763,7 @@
       "clutch_pct": 0.226,
       "kast": 0.747,
       "awp_pct": 0.002,
+      "vlr_rating": 1.072,
       "agents": [
         {
           "agent": "Killjoy",
@@ -7812,6 +7831,7 @@
       "clutch_pct": 0.071,
       "kast": 0.719,
       "awp_pct": 0.082,
+      "vlr_rating": 0.974,
       "agents": [
         {
           "agent": "Waylay",
@@ -7867,6 +7887,7 @@
       "clutch_pct": 0.182,
       "kast": 0.801,
       "awp_pct": 0.015,
+      "vlr_rating": 1.192,
       "agents": [
         {
           "agent": "Omen",
@@ -7910,6 +7931,7 @@
       "clutch_pct": 0.132,
       "kast": 0.797,
       "awp_pct": 0.161,
+      "vlr_rating": 1.038,
       "agents": [
         {
           "agent": "Yoru",
@@ -7953,6 +7975,7 @@
       "clutch_pct": 0.208,
       "kast": 0.767,
       "awp_pct": 0.007,
+      "vlr_rating": 1.121,
       "agents": [
         {
           "agent": "Viper",
@@ -7996,6 +8019,7 @@
       "clutch_pct": 0.106,
       "kast": 0.744,
       "awp_pct": 0.003,
+      "vlr_rating": 0.959,
       "agents": [
         {
           "agent": "Fade",
@@ -8039,6 +8063,7 @@
       "clutch_pct": 0.04,
       "kast": 0.796,
       "awp_pct": 0.046,
+      "vlr_rating": 1.306,
       "agents": [
         {
           "agent": "Waylay",
@@ -8088,6 +8113,7 @@
       "clutch_pct": 0.444,
       "kast": 0.729,
       "awp_pct": 0.061,
+      "vlr_rating": 1.164,
       "agents": [
         {
           "agent": "Raze",
@@ -8137,6 +8163,7 @@
       "clutch_pct": 0.304,
       "kast": 0.759,
       "awp_pct": 0.0,
+      "vlr_rating": 1.163,
       "agents": [
         {
           "agent": "Fade",
@@ -8198,6 +8225,7 @@
       "clutch_pct": 0.263,
       "kast": 0.695,
       "awp_pct": 0.022,
+      "vlr_rating": 0.707,
       "agents": [
         {
           "agent": "Omen",
@@ -8241,6 +8269,7 @@
       "clutch_pct": 0.273,
       "kast": 0.729,
       "awp_pct": 0.094,
+      "vlr_rating": 0.853,
       "agents": [
         {
           "agent": "Neon",
@@ -8290,6 +8319,7 @@
       "clutch_pct": 0.133,
       "kast": 0.758,
       "awp_pct": 0.007,
+      "vlr_rating": 1.157,
       "agents": [
         {
           "agent": "Vyse",
@@ -8339,6 +8369,7 @@
       "clutch_pct": 0.26,
       "kast": 0.775,
       "awp_pct": 0.095,
+      "vlr_rating": 1.269,
       "agents": [
         {
           "agent": "Yoru",
@@ -8388,6 +8419,7 @@
       "clutch_pct": 0.0,
       "kast": 0.681,
       "awp_pct": 0.0,
+      "vlr_rating": 1.025,
       "agents": [
         {
           "agent": "Sova",
@@ -8425,6 +8457,7 @@
       "clutch_pct": 0.0,
       "kast": 0.694,
       "awp_pct": 0.065,
+      "vlr_rating": 0.933,
       "agents": [
         {
           "agent": "Waylay",
@@ -8468,6 +8501,7 @@
       "clutch_pct": 0.0,
       "kast": 0.667,
       "awp_pct": 0.0,
+      "vlr_rating": 0.978,
       "agents": [
         {
           "agent": "Killjoy",
@@ -8511,6 +8545,7 @@
       "clutch_pct": 0.0,
       "kast": 0.667,
       "awp_pct": 0.143,
+      "vlr_rating": 1.001,
       "agents": [
         {
           "agent": "Yoru",
@@ -8548,6 +8583,7 @@
       "clutch_pct": 0.091,
       "kast": 0.671,
       "awp_pct": 0.0,
+      "vlr_rating": 0.889,
       "agents": [
         {
           "agent": "Fade",
@@ -8585,6 +8621,7 @@
       "clutch_pct": 0.286,
       "kast": 0.722,
       "awp_pct": 0.0,
+      "vlr_rating": 0.97,
       "agents": [
         {
           "agent": "Raze",
@@ -8628,6 +8665,7 @@
       "clutch_pct": 0.136,
       "kast": 0.706,
       "awp_pct": 0.152,
+      "vlr_rating": 0.966,
       "agents": [
         {
           "agent": "Yoru",
@@ -8665,6 +8703,7 @@
       "clutch_pct": 0.125,
       "kast": 0.675,
       "awp_pct": 0.0,
+      "vlr_rating": 0.887,
       "agents": [
         {
           "agent": "Viper",
@@ -8702,6 +8741,7 @@
       "clutch_pct": 0.182,
       "kast": 0.729,
       "awp_pct": 0.0,
+      "vlr_rating": 1.045,
       "agents": [
         {
           "agent": "Omen",
@@ -8745,6 +8785,7 @@
       "clutch_pct": 0.129,
       "kast": 0.734,
       "awp_pct": 0.0,
+      "vlr_rating": 1.104,
       "agents": [
         {
           "agent": "Viper",
@@ -8794,6 +8835,7 @@
       "clutch_pct": 0.143,
       "kast": 0.748,
       "awp_pct": 0.007,
+      "vlr_rating": 0.988,
       "agents": [
         {
           "agent": "Sova",
@@ -8843,6 +8885,7 @@
       "clutch_pct": 0.0,
       "kast": 0.761,
       "awp_pct": 0.25,
+      "vlr_rating": 0.982,
       "agents": [
         {
           "agent": "Yoru",
@@ -8886,6 +8929,7 @@
       "clutch_pct": 0.154,
       "kast": 0.702,
       "awp_pct": 0.0,
+      "vlr_rating": 0.887,
       "agents": [
         {
           "agent": "Omen",
@@ -8929,6 +8973,7 @@
       "clutch_pct": 0.077,
       "kast": 0.716,
       "awp_pct": 0.0,
+      "vlr_rating": 0.991,
       "agents": [
         {
           "agent": "Yoru",
@@ -8978,6 +9023,7 @@
       "clutch_pct": 0.265,
       "kast": 0.754,
       "awp_pct": 0.112,
+      "vlr_rating": 1.194,
       "agents": [
         {
           "agent": "Waylay",
@@ -9021,6 +9067,7 @@
       "clutch_pct": 0.219,
       "kast": 0.739,
       "awp_pct": 0.0,
+      "vlr_rating": 1.098,
       "agents": [
         {
           "agent": "Viper",
@@ -9076,6 +9123,7 @@
       "clutch_pct": 0.21,
       "kast": 0.736,
       "awp_pct": 0.097,
+      "vlr_rating": 1.046,
       "agents": [
         {
           "agent": "Viper",
@@ -9125,6 +9173,7 @@
       "clutch_pct": 0.159,
       "kast": 0.741,
       "awp_pct": 0.003,
+      "vlr_rating": 0.961,
       "agents": [
         {
           "agent": "Omen",
@@ -9168,6 +9217,7 @@
       "clutch_pct": 0.228,
       "kast": 0.746,
       "awp_pct": 0.01,
+      "vlr_rating": 0.971,
       "agents": [
         {
           "agent": "Sova",
@@ -9217,6 +9267,7 @@
       "clutch_pct": 0.167,
       "kast": 0.759,
       "awp_pct": 0.002,
+      "vlr_rating": 1.057,
       "agents": [
         {
           "agent": "Omen",
@@ -9260,6 +9311,7 @@
       "clutch_pct": 0.258,
       "kast": 0.745,
       "awp_pct": 0.002,
+      "vlr_rating": 0.985,
       "agents": [
         {
           "agent": "Fade",
@@ -9321,6 +9373,7 @@
       "clutch_pct": 0.14,
       "kast": 0.734,
       "awp_pct": 0.367,
+      "vlr_rating": 1.091,
       "agents": [
         {
           "agent": "Yoru",
@@ -9376,6 +9429,7 @@
       "clutch_pct": 0.186,
       "kast": 0.709,
       "awp_pct": 0.006,
+      "vlr_rating": 0.974,
       "agents": [
         {
           "agent": "Viper",
@@ -9431,6 +9485,7 @@
       "clutch_pct": 0.16,
       "kast": 0.729,
       "awp_pct": 0.008,
+      "vlr_rating": 0.96,
       "agents": [
         {
           "agent": "Skye",
@@ -9492,6 +9547,7 @@
       "clutch_pct": 0.122,
       "kast": 0.761,
       "awp_pct": 0.135,
+      "vlr_rating": 1.094,
       "agents": [
         {
           "agent": "Waylay",
@@ -9535,6 +9591,7 @@
       "clutch_pct": 0.148,
       "kast": 0.718,
       "awp_pct": 0.0,
+      "vlr_rating": 0.922,
       "agents": [
         {
           "agent": "Sova",
@@ -9584,6 +9641,7 @@
       "clutch_pct": 0.366,
       "kast": 0.779,
       "awp_pct": 0.003,
+      "vlr_rating": 1.104,
       "agents": [
         {
           "agent": "Omen",
@@ -9633,6 +9691,7 @@
       "clutch_pct": 0.146,
       "kast": 0.751,
       "awp_pct": 0.0,
+      "vlr_rating": 0.941,
       "agents": [
         {
           "agent": "Neon",
@@ -9682,6 +9741,7 @@
       "clutch_pct": 0.257,
       "kast": 0.765,
       "awp_pct": 0.003,
+      "vlr_rating": 1.176,
       "agents": [
         {
           "agent": "Viper",
@@ -9731,6 +9791,7 @@
       "clutch_pct": 0.167,
       "kast": 0.724,
       "awp_pct": 0.01,
+      "vlr_rating": 0.923,
       "agents": [
         {
           "agent": "Sova",
@@ -9792,6 +9853,7 @@
       "clutch_pct": 0.062,
       "kast": 0.757,
       "awp_pct": 0.03,
+      "vlr_rating": 1.095,
       "agents": [
         {
           "agent": "Yoru",
@@ -9847,6 +9909,7 @@
       "clutch_pct": 0.238,
       "kast": 0.738,
       "awp_pct": 0.137,
+      "vlr_rating": 0.997,
       "agents": [
         {
           "agent": "Waylay",
@@ -9890,6 +9953,7 @@
       "clutch_pct": 0.174,
       "kast": 0.764,
       "awp_pct": 0.002,
+      "vlr_rating": 1.006,
       "agents": [
         {
           "agent": "Astra",
@@ -9939,6 +10003,7 @@
       "clutch_pct": 0.179,
       "kast": 0.76,
       "awp_pct": 0.002,
+      "vlr_rating": 0.995,
       "agents": [
         {
           "agent": "Viper",
@@ -10000,6 +10065,7 @@
       "clutch_pct": 0.161,
       "kast": 0.721,
       "awp_pct": 0.062,
+      "vlr_rating": 1.101,
       "agents": [
         {
           "agent": "Yoru",
@@ -10061,6 +10127,7 @@
       "clutch_pct": 0.057,
       "kast": 0.726,
       "awp_pct": 0.053,
+      "vlr_rating": 0.987,
       "agents": [
         {
           "agent": "Raze",
@@ -10122,6 +10189,7 @@
       "clutch_pct": 0.187,
       "kast": 0.763,
       "awp_pct": 0.0,
+      "vlr_rating": 1.076,
       "agents": [
         {
           "agent": "Fade",
@@ -10183,6 +10251,7 @@
       "clutch_pct": 0.175,
       "kast": 0.766,
       "awp_pct": 0.0,
+      "vlr_rating": 1.098,
       "agents": [
         {
           "agent": "Viper",
@@ -10244,6 +10313,7 @@
       "clutch_pct": 0.134,
       "kast": 0.767,
       "awp_pct": 0.003,
+      "vlr_rating": 1.01,
       "agents": [
         {
           "agent": "Omen",
@@ -10299,6 +10369,7 @@
       "clutch_pct": 0.0,
       "kast": 0.785,
       "awp_pct": 0.0,
+      "vlr_rating": 0.915,
       "agents": [
         {
           "agent": "Waylay",
@@ -10336,6 +10407,7 @@
       "clutch_pct": 0.167,
       "kast": 0.873,
       "awp_pct": 0.0,
+      "vlr_rating": 1.021,
       "agents": [
         {
           "agent": "Omen",
@@ -10391,6 +10463,7 @@
       "clutch_pct": 0.176,
       "kast": 0.751,
       "awp_pct": 0.034,
+      "vlr_rating": 0.955,
       "agents": [
         {
           "agent": "Neon",
@@ -10458,6 +10531,7 @@
       "clutch_pct": 0.103,
       "kast": 0.757,
       "awp_pct": 0.002,
+      "vlr_rating": 1.037,
       "agents": [
         {
           "agent": "Viper",
@@ -10525,6 +10599,7 @@
       "clutch_pct": 0.167,
       "kast": 0.722,
       "awp_pct": 0.103,
+      "vlr_rating": 0.873,
       "agents": [
         {
           "agent": "Yoru",
@@ -10592,6 +10667,7 @@
       "clutch_pct": 0.255,
       "kast": 0.752,
       "awp_pct": 0.008,
+      "vlr_rating": 1.145,
       "agents": [
         {
           "agent": "Omen",
@@ -10641,6 +10717,7 @@
       "clutch_pct": 0.129,
       "kast": 0.751,
       "awp_pct": 0.002,
+      "vlr_rating": 0.968,
       "agents": [
         {
           "agent": "Sova",
@@ -10696,6 +10773,7 @@
       "clutch_pct": 0.13,
       "kast": 0.713,
       "awp_pct": 0.088,
+      "vlr_rating": 0.991,
       "agents": [
         {
           "agent": "Waylay",
