@@ -36,6 +36,12 @@ ehthumbs.db
 # Claude Code local settings
 .claude/settings.local.json
 
+# Superpowers skills & misc non-project files
+.superpowers/
+*-SKILL.md
+prompt-master-main.zip
+Github.png
+
 # Logs & temp
 *.log
 logs/
