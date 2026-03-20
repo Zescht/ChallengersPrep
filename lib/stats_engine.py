@@ -1,7 +1,7 @@
 """Core stat computation: economy, sides, player stats, XvY, post-plant."""
 
 from collections import defaultdict, Counter
-from .constants import AGENT_MAP, AGENT_ROLE, WEAPON_MAP, OPERATOR_UUID
+from .constants import AGENT_MAP, AGENT_ROLE, WEAPON_MAP, OPERATOR_UUID, ABILITY_NAMES, ABILITY_KILL_SLOTS
 
 
 def get_team_side_per_round(md, team_puuids):
@@ -91,6 +91,14 @@ def compute_team_stats(matches, team_tag, team_name):
     player_accum = defaultdict(_new_accum)
     # Per-role accumulators: role_accum[puuid][role] = same shape as player_accum
     role_accum = defaultdict(lambda: defaultdict(_new_accum))
+    # Per-player-per-agent ability stats: ability_accum[(puuid, agent)] = {rounds, casts_*, kills_*}
+    def _new_ability_accum():
+        return {
+            'rounds': 0,
+            'casts_grenade': 0, 'casts_ability1': 0, 'casts_ability2': 0, 'casts_ultimate': 0,
+            'kills_grenade': 0, 'kills_ability1': 0, 'kills_ability2': 0, 'kills_ultimate': 0,
+        }
+    ability_accum = defaultdict(_new_ability_accum)
 
     for md in matches:
         team_puuids = {p['puuid'] for p in md.team_players}
@@ -221,6 +229,9 @@ def compute_team_stats(matches, team_tag, team_name):
                     t['rounds'] += 1
                 pa['agents'][agent] += 1
                 ra['agents'][agent] += 1
+                # Track rounds on this agent for ability stats
+                if agent in ABILITY_NAMES:
+                    ability_accum[(puuid, agent)]['rounds'] += 1
 
                 kills = ps.get('kills', [])
                 kill_count = len(kills)
@@ -258,6 +269,14 @@ def compute_team_stats(matches, team_tag, team_name):
                             t['operator_kills'] += 1
                         if weapon_name:
                             t['weapons'][weapon_name] += 1
+
+                    # Track ability kills per agent
+                    dmg_type = k.get('finishingDamage', {}).get('damageType', '')
+                    raw_item = k.get('finishingDamage', {}).get('damageItem', '')
+                    if dmg_type == 'Ability' and agent in ABILITY_NAMES:
+                        slot = ABILITY_KILL_SLOTS.get(raw_item)
+                        if slot:
+                            ability_accum[(puuid, agent)][f'kills_{slot}'] += 1
 
                 # KAST
                 has_kill = kill_count > 0
@@ -347,6 +366,15 @@ def compute_team_stats(matches, team_tag, team_name):
                 player_accum[puuid]['vlr_rating_rounds'] += rp
                 role_accum[puuid][role]['vlr_rating_sum'] += vlr_r * rp
                 role_accum[puuid][role]['vlr_rating_rounds'] += rp
+            # Ability casts (match-level totals)
+            if agent in ABILITY_NAMES:
+                ac = p.get('stats', {}).get('abilityCasts', {})
+                if ac:
+                    aa = ability_accum[(puuid, agent)]
+                    aa['casts_grenade'] += ac.get('grenadeCasts', 0) or 0
+                    aa['casts_ability1'] += ac.get('ability1Casts', 0) or 0
+                    aa['casts_ability2'] += ac.get('ability2Casts', 0) or 0
+                    aa['casts_ultimate'] += ac.get('ultimateCasts', 0) or 0
 
         match_rows.append({
             'match_id': md.match_id,
@@ -452,6 +480,29 @@ def compute_team_stats(matches, team_tag, team_name):
                 continue
             player_role_rows.append(_build_row(puuid, ra, role_label=role_name))
 
+    # Build ability stat rows
+    ability_rows = []
+    for (puuid, agent), aa in ability_accum.items():
+        if aa['rounds'] == 0:
+            continue
+        pa = player_accum[puuid]
+        ability_rows.append({
+            'puuid': puuid,
+            'name': pa['name'],
+            'team': team_name,
+            'team_tag': team_tag,
+            'agent': agent,
+            'rounds': aa['rounds'],
+            'casts_grenade': aa['casts_grenade'],
+            'casts_ability1': aa['casts_ability1'],
+            'casts_ability2': aa['casts_ability2'],
+            'casts_ultimate': aa['casts_ultimate'],
+            'kills_grenade': aa['kills_grenade'],
+            'kills_ability1': aa['kills_ability1'],
+            'kills_ability2': aa['kills_ability2'],
+            'kills_ultimate': aa['kills_ultimate'],
+        })
+
     print(f"  {team_name} ({team_tag}): {len(matches)} valid maps, {len(player_rows)} players")
 
     return {
@@ -461,4 +512,5 @@ def compute_team_stats(matches, team_tag, team_name):
         'post_plant_rows': post_plant_rows,
         'player_rows': player_rows,
         'player_role_rows': player_role_rows,
+        'ability_rows': ability_rows,
     }

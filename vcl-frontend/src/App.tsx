@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import TeamOverview from './pages/TeamOverview'
 import PlayerProfile from './pages/PlayerProfile'
 import Leaderboards from './pages/Leaderboards'
+import AgentStats from './pages/AgentStats'
 import Versus from './pages/Versus'
 import MatchHistory from './pages/MatchHistory'
 
@@ -27,6 +28,7 @@ function AppRoutes() {
           <Route path="/team/:name" element={<TeamOverview />} />
           <Route path="/player/:ign" element={<PlayerProfile />} />
           <Route path="/leaderboards" element={<Leaderboards />} />
+          <Route path="/leaderboards/agents" element={<AgentStats />} />
           <Route path="/versus" element={<Versus />} />
           <Route path="/team/:name/history" element={<MatchHistory />} />
         </Routes>

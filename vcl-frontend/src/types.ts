@@ -132,12 +132,40 @@ export interface RolePlayer extends Player {
   role: string
 }
 
+export interface AgentStat {
+  ign: string
+  team: string
+  agent: string
+  rounds: number
+  casts_grenade: number
+  casts_grenade_per_round: number
+  kills_grenade: number
+  casts_ability1: number
+  casts_ability1_per_round: number
+  kills_ability1: number
+  casts_ability2: number
+  casts_ability2_per_round: number
+  kills_ability2: number
+  casts_ultimate: number
+  casts_ultimate_per_round: number
+  kills_ultimate: number
+}
+
+export interface AbilityNames {
+  grenade: string
+  ability1: string
+  ability2: string
+  ultimate: string
+}
+
 export interface StatsData {
   teams: Team[]
   players: Player[]
   players_by_role: RolePlayer[]
   matches: Match[]
   leaderboards: Record<string, Leaderboard>
+  agent_stats: AgentStat[]
+  ability_names: Record<string, AbilityNames>
 }
 
 export interface TournamentAverages {

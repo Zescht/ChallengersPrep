@@ -2,7 +2,7 @@
 
 import hashlib
 from collections import defaultdict
-from .constants import TAG_TO_NAME
+from .constants import TAG_TO_NAME, ABILITY_NAMES
 
 EVENT_NAME = "VCL EMEA 2026 Stage 1"
 MIN_LEADERBOARD_ROUNDS = 100
@@ -415,6 +415,7 @@ def build_stats_json(all_team_data):
     all_match_rows = []
     all_player_rows = []
     all_role_players_out = []
+    all_ability_rows = []
 
     # First pass: build team objects (without rankings)
     for tag, td in all_team_data.items():
@@ -472,6 +473,20 @@ def build_stats_json(all_team_data):
             rp['role'] = role_name
             all_role_players_out.append(rp)
 
+        # Collect ability rows, merge by (name, team, agent)
+        ab_merged = {}
+        for ar in td.get('ability_rows', []):
+            key = (ar['name'].lower(), ar['team'], ar['agent'])
+            if key not in ab_merged:
+                ab_merged[key] = dict(ar)
+            else:
+                m = ab_merged[key]
+                m['rounds'] += ar['rounds']
+                for slot in ('grenade', 'ability1', 'ability2', 'ultimate'):
+                    m[f'casts_{slot}'] += ar[f'casts_{slot}']
+                    m[f'kills_{slot}'] += ar[f'kills_{slot}']
+        all_ability_rows.extend(ab_merged.values())
+
         all_match_rows.extend(td['match_rows'])
 
     # Compute tournament-wide post-plant/retake rankings per map
@@ -488,12 +503,30 @@ def build_stats_json(all_team_data):
     # Build leaderboards
     leaderboards = _build_leaderboards(all_player_rows)
 
+    # Build agent_stats array
+    agent_stats_out = []
+    for ar in all_ability_rows:
+        rds = ar['rounds']
+        entry = {
+            'ign': ar['name'],
+            'team': ar['team'],
+            'agent': ar['agent'],
+            'rounds': rds,
+        }
+        for slot in ('grenade', 'ability1', 'ability2', 'ultimate'):
+            entry[f'casts_{slot}'] = ar[f'casts_{slot}']
+            entry[f'casts_{slot}_per_round'] = round(ar[f'casts_{slot}'] / rds, 3) if rds > 0 else 0
+            entry[f'kills_{slot}'] = ar[f'kills_{slot}']
+        agent_stats_out.append(entry)
+
     return {
         'teams': teams_out,
         'players': all_players_out,
         'players_by_role': all_role_players_out,
         'matches': unique_matches,
         'leaderboards': leaderboards,
+        'agent_stats': agent_stats_out,
+        'ability_names': ABILITY_NAMES,
     }
 
 

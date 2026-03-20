@@ -85,3 +85,34 @@ TEAMS = [
 
 VCL_TAGS = {t['tag'] for t in TEAMS}
 TAG_TO_NAME = {t['tag']: t['name'] for t in TEAMS}
+
+# Ability slot names per agent (C=grenade, Q=ability1, E=ability2, X=ultimate)
+# Only agents we track for Agent Stats page
+ABILITY_NAMES = {
+    'Sova': {
+        'grenade': 'Owl Drone',
+        'ability1': 'Shock Bolt',
+        'ability2': 'Recon Bolt',
+        'ultimate': "Hunter's Fury",
+    },
+    'Raze': {
+        'grenade': 'Boom Bot',
+        'ability1': 'Blast Pack',
+        'ability2': 'Paint Shells',
+        'ultimate': 'Showstopper',
+    },
+    'Omen': {
+        'grenade': 'Shrouded Step',
+        'ability1': 'Paranoia',
+        'ability2': 'Dark Cover',
+        'ultimate': 'From the Shadows',
+    },
+}
+
+# Which ability slots can get kills (damageItem values → slot name)
+ABILITY_KILL_SLOTS = {
+    'GrenadeAbility': 'grenade',
+    'Ability1': 'ability1',
+    'Ability2': 'ability2',
+    'Ultimate': 'ultimate',
+}
