@@ -367,13 +367,13 @@ function PlayerRow({ player, avgP }: { player: Player; avgP: Record<string, { me
           ))}
         </div>
       </td>
-      <td className="px-2 py-2.5 text-center font-mono text-xs text-on-surface">{player.rounds}</td>
+      <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface">{player.rounds}</td>
       <StatCell value={player.kd} mean={avgP.kd?.mean} std={avgP.kd?.std} format={formatRatio} />
       <StatCell value={player.kad} mean={avgP.kad?.mean} std={avgP.kad?.std} format={formatRatio} />
       <StatCell value={player.kast} mean={avgP.kast?.mean} std={avgP.kast?.std} format={formatPct} />
       <StatCell value={fkPerR} mean={avgP.fk_pct?.mean} std={avgP.fk_pct?.std} format={formatRatio} />
       <StatCell value={fdPerR} mean={avgP.fd_pct?.mean} std={avgP.fd_pct?.std} format={formatRatio} invert />
-      <td className="px-2 py-2.5 text-center font-mono text-xs text-on-surface">{fkfd === Infinity ? '-' : formatRatio(fkfd)}</td>
+      <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface">{fkfd === Infinity ? '-' : formatRatio(fkfd)}</td>
       <StatCell value={player.clutch_pct} mean={avgP.clutch_pct?.mean} std={avgP.clutch_pct?.std} format={formatPct} />
       <StatCell value={player.awp_pct} mean={avgP.awp_pct?.mean} std={avgP.awp_pct?.std} format={formatPct} />
     </tr>

@@ -2,7 +2,7 @@
  * Returns a CSS background-color string for a stat cell based on how its value
  * compares to the tournament average, using standard deviations.
  *
- * Dark-mode scale: dim red (below avg) → transparent (at avg) → neon green (above avg)
+ * Reads heat-map base colors from CSS custom properties so they adapt to theme.
  */
 export function heatColor(value: number, mean: number, std: number, invert = false): string {
   if (std === 0 || isNaN(value)) return 'transparent'
@@ -12,21 +12,31 @@ export function heatColor(value: number, mean: number, std: number, invert = fal
 
   if (invert) z = -z
 
+  const pos = getCSSVar('--theme-heat-positive', '161, 255, 194')
+  const neg = getCSSVar('--theme-heat-negative', '255, 113, 108')
+
   if (z > 0) {
-    // Green scale — neon tint on dark
     const t = z / 2
-    return `rgba(161, 255, 194, ${(t * 0.25).toFixed(3)})`
+    return `rgba(${pos}, ${(t * 0.25).toFixed(3)})`
   } else if (z < 0) {
-    // Red scale — dim red tint on dark
     const t = Math.abs(z) / 2
-    return `rgba(255, 113, 108, ${(t * 0.25).toFixed(3)})`
+    return `rgba(${neg}, ${(t * 0.25).toFixed(3)})`
   }
-  return 'transparent' // neutral — no tint
+  return 'transparent'
 }
 
-/** Simple green/red for delta values (dark mode) */
+/** Simple green/red for delta values */
 export function deltaColor(value: number): string {
-  if (value > 0.01) return 'rgba(161, 255, 194, 0.15)' // green tint
-  if (value < -0.01) return 'rgba(255, 113, 108, 0.15)' // red tint
-  return 'rgba(255, 255, 255, 0.03)' // neutral
+  const pos = getCSSVar('--theme-heat-positive', '161, 255, 194')
+  const neg = getCSSVar('--theme-heat-negative', '255, 113, 108')
+
+  if (value > 0.01) return `rgba(${pos}, 0.15)`
+  if (value < -0.01) return `rgba(${neg}, 0.15)`
+  return 'rgba(128, 128, 128, 0.03)'
+}
+
+/** Read a CSS custom property from :root, with fallback */
+function getCSSVar(name: string, fallback: string): string {
+  if (typeof document === 'undefined') return fallback
+  return getComputedStyle(document.documentElement).getPropertyValue(name).trim() || fallback
 }

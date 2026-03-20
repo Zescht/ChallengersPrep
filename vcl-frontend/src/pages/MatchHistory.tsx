@@ -94,7 +94,7 @@ export default function MatchHistory() {
                 <td className="px-2 py-1.5 text-text-muted align-top">{match.date}</td>
                 <td className="px-2 py-1.5 align-top">{opponent}</td>
                 <td className="px-2 py-1.5 align-top">{match.map}</td>
-                <td className="px-2 py-1.5 text-center font-mono align-top">{teamScore} – {oppScore}</td>
+                <td className="px-2 py-1.5 text-center font-table align-top">{teamScore} – {oppScore}</td>
                 <td className="px-2 py-1.5 text-center align-top">
                   <span className={`text-xs font-semibold px-1.5 py-0.5 rounded ${won ? 'bg-success/20 text-success' : 'bg-danger/20 text-danger'}`}>
                     {won ? 'W' : 'L'}
@@ -114,7 +114,7 @@ export default function MatchHistory() {
                       </div>
                       <div>
                         <span className="text-text-dim">Half-time:</span>{' '}
-                        <span className="font-mono text-text">{teamHalf} – {oppHalf}</span>
+                        <span className="font-table text-text">{teamHalf} – {oppHalf}</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <span className="text-text-dim">Opponent comp:</span>

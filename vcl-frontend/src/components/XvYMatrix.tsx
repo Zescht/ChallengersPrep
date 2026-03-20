@@ -71,7 +71,7 @@ export default function XvYMatrix({ title, entries, averages, mode }: XvYMatrixP
                 return (
                   <td
                     key={colIdx}
-                    className={`px-2 py-1 text-center font-mono text-[10px] ${textColor}`}
+                    className={`px-2 py-1 text-center font-table text-[10px] ${textColor}`}
                     style={{ backgroundColor: bg }}
                   >
                     {text}

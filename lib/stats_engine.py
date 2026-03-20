@@ -91,6 +91,8 @@ def compute_team_stats(matches, team_tag, team_name):
     player_accum = defaultdict(_new_accum)
     # Per-role accumulators: role_accum[puuid][role] = same shape as player_accum
     role_accum = defaultdict(lambda: defaultdict(_new_accum))
+    # Per-agent accumulators: agent_player_accum[puuid][agent] = same shape as player_accum
+    agent_player_accum = defaultdict(lambda: defaultdict(_new_accum))
     # Per-player-per-agent ability stats: ability_accum[(puuid, agent)] = {rounds, casts_*, kills_*}
     def _new_ability_accum():
         return {
@@ -223,12 +225,15 @@ def compute_team_stats(matches, team_tag, team_name):
                 role = AGENT_ROLE.get(agent, 'Unknown')
                 ra = role_accum[puuid][role]
                 ra['name'] = pname
-                targets = [pa, ra]  # write stats to both overall and role-specific
+                apa = agent_player_accum[puuid][agent]
+                apa['name'] = pname
+                targets = [pa, ra, apa]  # write stats to overall, role-specific, and agent-specific
 
                 for t in targets:
                     t['rounds'] += 1
                 pa['agents'][agent] += 1
                 ra['agents'][agent] += 1
+                apa['agents'][agent] += 1
                 # Track rounds on this agent for ability stats
                 if agent in ABILITY_NAMES:
                     ability_accum[(puuid, agent)]['rounds'] += 1
@@ -343,14 +348,16 @@ def compute_team_stats(matches, team_tag, team_name):
                     cp = list(t_track)[0]
                     if cp in team_puuids:
                         player_accum[cp]['clutch_attempts'] += 1
-                        # Also accumulate into role-specific bucket
+                        # Also accumulate into role-specific and agent-specific buckets
                         cp_agent = AGENT_MAP.get(
                             next((p.get('characterId', '') for p in md.team_players if p['puuid'] == cp), ''), '?')
                         cp_role = AGENT_ROLE.get(cp_agent, 'Unknown')
                         role_accum[cp][cp_role]['clutch_attempts'] += 1
+                        agent_player_accum[cp][cp_agent]['clutch_attempts'] += 1
                         if won:
                             player_accum[cp]['clutch_wins'] += 1
                             role_accum[cp][cp_role]['clutch_wins'] += 1
+                            agent_player_accum[cp][cp_agent]['clutch_wins'] += 1
                     break
 
         for p in md.team_players:
@@ -359,6 +366,7 @@ def compute_team_stats(matches, team_tag, team_name):
             role = AGENT_ROLE.get(agent, 'Unknown')
             player_accum[puuid]['maps_played'] += 1
             role_accum[puuid][role]['maps_played'] += 1
+            agent_player_accum[puuid][agent]['maps_played'] += 1
             vlr_r = p.get('stats', {}).get('vlrRating2')
             rp = p.get('stats', {}).get('roundsPlayed', 0)
             if vlr_r is not None and rp > 0:
@@ -366,6 +374,8 @@ def compute_team_stats(matches, team_tag, team_name):
                 player_accum[puuid]['vlr_rating_rounds'] += rp
                 role_accum[puuid][role]['vlr_rating_sum'] += vlr_r * rp
                 role_accum[puuid][role]['vlr_rating_rounds'] += rp
+                agent_player_accum[puuid][agent]['vlr_rating_sum'] += vlr_r * rp
+                agent_player_accum[puuid][agent]['vlr_rating_rounds'] += rp
             # Ability casts (match-level totals)
             if agent in ABILITY_NAMES:
                 ac = p.get('stats', {}).get('abilityCasts', {})
@@ -480,6 +490,16 @@ def compute_team_stats(matches, team_tag, team_name):
                 continue
             player_role_rows.append(_build_row(puuid, ra, role_label=role_name))
 
+    # Build per-agent player rows
+    player_agent_rows = []
+    for puuid, agents in agent_player_accum.items():
+        for agent_name, apa in agents.items():
+            if apa['rounds'] == 0:
+                continue
+            row = _build_row(puuid, apa)
+            row['agent'] = agent_name
+            player_agent_rows.append(row)
+
     # Build ability stat rows
     ability_rows = []
     for (puuid, agent), aa in ability_accum.items():
@@ -512,5 +532,6 @@ def compute_team_stats(matches, team_tag, team_name):
         'post_plant_rows': post_plant_rows,
         'player_rows': player_rows,
         'player_role_rows': player_role_rows,
+        'player_agent_rows': player_agent_rows,
         'ability_rows': ability_rows,
     }

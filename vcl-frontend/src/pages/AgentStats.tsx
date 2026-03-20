@@ -151,7 +151,7 @@ export default function AgentStats() {
   }
 
   const thBase = 'px-2 py-1.5 text-black font-medium whitespace-nowrap'
-  const tdBase = 'px-2 py-1 font-mono text-black whitespace-nowrap'
+  const tdBase = 'px-2 py-1 font-table text-black whitespace-nowrap'
 
   return (
     <div className="p-4">

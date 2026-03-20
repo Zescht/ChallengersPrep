@@ -188,7 +188,7 @@ function HeadToHead({ teamA, teamB, matches }: { teamA: Team; teamB: Team; match
               <tr key={i} className="border-b border-border">
                 <td className="px-2 py-1 text-text-muted">{m.date}</td>
                 <td className="px-2 py-1">{m.map}</td>
-                <td className="px-2 py-1 text-center font-mono">{m.team1_score} – {m.team2_score}</td>
+                <td className="px-2 py-1 text-center font-table">{m.team1_score} – {m.team2_score}</td>
                 <td className="px-2 py-1">
                   <span className={m.winner === teamA.name ? 'text-success' : 'text-danger'}>{m.winner}</span>
                 </td>
@@ -234,17 +234,17 @@ function MapPoolComparison({ teamA, teamB }: { teamA: Team; teamB: Team }) {
             const edge = aRW > bRW ? 'A' : bRW > aRW ? 'B' : null
             return (
               <tr key={mapName} className="border-b border-border">
-                <td className="px-2 py-1 font-mono">{mA?.plays ?? '-'}</td>
-                <td className="px-2 py-1 font-mono">{mA ? `${mA.wins}-${mA.losses}` : '-'}</td>
-                <td className={`px-2 py-1 font-mono ${edge === 'A' ? 'text-success font-semibold' : ''}`}>
+                <td className="px-2 py-1 font-table">{mA?.plays ?? '-'}</td>
+                <td className="px-2 py-1 font-table">{mA ? `${mA.wins}-${mA.losses}` : '-'}</td>
+                <td className={`px-2 py-1 font-table ${edge === 'A' ? 'text-success font-semibold' : ''}`}>
                   {mA ? formatPct(mA.rW_pct) : '-'}
                 </td>
                 <td className="px-2 py-1 text-center font-medium">{mapName}</td>
-                <td className={`px-2 py-1 text-right font-mono ${edge === 'B' ? 'text-success font-semibold' : ''}`}>
+                <td className={`px-2 py-1 text-right font-table ${edge === 'B' ? 'text-success font-semibold' : ''}`}>
                   {mB ? formatPct(mB.rW_pct) : '-'}
                 </td>
-                <td className="px-2 py-1 text-right font-mono">{mB ? `${mB.wins}-${mB.losses}` : '-'}</td>
-                <td className="px-2 py-1 text-right font-mono">{mB?.plays ?? '-'}</td>
+                <td className="px-2 py-1 text-right font-table">{mB ? `${mB.wins}-${mB.losses}` : '-'}</td>
+                <td className="px-2 py-1 text-right font-table">{mB?.plays ?? '-'}</td>
               </tr>
             )
           })}
@@ -281,11 +281,11 @@ function EconomyComparison({ teamA, teamB }: { teamA: Team; teamB: Team }) {
             const bHigher = bVal > aVal
             return (
               <tr key={cat.key} className="border-b border-border">
-                <td className={`px-3 py-1 text-right font-mono ${aHigher ? 'text-success font-semibold' : ''}`}>
+                <td className={`px-3 py-1 text-right font-table ${aHigher ? 'text-success font-semibold' : ''}`}>
                   {formatPct(aVal)}
                 </td>
                 <td className="px-3 py-1 text-center text-text-muted">{cat.label}</td>
-                <td className={`px-3 py-1 text-left font-mono ${bHigher ? 'text-success font-semibold' : ''}`}>
+                <td className={`px-3 py-1 text-left font-table ${bHigher ? 'text-success font-semibold' : ''}`}>
                   {formatPct(bVal)}
                 </td>
               </tr>
@@ -313,24 +313,24 @@ function PostPlantComparison({ teamA, teamB }: { teamA: Team; teamB: Team }) {
         </thead>
         <tbody>
           <tr className="border-b border-border">
-            <td className={`px-3 py-1 text-right font-mono ${teamA.allMaps.post_rW_pct > teamB.allMaps.post_rW_pct ? 'text-success font-semibold' : ''}`}>
+            <td className={`px-3 py-1 text-right font-table ${teamA.allMaps.post_rW_pct > teamB.allMaps.post_rW_pct ? 'text-success font-semibold' : ''}`}>
               {formatPct(teamA.allMaps.post_rW_pct)}
             </td>
             <td className="px-3 py-1 text-center text-text-muted">#{teamA.allMaps.post_rank}</td>
             <td className="px-3 py-1 text-center">Post-Plant rW%</td>
             <td className="px-3 py-1 text-center text-text-muted">#{teamB.allMaps.post_rank}</td>
-            <td className={`px-3 py-1 text-left font-mono ${teamB.allMaps.post_rW_pct > teamA.allMaps.post_rW_pct ? 'text-success font-semibold' : ''}`}>
+            <td className={`px-3 py-1 text-left font-table ${teamB.allMaps.post_rW_pct > teamA.allMaps.post_rW_pct ? 'text-success font-semibold' : ''}`}>
               {formatPct(teamB.allMaps.post_rW_pct)}
             </td>
           </tr>
           <tr className="border-b border-border">
-            <td className={`px-3 py-1 text-right font-mono ${teamA.allMaps.ret_rW_pct > teamB.allMaps.ret_rW_pct ? 'text-success font-semibold' : ''}`}>
+            <td className={`px-3 py-1 text-right font-table ${teamA.allMaps.ret_rW_pct > teamB.allMaps.ret_rW_pct ? 'text-success font-semibold' : ''}`}>
               {formatPct(teamA.allMaps.ret_rW_pct)}
             </td>
             <td className="px-3 py-1 text-center text-text-muted">#{teamA.allMaps.ret_rank}</td>
             <td className="px-3 py-1 text-center">Retake rW%</td>
             <td className="px-3 py-1 text-center text-text-muted">#{teamB.allMaps.ret_rank}</td>
-            <td className={`px-3 py-1 text-left font-mono ${teamB.allMaps.ret_rW_pct > teamA.allMaps.ret_rW_pct ? 'text-success font-semibold' : ''}`}>
+            <td className={`px-3 py-1 text-left font-table ${teamB.allMaps.ret_rW_pct > teamA.allMaps.ret_rW_pct ? 'text-success font-semibold' : ''}`}>
               {formatPct(teamB.allMaps.ret_rW_pct)}
             </td>
           </tr>
@@ -352,11 +352,11 @@ function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team;
             {player.ign}
           </Link>
         </td>
-        <td className="px-2 py-1 font-mono text-sm text-right">{formatCount(player.acs_split)}</td>
-        <td className="px-2 py-1 font-mono text-sm text-right">{formatRatio(player.kd)}</td>
-        <td className="px-2 py-1 font-mono text-sm text-right">{formatPct(player.kast)}</td>
-        <td className="px-2 py-1 font-mono text-sm text-right">{formatPct(player.fk_pct)}</td>
-        <td className="px-2 py-1 font-mono text-sm text-right">{formatPct(player.clutch_pct)}</td>
+        <td className="px-2 py-1 font-table text-sm text-right">{formatCount(player.acs_split)}</td>
+        <td className="px-2 py-1 font-table text-sm text-right">{formatRatio(player.kd)}</td>
+        <td className="px-2 py-1 font-table text-sm text-right">{formatPct(player.kast)}</td>
+        <td className="px-2 py-1 font-table text-sm text-right">{formatPct(player.fk_pct)}</td>
+        <td className="px-2 py-1 font-table text-sm text-right">{formatPct(player.clutch_pct)}</td>
       </tr>
     )
   }
@@ -474,11 +474,11 @@ function PlayerVsPlayer({ playerAIgn, playerBIgn, onChangeA, onChangeB, data }: 
                 const bWins = stat.invert ? bVal < aVal : bVal > aVal
                 return (
                   <tr key={stat.key} className="border-b border-border">
-                    <td className={`px-3 py-1 text-right font-mono ${aWins ? 'text-success font-semibold' : ''}`}>
+                    <td className={`px-3 py-1 text-right font-table ${aWins ? 'text-success font-semibold' : ''}`}>
                       {stat.format(aVal)}
                     </td>
                     <td className="px-3 py-1 text-center text-text-muted">{stat.label}</td>
-                    <td className={`px-3 py-1 text-left font-mono ${bWins ? 'text-success font-semibold' : ''}`}>
+                    <td className={`px-3 py-1 text-left font-table ${bWins ? 'text-success font-semibold' : ''}`}>
                       {stat.format(bVal)}
                     </td>
                   </tr>
@@ -498,7 +498,7 @@ function PlayerVsPlayer({ playerAIgn, playerBIgn, onChangeA, onChangeB, data }: 
                     <div key={a.agent} className="flex items-center gap-2 mb-1">
                       <AgentIcon agent={a.agent} size={24} />
                       <span className="text-sm">{a.agent}</span>
-                      <span className="text-text-muted text-xs ml-auto font-mono">{a.pct.toFixed(1)}%</span>
+                      <span className="text-text-muted text-xs ml-auto font-table">{a.pct.toFixed(1)}%</span>
                     </div>
                   ))}
                 </div>

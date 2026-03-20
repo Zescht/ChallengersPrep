@@ -415,6 +415,7 @@ def build_stats_json(all_team_data):
     all_match_rows = []
     all_player_rows = []
     all_role_players_out = []
+    all_agent_players_out = []
     all_ability_rows = []
 
     # First pass: build team objects (without rankings)
@@ -473,6 +474,12 @@ def build_stats_json(all_team_data):
             rp['role'] = role_name
             all_role_players_out.append(rp)
 
+        # Build per-agent player entries
+        for pr in td.get('player_agent_rows', []):
+            ap = _build_player(pr)
+            ap['agent'] = pr.get('agent', '?')
+            all_agent_players_out.append(ap)
+
         # Collect ability rows, merge by (name, team, agent)
         ab_merged = {}
         for ar in td.get('ability_rows', []):
@@ -523,6 +530,7 @@ def build_stats_json(all_team_data):
         'teams': teams_out,
         'players': all_players_out,
         'players_by_role': all_role_players_out,
+        'players_by_agent': all_agent_players_out,
         'matches': unique_matches,
         'leaderboards': leaderboards,
         'agent_stats': agent_stats_out,

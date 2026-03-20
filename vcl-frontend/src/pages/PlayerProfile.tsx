@@ -15,7 +15,7 @@ function StatCard({ label, value, rank, total }: StatCardProps) {
   return (
     <div className="bg-card border border-border rounded px-3 py-2">
       <div className="text-text-muted text-xs uppercase tracking-wider mb-1">{label}</div>
-      <div className="text-xl font-semibold font-mono">{value}</div>
+      <div className="text-xl font-semibold font-table">{value}</div>
       {rank != null && total != null && (
         <div className="text-text-dim text-xs mt-0.5">#{rank} of {total} players</div>
       )}
@@ -196,7 +196,7 @@ export default function PlayerProfile() {
                       <div className="text-sm font-medium">{a.agent}</div>
                       <div className="text-text-muted text-xs">{a.pct.toFixed(1)}% pick rate &middot; {a.matches} maps</div>
                     </div>
-                    <div className="text-text-dim text-xs font-mono">{a.picks} rds</div>
+                    <div className="text-text-dim text-xs font-table">{a.picks} rds</div>
                   </div>
                 ))}
               </div>
@@ -210,13 +210,13 @@ export default function PlayerProfile() {
           <div className="bg-card border border-border rounded p-3">
             <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm">
               <span className="text-text-muted">Scenarios</span>
-              <span className="font-mono text-right">{player.clutch_scens}</span>
+              <span className="font-table text-right">{player.clutch_scens}</span>
               <span className="text-text-muted">Wins</span>
-              <span className="font-mono text-right">{player.clutches}</span>
+              <span className="font-table text-right">{player.clutches}</span>
               <span className="text-text-muted">Win %</span>
-              <span className="font-mono text-right">{formatPct(player.clutch_pct)}</span>
+              <span className="font-table text-right">{formatPct(player.clutch_pct)}</span>
               <span className="text-text-muted">Conversion</span>
-              <span className="font-mono text-right">{formatPct(player.first_conversion)}</span>
+              <span className="font-table text-right">{formatPct(player.first_conversion)}</span>
             </div>
           </div>
 
@@ -231,8 +231,8 @@ export default function PlayerProfile() {
                   <div className="grid grid-cols-2 gap-x-4 gap-y-0.5 text-xs">
                     {team.xvy.map(x => (
                       <div key={x.situation} className="contents">
-                        <span className="text-text-muted font-mono">{x.situation}</span>
-                        <span className="font-mono text-right">{formatPct(x.win_pct)} ({x.wins}W-{x.losses}L)</span>
+                        <span className="text-text-muted font-table">{x.situation}</span>
+                        <span className="font-table text-right">{formatPct(x.win_pct)} ({x.wins}W-{x.losses}L)</span>
                       </div>
                     ))}
                   </div>

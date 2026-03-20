@@ -2,8 +2,9 @@ import { Fragment, useState, useMemo, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
 import { formatRatio, formatPct } from '../utils/format'
+import { heatColor } from '../utils/colors'
 import AgentIcon from '../components/AgentIcon'
-import type { Player } from '../types'
+import type { Player, AgentPlayer } from '../types'
 
 const MIN_ROUNDS = 100
 
@@ -43,7 +44,7 @@ interface Column {
   format: (v: number) => string
   renderCell?: (p: Player) => ReactNode
   defaultAsc?: boolean
-  invertColor?: boolean // true = lower value is better (gets purple)
+  invertColor?: boolean // true = lower value is better
 }
 
 const COLUMNS: Column[] = [
@@ -52,6 +53,7 @@ const COLUMNS: Column[] = [
   { key: 'kd', label: 'K/D', getValue: p => p.kd, format: formatRatio },
   { key: 'adr', label: 'ADR', getValue: p => p.adr, format: v => v.toFixed(1) },
   { key: 'kast', label: 'KAST', getValue: p => p.kast, format: formatPct },
+  { key: 'apr', label: 'APR', getValue: p => p.rounds > 0 ? p.assists / p.rounds : 0, format: v => v.toFixed(2) },
   {
     key: 'fkfd', label: 'FK/FD',
     getValue: p => p.fk - p.fd,
@@ -63,44 +65,12 @@ const COLUMNS: Column[] = [
   { key: 'op_pct', label: 'OP% Kill', getValue: p => p.awp_pct, format: formatPct },
 ]
 
-/**
- * Compute percentile rank (0 = worst, 1 = best) for a value within a sorted array.
- * If invertColor is true, lower values are better (get percentile 1).
- */
-function getPercentile(value: number, allValues: number[], invert: boolean): number {
-  if (allValues.length <= 1) return 0.5
-  const sorted = [...allValues].sort((a, b) => a - b)
-  // Find rank position
-  let rank = 0
-  for (const v of sorted) {
-    if (v < value) rank++
-    else break
-  }
-  const pct = rank / (sorted.length - 1)
-  return invert ? 1 - pct : pct
-}
-
-/**
- * Interpolate from deep red (worst) → neutral → deep purple (best)
- * matching the example screenshot's color scheme.
- */
-function percentileToColor(pct: number): string {
-  // 3-stop gradient: deep red (bad) → green (good) → deep purple (excellent)
-  if (pct <= 0.5) {
-    // Red → green
-    const t = pct / 0.5 // 0..1
-    const h = Math.round(0 + 120 * t) // 0 (red) → 120 (green)
-    const s = Math.round(55 - 15 * t + 15 * t) // stay ~50-55%
-    const l = Math.round(65 + 18 * t) // 65→83
-    return `hsl(${h}, ${s}%, ${l}%)`
-  } else {
-    // Green → purple
-    const t = (pct - 0.5) / 0.5 // 0..1
-    const h = Math.round(120 + 150 * t) // 120 (green) → 270 (purple)
-    const s = Math.round(55 - 15 * t + 15 * t)
-    const l = Math.round(83 - 8 * t) // 83→75
-    return `hsl(${h}, ${s}%, ${l}%)`
-  }
+/** Compute mean and std for an array of numbers */
+function computeStats(values: number[]): { mean: number; std: number } {
+  if (values.length === 0) return { mean: 0, std: 0 }
+  const mean = values.reduce((s, v) => s + v, 0) / values.length
+  const variance = values.reduce((s, v) => s + (v - mean) ** 2, 0) / values.length
+  return { mean, std: Math.sqrt(variance) }
 }
 
 export default function Leaderboards() {
@@ -111,15 +81,41 @@ export default function Leaderboards() {
   const [roleFilter, setRoleFilter] = useState<string | null>(null)
   const [roleStats, setRoleStats] = useState(false)
   const [clExpanded, setClExpanded] = useState(false)
+  const [expandedPlayers, setExpandedPlayers] = useState<Set<string>>(new Set())
+
+  const togglePlayerExpand = (ign: string) => {
+    setExpandedPlayers(prev => {
+      const next = new Set(prev)
+      if (next.has(ign)) next.delete(ign)
+      else next.add(ign)
+      return next
+    })
+  }
 
   const tagMap = useMemo(() => {
     if (!data) return new Map<string, string>()
     return new Map(data.teams.map(t => [t.name, t.tag]))
   }, [data])
 
-  // Pre-compute all values per column for percentile ranking (based on visible players)
-  const colValues = useMemo(() => {
-    if (!data) return new Map<string, number[]>()
+  // Build per-player agent breakdown lookup: ign → AgentPlayer[]
+  const agentBreakdown = useMemo(() => {
+    if (!data?.players_by_agent) return new Map<string, AgentPlayer[]>()
+    const map = new Map<string, AgentPlayer[]>()
+    for (const ap of data.players_by_agent) {
+      const existing = map.get(ap.ign) ?? []
+      existing.push(ap)
+      map.set(ap.ign, existing)
+    }
+    // Sort each player's agents by rounds descending
+    for (const [, agents] of map) {
+      agents.sort((a, b) => b.rounds - a.rounds)
+    }
+    return map
+  }, [data])
+
+  // Pre-compute mean/std per column for heatColor (based on eligible players)
+  const colStats = useMemo(() => {
+    if (!data) return new Map<string, { mean: number; std: number }>()
     const useRole = roleFilter && roleStats
     const source: Player[] = useRole
       ? (data.players_by_role ?? []).filter(p => (p as Player & { role?: string }).role === roleFilter)
@@ -127,9 +123,9 @@ export default function Leaderboards() {
     const eligible = source
       .filter(p => p.rounds >= MIN_ROUNDS)
       .filter(p => !roleFilter || useRole || playerPlaysRole(p, roleFilter!))
-    const map = new Map<string, number[]>()
+    const map = new Map<string, { mean: number; std: number }>()
     for (const c of COLUMNS) {
-      map.set(c.key, eligible.map(p => c.getValue(p)))
+      map.set(c.key, computeStats(eligible.map(p => c.getValue(p))))
     }
     return map
   }, [data, roleFilter, roleStats])
@@ -173,19 +169,36 @@ export default function Leaderboards() {
 
   const teams = [...data.teams].sort((a, b) => a.name.localeCompare(b.name))
 
-  const thBase = 'px-2 py-1.5 text-black font-medium whitespace-nowrap'
-  const tdBase = 'px-2 py-1 font-mono text-black whitespace-nowrap'
+  const SortHeader = ({ label, sortId }: { label: string; sortId: string }) => (
+    <span className="inline-flex items-center gap-1">
+      <button
+        onClick={() => handleSort(sortId)}
+        className="hover:text-primary cursor-pointer transition-colors"
+        title={`Sort by ${label}`}
+      >
+        {label}
+      </button>
+      <button
+        onClick={() => handleSort(sortId)}
+        className="inline-flex flex-col items-center leading-none text-[9px] hover:text-on-surface -my-1 transition-colors"
+        title={`Sort by ${label}`}
+      >
+        <span className={sortKey === sortId && !sortAsc ? 'text-primary' : 'text-text-dim/40'}>▲</span>
+        <span className={sortKey === sortId && sortAsc ? 'text-primary' : 'text-text-dim/40'}>▼</span>
+      </button>
+    </span>
+  )
 
   return (
-    <div className="p-4">
-      {/* Team Filter */}
-      <div className="mb-3 flex items-center gap-4">
+    <div className="p-6 space-y-6">
+      {/* ── Filters ── */}
+      <section className="flex items-center gap-6 bg-surface-container-low/40 rounded-2xl px-5 py-3 border border-white/5">
         <div className="flex items-center gap-2">
-          <span className="text-text-muted text-xs uppercase tracking-wider">Team:</span>
+          <span className="scannable-label">Team:</span>
           <select
             value={teamFilter ?? ''}
             onChange={e => setTeamFilter(e.target.value || null)}
-            className="bg-card border border-border rounded px-2 py-1 text-sm text-text focus:outline-none focus:border-primary"
+            className="bg-surface-container border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:outline-none focus:border-primary/50 transition-colors"
           >
             <option value="">All Teams</option>
             {teams.map(t => (
@@ -194,11 +207,11 @@ export default function Leaderboards() {
           </select>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-text-muted text-xs uppercase tracking-wider">Role:</span>
+          <span className="scannable-label">Role:</span>
           <select
             value={roleFilter ?? ''}
             onChange={e => setRoleFilter(e.target.value || null)}
-            className="bg-card border border-border rounded px-2 py-1 text-sm text-text focus:outline-none focus:border-primary"
+            className="bg-surface-container border border-white/10 rounded-lg px-3 py-1.5 text-xs text-on-surface focus:outline-none focus:border-primary/50 transition-colors"
           >
             <option value="">All Roles</option>
             {ROLE_LIST.map(r => (
@@ -206,155 +219,215 @@ export default function Leaderboards() {
             ))}
           </select>
           {roleFilter && (
-            <label className="flex items-center gap-1 ml-1 cursor-pointer">
+            <label className="flex items-center gap-1.5 ml-1 cursor-pointer">
               <input
                 type="checkbox"
                 checked={roleStats}
                 onChange={e => setRoleStats(e.target.checked)}
                 className="accent-primary"
               />
-              <span className="text-text text-xs">Role stats</span>
+              <span className="text-on-surface text-xs">Role stats</span>
             </label>
           )}
         </div>
-        <span className="text-text-dim text-xs">Min {MIN_ROUNDS} rounds</span>
-      </div>
+        <span className="text-text-dim text-[10px] font-bold uppercase tracking-[0.15em]">Min {MIN_ROUNDS} rounds</span>
+      </section>
 
-      {/* Table */}
-      <div className="overflow-x-auto">
-        <table className="border-collapse text-sm [&_td]:border-y-[1.5px] [&_td]:border-border [&_th]:border-y-[1.5px] [&_th]:border-border">
-          <thead>
-            <tr className="bg-nav">
-              <th className={`${thBase} text-left`}>#</th>
-              <th className={`${thBase} text-left`}>Player</th>
-              <th className={`${thBase} text-left`}>Team</th>
-              <th className={`${thBase} text-left`}>Agents</th>
-              <th className={`${thBase} text-right border-r-[3px] !border-r-black`}>Rnds</th>
-              {COLUMNS.map(c => (
-                <Fragment key={c.key}>
-                  <th className={`${thBase} text-right select-none`}>
-                    <span className="inline-flex items-center gap-1">
-                      {c.label}
-                      <button
-                        onClick={() => handleSort(c.key)}
-                        className="inline-flex flex-col items-center leading-none text-[9px] text-text-muted hover:text-black -my-1"
-                        title={`Sort by ${c.label}`}
-                      >
-                        <span className={sortKey === c.key && !sortAsc ? 'text-black' : 'opacity-40'}>▲</span>
-                        <span className={sortKey === c.key && sortAsc ? 'text-black' : 'opacity-40'}>▼</span>
-                      </button>
+      {/* ── Leaderboard Table ── */}
+      <section className="bg-surface-container-low rounded-2xl overflow-hidden border border-white/5 flex flex-col">
+        <div className="px-5 py-3 bg-surface-container-high/60 flex items-center gap-2 border-b border-white/5">
+          <span className="material-symbols-outlined text-primary text-xl">leaderboard</span>
+          <h3 className="font-headline font-bold text-sm tracking-tight uppercase">Player Leaderboard</h3>
+          <span className="text-text-dim text-[10px] ml-2">{players.length} players</span>
+        </div>
+        <div className="flex-1 overflow-x-auto custom-scrollbar">
+          <table className="w-full text-left ghost-borders">
+            <thead className="bg-surface-container/60 sticky top-0 z-10">
+              <tr>
+                <th className="px-3 py-2 scannable-label text-center">#</th>
+                <th className="px-3 py-2 scannable-label text-left">Player</th>
+                <th className="px-3 py-2 scannable-label text-left">Team</th>
+                <th className="px-2 py-2 scannable-label text-center">Agents</th>
+                <th className="px-2 py-2 scannable-label text-center border-r border-white/10">Rnds</th>
+                {COLUMNS.map(c => (
+                  <Fragment key={c.key}>
+                    <th className="px-2 py-2 scannable-label text-center select-none">
+                      <SortHeader label={c.label} sortId={c.key} />
                       {c.key === 'cl' && (
                         <span
                           onClick={(e) => { e.stopPropagation(); setClExpanded(v => !v) }}
-                          className="ml-0.5 w-4 h-4 border border-border rounded cursor-pointer text-text-muted hover:text-black"
+                          className="ml-1 w-4 h-4 border border-white/10 rounded cursor-pointer text-text-dim hover:text-on-surface hover:border-white/20 transition-colors"
                           title={clExpanded ? 'Collapse ATMP & WON' : 'Expand ATMP & WON'}
                           style={{ display: 'inline-grid', placeItems: 'center', fontSize: '12px', fontWeight: 700, lineHeight: 1 }}
                         >
                           {clExpanded ? '−' : '+'}
                         </span>
                       )}
-                    </span>
-                  </th>
-                  {c.key === 'cl' && clExpanded && (
-                    <>
-                      <th className={`${thBase} text-right select-none`}>
-                        <span className="inline-flex items-center gap-1">
-                          ATMP
-                          <button
-                            onClick={() => handleSort('cl_atmp')}
-                            className="inline-flex flex-col items-center leading-none text-[9px] text-text-muted hover:text-black -my-1"
-                          >
-                            <span className={sortKey === 'cl_atmp' && !sortAsc ? 'text-black' : 'opacity-40'}>▲</span>
-                            <span className={sortKey === 'cl_atmp' && sortAsc ? 'text-black' : 'opacity-40'}>▼</span>
-                          </button>
-                        </span>
-                      </th>
-                      <th className={`${thBase} text-right select-none`}>
-                        <span className="inline-flex items-center gap-1">
-                          WON
-                          <button
-                            onClick={() => handleSort('cl_won')}
-                            className="inline-flex flex-col items-center leading-none text-[9px] text-text-muted hover:text-black -my-1"
-                          >
-                            <span className={sortKey === 'cl_won' && !sortAsc ? 'text-black' : 'opacity-40'}>▲</span>
-                            <span className={sortKey === 'cl_won' && sortAsc ? 'text-black' : 'opacity-40'}>▼</span>
-                          </button>
-                        </span>
-                      </th>
-                    </>
-                  )}
-                </Fragment>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {players.map((p, i) => {
-              const dimmed = teamFilter && p.team !== teamFilter
-              const top3agents = p.agents?.slice(0, 3) ?? []
-              const tag = tagMap.get(p.team) ?? p.team
-              const logo = TEAM_LOGOS[tag]
-              return (
-                <tr
-                  key={p.ign}
-                  className={`hover:bg-card/50 ${dimmed ? 'opacity-30' : ''}`}
-                >
-                  <td className={tdBase}>{i + 1}</td>
-                  <td className="px-2 py-1 whitespace-nowrap">
-                    <Link
-                      to={`/player/${encodeURIComponent(p.ign)}`}
-                      className="text-primary hover:underline font-medium"
+                    </th>
+                    {c.key === 'cl' && clExpanded && (
+                      <>
+                        <th className="px-2 py-2 scannable-label text-center select-none">
+                          <SortHeader label="ATMP" sortId="cl_atmp" />
+                        </th>
+                        <th className="px-2 py-2 scannable-label text-center select-none">
+                          <SortHeader label="WON" sortId="cl_won" />
+                        </th>
+                      </>
+                    )}
+                  </Fragment>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {players.map((p, i) => {
+                const dimmed = teamFilter && p.team !== teamFilter
+                const top3agents = p.agents?.slice(0, 3) ?? []
+                const tag = tagMap.get(p.team) ?? p.team
+                const logo = TEAM_LOGOS[tag]
+                const isExpanded = expandedPlayers.has(p.ign)
+                const agentRows = agentBreakdown.get(p.ign) ?? []
+                const hasAgents = agentRows.length > 0
+                return (
+                  <Fragment key={p.ign}>
+                    <tr
+                      className={`hover:bg-white/5 transition-colors border-t-[1.5px] border-outline-variant ${dimmed ? 'opacity-30' : ''}`}
                     >
-                      {p.ign}
-                    </Link>
-                  </td>
-                  <td className="px-2 py-1 whitespace-nowrap">
-                    <div className="flex items-center gap-1.5">
-                      {logo && (
-                        <img
-                          src={`${import.meta.env.BASE_URL}logos/${logo}`}
-                          alt={tag}
-                          className="h-4 w-4 object-contain"
-                        />
-                      )}
-                      <span className="font-medium text-black text-sm">{tag}</span>
-                    </div>
-                  </td>
-                  <td className="px-2 py-1 whitespace-nowrap">
-                    <div className="flex gap-0.5">
-                      {top3agents.map((a, j) => (
-                        <AgentIcon key={j} agent={a.agent} size={18} />
-                      ))}
-                    </div>
-                  </td>
-                  <td className={`${tdBase} text-right border-r-[3px] !border-r-black`}>{p.rounds}</td>
-                  {COLUMNS.map(c => {
-                    const val = c.getValue(p)
-                    const allVals = colValues.get(c.key) ?? []
-                    const pct = getPercentile(val, allVals, c.invertColor ?? false)
-                    const bg = percentileToColor(pct)
-                    return (
-                      <Fragment key={c.key}>
-                        <td
-                          className={`${tdBase} text-right`}
-                          style={{ backgroundColor: bg }}
-                        >
-                          {c.renderCell ? c.renderCell(p) : c.format(val)}
+                      <td className="px-3 py-2 text-center font-table text-xs text-text-dim">{i + 1}</td>
+                      <td className="px-3 py-2 whitespace-nowrap">
+                        <div className="flex items-center gap-1.5">
+                          {hasAgents && (
+                            <button
+                              onClick={() => togglePlayerExpand(p.ign)}
+                              className="w-4 h-4 flex items-center justify-center text-text-dim hover:text-on-surface transition-colors shrink-0"
+                              title={isExpanded ? 'Collapse agent breakdown' : 'Expand agent breakdown'}
+                            >
+                              <span className={`material-symbols-outlined text-sm transition-transform ${isExpanded ? 'rotate-90' : ''}`}>
+                                chevron_right
+                              </span>
+                            </button>
+                          )}
+                          <Link
+                            to={`/player/${encodeURIComponent(p.ign)}`}
+                            className="text-primary hover:underline font-bold text-xs"
+                          >
+                            {p.ign}
+                          </Link>
+                        </div>
+                      </td>
+                      <td className="px-3 py-2 whitespace-nowrap">
+                        <div className="flex items-center gap-1.5">
+                          {logo && (
+                            <img
+                              src={`${import.meta.env.BASE_URL}logos/${logo}`}
+                              alt={tag}
+                              className="h-4 w-4 object-contain"
+                            />
+                          )}
+                          <span className="font-medium text-on-surface text-xs">{tag}</span>
+                        </div>
+                      </td>
+                      <td className="px-2 py-2 whitespace-nowrap">
+                        <div className="flex gap-0.5 justify-center">
+                          {top3agents.map((a, j) => (
+                            <AgentIcon key={j} agent={a.agent} size={16} />
+                          ))}
+                        </div>
+                      </td>
+                      <td className="px-2 py-2 text-center font-table text-xs text-on-surface border-r border-white/10">{p.rounds}</td>
+                      {COLUMNS.map(c => {
+                        const val = c.getValue(p)
+                        const stats = colStats.get(c.key)
+                        const bg = stats && stats.std > 0
+                          ? heatColor(val, stats.mean, stats.std, c.invertColor)
+                          : 'transparent'
+
+                        let textClass = 'text-on-surface'
+                        if (stats && stats.std > 0) {
+                          let z = (val - stats.mean) / stats.std
+                          if (c.invertColor) z = -z
+                          if (z >= 1.5) textClass = 'text-primary font-bold'
+                          else if (z >= 0.8) textClass = 'text-primary-dim'
+                          else if (z <= -1.5) textClass = 'text-error font-bold'
+                          else if (z <= -0.8) textClass = 'text-error-dim'
+                        }
+
+                        return (
+                          <Fragment key={c.key}>
+                            <td
+                              className={`px-2 py-1.5 text-center font-table text-xs whitespace-nowrap ${textClass}`}
+                              style={{ backgroundColor: bg }}
+                            >
+                              {c.renderCell ? c.renderCell(p) : c.format(val)}
+                            </td>
+                            {c.key === 'cl' && clExpanded && (
+                              <>
+                                <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{p.clutch_scens}</td>
+                                <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{p.clutches}</td>
+                              </>
+                            )}
+                          </Fragment>
+                        )
+                      })}
+                    </tr>
+                    {/* Agent breakdown sub-rows */}
+                    {isExpanded && agentRows.map(ap => (
+                      <tr
+                        key={`${p.ign}-${ap.agent}`}
+                        className=""
+                      >
+                        <td className="px-3 py-1.5" />
+                        <td className="px-3 py-1.5 whitespace-nowrap" colSpan={2}>
+                          <div className="flex items-center gap-2 pl-5">
+                            <AgentIcon agent={ap.agent} size={18} />
+                            <span className="text-on-surface text-xs font-medium">{ap.agent}</span>
+                            <span className="text-text-dim text-[10px]">({ap.rounds} rnds)</span>
+                          </div>
                         </td>
-                        {c.key === 'cl' && clExpanded && (
-                          <>
-                            <td className={`${tdBase} text-right`}>{p.clutch_scens}</td>
-                            <td className={`${tdBase} text-right`}>{p.clutches}</td>
-                          </>
-                        )}
-                      </Fragment>
-                    )
-                  })}
-                </tr>
-              )
-            })}
-          </tbody>
-        </table>
-      </div>
+                        <td className="px-2 py-1.5" />
+                        <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface border-r border-white/10">{ap.rounds}</td>
+                        {COLUMNS.map(c => {
+                          const val = c.getValue(ap)
+                          const stats = colStats.get(c.key)
+                          const bg = stats && stats.std > 0
+                            ? heatColor(val, stats.mean, stats.std, c.invertColor)
+                            : 'transparent'
+
+                          let textClass = 'text-on-surface'
+                          if (stats && stats.std > 0) {
+                            let z = (val - stats.mean) / stats.std
+                            if (c.invertColor) z = -z
+                            if (z >= 1.5) textClass = 'text-primary font-bold'
+                            else if (z >= 0.8) textClass = 'text-primary-dim'
+                            else if (z <= -1.5) textClass = 'text-error font-bold'
+                            else if (z <= -0.8) textClass = 'text-error-dim'
+                          }
+
+                          return (
+                            <Fragment key={c.key}>
+                              <td
+                                className={`px-2 py-1.5 text-center font-table text-xs whitespace-nowrap ${textClass}`}
+                                style={{ backgroundColor: bg }}
+                              >
+                                {c.renderCell ? c.renderCell(ap) : c.format(val)}
+                              </td>
+                              {c.key === 'cl' && clExpanded && (
+                                <>
+                                  <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{ap.clutch_scens}</td>
+                                  <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{ap.clutches}</td>
+                                </>
+                              )}
+                            </Fragment>
+                          )
+                        })}
+                      </tr>
+                    ))}
+                  </Fragment>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
   )
 }

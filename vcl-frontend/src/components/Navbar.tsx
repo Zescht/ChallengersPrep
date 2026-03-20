@@ -1,10 +1,12 @@
 import { useRef, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
+import { useTheme } from '../context/ThemeContext'
 import SearchBar from './SearchBar'
 
 export default function Navbar() {
   const { data } = useStats()
+  const { theme, toggleTheme } = useTheme()
   const location = useLocation()
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -58,7 +60,7 @@ export default function Navbar() {
 
           {/* Leaderboards with hover dropdown */}
           <div
-            className="relative"
+            className="relative flex items-center"
             onMouseEnter={openDropdown}
             onMouseLeave={closeDropdown}
           >
@@ -92,7 +94,18 @@ export default function Navbar() {
           ))}
         </div>
       </div>
-      <SearchBar />
+      <div className="flex items-center gap-3">
+        <SearchBar />
+        <button
+          onClick={toggleTheme}
+          className="w-8 h-8 rounded-lg flex items-center justify-center text-text-dim hover:text-on-surface hover:bg-white/5 transition-colors"
+          title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          <span className="material-symbols-outlined text-lg">
+            {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+          </span>
+        </button>
+      </div>
     </nav>
   )
 }

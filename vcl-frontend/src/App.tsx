@@ -1,5 +1,6 @@
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { StatsProvider, useStats } from './context/StatsContext'
+import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import TeamOverview from './pages/TeamOverview'
 import PlayerProfile from './pages/PlayerProfile'
@@ -40,11 +41,13 @@ function AppRoutes() {
 export default function App() {
   return (
     <HashRouter>
-      <StatsProvider>
-        <div className="min-h-screen bg-surface text-text">
-          <AppRoutes />
-        </div>
-      </StatsProvider>
+      <ThemeProvider>
+        <StatsProvider>
+          <div className="min-h-screen bg-surface text-text">
+            <AppRoutes />
+          </div>
+        </StatsProvider>
+      </ThemeProvider>
     </HashRouter>
   )
 }

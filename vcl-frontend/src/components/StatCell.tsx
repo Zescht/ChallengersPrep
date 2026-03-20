@@ -31,7 +31,7 @@ export default function StatCell({ value, mean, std, format, invert = false, cla
 
   return (
     <td
-      className={`px-2 py-1.5 text-center font-mono text-xs whitespace-nowrap ${textClass} ${className}`}
+      className={`px-2 py-1.5 text-center font-table text-xs whitespace-nowrap ${textClass} ${className}`}
       style={{ backgroundColor: bg }}
     >
       {format(value)}

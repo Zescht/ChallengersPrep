@@ -132,6 +132,10 @@ export interface RolePlayer extends Player {
   role: string
 }
 
+export interface AgentPlayer extends Player {
+  agent: string
+}
+
 export interface AgentStat {
   ign: string
   team: string
@@ -162,6 +166,7 @@ export interface StatsData {
   teams: Team[]
   players: Player[]
   players_by_role: RolePlayer[]
+  players_by_agent: AgentPlayer[]
   matches: Match[]
   leaderboards: Record<string, Leaderboard>
   agent_stats: AgentStat[]
