@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
 import AgentIcon from '../components/AgentIcon'
@@ -89,14 +89,14 @@ export default function AgentStats() {
       cols.push({
         key: `casts_${slot}_per_round`,
         label: `${name} /r`,
-        getValue: (p: AgentStat) => (p as Record<string, number>)[`casts_${slot}_per_round`] ?? 0,
+        getValue: (p: AgentStat) => (p as unknown as Record<string, number>)[`casts_${slot}_per_round`] ?? 0,
         format: v => v.toFixed(3),
       })
       if (damaging.has(slot)) {
         cols.push({
           key: `kills_${slot}`,
           label: `${name} Kills`,
-          getValue: (p: AgentStat) => (p as Record<string, number>)[`kills_${slot}`] ?? 0,
+          getValue: (p: AgentStat) => (p as unknown as Record<string, number>)[`kills_${slot}`] ?? 0,
           format: v => v.toString(),
         })
       }
