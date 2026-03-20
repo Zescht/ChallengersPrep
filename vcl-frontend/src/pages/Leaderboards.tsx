@@ -311,7 +311,7 @@ export default function Leaderboards() {
                     <div className="flex items-center gap-1.5">
                       {logo && (
                         <img
-                          src={`/logos/${logo}`}
+                          src={`${import.meta.env.BASE_URL}logos/${logo}`}
                           alt={tag}
                           className="h-4 w-4 object-contain"
                         />
