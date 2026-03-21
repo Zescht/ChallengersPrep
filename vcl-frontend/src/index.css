@@ -161,7 +161,7 @@ body {
 .text-on-surface\/60 { color: color-mix(in srgb, var(--theme-on-surface) 60%, transparent) !important; }
 .text-outline { color: var(--theme-outline) !important; }
 
-.text-player-link { color: #4a90d9 !important; }
+a.text-player-link, .text-player-link { color: #2563eb !important; }
 .text-primary { color: var(--theme-primary) !important; }
 .text-primary-dim { color: var(--theme-primary-dim) !important; }
 .text-secondary { color: var(--theme-secondary) !important; }
