@@ -82,6 +82,8 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
     all_eco_atk_w = all_eco_atk_l = all_eco_def_w = all_eco_def_l = 0
     all_post_scens = all_post_wins = 0
     all_ret_scens = all_ret_wins = 0
+    all_post_by_site = defaultdict(lambda: {'scens': 0, 'wins': 0})
+    all_ret_by_site = defaultdict(lambda: {'scens': 0, 'wins': 0})
 
     for map_name, mm in sorted(map_matches.items()):
         plays = len(mm)
@@ -94,9 +96,11 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
         def_l = sum(m['team1_def_losses'] for m in mm)
         total_rounds = atk_w + atk_l + def_w + def_l
 
-        # Latest comp
+        # Latest comp + count how many times it was played
         latest = sorted(mm, key=lambda m: m['date'], reverse=True)[0]
         comp = latest['team1_agents']
+        comp_key = tuple(sorted(comp))
+        comp_count = sum(1 for m in mm if tuple(sorted(m['team1_agents'])) == comp_key)
 
         # Pistol
         pistol_atk_w = sum(m['team1_atk_pistol'] for m in mm)
@@ -125,19 +129,70 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
 
         # Post-plant / retake
         post_scens = post_wins = ret_scens = ret_wins = 0
-        for site in ('A', 'B', '?'):
+        post_by_site = {}
+        ret_by_site = {}
+        for site in ('A', 'B', 'C', '?'):
             pp_atk = pp_idx.get((map_name, site, 'atk'))
             if pp_atk:
                 post_scens += pp_atk['plants']
                 post_wins += pp_atk['wins']
+                post_by_site[site] = {
+                    'scens': pp_atk['plants'],
+                    'wins': pp_atk['wins'],
+                    'pct': _safe_pct(pp_atk['wins'], pp_atk['plants']),
+                }
             pp_def = pp_idx.get((map_name, site, 'def'))
             if pp_def:
                 ret_scens += pp_def['plants']
                 ret_wins += pp_def['wins']
+                ret_by_site[site] = {
+                    'scens': pp_def['plants'],
+                    'wins': pp_def['wins'],
+                    'pct': _safe_pct(pp_def['wins'], pp_def['plants']),
+                }
+
+        # Build per-comp breakdown
+        comp_groups = defaultdict(list)
+        for m in mm:
+            ck = tuple(sorted(m['team1_agents']))
+            comp_groups[ck].append(m)
+
+        comps_list = []
+        for ck, cm in comp_groups.items():
+            c_plays = len(cm)
+            c_wins = sum(1 for m in cm if m['winner'] == team_name)
+            c_losses = c_plays - c_wins
+            c_atk_w = sum(m['team1_atk_wins'] for m in cm)
+            c_atk_l = sum(m['team1_atk_losses'] for m in cm)
+            c_def_w = sum(m['team1_def_wins'] for m in cm)
+            c_def_l = sum(m['team1_def_losses'] for m in cm)
+            c_total = c_atk_w + c_atk_l + c_def_w + c_def_l
+            c_pistol_atk_w = sum(m['team1_atk_pistol'] for m in cm)
+            c_pistol_def_w = sum(m['team1_def_pistol'] for m in cm)
+            c_pistol_w = c_pistol_atk_w + c_pistol_def_w
+            c_pistol_total = c_plays * 2
+            c_latest = sorted(cm, key=lambda m: m['date'], reverse=True)[0]
+            comps_list.append({
+                'comp': c_latest['team1_agents'],
+                'comp_count': c_plays,
+                'plays': plays,
+                'wins': c_wins,
+                'losses': c_losses,
+                'rW_pct': _safe_pct(c_atk_w + c_def_w, c_total),
+                'atk_rW_pct': _safe_pct(c_atk_w, c_atk_w + c_atk_l),
+                'def_rW_pct': _safe_pct(c_def_w, c_def_w + c_def_l),
+                'pistol_rW_pct': _safe_pct(c_pistol_w, c_pistol_total),
+                'pistol_atk_rW_pct': _safe_pct(c_pistol_atk_w, c_plays),
+                'pistol_def_rW_pct': _safe_pct(c_pistol_def_w, c_plays),
+            })
+        # Sort: latest comp first, then by play count descending
+        comps_list.sort(key=lambda c: (-c['comp_count'],))
 
         map_obj = {
             'map': map_name,
             'comp': comp,
+            'comp_count': comp_count,
+            'comps': comps_list,
             'plays': plays,
             'wins': wins,
             'losses': losses,
@@ -162,6 +217,8 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
             'ret_scens': ret_scens,
             'ret_per_map': round(ret_scens / plays, 1) if plays > 0 else 0,
             'ret_rW_pct': _safe_pct(ret_wins, ret_scens),
+            'post_by_site': post_by_site,
+            'ret_by_site': ret_by_site,
             # post_rank, ret_rank, event_avg added later
             'post_rank': 0,
             'post_rW_event_avg': 0,
@@ -188,11 +245,18 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
         all_eco_def_w += eco_def_w; all_eco_def_l += eco_def_l
         all_post_scens += post_scens; all_post_wins += post_wins
         all_ret_scens += ret_scens; all_ret_wins += ret_wins
+        for site, sd in post_by_site.items():
+            all_post_by_site[site]['scens'] += sd['scens']
+            all_post_by_site[site]['wins'] += sd['wins']
+        for site, sd in ret_by_site.items():
+            all_ret_by_site[site]['scens'] += sd['scens']
+            all_ret_by_site[site]['wins'] += sd['wins']
 
     all_total_rounds = all_atk_w + all_atk_l + all_def_w + all_def_l
     all_maps_obj = {
         'map': 'All Maps',
         'comp': [],
+        'comp_count': 0,
         'plays': all_plays,
         'wins': all_wins,
         'losses': all_losses,
@@ -217,6 +281,8 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
         'ret_scens': all_ret_scens,
         'ret_per_map': round(all_ret_scens / all_plays, 1) if all_plays > 0 else 0,
         'ret_rW_pct': _safe_pct(all_ret_wins, all_ret_scens),
+        'post_by_site': {s: {'scens': d['scens'], 'wins': d['wins'], 'pct': _safe_pct(d['wins'], d['scens'])} for s, d in all_post_by_site.items()},
+        'ret_by_site': {s: {'scens': d['scens'], 'wins': d['wins'], 'pct': _safe_pct(d['wins'], d['scens'])} for s, d in all_ret_by_site.items()},
         'post_rank': 0,
         'post_rW_event_avg': 0,
         'ret_rank': 0,

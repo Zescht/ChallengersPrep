@@ -1,6 +1,28 @@
+export interface SiteStats {
+  scens: number
+  wins: number
+  pct: number
+}
+
+export interface CompStats {
+  comp: string[]
+  comp_count: number
+  plays: number
+  wins: number
+  losses: number
+  rW_pct: number
+  atk_rW_pct: number
+  def_rW_pct: number
+  pistol_rW_pct: number
+  pistol_atk_rW_pct: number
+  pistol_def_rW_pct: number
+}
+
 export interface MapStats {
   map: string
   comp: string[]
+  comp_count: number
+  comps?: CompStats[]
   plays: number
   wins: number
   losses: number
@@ -24,11 +46,13 @@ export interface MapStats {
   post_rW_pct: number
   post_rW_event_avg: number
   post_rank: number
+  post_by_site: Record<string, SiteStats>
   ret_scens: number
   ret_per_map: number
   ret_rW_pct: number
   ret_rW_event_avg: number
   ret_rank: number
+  ret_by_site: Record<string, SiteStats>
 }
 
 export interface XvYEntry {
@@ -178,4 +202,8 @@ export interface TournamentAverages {
   perMap: Record<string, Record<string, { mean: number; std: number }>>
   xvy: Record<string, number>
   player: Record<string, { mean: number; std: number }>
+  /** per-site averages: key = "post_A", "ret_B", etc. → { mean, std } across all teams' allMaps */
+  siteAvgs: Record<string, { mean: number; std: number }>
+  /** per-map per-site averages: key = mapName → "post_A" etc. */
+  perMapSiteAvgs: Record<string, Record<string, { mean: number; std: number }>>
 }

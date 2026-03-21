@@ -7,9 +7,10 @@ interface StatCellProps {
   format: (v: number) => string
   invert?: boolean
   className?: string
+  boldBlack?: boolean
 }
 
-export default function StatCell({ value, mean, std, format, invert = false, className = '' }: StatCellProps) {
+export default function StatCell({ value, mean, std, format, invert = false, className = '', boldBlack = false }: StatCellProps) {
   if (value == null || isNaN(value)) {
     return <td className={`px-2 py-1.5 text-center text-text-dim ${className}`}>-</td>
   }
@@ -20,7 +21,9 @@ export default function StatCell({ value, mean, std, format, invert = false, cla
 
   // Determine text color based on z-score for stronger signals
   let textClass = 'text-on-surface'
-  if (mean != null && std != null && std > 0) {
+  if (boldBlack) {
+    textClass = 'font-bold'
+  } else if (mean != null && std != null && std > 0) {
     let z = (value - mean) / std
     if (invert) z = -z
     if (z >= 1.5) textClass = 'text-primary font-bold'
@@ -32,7 +35,7 @@ export default function StatCell({ value, mean, std, format, invert = false, cla
   return (
     <td
       className={`px-2 py-1.5 text-center font-table text-xs whitespace-nowrap ${textClass} ${className}`}
-      style={{ backgroundColor: bg }}
+      style={{ backgroundColor: bg, ...(boldBlack ? { color: '#000000' } : {}) }}
     >
       {format(value)}
     </td>

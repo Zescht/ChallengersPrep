@@ -161,7 +161,7 @@ body {
 .text-on-surface\/60 { color: color-mix(in srgb, var(--theme-on-surface) 60%, transparent) !important; }
 .text-outline { color: var(--theme-outline) !important; }
 
-a.text-player-link, .text-player-link { color: #2563eb !important; }
+a.text-player-link, .text-player-link { color: #1e3a5f !important; }
 .text-primary { color: var(--theme-primary) !important; }
 .text-primary-dim { color: var(--theme-primary-dim) !important; }
 .text-secondary { color: var(--theme-secondary) !important; }
@@ -221,6 +221,10 @@ table.ghost-borders td,
 table.ghost-borders th {
   border: 1px solid var(--theme-ghost-border);
 }
+table.ghost-borders td.thick-sep,
+table.ghost-borders th.thick-sep {
+  border-left: 2px solid #000000 !important;
+}
 
 /* Remove old hard borders */
 table.border-collapse td,
@@ -251,6 +255,12 @@ table.border-collapse th {
   .bg-white\/10 { background-color: rgba(0, 0, 0, 0.08) !important; }
   .bg-surface-container-highest\/50 { background-color: color-mix(in srgb, var(--theme-surface-container-highest) 50%, transparent) !important; }
   .bg-card\/50 { background-color: color-mix(in srgb, var(--theme-card) 50%, transparent) !important; }
+
+  /* Thick separator in light mode */
+  table.ghost-borders td.thick-sep,
+  table.ghost-borders th.thick-sep {
+    border-left: 2px solid #000000 !important;
+  }
 
   /* Focus ring */
   .focus\:ring-tertiary:focus { --tw-ring-color: var(--theme-tertiary) !important; }

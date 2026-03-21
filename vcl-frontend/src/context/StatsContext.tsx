@@ -85,7 +85,48 @@ function computeAverages(data: StatsData): TournamentAverages {
     player[key] = meanStd(values)
   }
 
-  return { team, perMap, xvy, player }
+  // Per-site averages (allMaps level)
+  const siteAvgs: Record<string, { mean: number; std: number }> = {}
+  for (const mode of ['post', 'ret'] as const) {
+    const siteKey = mode === 'post' ? 'post_by_site' : 'ret_by_site'
+    const allSites = new Set<string>()
+    for (const t of data.teams) {
+      const bs = (t.allMaps as any)[siteKey]
+      if (bs) Object.keys(bs).forEach(s => { if (s !== '?') allSites.add(s) })
+    }
+    for (const site of allSites) {
+      const values = data.teams
+        .map(t => (t.allMaps as any)[siteKey]?.[site]?.pct)
+        .filter((v: any): v is number => v != null && !isNaN(v))
+      siteAvgs[`${mode}_${site}`] = meanStd(values)
+    }
+  }
+
+  // Per-map per-site averages
+  const perMapSiteAvgs: Record<string, Record<string, { mean: number; std: number }>> = {}
+  for (const mapName of allMapNames) {
+    perMapSiteAvgs[mapName] = {}
+    for (const mode of ['post', 'ret'] as const) {
+      const siteKey = mode === 'post' ? 'post_by_site' : 'ret_by_site'
+      const allSites = new Set<string>()
+      for (const t of data.teams) {
+        const m = t.maps.find(m => m.map === mapName)
+        const bs = m ? (m as any)[siteKey] : null
+        if (bs) Object.keys(bs).forEach(s => { if (s !== '?') allSites.add(s) })
+      }
+      for (const site of allSites) {
+        const values = data.teams
+          .map(t => {
+            const m = t.maps.find(m => m.map === mapName)
+            return m ? (m as any)[siteKey]?.[site]?.pct : undefined
+          })
+          .filter((v: any): v is number => v != null && !isNaN(v))
+        perMapSiteAvgs[mapName][`${mode}_${site}`] = meanStd(values)
+      }
+    }
+  }
+
+  return { team, perMap, xvy, player, siteAvgs, perMapSiteAvgs }
 }
 
 export function StatsProvider({ children }: { children: ReactNode }) {

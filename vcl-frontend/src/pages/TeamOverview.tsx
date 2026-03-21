@@ -8,7 +8,7 @@ import StatCell from '../components/StatCell'
 import XvYMatrix from '../components/XvYMatrix'
 import { formatPct, formatRatio } from '../utils/format'
 import { generateTalkingPoints } from '../utils/talkingPoints'
-import type { MapStats, Player } from '../types'
+import type { MapStats, CompStats, Player } from '../types'
 
 const TEAM_LOGOS: Record<string, string> = {
   FKS: 'fks.png', SGE: 'sge.png', JL: 'jl.png', MDR: 'mdr.png',
@@ -112,7 +112,8 @@ export default function TeamOverview() {
               <thead className="bg-surface-container/60 sticky top-0 z-10">
                 {/* Group headers */}
                 <tr>
-                  <th colSpan={5} className="px-3 py-2 scannable-label text-center border-b border-white/5"></th>
+                  <th colSpan={3} className="px-3 py-2 scannable-label text-center border-b border-white/5"></th>
+                  <th colSpan={3} className="px-3 py-2 scannable-label text-center border-b border-white/5 thick-sep"></th>
                   <th colSpan={3} className="px-3 py-2 scannable-label text-center text-on-surface/60 border-b border-white/5 border-l border-white/5">All Rounds</th>
                   <th colSpan={3} className="px-3 py-2 scannable-label text-center text-secondary/80 border-b border-white/5 border-l border-white/5">Pistols</th>
                   <th colSpan={3} className="px-3 py-2 scannable-label text-center text-primary/80 border-b border-white/5 border-l border-white/5">Gun</th>
@@ -123,7 +124,8 @@ export default function TeamOverview() {
                 <tr>
                   <th className="px-3 py-2 scannable-label text-left">Map</th>
                   <th className="px-2 py-2 scannable-label text-center">Comp</th>
-                  <th className="px-2 py-2 scannable-label text-center">P</th>
+                  <th className="px-2 py-2 scannable-label text-center">x</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">P</th>
                   <th className="px-2 py-2 scannable-label text-center">W</th>
                   <th className="px-2 py-2 scannable-label text-center">L</th>
                   <th className="px-2 py-2 scannable-label text-center border-l border-white/5">rW%</th>
@@ -280,7 +282,9 @@ export default function TeamOverview() {
 /* ──── Sub-components ──── */
 
 function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false }: { ms: MapStats; avgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; highlight?: boolean }) {
+  const [expanded, setExpanded] = useState(false)
   const a = avgs || {}
+  const hasComps = !isAggregate && ms.comps && ms.comps.length > 1
   const rowClass = isAggregate
     ? 'bg-surface-container-high/40 border-t border-white/10'
     : highlight
@@ -288,38 +292,86 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false }: { ms:
       : 'hover:bg-white/5 transition-colors'
 
   return (
-    <tr className={rowClass}>
-      <td className="px-3 py-2.5 text-left font-bold text-on-surface text-sm whitespace-nowrap">{isAggregate ? 'All Maps' : ms.map}</td>
-      <td className="px-2 py-2.5 text-center">
+    <Fragment>
+      <tr className={`${rowClass} ${hasComps ? 'cursor-pointer' : ''}`} onClick={() => hasComps && setExpanded(v => !v)}>
+        <td className="px-3 py-2.5 text-left font-bold text-on-surface text-sm whitespace-nowrap">
+          {isAggregate ? 'All Maps' : ms.map}
+        </td>
+        <td className="px-2 py-2.5 text-center">
+          <div className="flex gap-0.5 justify-center">
+            {ms.comp.slice(0, 5).map((agent, i) => (
+              <AgentIcon key={i} agent={agent} size={16} />
+            ))}
+          </div>
+        </td>
+        <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.comp_count || ''}</td>
+        <td className="px-2 py-2.5 text-center text-xs text-on-surface thick-sep">{ms.plays}</td>
+        <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.wins}</td>
+        <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.losses}</td>
+        {/* All rounds */}
+        <StatCell value={ms.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.atk_rW_pct} mean={a.atk_rW_pct?.mean} std={a.atk_rW_pct?.std} format={formatPct} />
+        <StatCell value={ms.def_rW_pct} mean={a.def_rW_pct?.mean} std={a.def_rW_pct?.std} format={formatPct} />
+        {/* Pistols */}
+        <StatCell value={ms.pistol_rW_pct} mean={a.pistol_rW_pct?.mean} std={a.pistol_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.pistol_atk_rW_pct} mean={a.pistol_atk_rW_pct?.mean} std={a.pistol_atk_rW_pct?.std} format={formatPct} />
+        <StatCell value={ms.pistol_def_rW_pct} mean={a.pistol_def_rW_pct?.mean} std={a.pistol_def_rW_pct?.std} format={formatPct} />
+        {/* Gun */}
+        <StatCell value={ms.gun_rW_pct} mean={a.gun_rW_pct?.mean} std={a.gun_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.gun_atk_rW_pct} mean={a.gun_atk_rW_pct?.mean} std={a.gun_atk_rW_pct?.std} format={formatPct} />
+        <StatCell value={ms.gun_def_rW_pct} mean={a.gun_def_rW_pct?.mean} std={a.gun_def_rW_pct?.std} format={formatPct} />
+        {/* Anti Eco */}
+        <StatCell value={ms.antieco_rW_pct} mean={a.antieco_rW_pct?.mean} std={a.antieco_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.antieco_atk_rW_pct} mean={a.antieco_atk_rW_pct?.mean} std={a.antieco_atk_rW_pct?.std} format={formatPct} />
+        <StatCell value={ms.antieco_def_rW_pct} mean={a.antieco_def_rW_pct?.mean} std={a.antieco_def_rW_pct?.std} format={formatPct} />
+        {/* Eco */}
+        <StatCell value={ms.eco_rW_pct} mean={a.eco_rW_pct?.mean} std={a.eco_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.eco_atk_rW_pct} mean={a.eco_atk_rW_pct?.mean} std={a.eco_atk_rW_pct?.std} format={formatPct} />
+        <StatCell value={ms.eco_def_rW_pct} mean={a.eco_def_rW_pct?.mean} std={a.eco_def_rW_pct?.std} format={formatPct} />
+      </tr>
+      {expanded && ms.comps?.map((c, i) => (
+        <CompRow key={i} c={c} avgs={a} />
+      ))}
+    </Fragment>
+  )
+}
+
+function CompRow({ c, avgs }: { c: CompStats; avgs: Record<string, { mean: number; std: number }> }) {
+  const a = avgs
+  return (
+    <tr className="bg-surface-container/30">
+      <td className="px-3 py-1.5 text-left text-xs text-text-dim pl-8"></td>
+      <td className="px-2 py-1.5 text-center">
         <div className="flex gap-0.5 justify-center">
-          {ms.comp.slice(0, 5).map((agent, i) => (
-            <AgentIcon key={i} agent={agent} size={16} />
+          {c.comp.slice(0, 5).map((agent, i) => (
+            <AgentIcon key={i} agent={agent} size={14} />
           ))}
         </div>
       </td>
-      <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.plays}</td>
-      <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.wins}</td>
-      <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.losses}</td>
+      <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.comp_count}</td>
+      <td className="px-2 py-1.5 text-center text-xs text-text-dim thick-sep">{c.plays}</td>
+      <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.wins}</td>
+      <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.losses}</td>
       {/* All rounds */}
-      <StatCell value={ms.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="border-l border-white/5" />
-      <StatCell value={ms.atk_rW_pct} mean={a.atk_rW_pct?.mean} std={a.atk_rW_pct?.std} format={formatPct} />
-      <StatCell value={ms.def_rW_pct} mean={a.def_rW_pct?.mean} std={a.def_rW_pct?.std} format={formatPct} />
+      <StatCell value={c.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+      <StatCell value={c.atk_rW_pct} mean={a.atk_rW_pct?.mean} std={a.atk_rW_pct?.std} format={formatPct} />
+      <StatCell value={c.def_rW_pct} mean={a.def_rW_pct?.mean} std={a.def_rW_pct?.std} format={formatPct} />
       {/* Pistols */}
-      <StatCell value={ms.pistol_rW_pct} mean={a.pistol_rW_pct?.mean} std={a.pistol_rW_pct?.std} format={formatPct} className="border-l border-white/5" />
-      <StatCell value={ms.pistol_atk_rW_pct} mean={a.pistol_atk_rW_pct?.mean} std={a.pistol_atk_rW_pct?.std} format={formatPct} />
-      <StatCell value={ms.pistol_def_rW_pct} mean={a.pistol_def_rW_pct?.mean} std={a.pistol_def_rW_pct?.std} format={formatPct} />
-      {/* Gun */}
-      <StatCell value={ms.gun_rW_pct} mean={a.gun_rW_pct?.mean} std={a.gun_rW_pct?.std} format={formatPct} className="border-l border-white/5" />
-      <StatCell value={ms.gun_atk_rW_pct} mean={a.gun_atk_rW_pct?.mean} std={a.gun_atk_rW_pct?.std} format={formatPct} />
-      <StatCell value={ms.gun_def_rW_pct} mean={a.gun_def_rW_pct?.mean} std={a.gun_def_rW_pct?.std} format={formatPct} />
-      {/* Anti Eco */}
-      <StatCell value={ms.antieco_rW_pct} mean={a.antieco_rW_pct?.mean} std={a.antieco_rW_pct?.std} format={formatPct} className="border-l border-white/5" />
-      <StatCell value={ms.antieco_atk_rW_pct} mean={a.antieco_atk_rW_pct?.mean} std={a.antieco_atk_rW_pct?.std} format={formatPct} />
-      <StatCell value={ms.antieco_def_rW_pct} mean={a.antieco_def_rW_pct?.mean} std={a.antieco_def_rW_pct?.std} format={formatPct} />
-      {/* Eco */}
-      <StatCell value={ms.eco_rW_pct} mean={a.eco_rW_pct?.mean} std={a.eco_rW_pct?.std} format={formatPct} className="border-l border-white/5" />
-      <StatCell value={ms.eco_atk_rW_pct} mean={a.eco_atk_rW_pct?.mean} std={a.eco_atk_rW_pct?.std} format={formatPct} />
-      <StatCell value={ms.eco_def_rW_pct} mean={a.eco_def_rW_pct?.mean} std={a.eco_def_rW_pct?.std} format={formatPct} />
+      <StatCell value={c.pistol_rW_pct} mean={a.pistol_rW_pct?.mean} std={a.pistol_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+      <StatCell value={c.pistol_atk_rW_pct} mean={a.pistol_atk_rW_pct?.mean} std={a.pistol_atk_rW_pct?.std} format={formatPct} />
+      <StatCell value={c.pistol_def_rW_pct} mean={a.pistol_def_rW_pct?.mean} std={a.pistol_def_rW_pct?.std} format={formatPct} />
+      {/* Gun — not available per comp */}
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs border-l border-white/5">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
+      {/* Anti Eco — not available per comp */}
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs border-l border-white/5">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
+      {/* Eco — not available per comp */}
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs border-l border-white/5">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
     </tr>
   )
 }
