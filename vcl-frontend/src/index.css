@@ -161,7 +161,19 @@ body {
 .text-on-surface\/60 { color: color-mix(in srgb, var(--theme-on-surface) 60%, transparent) !important; }
 .text-outline { color: var(--theme-outline) !important; }
 
-a.text-player-link, .text-player-link { color: #1e3a5f !important; }
+/* Player link — dark blue in light mode, bright blue in dark mode */
+[data-theme="light"] a.text-player-link,
+[data-theme="light"] .text-player-link { color: #1e3a5f !important; }
+a.text-player-link, .text-player-link { color: #60a5fa !important; }
+
+/* Bold-black stat cells — theme-aware */
+[data-theme="light"] .stat-bold-black { color: #000000 !important; }
+.stat-bold-black { color: var(--theme-on-surface) !important; }
+
+/* Table data cells: bump font size by 1px (13px instead of default 12px) */
+table.ghost-borders td {
+  font-size: 13px;
+}
 .text-primary { color: var(--theme-primary) !important; }
 .text-primary-dim { color: var(--theme-primary-dim) !important; }
 .text-secondary { color: var(--theme-secondary) !important; }
@@ -221,9 +233,32 @@ table.ghost-borders td,
 table.ghost-borders th {
   border: 1px solid var(--theme-ghost-border);
 }
+[data-theme="light"] table.ghost-borders td,
+[data-theme="light"] table.ghost-borders th {
+  color: #000000 !important;
+}
+table.ghost-borders tbody tr {
+  box-shadow: 0 1px 0 0 #000000;
+}
+table.ghost-borders tbody tr:last-child {
+  box-shadow: none;
+}
 table.ghost-borders td.thick-sep,
 table.ghost-borders th.thick-sep {
-  border-left: 2px solid #000000 !important;
+  border-left: none !important;
+  box-shadow: -2px 0 0 0 #000000;
+}
+
+/* XvY grid — borders on every cell, black text in light mode */
+table.xvy-grid td,
+table.xvy-grid th {
+  border: 1px solid var(--theme-ghost-border);
+  font-size: 13px;
+}
+[data-theme="light"] table.xvy-grid td,
+[data-theme="light"] table.xvy-grid th {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #000000 !important;
 }
 
 /* Remove old hard borders */
@@ -259,7 +294,8 @@ table.border-collapse th {
   /* Thick separator in light mode */
   table.ghost-borders td.thick-sep,
   table.ghost-borders th.thick-sep {
-    border-left: 2px solid #000000 !important;
+    border-left: none !important;
+    box-shadow: -2px 0 0 0 #000000;
   }
 
   /* Focus ring */

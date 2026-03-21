@@ -7,6 +7,7 @@ import AgentIcon from '../components/AgentIcon'
 import StatCell from '../components/StatCell'
 import XvYMatrix from '../components/XvYMatrix'
 import { formatPct, formatRatio } from '../utils/format'
+import { fkColor, fkfdColor, clColor, opColor, adrColor, aprColor } from '../utils/colors'
 import { generateTalkingPoints } from '../utils/talkingPoints'
 import type { MapStats, CompStats, Player } from '../types'
 
@@ -109,16 +110,16 @@ export default function TeamOverview() {
           </div>
           <div className="flex-1 overflow-x-auto custom-scrollbar">
             <table className="w-full text-left ghost-borders">
-              <thead className="bg-surface-container/60 sticky top-0 z-10">
+              <thead className="bg-surface-container sticky top-0 z-10">
                 {/* Group headers */}
                 <tr>
                   <th colSpan={3} className="px-3 py-2 scannable-label text-center border-b border-white/5"></th>
                   <th colSpan={3} className="px-3 py-2 scannable-label text-center border-b border-white/5 thick-sep"></th>
-                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-on-surface/60 border-b border-white/5 border-l border-white/5">All Rounds</th>
-                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-secondary/80 border-b border-white/5 border-l border-white/5">Pistols</th>
-                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-primary/80 border-b border-white/5 border-l border-white/5">Gun</th>
-                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-tertiary/80 border-b border-white/5 border-l border-white/5">Anti Eco</th>
-                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-error/60 border-b border-white/5 border-l border-white/5">Eco</th>
+                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-on-surface/60 border-b border-white/5 thick-sep">All Rounds</th>
+                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-secondary/80 border-b border-white/5 thick-sep">Pistols</th>
+                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-primary/80 border-b border-white/5 thick-sep">Gun</th>
+                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-tertiary/80 border-b border-white/5 thick-sep">Anti Eco</th>
+                  <th colSpan={3} className="px-3 py-2 scannable-label text-center text-error/60 border-b border-white/5 thick-sep">Eco</th>
                 </tr>
                 {/* Column headers */}
                 <tr>
@@ -128,19 +129,19 @@ export default function TeamOverview() {
                   <th className="px-2 py-2 scannable-label text-center thick-sep">P</th>
                   <th className="px-2 py-2 scannable-label text-center">W</th>
                   <th className="px-2 py-2 scannable-label text-center">L</th>
-                  <th className="px-2 py-2 scannable-label text-center border-l border-white/5">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
                   <th className="px-2 py-2 scannable-label text-center">aW%</th>
                   <th className="px-2 py-2 scannable-label text-center">dW%</th>
-                  <th className="px-2 py-2 scannable-label text-center border-l border-white/5">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
                   <th className="px-2 py-2 scannable-label text-center">aW%</th>
                   <th className="px-2 py-2 scannable-label text-center">dW%</th>
-                  <th className="px-2 py-2 scannable-label text-center border-l border-white/5">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
                   <th className="px-2 py-2 scannable-label text-center">aW%</th>
                   <th className="px-2 py-2 scannable-label text-center">dW%</th>
-                  <th className="px-2 py-2 scannable-label text-center border-l border-white/5">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
                   <th className="px-2 py-2 scannable-label text-center">aW%</th>
                   <th className="px-2 py-2 scannable-label text-center">dW%</th>
-                  <th className="px-2 py-2 scannable-label text-center border-l border-white/5">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
                   <th className="px-2 py-2 scannable-label text-center">aW%</th>
                   <th className="px-2 py-2 scannable-label text-center">dW%</th>
                 </tr>
@@ -168,11 +169,11 @@ export default function TeamOverview() {
               <thead className="bg-surface-container/60">
                 <tr>
                   <th className="px-3 py-2 scannable-label text-left">Map</th>
-                  <th className="px-2 py-2 scannable-label text-center">Scens</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">Scens</th>
                   <th className="px-2 py-2 scannable-label text-center">/Map</th>
-                  <th className="px-2 py-2 scannable-label text-center">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
                   <th className="px-2 py-2 scannable-label text-center">Avg</th>
-                  <th className="px-2 py-2 scannable-label text-center">Rk</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">Rk</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -195,11 +196,11 @@ export default function TeamOverview() {
               <thead className="bg-surface-container/60">
                 <tr>
                   <th className="px-3 py-2 scannable-label text-left">Map</th>
-                  <th className="px-2 py-2 scannable-label text-center">Scens</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">Scens</th>
                   <th className="px-2 py-2 scannable-label text-center">/Map</th>
-                  <th className="px-2 py-2 scannable-label text-center">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
                   <th className="px-2 py-2 scannable-label text-center">Avg</th>
-                  <th className="px-2 py-2 scannable-label text-center">Rk</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">Rk</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -216,26 +217,26 @@ export default function TeamOverview() {
       {/* ── Player Stats + XvY ── */}
       <div className="flex gap-6">
         {/* Player Metrics */}
-        <section className="flex-1 min-w-0 bg-surface-container-low rounded-2xl overflow-hidden border border-white/5 flex flex-col">
+        <section className="w-1/2 shrink-0 bg-surface-container-low rounded-2xl overflow-hidden border border-white/5 flex flex-col">
           <div className="px-5 py-3 bg-surface-container-high/60 flex items-center gap-2 border-b border-white/5">
             <span className="material-symbols-outlined text-secondary text-lg">person</span>
-            <h3 className="font-headline font-bold text-xs tracking-tight uppercase">Individual Elite Metrics</h3>
+            <h3 className="font-headline font-bold text-xs tracking-tight uppercase">Players</h3>
           </div>
           <div className="flex-1 overflow-x-auto custom-scrollbar">
             <table className="w-full text-left ghost-borders">
               <thead className="bg-surface-container/60 sticky top-0 z-10">
                 <tr>
-                  <th className="px-3 py-2 scannable-label text-left">Player</th>
-                  <th className="px-2 py-2 scannable-label text-center">Agents</th>
-                  <th className="px-2 py-2 scannable-label text-center">Rnds</th>
-                  <th className="px-2 py-2 scannable-label text-center">K/D</th>
-                  <th className="px-2 py-2 scannable-label text-center">KA/D</th>
-                  <th className="px-2 py-2 scannable-label text-center">KAST</th>
-                  <th className="px-2 py-2 scannable-label text-center">FK/r</th>
+                  <th className="px-3 py-2 scannable-label text-left whitespace-nowrap">Player</th>
+                  <th className="px-2 py-2 scannable-label text-center whitespace-nowrap">Agents</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">Rnds</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">K/D</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help" title="Average Damage per Round">ADR</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help" title="Assists per Round">APR</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">FK/r</th>
                   <th className="px-2 py-2 scannable-label text-center">FD/r</th>
-                  <th className="px-2 py-2 scannable-label text-center">FK/FD</th>
-                  <th className="px-2 py-2 scannable-label text-center">CL%</th>
-                  <th className="px-2 py-2 scannable-label text-center">OP%</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help" title="Percentage of opening duels won (FK / (FK + FD))">FK%</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help thick-sep" title="Percentage of clutch situations won">CL%</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help thick-sep" title="Percentage of kills made with the Operator">OP%</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -248,10 +249,9 @@ export default function TeamOverview() {
         </section>
 
         {/* XvY Matrices */}
-        <div className="shrink-0 flex gap-3">
-          <XvYMatrix title="Team XvY" entries={team.xvy} mode="absolute" />
-          <XvYMatrix title="XvY vs Avg" entries={team.xvy} averages={averages.xvy} mode="delta" />
-          <XvYMatrix title="Attending Avg" averages={averages.xvy} mode="average" />
+        <div className="flex-1 flex gap-3 self-start">
+          <div className="flex-1"><XvYMatrix title="Team XvY" entries={team.xvy} mode="absolute" /></div>
+          <div className="flex-1"><XvYMatrix title="XvY vs Avg" entries={team.xvy} averages={averages.xvy} mode="delta" /></div>
         </div>
       </div>
 
@@ -288,13 +288,13 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false }: { ms:
   const rowClass = isAggregate
     ? 'bg-surface-container-high/40 border-t border-white/10'
     : highlight
-      ? 'bg-primary/5 border-l-2 border-l-primary'
+      ? 'bg-primary/5'
       : 'hover:bg-white/5 transition-colors'
 
   return (
     <Fragment>
       <tr className={`${rowClass} ${hasComps ? 'cursor-pointer' : ''}`} onClick={() => hasComps && setExpanded(v => !v)}>
-        <td className="px-3 py-2.5 text-left font-bold text-on-surface text-sm whitespace-nowrap">
+        <td className="px-3 py-2.5 text-left font-bold text-on-surface text-xs whitespace-nowrap">
           {isAggregate ? 'All Maps' : ms.map}
         </td>
         <td className="px-2 py-2.5 text-center">
@@ -309,23 +309,23 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false }: { ms:
         <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.wins}</td>
         <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.losses}</td>
         {/* All rounds */}
-        <StatCell value={ms.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
         <StatCell value={ms.atk_rW_pct} mean={a.atk_rW_pct?.mean} std={a.atk_rW_pct?.std} format={formatPct} />
         <StatCell value={ms.def_rW_pct} mean={a.def_rW_pct?.mean} std={a.def_rW_pct?.std} format={formatPct} />
         {/* Pistols */}
-        <StatCell value={ms.pistol_rW_pct} mean={a.pistol_rW_pct?.mean} std={a.pistol_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.pistol_rW_pct} mean={a.pistol_rW_pct?.mean} std={a.pistol_rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
         <StatCell value={ms.pistol_atk_rW_pct} mean={a.pistol_atk_rW_pct?.mean} std={a.pistol_atk_rW_pct?.std} format={formatPct} />
         <StatCell value={ms.pistol_def_rW_pct} mean={a.pistol_def_rW_pct?.mean} std={a.pistol_def_rW_pct?.std} format={formatPct} />
         {/* Gun */}
-        <StatCell value={ms.gun_rW_pct} mean={a.gun_rW_pct?.mean} std={a.gun_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.gun_rW_pct} mean={a.gun_rW_pct?.mean} std={a.gun_rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
         <StatCell value={ms.gun_atk_rW_pct} mean={a.gun_atk_rW_pct?.mean} std={a.gun_atk_rW_pct?.std} format={formatPct} />
         <StatCell value={ms.gun_def_rW_pct} mean={a.gun_def_rW_pct?.mean} std={a.gun_def_rW_pct?.std} format={formatPct} />
         {/* Anti Eco */}
-        <StatCell value={ms.antieco_rW_pct} mean={a.antieco_rW_pct?.mean} std={a.antieco_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.antieco_rW_pct} mean={a.antieco_rW_pct?.mean} std={a.antieco_rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
         <StatCell value={ms.antieco_atk_rW_pct} mean={a.antieco_atk_rW_pct?.mean} std={a.antieco_atk_rW_pct?.std} format={formatPct} />
         <StatCell value={ms.antieco_def_rW_pct} mean={a.antieco_def_rW_pct?.mean} std={a.antieco_def_rW_pct?.std} format={formatPct} />
         {/* Eco */}
-        <StatCell value={ms.eco_rW_pct} mean={a.eco_rW_pct?.mean} std={a.eco_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+        <StatCell value={ms.eco_rW_pct} mean={a.eco_rW_pct?.mean} std={a.eco_rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
         <StatCell value={ms.eco_atk_rW_pct} mean={a.eco_atk_rW_pct?.mean} std={a.eco_atk_rW_pct?.std} format={formatPct} />
         <StatCell value={ms.eco_def_rW_pct} mean={a.eco_def_rW_pct?.mean} std={a.eco_def_rW_pct?.std} format={formatPct} />
       </tr>
@@ -339,7 +339,7 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false }: { ms:
 function CompRow({ c, avgs }: { c: CompStats; avgs: Record<string, { mean: number; std: number }> }) {
   const a = avgs
   return (
-    <tr className="bg-surface-container/30">
+    <tr className="bg-surface-container/10">
       <td className="px-3 py-1.5 text-left text-xs text-text-dim pl-8"></td>
       <td className="px-2 py-1.5 text-center">
         <div className="flex gap-0.5 justify-center">
@@ -349,27 +349,27 @@ function CompRow({ c, avgs }: { c: CompStats; avgs: Record<string, { mean: numbe
         </div>
       </td>
       <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.comp_count}</td>
-      <td className="px-2 py-1.5 text-center text-xs text-text-dim thick-sep">{c.plays}</td>
+      <td className="px-2 py-1.5 text-center text-xs text-on-surface thick-sep">{c.plays}</td>
       <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.wins}</td>
       <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.losses}</td>
       {/* All rounds */}
-      <StatCell value={c.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+      <StatCell value={c.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
       <StatCell value={c.atk_rW_pct} mean={a.atk_rW_pct?.mean} std={a.atk_rW_pct?.std} format={formatPct} />
       <StatCell value={c.def_rW_pct} mean={a.def_rW_pct?.mean} std={a.def_rW_pct?.std} format={formatPct} />
       {/* Pistols */}
-      <StatCell value={c.pistol_rW_pct} mean={a.pistol_rW_pct?.mean} std={a.pistol_rW_pct?.std} format={formatPct} className="border-l border-white/5" boldBlack />
+      <StatCell value={c.pistol_rW_pct} mean={a.pistol_rW_pct?.mean} std={a.pistol_rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
       <StatCell value={c.pistol_atk_rW_pct} mean={a.pistol_atk_rW_pct?.mean} std={a.pistol_atk_rW_pct?.std} format={formatPct} />
       <StatCell value={c.pistol_def_rW_pct} mean={a.pistol_def_rW_pct?.mean} std={a.pistol_def_rW_pct?.std} format={formatPct} />
       {/* Gun — not available per comp */}
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs border-l border-white/5">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs thick-sep">-</td>
       <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
       <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
       {/* Anti Eco — not available per comp */}
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs border-l border-white/5">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs thick-sep">-</td>
       <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
       <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
       {/* Eco — not available per comp */}
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs border-l border-white/5">-</td>
+      <td className="px-2 py-1.5 text-center text-text-dim text-xs thick-sep">-</td>
       <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
       <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
     </tr>
@@ -405,11 +405,11 @@ function PostPlantRow({ ms, avgs, siteAvgs, isAggregate = false, type }: { ms: M
             {isAggregate ? 'All Maps' : ms.map}
           </div>
         </td>
-        <td className="px-2 py-2 text-center text-xs text-on-surface">{scens}</td>
-        <td className="px-2 py-2 text-center text-xs text-on-surface">{formatRatio(perMap)}</td>
-        <StatCell value={rwPct} mean={a[statKey]?.mean} std={a[statKey]?.std} format={formatPct} />
-        <td className="px-2 py-2 text-center text-xs text-on-surface-variant">{formatPct(avg)}</td>
-        <td className="px-2 py-2 text-center text-xs text-on-surface font-bold">{rank}</td>
+        <td className="px-2 py-2 text-center text-xs text-on-surface font-bold thick-sep">{scens}</td>
+        <td className="px-2 py-2 text-center text-xs text-on-surface font-bold">{formatRatio(perMap)}</td>
+        <StatCell value={rwPct} mean={a[statKey]?.mean} std={a[statKey]?.std} format={formatPct} className="thick-sep" />
+        <td className="px-2 py-2 text-center text-xs text-on-surface-variant font-bold">{formatPct(avg)}</td>
+        <td className="px-2 py-2 text-center text-xs text-on-surface font-bold thick-sep">{rank}</td>
       </tr>
       {expanded && sites.map(site => {
         const sd = bySite![site]
@@ -421,11 +421,11 @@ function PostPlantRow({ ms, avgs, siteAvgs, isAggregate = false, type }: { ms: M
             <td className="pl-8 pr-3 py-1.5 text-left text-xs text-on-surface whitespace-nowrap">
               Site {site}
             </td>
-            <td className="px-2 py-1.5 text-center text-xs text-on-surface">{sd.scens}</td>
-            <td className="px-2 py-1.5 text-center text-xs text-on-surface">{ms.plays > 0 ? formatRatio(sd.scens / ms.plays) : '—'}</td>
-            <StatCell value={sd.pct} mean={siteStats?.mean} std={siteStats?.std} format={formatPct} />
-            <td className="px-2 py-1.5 text-center text-xs text-on-surface">{formatPct(siteAvg)}</td>
-            <td className="px-2 py-1.5 text-center text-xs text-on-surface">—</td>
+            <td className="px-2 py-1.5 text-center text-xs text-on-surface font-bold thick-sep">{sd.scens}</td>
+            <td className="px-2 py-1.5 text-center text-xs text-on-surface font-bold">{ms.plays > 0 ? formatRatio(sd.scens / ms.plays) : '—'}</td>
+            <StatCell value={sd.pct} mean={siteStats?.mean} std={siteStats?.std} format={formatPct} className="thick-sep" />
+            <td className="px-2 py-1.5 text-center text-xs text-on-surface font-bold">{formatPct(siteAvg)}</td>
+            <td className="px-2 py-1.5 text-center text-xs text-on-surface font-bold thick-sep">—</td>
           </tr>
         )
       })}
@@ -437,12 +437,13 @@ function PlayerRow({ player, avgP }: { player: Player; avgP: Record<string, { me
   const topAgents = [...player.agents].sort((a, b) => b.picks - a.picks).slice(0, 3)
   const fkPerR = player.rounds > 0 ? player.fk / player.rounds : 0
   const fdPerR = player.rounds > 0 ? player.fd / player.rounds : 0
-  const fkfd = player.fd > 0 ? player.fk / player.fd : player.fk > 0 ? Infinity : 0
+  const fkfdPct = (player.fk + player.fd) > 0 ? player.fk / (player.fk + player.fd) : 0
+  const aprVal = player.rounds > 0 ? player.assists / player.rounds : 0
 
   return (
     <tr className="hover:bg-white/5 transition-colors">
-      <td className="px-3 py-2.5 text-left whitespace-nowrap">
-        <Link to={`/player/${encodeURIComponent(player.ign)}`} className="text-player-link hover:underline font-bold text-xs">
+      <td className="px-3 py-2.5 text-left whitespace-nowrap font-bold">
+        <Link to={`/player/${encodeURIComponent(player.ign)}`} className="text-player-link hover:underline">
           {player.ign}
         </Link>
       </td>
@@ -453,15 +454,15 @@ function PlayerRow({ player, avgP }: { player: Player; avgP: Record<string, { me
           ))}
         </div>
       </td>
-      <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface">{player.rounds}</td>
-      <StatCell value={player.kd} mean={avgP.kd?.mean} std={avgP.kd?.std} format={formatRatio} />
-      <StatCell value={player.kad} mean={avgP.kad?.mean} std={avgP.kad?.std} format={formatRatio} />
-      <StatCell value={player.kast} mean={avgP.kast?.mean} std={avgP.kast?.std} format={formatPct} />
-      <StatCell value={fkPerR} mean={avgP.fk_pct?.mean} std={avgP.fk_pct?.std} format={formatRatio} />
+      <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface thick-sep">{player.rounds}</td>
+      <StatCell value={player.kd} mean={avgP.kd?.mean} std={avgP.kd?.std} format={formatRatio} className="thick-sep" />
+      <StatCell value={player.adr} format={(v: number) => Math.round(v).toString()} customColor={adrColor} />
+      <StatCell value={aprVal} format={formatRatio} customColor={aprColor} />
+      <StatCell value={fkPerR} mean={avgP.fk_pct?.mean} std={avgP.fk_pct?.std} format={formatRatio} customColor={fkColor} className="thick-sep" />
       <StatCell value={fdPerR} mean={avgP.fd_pct?.mean} std={avgP.fd_pct?.std} format={formatRatio} invert />
-      <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface">{fkfd === Infinity ? '-' : formatRatio(fkfd)}</td>
-      <StatCell value={player.clutch_pct} mean={avgP.clutch_pct?.mean} std={avgP.clutch_pct?.std} format={formatPct} />
-      <StatCell value={player.awp_pct} mean={avgP.awp_pct?.mean} std={avgP.awp_pct?.std} format={formatPct} />
+      <StatCell value={fkfdPct} format={formatPct} customColor={fkfdColor} />
+      <StatCell value={player.clutch_pct} mean={avgP.clutch_pct?.mean} std={avgP.clutch_pct?.std} format={formatPct} customColor={clColor} className="thick-sep" />
+      <StatCell value={player.awp_pct} mean={avgP.awp_pct?.mean} std={avgP.awp_pct?.std} format={formatPct} customColor={opColor} className="thick-sep" />
     </tr>
   )
 }
