@@ -80,6 +80,7 @@
   --theme-white-overlay: rgba(255, 255, 255, 0.05);
   --theme-scrollbar-thumb: rgba(161, 255, 194, 0.2);
   --theme-shadow-dropdown: rgba(0, 0, 0, 0.4);
+  --theme-site-expand-bg: rgba(255, 255, 255, 0.03);
   /* Heat map base colors (rgb channels only) */
   --theme-heat-positive: 161, 255, 194;
   --theme-heat-negative: 255, 113, 108;
@@ -121,6 +122,7 @@
   --theme-white-overlay: rgba(0, 0, 0, 0.03);
   --theme-scrollbar-thumb: rgba(10, 143, 66, 0.3);
   --theme-shadow-dropdown: rgba(0, 0, 0, 0.12);
+  --theme-site-expand-bg: rgba(0, 0, 0, 0.03);
   --theme-heat-positive: 22, 163, 74;
   --theme-heat-negative: 220, 38, 38;
 }
@@ -159,6 +161,7 @@ body {
 .text-on-surface\/60 { color: color-mix(in srgb, var(--theme-on-surface) 60%, transparent) !important; }
 .text-outline { color: var(--theme-outline) !important; }
 
+.text-player-link { color: #4a90d9 !important; }
 .text-primary { color: var(--theme-primary) !important; }
 .text-primary-dim { color: var(--theme-primary-dim) !important; }
 .text-secondary { color: var(--theme-secondary) !important; }

@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
 import TeamSelector from '../components/TeamSelector'
@@ -175,9 +175,9 @@ export default function TeamOverview() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {mapRows.map(ms => (
-                  <PostPlantRow key={ms.map} ms={ms} avgs={averages.perMap[ms.map]} type="post" />
+                  <PostPlantRow key={ms.map} ms={ms} avgs={averages.perMap[ms.map]} siteAvgs={averages.perMapSiteAvgs[ms.map]} type="post" />
                 ))}
-                <PostPlantRow ms={team.allMaps} avgs={averages.team} isAggregate type="post" />
+                <PostPlantRow ms={team.allMaps} avgs={averages.team} siteAvgs={averages.siteAvgs} isAggregate type="post" />
               </tbody>
             </table>
           </div>
@@ -202,9 +202,9 @@ export default function TeamOverview() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {mapRows.map(ms => (
-                  <PostPlantRow key={ms.map} ms={ms} avgs={averages.perMap[ms.map]} type="ret" />
+                  <PostPlantRow key={ms.map} ms={ms} avgs={averages.perMap[ms.map]} siteAvgs={averages.perMapSiteAvgs[ms.map]} type="ret" />
                 ))}
-                <PostPlantRow ms={team.allMaps} avgs={averages.team} isAggregate type="ret" />
+                <PostPlantRow ms={team.allMaps} avgs={averages.team} siteAvgs={averages.siteAvgs} isAggregate type="ret" />
               </tbody>
             </table>
           </div>
@@ -324,8 +324,10 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false }: { ms:
   )
 }
 
-function PostPlantRow({ ms, avgs, isAggregate = false, type }: { ms: MapStats; avgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; type: 'post' | 'ret' }) {
+function PostPlantRow({ ms, avgs, siteAvgs, isAggregate = false, type }: { ms: MapStats; avgs?: Record<string, { mean: number; std: number }>; siteAvgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; type: 'post' | 'ret' }) {
+  const [expanded, setExpanded] = useState(false)
   const a = avgs || {}
+  const sa = siteAvgs || {}
   const rowClass = isAggregate ? 'bg-surface-container-high/40 border-t border-white/10' : 'hover:bg-white/5 transition-colors'
 
   const scens = type === 'post' ? ms.post_scens : ms.ret_scens
@@ -334,16 +336,48 @@ function PostPlantRow({ ms, avgs, isAggregate = false, type }: { ms: MapStats; a
   const avg = type === 'post' ? ms.post_rW_event_avg : ms.ret_rW_event_avg
   const rank = type === 'post' ? ms.post_rank : ms.ret_rank
   const statKey = type === 'post' ? 'post_rW_pct' : 'ret_rW_pct'
+  const bySite = type === 'post' ? ms.post_by_site : ms.ret_by_site
+  const sites = bySite ? Object.keys(bySite).filter(s => s !== '?').sort() : []
+  const hasSites = sites.length > 0
 
   return (
-    <tr className={rowClass}>
-      <td className="px-3 py-2 text-left font-bold text-on-surface text-xs whitespace-nowrap">{isAggregate ? 'All Maps' : ms.map}</td>
-      <td className="px-2 py-2 text-center text-xs text-on-surface">{scens}</td>
-      <td className="px-2 py-2 text-center text-xs text-on-surface">{formatRatio(perMap)}</td>
-      <StatCell value={rwPct} mean={a[statKey]?.mean} std={a[statKey]?.std} format={formatPct} />
-      <td className="px-2 py-2 text-center text-xs text-text-dim">{formatPct(avg)}</td>
-      <td className="px-2 py-2 text-center text-xs text-on-surface font-bold">{rank}</td>
-    </tr>
+    <Fragment>
+      <tr className={`${rowClass} cursor-pointer`} onClick={() => hasSites && setExpanded(v => !v)}>
+        <td className="px-3 py-2 text-left font-bold text-on-surface text-xs whitespace-nowrap">
+          <div className="flex items-center gap-1">
+            {hasSites && (
+              <span className={`material-symbols-outlined text-sm text-text-dim transition-transform ${expanded ? 'rotate-90' : ''}`}>
+                chevron_right
+              </span>
+            )}
+            {isAggregate ? 'All Maps' : ms.map}
+          </div>
+        </td>
+        <td className="px-2 py-2 text-center text-xs text-on-surface">{scens}</td>
+        <td className="px-2 py-2 text-center text-xs text-on-surface">{formatRatio(perMap)}</td>
+        <StatCell value={rwPct} mean={a[statKey]?.mean} std={a[statKey]?.std} format={formatPct} />
+        <td className="px-2 py-2 text-center text-xs text-on-surface-variant">{formatPct(avg)}</td>
+        <td className="px-2 py-2 text-center text-xs text-on-surface font-bold">{rank}</td>
+      </tr>
+      {expanded && sites.map(site => {
+        const sd = bySite![site]
+        const siteStatKey = `${type}_${site}`
+        const siteStats = sa[siteStatKey]
+        const siteAvg = siteStats?.mean ?? 0
+        return (
+          <tr key={site} className="bg-white/3 dark:bg-white/3" style={{ backgroundColor: 'var(--theme-site-expand-bg, rgba(255,255,255,0.03))' }}>
+            <td className="pl-8 pr-3 py-1.5 text-left text-xs text-on-surface whitespace-nowrap">
+              Site {site}
+            </td>
+            <td className="px-2 py-1.5 text-center text-xs text-on-surface">{sd.scens}</td>
+            <td className="px-2 py-1.5 text-center text-xs text-on-surface">{ms.plays > 0 ? formatRatio(sd.scens / ms.plays) : '—'}</td>
+            <StatCell value={sd.pct} mean={siteStats?.mean} std={siteStats?.std} format={formatPct} />
+            <td className="px-2 py-1.5 text-center text-xs text-on-surface">{formatPct(siteAvg)}</td>
+            <td className="px-2 py-1.5 text-center text-xs text-on-surface">—</td>
+          </tr>
+        )
+      })}
+    </Fragment>
   )
 }
 
@@ -356,7 +390,7 @@ function PlayerRow({ player, avgP }: { player: Player; avgP: Record<string, { me
   return (
     <tr className="hover:bg-white/5 transition-colors">
       <td className="px-3 py-2.5 text-left whitespace-nowrap">
-        <Link to={`/player/${encodeURIComponent(player.ign)}`} className="text-primary hover:underline font-bold text-xs">
+        <Link to={`/player/${encodeURIComponent(player.ign)}`} className="text-player-link hover:underline font-bold text-xs">
           {player.ign}
         </Link>
       </td>

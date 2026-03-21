@@ -210,7 +210,7 @@ export default function AgentStats() {
                       <AgentIcon agent={agentFilter} size={18} />
                       <Link
                         to={`/player/${encodeURIComponent(p.ign)}`}
-                        className="text-primary hover:underline font-medium"
+                        className="text-player-link hover:underline font-medium"
                       >
                         {p.ign}
                       </Link>

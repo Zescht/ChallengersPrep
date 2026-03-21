@@ -348,7 +348,7 @@ function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team;
     return (
       <tr className="border-b border-border">
         <td className="px-2 py-1">
-          <Link to={`/player/${encodeURIComponent(player.ign)}`} className="text-primary hover:underline text-sm">
+          <Link to={`/player/${encodeURIComponent(player.ign)}`} className="text-player-link hover:underline text-sm">
             {player.ign}
           </Link>
         </td>

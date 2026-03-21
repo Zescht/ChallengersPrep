@@ -308,7 +308,7 @@ export default function Leaderboards() {
                           )}
                           <Link
                             to={`/player/${encodeURIComponent(p.ign)}`}
-                            className="text-primary hover:underline font-bold text-xs"
+                            className="text-player-link hover:underline font-bold text-xs"
                           >
                             {p.ign}
                           </Link>
