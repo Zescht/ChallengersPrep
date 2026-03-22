@@ -7,7 +7,7 @@ import AgentIcon from '../components/AgentIcon'
 import StatCell from '../components/StatCell'
 import XvYMatrix from '../components/XvYMatrix'
 import { formatPct, formatRatio } from '../utils/format'
-import { fkColor, fkfdColor, clColor, opColor, adrColor, aprColor } from '../utils/colors'
+import { fkColor, fkfdColor, clColor, opColor, adrColor, aprColor, retakeColor } from '../utils/colors'
 import { generateTalkingPoints } from '../utils/talkingPoints'
 import type { MapStats, CompStats, Player } from '../types'
 
@@ -35,7 +35,7 @@ export default function TeamOverview() {
   if (!team) return <div className="p-8 text-error">Team not found: {teamName}</div>
 
   const teamPlayers = data.players.filter(p => p.team === team.name)
-  const mapRows = [...team.maps].sort((a, b) => b.plays - a.plays)
+  const mapRows = [...team.maps].sort((a, b) => a.map.localeCompare(b.map))
   const talkingPoints = generateTalkingPoints(team, data, averages)
 
   const mapWins = mapRows.reduce((s, m) => s + m.wins, 0)
@@ -171,7 +171,7 @@ export default function TeamOverview() {
                   <th className="px-3 py-2 scannable-label text-left">Map</th>
                   <th className="px-2 py-2 scannable-label text-center thick-sep">Scens</th>
                   <th className="px-2 py-2 scannable-label text-center">/Map</th>
-                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">WIN%</th>
                   <th className="px-2 py-2 scannable-label text-center">Avg</th>
                   <th className="px-2 py-2 scannable-label text-center thick-sep">Rk</th>
                 </tr>
@@ -198,7 +198,7 @@ export default function TeamOverview() {
                   <th className="px-3 py-2 scannable-label text-left">Map</th>
                   <th className="px-2 py-2 scannable-label text-center thick-sep">Scens</th>
                   <th className="px-2 py-2 scannable-label text-center">/Map</th>
-                  <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep">WIN%</th>
                   <th className="px-2 py-2 scannable-label text-center">Avg</th>
                   <th className="px-2 py-2 scannable-label text-center thick-sep">Rk</th>
                 </tr>
@@ -294,7 +294,7 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false }: { ms:
   return (
     <Fragment>
       <tr className={`${rowClass} ${hasComps ? 'cursor-pointer' : ''}`} onClick={() => hasComps && setExpanded(v => !v)}>
-        <td className="px-3 py-2.5 text-left font-bold text-on-surface text-xs whitespace-nowrap">
+        <td className="px-3 py-2.5 text-left font-bold font-table text-on-surface text-xs whitespace-nowrap">
           {isAggregate ? 'All Maps' : ms.map}
         </td>
         <td className="px-2 py-2.5 text-center">
@@ -304,10 +304,10 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false }: { ms:
             ))}
           </div>
         </td>
-        <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.comp_count || ''}</td>
-        <td className="px-2 py-2.5 text-center text-xs text-on-surface thick-sep">{ms.plays}</td>
-        <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.wins}</td>
-        <td className="px-2 py-2.5 text-center text-xs text-on-surface">{ms.losses}</td>
+        <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface">{ms.comp_count || ''}</td>
+        <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface thick-sep">{ms.plays}</td>
+        <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface">{ms.wins}</td>
+        <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface">{ms.losses}</td>
         {/* All rounds */}
         <StatCell value={ms.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
         <StatCell value={ms.atk_rW_pct} mean={a.atk_rW_pct?.mean} std={a.atk_rW_pct?.std} format={formatPct} />
@@ -348,10 +348,10 @@ function CompRow({ c, avgs }: { c: CompStats; avgs: Record<string, { mean: numbe
           ))}
         </div>
       </td>
-      <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.comp_count}</td>
-      <td className="px-2 py-1.5 text-center text-xs text-on-surface thick-sep">{c.plays}</td>
-      <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.wins}</td>
-      <td className="px-2 py-1.5 text-center text-xs text-on-surface">{c.losses}</td>
+      <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{c.comp_count}</td>
+      <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface thick-sep">{c.plays}</td>
+      <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{c.wins}</td>
+      <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{c.losses}</td>
       {/* All rounds */}
       <StatCell value={c.rW_pct} mean={a.rW_pct?.mean} std={a.rW_pct?.std} format={formatPct} className="thick-sep" boldBlack />
       <StatCell value={c.atk_rW_pct} mean={a.atk_rW_pct?.mean} std={a.atk_rW_pct?.std} format={formatPct} />
@@ -361,17 +361,17 @@ function CompRow({ c, avgs }: { c: CompStats; avgs: Record<string, { mean: numbe
       <StatCell value={c.pistol_atk_rW_pct} mean={a.pistol_atk_rW_pct?.mean} std={a.pistol_atk_rW_pct?.std} format={formatPct} />
       <StatCell value={c.pistol_def_rW_pct} mean={a.pistol_def_rW_pct?.mean} std={a.pistol_def_rW_pct?.std} format={formatPct} />
       {/* Gun — not available per comp */}
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs thick-sep">-</td>
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs thick-sep">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs">-</td>
       {/* Anti Eco — not available per comp */}
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs thick-sep">-</td>
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs thick-sep">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs">-</td>
       {/* Eco — not available per comp */}
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs thick-sep">-</td>
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
-      <td className="px-2 py-1.5 text-center text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs thick-sep">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs">-</td>
+      <td className="px-2 py-1.5 text-center font-table text-text-dim text-xs">-</td>
     </tr>
   )
 }
@@ -395,7 +395,7 @@ function PostPlantRow({ ms, avgs, siteAvgs, isAggregate = false, type }: { ms: M
   return (
     <Fragment>
       <tr className={`${rowClass} cursor-pointer`} onClick={() => hasSites && setExpanded(v => !v)}>
-        <td className="px-3 py-2 text-left font-bold text-on-surface text-xs whitespace-nowrap">
+        <td className="px-3 py-2 text-left font-bold font-table text-on-surface text-xs whitespace-nowrap">
           <div className="flex items-center gap-1">
             {hasSites && (
               <span className={`material-symbols-outlined text-sm text-text-dim transition-transform ${expanded ? 'rotate-90' : ''}`}>
@@ -405,11 +405,11 @@ function PostPlantRow({ ms, avgs, siteAvgs, isAggregate = false, type }: { ms: M
             {isAggregate ? 'All Maps' : ms.map}
           </div>
         </td>
-        <td className="px-2 py-2 text-center text-xs text-on-surface font-bold thick-sep">{scens}</td>
-        <td className="px-2 py-2 text-center text-xs text-on-surface font-bold">{formatRatio(perMap)}</td>
-        <StatCell value={rwPct} mean={a[statKey]?.mean} std={a[statKey]?.std} format={formatPct} className="thick-sep" />
-        <td className="px-2 py-2 text-center text-xs text-on-surface-variant font-bold">{formatPct(avg)}</td>
-        <td className="px-2 py-2 text-center text-xs text-on-surface font-bold thick-sep">{rank}</td>
+        <td className="px-2 py-2 text-center font-table text-xs text-on-surface font-bold thick-sep">{scens}</td>
+        <td className="px-2 py-2 text-center font-table text-xs text-on-surface font-bold">{formatRatio(perMap)}</td>
+        <StatCell value={rwPct} format={formatPct} customColor={retakeColor} className="thick-sep" />
+        <td className="px-2 py-2 text-center font-table text-xs text-on-surface-variant font-bold">{formatPct(avg)}</td>
+        <td className="px-2 py-2 text-center font-table text-xs text-on-surface font-bold thick-sep">{rank}</td>
       </tr>
       {expanded && sites.map(site => {
         const sd = bySite![site]
@@ -418,14 +418,14 @@ function PostPlantRow({ ms, avgs, siteAvgs, isAggregate = false, type }: { ms: M
         const siteAvg = siteStats?.mean ?? 0
         return (
           <tr key={site} className="bg-white/3 dark:bg-white/3" style={{ backgroundColor: 'var(--theme-site-expand-bg, rgba(255,255,255,0.03))' }}>
-            <td className="pl-8 pr-3 py-1.5 text-left text-xs text-on-surface whitespace-nowrap">
+            <td className="pl-8 pr-3 py-1.5 text-left font-table text-xs text-on-surface whitespace-nowrap">
               Site {site}
             </td>
-            <td className="px-2 py-1.5 text-center text-xs text-on-surface font-bold thick-sep">{sd.scens}</td>
-            <td className="px-2 py-1.5 text-center text-xs text-on-surface font-bold">{ms.plays > 0 ? formatRatio(sd.scens / ms.plays) : '—'}</td>
-            <StatCell value={sd.pct} mean={siteStats?.mean} std={siteStats?.std} format={formatPct} className="thick-sep" />
-            <td className="px-2 py-1.5 text-center text-xs text-on-surface font-bold">{formatPct(siteAvg)}</td>
-            <td className="px-2 py-1.5 text-center text-xs text-on-surface font-bold thick-sep">—</td>
+            <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold thick-sep">{sd.scens}</td>
+            <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold">{ms.plays > 0 ? formatRatio(sd.scens / ms.plays) : '—'}</td>
+            <StatCell value={sd.pct} format={formatPct} customColor={retakeColor} className="thick-sep" />
+            <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold">{formatPct(siteAvg)}</td>
+            <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold thick-sep">—</td>
           </tr>
         )
       })}
@@ -442,7 +442,7 @@ function PlayerRow({ player, avgP }: { player: Player; avgP: Record<string, { me
 
   return (
     <tr className="hover:bg-white/5 transition-colors">
-      <td className="px-3 py-2.5 text-left whitespace-nowrap font-bold">
+      <td className="px-3 py-2.5 text-left whitespace-nowrap font-bold font-table">
         <Link to={`/player/${encodeURIComponent(player.ign)}`} className="text-player-link hover:underline">
           {player.ign}
         </Link>

@@ -22,11 +22,13 @@ export default function StatCell({ value, mean, std, format, invert = false, cla
       ? heatColor(value, mean, std, invert)
       : 'transparent'
 
-  // Determine text color based on z-score for stronger signals
+  // In dark mode, use white text on colored cells for readability.
+  // Colored text (green/red) is only used in light mode where backgrounds are pale.
+  const hasColoredBg = bg !== 'transparent'
   let textClass = 'text-on-surface'
   if (boldBlack) {
     textClass = 'stat-bold-black'
-  } else if (mean != null && std != null && std > 0) {
+  } else if (!hasColoredBg && mean != null && std != null && std > 0) {
     let z = (value - mean) / std
     if (invert) z = -z
     if (z >= 1.5) textClass = 'text-primary'

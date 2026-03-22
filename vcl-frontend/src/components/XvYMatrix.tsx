@@ -1,5 +1,5 @@
 import { buildXvYMatrix, buildAvgMatrix } from '../utils/xvy'
-import { heatColor } from '../utils/colors'
+import { heatColor, xvyDeltaColor } from '../utils/colors'
 import { formatPct, formatDelta } from '../utils/format'
 import type { XvYEntry } from '../types'
 
@@ -62,11 +62,9 @@ export default function XvYMatrix({ title, entries, averages, mode }: XvYMatrixP
                   return <td key={colIdx} className="px-3 py-2 text-center text-sm">-</td>
                 }
 
-                // Use same color curve as Map Intelligence (heatColor with absolute % scale)
-                // For absolute: value is 0–1 win%, heatColor centers on 0.5
-                // For delta: value is a difference, shift by +0.5 so positive diffs → green, negative → red
-                const colorVal = mode === 'delta' ? val + 0.5 : val
-                const bg = heatColor(colorVal, 0.5, 1, false)
+                const bg = mode === 'delta'
+                  ? xvyDeltaColor(val)
+                  : heatColor(val, 0.5, 1, false)
                 const text = mode === 'delta' ? formatDelta(val) : formatPct(val)
 
                 return (

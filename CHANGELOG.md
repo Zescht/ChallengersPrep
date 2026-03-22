@@ -20,6 +20,32 @@ This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
 
 ---
 
+## [0.7.0] - 2026-03-21
+
+### Added
+- **Team Overview overhaul**: XvY matrix, form strip, persistent navbar, global search bar, stat cell refinements
+- **Per-comp expandable rows**: click to expand composition details per map
+- **Custom color scales**: team-tab stat cells use tailored red–green gradients with unified intensity constants
+- **XvY scaling**: clutch table sizing adjusted for readability; dedicated `xvyDeltaColor` for delta mode
+- **Percentile-based leaderboard coloring**: replaced z-score/std-dev system with percentile ranking for more intuitive color gradients
+- **Retake custom color scale**: `retakeColor` function for post-plant/retake win% cells
+
+### Changed
+- **Typography overhaul**: leaderboard and team page font hierarchy rewritten for density and clarity
+- Player name links styled dark blue (replacing green) for better contrast
+- rW% column values bold black; thick 3px separator between identity and stat columns
+- Player table layout refined with `font-table` class for compact broadcast-ready display
+- Maps sorted alphabetically in Team Overview (was by play count)
+- "rW%" column header renamed to "WIN%" in post-plant/retake tables
+- Color system unified: shared `MAX_OPACITY` (0.55) and `CURVE_POWER` (0.45) constants across all color scales
+- StatCell: colored text (green/red) only in light mode; dark mode uses white text on colored backgrounds
+
+### Fixed
+- TypeScript build errors in `AgentStats.tsx` and CI pipeline (bumped Node.js)
+- Player link color specificity issue resolved
+- GitHub Pages team logo paths use `BASE_URL` correctly
+- Dark mode: ghost-borders tables now use theme `on-surface` color
+
 ## [0.6.0] - 2026-03-20
 
 ### Added

@@ -233,6 +233,10 @@ table.ghost-borders td,
 table.ghost-borders th {
   border: 1px solid var(--theme-ghost-border);
 }
+table.ghost-borders td,
+table.ghost-borders th {
+  color: var(--theme-on-surface) !important;
+}
 [data-theme="light"] table.ghost-borders td,
 [data-theme="light"] table.ghost-borders th {
   color: #000000 !important;

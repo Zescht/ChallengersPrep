@@ -2,11 +2,47 @@ import { Fragment, useState, useMemo, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
 import { formatRatio, formatPct } from '../utils/format'
-import { heatColor } from '../utils/colors'
 import AgentIcon from '../components/AgentIcon'
 import type { Player, AgentPlayer } from '../types'
 
 const MIN_ROUNDS = 100
+
+/**
+ * Compute percentile rank (0 = worst, 1 = best) for a value within a sorted array.
+ * If invert is true, lower values are better (get percentile 1).
+ */
+function getPercentile(value: number, allValues: number[], invert: boolean): number {
+  if (allValues.length <= 1) return 0.5
+  const sorted = [...allValues].sort((a, b) => a - b)
+  let rank = 0
+  for (const v of sorted) {
+    if (v < value) rank++
+    else break
+  }
+  const pct = rank / (sorted.length - 1)
+  return invert ? 1 - pct : pct
+}
+
+/**
+ * Interpolate from deep red (worst) → green (good) → deep purple (best)
+ */
+function percentileToColor(pct: number): string {
+  if (pct <= 0.5) {
+    // Red → green
+    const t = pct / 0.5
+    const h = Math.round(120 * t) // 0 (red) → 120 (green)
+    const s = Math.round(55 - 15 * t + 15 * t)
+    const l = Math.round(65 + 18 * t) // 65→83
+    return `hsl(${h}, ${s}%, ${l}%)`
+  } else {
+    // Green → purple
+    const t = (pct - 0.5) / 0.5
+    const h = Math.round(120 + 150 * t) // 120 (green) → 270 (purple)
+    const s = Math.round(55 - 15 * t + 15 * t)
+    const l = Math.round(83 - 8 * t) // 83→75
+    return `hsl(${h}, ${s}%, ${l}%)`
+  }
+}
 
 const AGENT_ROLES: Record<string, string> = {
   // Controllers
@@ -66,12 +102,6 @@ const COLUMNS: Column[] = [
 ]
 
 /** Compute mean and std for an array of numbers */
-function computeStats(values: number[]): { mean: number; std: number } {
-  if (values.length === 0) return { mean: 0, std: 0 }
-  const mean = values.reduce((s, v) => s + v, 0) / values.length
-  const variance = values.reduce((s, v) => s + (v - mean) ** 2, 0) / values.length
-  return { mean, std: Math.sqrt(variance) }
-}
 
 export default function Leaderboards() {
   const { data } = useStats()
@@ -113,9 +143,9 @@ export default function Leaderboards() {
     return map
   }, [data])
 
-  // Pre-compute mean/std per column for heatColor (based on eligible players)
-  const colStats = useMemo(() => {
-    if (!data) return new Map<string, { mean: number; std: number }>()
+  // Pre-compute all values per column for percentile ranking (based on eligible players)
+  const colValues = useMemo(() => {
+    if (!data) return new Map<string, number[]>()
     const useRole = roleFilter && roleStats
     const source: Player[] = useRole
       ? (data.players_by_role ?? []).filter(p => (p as Player & { role?: string }).role === roleFilter)
@@ -123,9 +153,9 @@ export default function Leaderboards() {
     const eligible = source
       .filter(p => p.rounds >= MIN_ROUNDS)
       .filter(p => !roleFilter || useRole || playerPlaysRole(p, roleFilter!))
-    const map = new Map<string, { mean: number; std: number }>()
+    const map = new Map<string, number[]>()
     for (const c of COLUMNS) {
-      map.set(c.key, computeStats(eligible.map(p => c.getValue(p))))
+      map.set(c.key, eligible.map(p => c.getValue(p)))
     }
     return map
   }, [data, roleFilter, roleStats])
@@ -336,25 +366,14 @@ export default function Leaderboards() {
                       <td className="px-2 py-2 text-center font-table text-xs text-on-surface border-r border-white/10">{p.rounds}</td>
                       {COLUMNS.map(c => {
                         const val = c.getValue(p)
-                        const stats = colStats.get(c.key)
-                        const bg = stats && stats.std > 0
-                          ? heatColor(val, stats.mean, stats.std, c.invertColor)
-                          : 'transparent'
-
-                        let textClass = 'text-on-surface'
-                        if (stats && stats.std > 0) {
-                          let z = (val - stats.mean) / stats.std
-                          if (c.invertColor) z = -z
-                          if (z >= 1.5) textClass = 'text-primary font-bold'
-                          else if (z >= 0.8) textClass = 'text-primary-dim'
-                          else if (z <= -1.5) textClass = 'text-error font-bold'
-                          else if (z <= -0.8) textClass = 'text-error-dim'
-                        }
+                        const allVals = colValues.get(c.key) ?? []
+                        const pct = getPercentile(val, allVals, c.invertColor ?? false)
+                        const bg = percentileToColor(pct)
 
                         return (
                           <Fragment key={c.key}>
                             <td
-                              className={`px-2 py-1.5 text-center font-table text-xs whitespace-nowrap ${textClass}`}
+                              className="px-2 py-1.5 text-center font-table text-xs whitespace-nowrap text-on-surface"
                               style={{ backgroundColor: bg }}
                             >
                               {c.renderCell ? c.renderCell(p) : c.format(val)}
@@ -387,25 +406,14 @@ export default function Leaderboards() {
                         <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface border-r border-white/10">{ap.rounds}</td>
                         {COLUMNS.map(c => {
                           const val = c.getValue(ap)
-                          const stats = colStats.get(c.key)
-                          const bg = stats && stats.std > 0
-                            ? heatColor(val, stats.mean, stats.std, c.invertColor)
-                            : 'transparent'
-
-                          let textClass = 'text-on-surface'
-                          if (stats && stats.std > 0) {
-                            let z = (val - stats.mean) / stats.std
-                            if (c.invertColor) z = -z
-                            if (z >= 1.5) textClass = 'text-primary font-bold'
-                            else if (z >= 0.8) textClass = 'text-primary-dim'
-                            else if (z <= -1.5) textClass = 'text-error font-bold'
-                            else if (z <= -0.8) textClass = 'text-error-dim'
-                          }
+                          const allVals = colValues.get(c.key) ?? []
+                          const pct = getPercentile(val, allVals, c.invertColor ?? false)
+                          const bg = percentileToColor(pct)
 
                           return (
                             <Fragment key={c.key}>
                               <td
-                                className={`px-2 py-1.5 text-center font-table text-xs whitespace-nowrap ${textClass}`}
+                                className="px-2 py-1.5 text-center font-table text-xs whitespace-nowrap text-on-surface"
                                 style={{ backgroundColor: bg }}
                               >
                                 {c.renderCell ? c.renderCell(ap) : c.format(val)}
