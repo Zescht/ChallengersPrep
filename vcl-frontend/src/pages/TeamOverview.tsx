@@ -178,9 +178,9 @@ export default function TeamOverview() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {mapRows.map(ms => (
-                  <PostPlantRow key={ms.map} ms={ms} avgs={averages.perMap[ms.map]} siteAvgs={averages.perMapSiteAvgs[ms.map]} type="post" />
+                  <PostPlantRow key={ms.map} ms={ms} siteAvgs={averages.perMapSiteAvgs[ms.map]} type="post" />
                 ))}
-                <PostPlantRow ms={team.allMaps} avgs={averages.team} siteAvgs={averages.siteAvgs} isAggregate type="post" />
+                <PostPlantRow ms={team.allMaps} siteAvgs={averages.siteAvgs} isAggregate type="post" />
               </tbody>
             </table>
           </div>
@@ -205,9 +205,9 @@ export default function TeamOverview() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {mapRows.map(ms => (
-                  <PostPlantRow key={ms.map} ms={ms} avgs={averages.perMap[ms.map]} siteAvgs={averages.perMapSiteAvgs[ms.map]} type="ret" />
+                  <PostPlantRow key={ms.map} ms={ms} siteAvgs={averages.perMapSiteAvgs[ms.map]} type="ret" />
                 ))}
-                <PostPlantRow ms={team.allMaps} avgs={averages.team} siteAvgs={averages.siteAvgs} isAggregate type="ret" />
+                <PostPlantRow ms={team.allMaps} siteAvgs={averages.siteAvgs} isAggregate type="ret" />
               </tbody>
             </table>
           </div>
@@ -376,9 +376,8 @@ function CompRow({ c, avgs }: { c: CompStats; avgs: Record<string, { mean: numbe
   )
 }
 
-function PostPlantRow({ ms, avgs, siteAvgs, isAggregate = false, type }: { ms: MapStats; avgs?: Record<string, { mean: number; std: number }>; siteAvgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; type: 'post' | 'ret' }) {
+function PostPlantRow({ ms, siteAvgs, isAggregate = false, type }: { ms: MapStats; siteAvgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; type: 'post' | 'ret' }) {
   const [expanded, setExpanded] = useState(false)
-  const a = avgs || {}
   const sa = siteAvgs || {}
   const rowClass = isAggregate ? 'bg-surface-container-high/40 border-t border-white/10' : 'hover:bg-white/5 transition-colors'
 
@@ -387,7 +386,6 @@ function PostPlantRow({ ms, avgs, siteAvgs, isAggregate = false, type }: { ms: M
   const rwPct = type === 'post' ? ms.post_rW_pct : ms.ret_rW_pct
   const avg = type === 'post' ? ms.post_rW_event_avg : ms.ret_rW_event_avg
   const rank = type === 'post' ? ms.post_rank : ms.ret_rank
-  const statKey = type === 'post' ? 'post_rW_pct' : 'ret_rW_pct'
   const bySite = type === 'post' ? ms.post_by_site : ms.ret_by_site
   const sites = bySite ? Object.keys(bySite).filter(s => s !== '?').sort() : []
   const hasSites = sites.length > 0
