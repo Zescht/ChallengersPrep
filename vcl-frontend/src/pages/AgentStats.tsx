@@ -43,18 +43,23 @@ function getPercentile(value: number, allValues: number[], invert: boolean): num
   return invert ? 1 - pct : pct
 }
 
+function isDarkMode(): boolean {
+  return document.documentElement.getAttribute('data-theme') !== 'light'
+}
+
 function percentileToColor(pct: number): string {
+  const dark = isDarkMode()
   if (pct <= 0.5) {
     const t = pct / 0.5
-    const h = Math.round(0 + 120 * t)
-    const s = Math.round(55 - 15 * t + 15 * t)
-    const l = Math.round(65 + 18 * t)
+    const h = Math.round(120 * t)
+    const s = dark ? Math.round(45 + 10 * t) : Math.round(55 - 15 * t + 15 * t)
+    const l = dark ? Math.round(25 + 5 * t) : Math.round(65 + 5 * t)
     return `hsl(${h}, ${s}%, ${l}%)`
   } else {
     const t = (pct - 0.5) / 0.5
     const h = Math.round(120 + 150 * t)
-    const s = Math.round(55 - 15 * t + 15 * t)
-    const l = Math.round(83 - 8 * t)
+    const s = dark ? Math.round(55 - 10 * t) : Math.round(55 - 15 * t + 15 * t)
+    const l = dark ? Math.round(30 - 3 * t) : Math.round(70 - 5 * t)
     return `hsl(${h}, ${s}%, ${l}%)`
   }
 }

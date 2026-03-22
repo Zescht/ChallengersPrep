@@ -26,20 +26,23 @@ function getPercentile(value: number, allValues: number[], invert: boolean): num
 /**
  * Interpolate from deep red (worst) → green (good) → deep purple (best)
  */
+function isDarkMode(): boolean {
+  return document.documentElement.getAttribute('data-theme') !== 'light'
+}
+
 function percentileToColor(pct: number): string {
+  const dark = isDarkMode()
   if (pct <= 0.5) {
-    // Red → green
     const t = pct / 0.5
-    const h = Math.round(120 * t) // 0 (red) → 120 (green)
-    const s = Math.round(55 - 15 * t + 15 * t)
-    const l = Math.round(65 + 18 * t) // 65→83
+    const h = Math.round(120 * t)
+    const s = dark ? Math.round(45 + 10 * t) : Math.round(55 - 15 * t + 15 * t)
+    const l = dark ? Math.round(25 + 5 * t) : Math.round(65 + 5 * t)
     return `hsl(${h}, ${s}%, ${l}%)`
   } else {
-    // Green → purple
     const t = (pct - 0.5) / 0.5
-    const h = Math.round(120 + 150 * t) // 120 (green) → 270 (purple)
-    const s = Math.round(55 - 15 * t + 15 * t)
-    const l = Math.round(83 - 8 * t) // 83→75
+    const h = Math.round(120 + 150 * t)
+    const s = dark ? Math.round(55 - 10 * t) : Math.round(55 - 15 * t + 15 * t)
+    const l = dark ? Math.round(30 - 3 * t) : Math.round(70 - 5 * t)
     return `hsl(${h}, ${s}%, ${l}%)`
   }
 }

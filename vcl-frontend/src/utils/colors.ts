@@ -1,6 +1,6 @@
 /** Shared intensity constants — ensures identical max green / max red across all scales */
 const MAX_OPACITY = 0.55
-const CURVE_POWER = 0.45
+const CURVE_POWER = 0.7
 
 /**
  * Returns a CSS background-color string for a stat cell based on how its value
@@ -192,6 +192,28 @@ export function retakeColor(value: number): string {
     return `rgba(${neg}, ${opacity})`
   } else {
     const t = (clamped - 0.5) / 0.3
+    const curved = Math.pow(t, CURVE_POWER)
+    const opacity = (curved * MAX_OPACITY).toFixed(3)
+    return `rgba(${pos}, ${opacity})`
+  }
+}
+
+/** K/D color scale: 0.8 = red, 1.0 = yellow, 1.2+ = green */
+export function kdColor(value: number): string {
+  if (isNaN(value)) return 'transparent'
+
+  const pos = getCSSVar('--theme-heat-positive', '161, 255, 194')
+  const neg = getCSSVar('--theme-heat-negative', '255, 113, 108')
+
+  const clamped = Math.max(0.8, Math.min(1.2, value))
+
+  if (clamped <= 1.0) {
+    const t = (clamped - 0.8) / 0.2
+    const curved = Math.pow(1 - t, CURVE_POWER)
+    const opacity = (curved * MAX_OPACITY).toFixed(3)
+    return `rgba(${neg}, ${opacity})`
+  } else {
+    const t = (clamped - 1.0) / 0.2
     const curved = Math.pow(t, CURVE_POWER)
     const opacity = (curved * MAX_OPACITY).toFixed(3)
     return `rgba(${pos}, ${opacity})`

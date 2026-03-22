@@ -40,8 +40,8 @@ export default function XvYMatrix({ title, entries, averages, mode }: XvYMatrixP
 
   return (
     <div className="bg-surface-container-low rounded-xl overflow-hidden border border-white/5">
-      <div className="px-3 py-2 bg-surface-container-high/60 border-b border-white/5">
-        <h4 className="font-headline font-bold text-xs text-on-surface uppercase tracking-tight">{title}</h4>
+      <div className="px-5 py-3 bg-surface-container-high/60 border-b border-white/5">
+        <h3 className="font-headline font-bold text-xs text-on-surface uppercase tracking-tight">{title}</h3>
       </div>
       <table className="w-full text-sm xvy-grid">
         <thead>

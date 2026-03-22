@@ -7,7 +7,7 @@ import AgentIcon from '../components/AgentIcon'
 import StatCell from '../components/StatCell'
 import XvYMatrix from '../components/XvYMatrix'
 import { formatPct, formatRatio } from '../utils/format'
-import { fkColor, fkfdColor, clColor, opColor, adrColor, aprColor, retakeColor } from '../utils/colors'
+import { fkColor, fkfdColor, clColor, opColor, adrColor, aprColor, retakeColor, kdColor } from '../utils/colors'
 import { generateTalkingPoints } from '../utils/talkingPoints'
 import type { MapStats, CompStats, Player } from '../types'
 
@@ -453,7 +453,7 @@ function PlayerRow({ player, avgP }: { player: Player; avgP: Record<string, { me
         </div>
       </td>
       <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface thick-sep">{player.rounds}</td>
-      <StatCell value={player.kd} mean={avgP.kd?.mean} std={avgP.kd?.std} format={formatRatio} className="thick-sep" />
+      <StatCell value={player.kd} format={formatRatio} customColor={kdColor} className="thick-sep" />
       <StatCell value={player.adr} format={(v: number) => Math.round(v).toString()} customColor={adrColor} />
       <StatCell value={aprVal} format={formatRatio} customColor={aprColor} />
       <StatCell value={fkPerR} mean={avgP.fk_pct?.mean} std={avgP.fk_pct?.std} format={formatRatio} customColor={fkColor} className="thick-sep" />
