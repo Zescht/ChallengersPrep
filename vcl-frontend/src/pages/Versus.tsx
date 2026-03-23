@@ -409,7 +409,7 @@ function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team;
     { label: 'CL%', get: (p: Player) => formatPct(p.clutch_pct) },
   ]
 
-  function RosterTable({ team, roster, accent }: { team: Team; roster: Player[]; accent: string }) {
+  function RosterTable({ team, roster }: { team: Team; roster: Player[] }) {
     return (
       <div className="bg-surface-container-low rounded-xl overflow-hidden border border-white/5">
         <div className={`px-4 py-2.5 bg-surface-container-high/60 border-b border-white/5 flex items-center gap-2`}>
@@ -456,8 +456,8 @@ function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team;
     <section>
       <h3 className="font-headline font-bold text-sm uppercase tracking-tight text-on-surface mb-3">Player Rosters</h3>
       <div className="grid grid-cols-2 gap-4">
-        <RosterTable team={teamA} roster={pA} accent="primary" />
-        <RosterTable team={teamB} roster={pB} accent="secondary" />
+        <RosterTable team={teamA} roster={pA} />
+        <RosterTable team={teamB} roster={pB} />
       </div>
     </section>
   )
@@ -594,7 +594,7 @@ function PlayerVsPlayer({ playerAIgn, playerBIgn, onChangeA, onChangeB, data }: 
           <section>
             <h3 className="font-headline font-bold text-sm uppercase tracking-tight text-on-surface mb-3">Agent Pools</h3>
             <div className="grid grid-cols-2 gap-4">
-              {[{ player: pA, accent: 'primary' }, { player: pB, accent: 'secondary' }].map(({ player, accent }) => (
+              {[pA, pB].map(player => (
                 <div key={player.ign} className="bg-surface-container-low rounded-xl p-4 border border-white/5">
                   <div className="text-xs text-text-muted mb-3 font-bold uppercase tracking-wider">{player.ign}</div>
                   <div className="space-y-2">
