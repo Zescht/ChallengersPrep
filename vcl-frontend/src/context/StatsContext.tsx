@@ -1,4 +1,5 @@
-import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
+import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { useFilter } from './FilterContext'
 import type { StatsData, TournamentAverages } from '../types'
 
 interface StatsContextValue {
@@ -85,7 +86,6 @@ function computeAverages(data: StatsData): TournamentAverages {
     player[key] = meanStd(values)
   }
 
-  // Per-site averages (allMaps level)
   const siteAvgs: Record<string, { mean: number; std: number }> = {}
   for (const mode of ['post', 'ret'] as const) {
     const siteKey = mode === 'post' ? 'post_by_site' : 'ret_by_site'
@@ -102,7 +102,6 @@ function computeAverages(data: StatsData): TournamentAverages {
     }
   }
 
-  // Per-map per-site averages
   const perMapSiteAvgs: Record<string, Record<string, { mean: number; std: number }>> = {}
   for (const mapName of allMapNames) {
     perMapSiteAvgs[mapName] = {}
@@ -129,21 +128,63 @@ function computeAverages(data: StatsData): TournamentAverages {
   return { team, perMap, xvy, player, siteAvgs, perMapSiteAvgs }
 }
 
+const PLAYOFF_TAGS = new Set(['EP', 'MDR', 'MISA', 'UCAM'])
+
+function filterPlayoffData(data: StatsData): StatsData {
+  const teams = data.teams.filter(t => PLAYOFF_TAGS.has(t.tag))
+  const teamNames = new Set(teams.map(t => t.name))
+  const players = data.players.filter(p => teamNames.has(p.team))
+  const playersByRole = data.players_by_role.filter(p => teamNames.has(p.team))
+  const playersByAgent = data.players_by_agent.filter(p => teamNames.has(p.team))
+  const matches = data.matches.filter(m => teamNames.has(m.team1) || teamNames.has(m.team2))
+  const agentStats = data.agent_stats.filter(a => teamNames.has(a.team))
+
+  // Recompute leaderboards from filtered players (spread to avoid mutating originals)
+  const leaderboards: typeof data.leaderboards = {}
+  for (const [key, lb] of Object.entries(data.leaderboards)) {
+    const filtered = lb.entries.filter(e => teamNames.has(e.team))
+    const sorted = [...filtered].sort((a, b) => b.value - a.value)
+    const reranked = sorted.map((e, i) => ({ ...e, rank: i + 1 }))
+    const values = sorted.map(e => e.value)
+    const avg = values.length > 0 ? values.reduce((a, b) => a + b, 0) / values.length : 0
+    leaderboards[key] = { entries: reranked, tournament_avg: avg }
+  }
+
+  return {
+    teams,
+    players,
+    players_by_role: playersByRole,
+    players_by_agent: playersByAgent,
+    matches,
+    leaderboards,
+    agent_stats: agentStats,
+    ability_names: data.ability_names,
+  }
+}
+
 export function StatsProvider({ children }: { children: ReactNode }) {
-  const [data, setData] = useState<StatsData | null>(null)
-  const [averages, setAverages] = useState<TournamentAverages | null>(null)
+  const { playoffOnly, clDataOnly } = useFilter()
+  const [fullData, setFullData] = useState<StatsData | null>(null)
+  const [playoffData, setPlayoffData] = useState<StatsData | null>(null)
+  const [fullAverages, setFullAverages] = useState<TournamentAverages | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
+  // Load both datasets on mount
   useEffect(() => {
-    fetch('./data/stats.json')
-      .then(res => {
-        if (!res.ok) throw new Error(`Failed to load stats.json: ${res.status}`)
-        return res.json()
-      })
-      .then((json: StatsData) => {
-        setData(json)
-        setAverages(computeAverages(json))
+    Promise.all([
+      fetch('./data/stats.json').then(r => {
+        if (!r.ok) throw new Error(`Failed to load stats.json: ${r.status}`)
+        return r.json()
+      }),
+      fetch('./data/stats_playoffs.json')
+        .then(r => r.ok ? r.json() : null)
+        .catch(() => null),
+    ])
+      .then(([full, playoff]: [StatsData, StatsData | null]) => {
+        setFullData(full)
+        setPlayoffData(playoff)
+        setFullAverages(computeAverages(full))
         setLoading(false)
       })
       .catch(err => {
@@ -151,6 +192,24 @@ export function StatsProvider({ children }: { children: ReactNode }) {
         setLoading(false)
       })
   }, [])
+
+  // Compute active data + averages based on filter mode
+  const { data, averages } = useMemo(() => {
+    if (!fullData || !fullAverages) return { data: null, averages: null }
+
+    if (clDataOnly && playoffData) {
+      // Mode 2: use playoff dataset entirely, with its own averages
+      return { data: playoffData, averages: computeAverages(playoffData) }
+    }
+
+    if (playoffOnly) {
+      // Mode 1: filter full data to 4 teams, keep full-league averages
+      return { data: filterPlayoffData(fullData), averages: fullAverages }
+    }
+
+    // Default: full data, full averages
+    return { data: fullData, averages: fullAverages }
+  }, [fullData, playoffData, fullAverages, playoffOnly, clDataOnly])
 
   return (
     <StatsContext.Provider value={{ data, averages, loading, error }}>
