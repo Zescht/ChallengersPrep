@@ -19,19 +19,30 @@ def main():
     parser = argparse.ArgumentParser(description='Build stats.json from JSONL match data')
     parser.add_argument('--output', default='public/data/stats.json',
                         help='Output path for stats.json')
+    parser.add_argument('--playoff', action='store_true',
+                        help='Build playoff-only database (4 teams, CL matches only)')
     args = parser.parse_args()
 
-    print("Building stats.json from raw match data...")
-    print(f"Processing {len(TEAMS)} teams\n")
+    if args.playoff:
+        from lib.constants import PLAYOFF_TEAMS, PLAYOFF_MATCH_IDS
+        teams_list = PLAYOFF_TEAMS
+        match_filter = PLAYOFF_MATCH_IDS
+        print("Building PLAYOFF stats.json (4 teams, CL matches only)...")
+    else:
+        teams_list = TEAMS
+        match_filter = None
+        print("Building stats.json from raw match data...")
+
+    print(f"Processing {len(teams_list)} teams\n")
 
     all_team_data = {}
-    for team_cfg in TEAMS:
+    for team_cfg in teams_list:
         data_file = team_cfg['data_file']
         if not os.path.exists(data_file):
             print(f"  WARNING: {data_file} not found, skipping {team_cfg['name']}")
             continue
 
-        matches = load_team_matches(team_cfg['tag'], team_cfg['name'], data_file)
+        matches = load_team_matches(team_cfg['tag'], team_cfg['name'], data_file, match_ids=match_filter)
         stats = compute_team_stats(matches, team_cfg['tag'], team_cfg['name'])
         all_team_data[team_cfg['tag']] = {
             'name': team_cfg['name'],

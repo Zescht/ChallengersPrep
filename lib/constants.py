@@ -83,6 +83,36 @@ TEAMS = [
     {'tag': 'GNG',  'name': 'GnG Amazigh',           'data_file': 'data/raw/gng_2026_raw_responses.jsonl'},
 ]
 
+PLAYOFF_TAGS = {'EP', 'MDR', 'MISA', 'UCAM'}
+
+PLAYOFF_TEAMS = [t for t in TEAMS if t['tag'] in PLAYOFF_TAGS]
+
+PLAYOFF_MATCH_IDS = {
+    # MISA (4 maps, Mar 19-20)
+    '5cadffcf-1f28-4e7e-9eaf-ed57375868b4',
+    'ea6e413d-f95f-404d-a8f6-7da51c5befdf',
+    '1c4f285c-f4e1-411a-94ae-48bdd9a50167',
+    '0cafb898-666e-4980-a856-61772ca83ff4',
+    # EP (5 maps, Mar 19-20)
+    '22607544-de81-49bc-8f37-85c70f596d0b',
+    '25d172f7-f241-41ad-bddd-dde81c56e5a1',
+    '995243f6-943b-4ea3-98f0-2be7a292c796',
+    '5e8c7871-73b1-4f22-ac3a-779f6682cd63',
+    'a23565be-b405-40d6-8c9d-bdc7592ccbaf',
+    # UCAM (4 maps, Mar 19-22)
+    '8cb578c4-a675-45c7-8405-155b2b80da28',
+    '9abce8ee-7847-4f91-abc3-17d68e077229',
+    'c8d0a2ff-529e-4c34-ab6f-02535841d196',
+    '1ac7f08d-1f04-4c5c-98ad-c1f5f3ec75d9',
+    # MDR (6 maps, Mar 19-22)
+    '45021724-cf69-4b1c-be00-e033ada8f9f4',
+    '552d7ee1-e6b1-47fc-99b1-d421663f1253',
+    'fe848444-9df2-4991-97d6-f88c2b06646d',
+    '225163c0-ece4-4477-a611-327fb837230e',
+    '47977248-3e6c-4721-a2a8-60fca030c393',
+    '65177388-7b7f-4740-ad96-1d38a0309ac4',
+}
+
 VCL_TAGS = {t['tag'] for t in TEAMS}
 TAG_TO_NAME = {t['tag']: t['name'] for t in TEAMS}
 

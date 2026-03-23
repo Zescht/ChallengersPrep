@@ -1,0 +1,7317 @@
+{
+  "teams": [
+    {
+      "name": "Mandatory",
+      "tag": "MDR",
+      "maps": [
+        {
+          "map": "Abyss",
+          "comp": [
+            "Brimstone",
+            "KAY/O",
+            "Omen",
+            "Tejo",
+            "Waylay"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Brimstone",
+                "KAY/O",
+                "Omen",
+                "Tejo",
+                "Waylay"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.65,
+              "atk_rW_pct": 0.667,
+              "def_rW_pct": 0.625,
+              "pistol_rW_pct": 0.5,
+              "pistol_atk_rW_pct": 0.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.65,
+          "atk_rW_pct": 0.667,
+          "def_rW_pct": 0.625,
+          "pistol_rW_pct": 0.5,
+          "pistol_atk_rW_pct": 0.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.688,
+          "gun_atk_rW_pct": 0.8,
+          "gun_def_rW_pct": 0.5,
+          "antieco_rW_pct": 0.5,
+          "antieco_atk_rW_pct": 0.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 10,
+          "post_per_map": 10.0,
+          "post_rW_pct": 0.8,
+          "ret_scens": 5,
+          "ret_per_map": 5.0,
+          "ret_rW_pct": 0.4,
+          "post_by_site": {
+            "A": {
+              "scens": 5,
+              "wins": 3,
+              "pct": 0.6
+            },
+            "B": {
+              "scens": 5,
+              "wins": 5,
+              "pct": 1.0
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 2,
+              "pct": 0.5
+            },
+            "B": {
+              "scens": 1,
+              "wins": 0,
+              "pct": 0.0
+            }
+          },
+          "post_rank": 1,
+          "post_rW_event_avg": 0.764,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.7
+        },
+        {
+          "map": "Breeze",
+          "comp": [
+            "Jett",
+            "Omen",
+            "Sova",
+            "Viper",
+            "Yoru"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Jett",
+                "Omen",
+                "Sova",
+                "Viper",
+                "Yoru"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.619,
+              "atk_rW_pct": 0.5,
+              "def_rW_pct": 0.778,
+              "pistol_rW_pct": 1.0,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.619,
+          "atk_rW_pct": 0.5,
+          "def_rW_pct": 0.778,
+          "pistol_rW_pct": 1.0,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.529,
+          "gun_atk_rW_pct": 0.4,
+          "gun_def_rW_pct": 0.714,
+          "antieco_rW_pct": 1.0,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 8,
+          "post_per_map": 8.0,
+          "post_rW_pct": 0.75,
+          "ret_scens": 6,
+          "ret_per_map": 6.0,
+          "ret_rW_pct": 0.667,
+          "post_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 3,
+              "pct": 0.75
+            },
+            "B": {
+              "scens": 4,
+              "wins": 3,
+              "pct": 0.75
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 5,
+              "wins": 3,
+              "pct": 0.6
+            },
+            "B": {
+              "scens": 1,
+              "wins": 1,
+              "pct": 1.0
+            }
+          },
+          "post_rank": 1,
+          "post_rW_event_avg": 0.75,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.667
+        },
+        {
+          "map": "Corrode",
+          "comp": [
+            "Brimstone",
+            "KAY/O",
+            "Omen",
+            "Sova",
+            "Waylay"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Brimstone",
+                "KAY/O",
+                "Omen",
+                "Sova",
+                "Waylay"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.867,
+              "atk_rW_pct": 0.917,
+              "def_rW_pct": 0.667,
+              "pistol_rW_pct": 1.0,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.867,
+          "atk_rW_pct": 0.917,
+          "def_rW_pct": 0.667,
+          "pistol_rW_pct": 1.0,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.9,
+          "gun_atk_rW_pct": 0.9,
+          "gun_def_rW_pct": 0,
+          "antieco_rW_pct": 0.5,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 0.0,
+          "eco_rW_pct": 1.0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 1.0,
+          "post_scens": 10,
+          "post_per_map": 10.0,
+          "post_rW_pct": 1.0,
+          "ret_scens": 2,
+          "ret_per_map": 2.0,
+          "ret_rW_pct": 0.5,
+          "post_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 4,
+              "pct": 1.0
+            },
+            "B": {
+              "scens": 6,
+              "wins": 6,
+              "pct": 1.0
+            }
+          },
+          "ret_by_site": {
+            "B": {
+              "scens": 2,
+              "wins": 1,
+              "pct": 0.5
+            }
+          },
+          "post_rank": 1,
+          "post_rW_event_avg": 1.0,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.375
+        },
+        {
+          "map": "Haven",
+          "comp": [
+            "Killjoy",
+            "Neon",
+            "Omen",
+            "Sova",
+            "Viper"
+          ],
+          "comp_count": 2,
+          "comps": [
+            {
+              "comp": [
+                "Killjoy",
+                "Neon",
+                "Omen",
+                "Sova",
+                "Viper"
+              ],
+              "comp_count": 2,
+              "plays": 2,
+              "wins": 2,
+              "losses": 0,
+              "rW_pct": 0.839,
+              "atk_rW_pct": 0.833,
+              "def_rW_pct": 0.857,
+              "pistol_rW_pct": 0.75,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 0.5
+            }
+          ],
+          "plays": 2,
+          "wins": 2,
+          "losses": 0,
+          "rW_pct": 0.839,
+          "atk_rW_pct": 0.833,
+          "def_rW_pct": 0.857,
+          "pistol_rW_pct": 0.75,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 0.5,
+          "gun_rW_pct": 0.826,
+          "gun_atk_rW_pct": 0.8,
+          "gun_def_rW_pct": 1.0,
+          "antieco_rW_pct": 1.0,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 22,
+          "post_per_map": 11.0,
+          "post_rW_pct": 0.909,
+          "ret_scens": 5,
+          "ret_per_map": 2.5,
+          "ret_rW_pct": 0.8,
+          "post_by_site": {
+            "A": {
+              "scens": 9,
+              "wins": 8,
+              "pct": 0.889
+            },
+            "B": {
+              "scens": 5,
+              "wins": 5,
+              "pct": 1.0
+            },
+            "C": {
+              "scens": 8,
+              "wins": 7,
+              "pct": 0.875
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 2,
+              "wins": 2,
+              "pct": 1.0
+            },
+            "B": {
+              "scens": 3,
+              "wins": 2,
+              "pct": 0.667
+            }
+          },
+          "post_rank": 1,
+          "post_rW_event_avg": 0.811,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.485
+        },
+        {
+          "map": "Pearl",
+          "comp": [
+            "Astra",
+            "Cypher",
+            "Sova",
+            "Tejo",
+            "Waylay"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Astra",
+                "Cypher",
+                "Sova",
+                "Tejo",
+                "Waylay"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.565,
+              "atk_rW_pct": 0.583,
+              "def_rW_pct": 0.545,
+              "pistol_rW_pct": 0.0,
+              "pistol_atk_rW_pct": 0.0,
+              "pistol_def_rW_pct": 0.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.565,
+          "atk_rW_pct": 0.583,
+          "def_rW_pct": 0.545,
+          "pistol_rW_pct": 0.0,
+          "pistol_atk_rW_pct": 0.0,
+          "pistol_def_rW_pct": 0.0,
+          "gun_rW_pct": 0.684,
+          "gun_atk_rW_pct": 0.7,
+          "gun_def_rW_pct": 0.667,
+          "antieco_rW_pct": 0.0,
+          "antieco_atk_rW_pct": 0.0,
+          "antieco_def_rW_pct": 0.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 9,
+          "post_per_map": 9.0,
+          "post_rW_pct": 0.778,
+          "ret_scens": 9,
+          "ret_per_map": 9.0,
+          "ret_rW_pct": 0.444,
+          "post_by_site": {
+            "A": {
+              "scens": 7,
+              "wins": 5,
+              "pct": 0.714
+            },
+            "B": {
+              "scens": 2,
+              "wins": 2,
+              "pct": 1.0
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 2,
+              "wins": 1,
+              "pct": 0.5
+            },
+            "B": {
+              "scens": 7,
+              "wins": 3,
+              "pct": 0.429
+            }
+          },
+          "post_rank": 3,
+          "post_rW_event_avg": 0.839,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.315
+        }
+      ],
+      "allMaps": {
+        "map": "All Maps",
+        "comp": [],
+        "comp_count": 0,
+        "plays": 6,
+        "wins": 6,
+        "losses": 0,
+        "rW_pct": 0.709,
+        "atk_rW_pct": 0.722,
+        "def_rW_pct": 0.684,
+        "pistol_rW_pct": 0.667,
+        "pistol_atk_rW_pct": 0.667,
+        "pistol_def_rW_pct": 0.667,
+        "gun_rW_pct": 0.718,
+        "gun_atk_rW_pct": 0.733,
+        "gun_def_rW_pct": 0.68,
+        "antieco_rW_pct": 0.667,
+        "antieco_atk_rW_pct": 0.667,
+        "antieco_def_rW_pct": 0.667,
+        "eco_rW_pct": 1.0,
+        "eco_atk_rW_pct": 0,
+        "eco_def_rW_pct": 1.0,
+        "post_scens": 59,
+        "post_per_map": 9.8,
+        "post_rW_pct": 0.864,
+        "ret_scens": 27,
+        "ret_per_map": 4.5,
+        "ret_rW_pct": 0.556,
+        "post_by_site": {
+          "A": {
+            "scens": 29,
+            "wins": 23,
+            "pct": 0.793
+          },
+          "B": {
+            "scens": 22,
+            "wins": 21,
+            "pct": 0.955
+          },
+          "C": {
+            "scens": 8,
+            "wins": 7,
+            "pct": 0.875
+          }
+        },
+        "ret_by_site": {
+          "A": {
+            "scens": 13,
+            "wins": 8,
+            "pct": 0.615
+          },
+          "B": {
+            "scens": 14,
+            "wins": 7,
+            "pct": 0.5
+          }
+        },
+        "post_rank": 3,
+        "post_rW_event_avg": 0.87,
+        "ret_rank": 1,
+        "ret_rW_event_avg": 0.415
+      },
+      "players": [
+        "TakaS",
+        "K4davra",
+        "sh1n",
+        "nataNk",
+        "Sevire"
+      ],
+      "xvy": [
+        {
+          "situation": "5v1",
+          "wins": 17,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v2",
+          "wins": 30,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v3",
+          "wins": 43,
+          "losses": 1,
+          "win_pct": 0.9772727272727273
+        },
+        {
+          "situation": "5v4",
+          "wins": 60,
+          "losses": 6,
+          "win_pct": 0.9090909090909091
+        },
+        {
+          "situation": "5v5",
+          "wins": 78,
+          "losses": 32,
+          "win_pct": 0.7090909090909091
+        },
+        {
+          "situation": "4v1",
+          "wins": 21,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "4v2",
+          "wins": 36,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "4v3",
+          "wins": 35,
+          "losses": 3,
+          "win_pct": 0.9210526315789473
+        },
+        {
+          "situation": "4v4",
+          "wins": 31,
+          "losses": 13,
+          "win_pct": 0.7045454545454546
+        },
+        {
+          "situation": "4v5",
+          "wins": 18,
+          "losses": 26,
+          "win_pct": 0.4090909090909091
+        },
+        {
+          "situation": "3v1",
+          "wins": 32,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "3v2",
+          "wins": 30,
+          "losses": 2,
+          "win_pct": 0.9375
+        },
+        {
+          "situation": "3v3",
+          "wins": 22,
+          "losses": 4,
+          "win_pct": 0.8461538461538461
+        },
+        {
+          "situation": "3v4",
+          "wins": 13,
+          "losses": 15,
+          "win_pct": 0.4642857142857143
+        },
+        {
+          "situation": "3v5",
+          "wins": 4,
+          "losses": 18,
+          "win_pct": 0.18181818181818182
+        },
+        {
+          "situation": "2v1",
+          "wins": 22,
+          "losses": 1,
+          "win_pct": 0.9565217391304348
+        },
+        {
+          "situation": "2v2",
+          "wins": 14,
+          "losses": 5,
+          "win_pct": 0.7368421052631579
+        },
+        {
+          "situation": "2v3",
+          "wins": 10,
+          "losses": 8,
+          "win_pct": 0.5555555555555556
+        },
+        {
+          "situation": "2v4",
+          "wins": 2,
+          "losses": 19,
+          "win_pct": 0.09523809523809523
+        },
+        {
+          "situation": "2v5",
+          "wins": 0,
+          "losses": 13,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "1v1",
+          "wins": 10,
+          "losses": 3,
+          "win_pct": 0.7692307692307693
+        },
+        {
+          "situation": "1v2",
+          "wins": 3,
+          "losses": 5,
+          "win_pct": 0.375
+        },
+        {
+          "situation": "1v3",
+          "wins": 1,
+          "losses": 7,
+          "win_pct": 0.125
+        },
+        {
+          "situation": "1v4",
+          "wins": 0,
+          "losses": 15,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "1v5",
+          "wins": 0,
+          "losses": 7,
+          "win_pct": 0.0
+        }
+      ],
+      "series_record": {
+        "wins": 3,
+        "losses": 0
+      },
+      "form": [
+        {
+          "opponent": "M1R",
+          "map": "Abyss",
+          "score": "13-7",
+          "result": "W"
+        },
+        {
+          "opponent": "GNG",
+          "map": "Haven",
+          "score": "13-4",
+          "result": "W"
+        },
+        {
+          "opponent": "GNG",
+          "map": "Corrode",
+          "score": "13-2",
+          "result": "W"
+        },
+        {
+          "opponent": "S2G",
+          "map": "Breeze",
+          "score": "13-8",
+          "result": "W"
+        },
+        {
+          "opponent": "S2G",
+          "map": "Pearl",
+          "score": "13-10",
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "name": "Enterprise Esports",
+      "tag": "EP",
+      "maps": [
+        {
+          "map": "Bind",
+          "comp": [
+            "Brimstone",
+            "Chamber",
+            "Skye",
+            "Viper",
+            "Waylay"
+          ],
+          "comp_count": 2,
+          "comps": [
+            {
+              "comp": [
+                "Brimstone",
+                "Chamber",
+                "Skye",
+                "Viper",
+                "Waylay"
+              ],
+              "comp_count": 2,
+              "plays": 2,
+              "wins": 2,
+              "losses": 0,
+              "rW_pct": 0.867,
+              "atk_rW_pct": 1.0,
+              "def_rW_pct": 0.833,
+              "pistol_rW_pct": 1.0,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 2,
+          "wins": 2,
+          "losses": 0,
+          "rW_pct": 0.867,
+          "atk_rW_pct": 1.0,
+          "def_rW_pct": 0.833,
+          "pistol_rW_pct": 1.0,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.818,
+          "gun_atk_rW_pct": 1.0,
+          "gun_def_rW_pct": 0.8,
+          "antieco_rW_pct": 1.0,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 4,
+          "post_per_map": 2.0,
+          "post_rW_pct": 1.0,
+          "ret_scens": 9,
+          "ret_per_map": 4.5,
+          "ret_rW_pct": 0.556,
+          "post_by_site": {
+            "A": {
+              "scens": 1,
+              "wins": 1,
+              "pct": 1.0
+            },
+            "B": {
+              "scens": 3,
+              "wins": 3,
+              "pct": 1.0
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 3,
+              "pct": 0.75
+            },
+            "B": {
+              "scens": 5,
+              "wins": 2,
+              "pct": 0.4
+            }
+          },
+          "post_rank": 1,
+          "post_rW_event_avg": 1.0,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.556
+        },
+        {
+          "map": "Pearl",
+          "comp": [
+            "Astra",
+            "Fade",
+            "Killjoy",
+            "Tejo",
+            "Yoru"
+          ],
+          "comp_count": 2,
+          "comps": [
+            {
+              "comp": [
+                "Astra",
+                "Fade",
+                "Killjoy",
+                "Tejo",
+                "Yoru"
+              ],
+              "comp_count": 2,
+              "plays": 2,
+              "wins": 1,
+              "losses": 1,
+              "rW_pct": 0.479,
+              "atk_rW_pct": 0.652,
+              "def_rW_pct": 0.32,
+              "pistol_rW_pct": 0.75,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 0.5
+            }
+          ],
+          "plays": 2,
+          "wins": 1,
+          "losses": 1,
+          "rW_pct": 0.479,
+          "atk_rW_pct": 0.652,
+          "def_rW_pct": 0.32,
+          "pistol_rW_pct": 0.75,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 0.5,
+          "gun_rW_pct": 0.447,
+          "gun_atk_rW_pct": 0.579,
+          "gun_def_rW_pct": 0.316,
+          "antieco_rW_pct": 0.75,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 0.5,
+          "eco_rW_pct": 0.0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0.0,
+          "post_scens": 17,
+          "post_per_map": 8.5,
+          "post_rW_pct": 0.882,
+          "ret_scens": 18,
+          "ret_per_map": 9.0,
+          "ret_rW_pct": 0.056,
+          "post_by_site": {
+            "A": {
+              "scens": 10,
+              "wins": 9,
+              "pct": 0.9
+            },
+            "B": {
+              "scens": 7,
+              "wins": 6,
+              "pct": 0.857
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 13,
+              "wins": 1,
+              "pct": 0.077
+            },
+            "B": {
+              "scens": 5,
+              "wins": 0,
+              "pct": 0.0
+            }
+          },
+          "post_rank": 1,
+          "post_rW_event_avg": 0.839,
+          "ret_rank": 3,
+          "ret_rW_event_avg": 0.315
+        },
+        {
+          "map": "Split",
+          "comp": [
+            "Omen",
+            "Tejo",
+            "Viper",
+            "Waylay",
+            "Yoru"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Omen",
+                "Tejo",
+                "Viper",
+                "Waylay",
+                "Yoru"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.812,
+              "atk_rW_pct": 1.0,
+              "def_rW_pct": 0.75,
+              "pistol_rW_pct": 1.0,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.812,
+          "atk_rW_pct": 1.0,
+          "def_rW_pct": 0.75,
+          "pistol_rW_pct": 1.0,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.75,
+          "gun_atk_rW_pct": 1.0,
+          "gun_def_rW_pct": 0.7,
+          "antieco_rW_pct": 1.0,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 3,
+          "post_per_map": 3.0,
+          "post_rW_pct": 1.0,
+          "ret_scens": 7,
+          "ret_per_map": 7.0,
+          "ret_rW_pct": 0.571,
+          "post_by_site": {
+            "A": {
+              "scens": 1,
+              "wins": 1,
+              "pct": 1.0
+            },
+            "B": {
+              "scens": 2,
+              "wins": 2,
+              "pct": 1.0
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 3,
+              "pct": 0.75
+            },
+            "B": {
+              "scens": 3,
+              "wins": 1,
+              "pct": 0.333
+            }
+          },
+          "post_rank": 1,
+          "post_rW_event_avg": 0.943,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.657
+        }
+      ],
+      "allMaps": {
+        "map": "All Maps",
+        "comp": [],
+        "comp_count": 0,
+        "plays": 5,
+        "wins": 4,
+        "losses": 1,
+        "rW_pct": 0.66,
+        "atk_rW_pct": 0.758,
+        "def_rW_pct": 0.607,
+        "pistol_rW_pct": 0.9,
+        "pistol_atk_rW_pct": 1.0,
+        "pistol_def_rW_pct": 0.8,
+        "gun_rW_pct": 0.611,
+        "gun_atk_rW_pct": 0.652,
+        "gun_def_rW_pct": 0.592,
+        "antieco_rW_pct": 0.9,
+        "antieco_atk_rW_pct": 1.0,
+        "antieco_def_rW_pct": 0.8,
+        "eco_rW_pct": 0.0,
+        "eco_atk_rW_pct": 0,
+        "eco_def_rW_pct": 0.0,
+        "post_scens": 24,
+        "post_per_map": 4.8,
+        "post_rW_pct": 0.917,
+        "ret_scens": 34,
+        "ret_per_map": 6.8,
+        "ret_rW_pct": 0.294,
+        "post_by_site": {
+          "A": {
+            "scens": 12,
+            "wins": 11,
+            "pct": 0.917
+          },
+          "B": {
+            "scens": 12,
+            "wins": 11,
+            "pct": 0.917
+          }
+        },
+        "ret_by_site": {
+          "A": {
+            "scens": 21,
+            "wins": 7,
+            "pct": 0.333
+          },
+          "B": {
+            "scens": 13,
+            "wins": 3,
+            "pct": 0.231
+          }
+        },
+        "post_rank": 1,
+        "post_rW_event_avg": 0.87,
+        "ret_rank": 4,
+        "ret_rW_event_avg": 0.415
+      },
+      "players": [
+        "kozzy",
+        "Lime",
+        "iluri",
+        "MAGNUM",
+        "Proxh"
+      ],
+      "xvy": [
+        {
+          "situation": "5v1",
+          "wins": 14,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v2",
+          "wins": 20,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v3",
+          "wins": 28,
+          "losses": 3,
+          "win_pct": 0.9032258064516129
+        },
+        {
+          "situation": "5v4",
+          "wins": 42,
+          "losses": 12,
+          "win_pct": 0.7777777777777778
+        },
+        {
+          "situation": "5v5",
+          "wins": 62,
+          "losses": 32,
+          "win_pct": 0.6595744680851063
+        },
+        {
+          "situation": "4v1",
+          "wins": 21,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "4v2",
+          "wins": 21,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "4v3",
+          "wins": 25,
+          "losses": 5,
+          "win_pct": 0.8333333333333334
+        },
+        {
+          "situation": "4v4",
+          "wins": 26,
+          "losses": 14,
+          "win_pct": 0.65
+        },
+        {
+          "situation": "4v5",
+          "wins": 20,
+          "losses": 20,
+          "win_pct": 0.5
+        },
+        {
+          "situation": "3v1",
+          "wins": 19,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "3v2",
+          "wins": 19,
+          "losses": 4,
+          "win_pct": 0.8260869565217391
+        },
+        {
+          "situation": "3v3",
+          "wins": 26,
+          "losses": 13,
+          "win_pct": 0.6666666666666666
+        },
+        {
+          "situation": "3v4",
+          "wins": 17,
+          "losses": 20,
+          "win_pct": 0.4594594594594595
+        },
+        {
+          "situation": "3v5",
+          "wins": 8,
+          "losses": 15,
+          "win_pct": 0.34782608695652173
+        },
+        {
+          "situation": "2v1",
+          "wins": 14,
+          "losses": 1,
+          "win_pct": 0.9333333333333333
+        },
+        {
+          "situation": "2v2",
+          "wins": 16,
+          "losses": 8,
+          "win_pct": 0.6666666666666666
+        },
+        {
+          "situation": "2v3",
+          "wins": 11,
+          "losses": 15,
+          "win_pct": 0.4230769230769231
+        },
+        {
+          "situation": "2v4",
+          "wins": 1,
+          "losses": 14,
+          "win_pct": 0.06666666666666667
+        },
+        {
+          "situation": "2v5",
+          "wins": 0,
+          "losses": 7,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "1v1",
+          "wins": 13,
+          "losses": 4,
+          "win_pct": 0.7647058823529411
+        },
+        {
+          "situation": "1v2",
+          "wins": 6,
+          "losses": 9,
+          "win_pct": 0.4
+        },
+        {
+          "situation": "1v3",
+          "wins": 1,
+          "losses": 15,
+          "win_pct": 0.0625
+        },
+        {
+          "situation": "1v4",
+          "wins": 0,
+          "losses": 10,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "1v5",
+          "wins": 0,
+          "losses": 5,
+          "win_pct": 0.0
+        }
+      ],
+      "series_record": {
+        "wins": 2,
+        "losses": 0
+      },
+      "form": [
+        {
+          "opponent": "BAR",
+          "map": "Pearl",
+          "score": "14-12",
+          "result": "W"
+        },
+        {
+          "opponent": "BAR",
+          "map": "Bind",
+          "score": "13-2",
+          "result": "W"
+        },
+        {
+          "opponent": "FKS",
+          "map": "Bind",
+          "score": "13-2",
+          "result": "W"
+        },
+        {
+          "opponent": "FKS",
+          "map": "Pearl",
+          "score": "9-13",
+          "result": "L"
+        },
+        {
+          "opponent": "FKS",
+          "map": "Split",
+          "score": "13-3",
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "name": "UCAM Esports",
+      "tag": "UCAM",
+      "maps": [
+        {
+          "map": "Abyss",
+          "comp": [
+            "Neon",
+            "Omen",
+            "Sova",
+            "Viper",
+            "Yoru"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Neon",
+                "Omen",
+                "Sova",
+                "Viper",
+                "Yoru"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.765,
+              "atk_rW_pct": 0.667,
+              "def_rW_pct": 1.0,
+              "pistol_rW_pct": 0.5,
+              "pistol_atk_rW_pct": 0.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.765,
+          "atk_rW_pct": 0.667,
+          "def_rW_pct": 1.0,
+          "pistol_rW_pct": 0.5,
+          "pistol_atk_rW_pct": 0.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.846,
+          "gun_atk_rW_pct": 0.8,
+          "gun_def_rW_pct": 1.0,
+          "antieco_rW_pct": 0.5,
+          "antieco_atk_rW_pct": 0.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 11,
+          "post_per_map": 11.0,
+          "post_rW_pct": 0.727,
+          "ret_scens": 1,
+          "ret_per_map": 1.0,
+          "ret_rW_pct": 1.0,
+          "post_by_site": {
+            "A": {
+              "scens": 3,
+              "wins": 2,
+              "pct": 0.667
+            },
+            "B": {
+              "scens": 8,
+              "wins": 6,
+              "pct": 0.75
+            }
+          },
+          "ret_by_site": {
+            "B": {
+              "scens": 1,
+              "wins": 1,
+              "pct": 1.0
+            }
+          },
+          "post_rank": 2,
+          "post_rW_event_avg": 0.764,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.7
+        },
+        {
+          "map": "Corrode",
+          "comp": [
+            "Fade",
+            "Neon",
+            "Omen",
+            "Viper",
+            "Yoru"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Fade",
+                "Neon",
+                "Omen",
+                "Viper",
+                "Yoru"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.619,
+              "atk_rW_pct": 0.778,
+              "def_rW_pct": 0.5,
+              "pistol_rW_pct": 1.0,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.619,
+          "atk_rW_pct": 0.778,
+          "def_rW_pct": 0.5,
+          "pistol_rW_pct": 1.0,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.529,
+          "gun_atk_rW_pct": 0.714,
+          "gun_def_rW_pct": 0.4,
+          "antieco_rW_pct": 1.0,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 7,
+          "post_per_map": 7.0,
+          "post_rW_pct": 1.0,
+          "ret_scens": 8,
+          "ret_per_map": 8.0,
+          "ret_rW_pct": 0.25,
+          "post_by_site": {
+            "A": {
+              "scens": 3,
+              "wins": 3,
+              "pct": 1.0
+            },
+            "B": {
+              "scens": 4,
+              "wins": 4,
+              "pct": 1.0
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 2,
+              "pct": 0.5
+            },
+            "B": {
+              "scens": 4,
+              "wins": 0,
+              "pct": 0.0
+            }
+          },
+          "post_rank": 2,
+          "post_rW_event_avg": 1.0,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.375
+        },
+        {
+          "map": "Haven",
+          "comp": [
+            "Astra",
+            "Cypher",
+            "Neon",
+            "Sova",
+            "Yoru"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Astra",
+                "Cypher",
+                "Neon",
+                "Sova",
+                "Yoru"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.591,
+              "atk_rW_pct": 0.5,
+              "def_rW_pct": 0.7,
+              "pistol_rW_pct": 1.0,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.591,
+          "atk_rW_pct": 0.5,
+          "def_rW_pct": 0.7,
+          "pistol_rW_pct": 1.0,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.5,
+          "gun_atk_rW_pct": 0.4,
+          "gun_def_rW_pct": 0.625,
+          "antieco_rW_pct": 1.0,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 9,
+          "post_per_map": 9.0,
+          "post_rW_pct": 0.667,
+          "ret_scens": 6,
+          "ret_per_map": 6.0,
+          "ret_rW_pct": 0.5,
+          "post_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 3,
+              "pct": 0.75
+            },
+            "B": {
+              "scens": 1,
+              "wins": 0,
+              "pct": 0.0
+            },
+            "C": {
+              "scens": 4,
+              "wins": 3,
+              "pct": 0.75
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 3,
+              "wins": 2,
+              "pct": 0.667
+            },
+            "C": {
+              "scens": 3,
+              "wins": 1,
+              "pct": 0.333
+            }
+          },
+          "post_rank": 3,
+          "post_rW_event_avg": 0.811,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.485
+        },
+        {
+          "map": "Split",
+          "comp": [
+            "Astra",
+            "Neon",
+            "Skye",
+            "Viper",
+            "Yoru"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Astra",
+                "Neon",
+                "Skye",
+                "Viper",
+                "Yoru"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.867,
+              "atk_rW_pct": 0.833,
+              "def_rW_pct": 1.0,
+              "pistol_rW_pct": 1.0,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.867,
+          "atk_rW_pct": 0.833,
+          "def_rW_pct": 1.0,
+          "pistol_rW_pct": 1.0,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.818,
+          "gun_atk_rW_pct": 0.8,
+          "gun_def_rW_pct": 1.0,
+          "antieco_rW_pct": 1.0,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 10,
+          "post_per_map": 10.0,
+          "post_rW_pct": 0.9,
+          "ret_scens": 3,
+          "ret_per_map": 3.0,
+          "ret_rW_pct": 1.0,
+          "post_by_site": {
+            "A": {
+              "scens": 7,
+              "wins": 6,
+              "pct": 0.857
+            },
+            "B": {
+              "scens": 3,
+              "wins": 3,
+              "pct": 1.0
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 2,
+              "wins": 2,
+              "pct": 1.0
+            },
+            "B": {
+              "scens": 1,
+              "wins": 1,
+              "pct": 1.0
+            }
+          },
+          "post_rank": 3,
+          "post_rW_event_avg": 0.943,
+          "ret_rank": 1,
+          "ret_rW_event_avg": 0.657
+        }
+      ],
+      "allMaps": {
+        "map": "All Maps",
+        "comp": [],
+        "comp_count": 0,
+        "plays": 4,
+        "wins": 4,
+        "losses": 0,
+        "rW_pct": 0.693,
+        "atk_rW_pct": 0.689,
+        "def_rW_pct": 0.7,
+        "pistol_rW_pct": 0.875,
+        "pistol_atk_rW_pct": 0.75,
+        "pistol_def_rW_pct": 1.0,
+        "gun_rW_pct": 0.644,
+        "gun_atk_rW_pct": 0.676,
+        "gun_def_rW_pct": 0.591,
+        "antieco_rW_pct": 0.875,
+        "antieco_atk_rW_pct": 0.75,
+        "antieco_def_rW_pct": 1.0,
+        "eco_rW_pct": 0,
+        "eco_atk_rW_pct": 0,
+        "eco_def_rW_pct": 0,
+        "post_scens": 37,
+        "post_per_map": 9.2,
+        "post_rW_pct": 0.811,
+        "ret_scens": 18,
+        "ret_per_map": 4.5,
+        "ret_rW_pct": 0.5,
+        "post_by_site": {
+          "A": {
+            "scens": 17,
+            "wins": 14,
+            "pct": 0.824
+          },
+          "B": {
+            "scens": 16,
+            "wins": 13,
+            "pct": 0.812
+          },
+          "C": {
+            "scens": 4,
+            "wins": 3,
+            "pct": 0.75
+          }
+        },
+        "ret_by_site": {
+          "B": {
+            "scens": 6,
+            "wins": 2,
+            "pct": 0.333
+          },
+          "A": {
+            "scens": 9,
+            "wins": 6,
+            "pct": 0.667
+          },
+          "C": {
+            "scens": 3,
+            "wins": 1,
+            "pct": 0.333
+          }
+        },
+        "post_rank": 4,
+        "post_rW_event_avg": 0.87,
+        "ret_rank": 2,
+        "ret_rW_event_avg": 0.415
+      },
+      "players": [
+        "BULD",
+        "Famsii",
+        "Jesse",
+        "OLIZERA",
+        "B1SK"
+      ],
+      "xvy": [
+        {
+          "situation": "5v1",
+          "wins": 1,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v2",
+          "wins": 6,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v3",
+          "wins": 16,
+          "losses": 3,
+          "win_pct": 0.8421052631578947
+        },
+        {
+          "situation": "5v4",
+          "wins": 29,
+          "losses": 7,
+          "win_pct": 0.8055555555555556
+        },
+        {
+          "situation": "5v5",
+          "wins": 52,
+          "losses": 23,
+          "win_pct": 0.6933333333333334
+        },
+        {
+          "situation": "4v1",
+          "wins": 11,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "4v2",
+          "wins": 24,
+          "losses": 1,
+          "win_pct": 0.96
+        },
+        {
+          "situation": "4v3",
+          "wins": 35,
+          "losses": 8,
+          "win_pct": 0.813953488372093
+        },
+        {
+          "situation": "4v4",
+          "wins": 31,
+          "losses": 9,
+          "win_pct": 0.775
+        },
+        {
+          "situation": "4v5",
+          "wins": 23,
+          "losses": 16,
+          "win_pct": 0.5897435897435898
+        },
+        {
+          "situation": "3v1",
+          "wins": 28,
+          "losses": 2,
+          "win_pct": 0.9333333333333333
+        },
+        {
+          "situation": "3v2",
+          "wins": 32,
+          "losses": 3,
+          "win_pct": 0.9142857142857143
+        },
+        {
+          "situation": "3v3",
+          "wins": 23,
+          "losses": 9,
+          "win_pct": 0.71875
+        },
+        {
+          "situation": "3v4",
+          "wins": 10,
+          "losses": 6,
+          "win_pct": 0.625
+        },
+        {
+          "situation": "3v5",
+          "wins": 5,
+          "losses": 11,
+          "win_pct": 0.3125
+        },
+        {
+          "situation": "2v1",
+          "wins": 20,
+          "losses": 2,
+          "win_pct": 0.9090909090909091
+        },
+        {
+          "situation": "2v2",
+          "wins": 15,
+          "losses": 4,
+          "win_pct": 0.7894736842105263
+        },
+        {
+          "situation": "2v3",
+          "wins": 8,
+          "losses": 10,
+          "win_pct": 0.4444444444444444
+        },
+        {
+          "situation": "2v4",
+          "wins": 4,
+          "losses": 10,
+          "win_pct": 0.2857142857142857
+        },
+        {
+          "situation": "2v5",
+          "wins": 1,
+          "losses": 9,
+          "win_pct": 0.1
+        },
+        {
+          "situation": "1v1",
+          "wins": 7,
+          "losses": 4,
+          "win_pct": 0.6363636363636364
+        },
+        {
+          "situation": "1v2",
+          "wins": 3,
+          "losses": 5,
+          "win_pct": 0.375
+        },
+        {
+          "situation": "1v3",
+          "wins": 1,
+          "losses": 10,
+          "win_pct": 0.09090909090909091
+        },
+        {
+          "situation": "1v4",
+          "wins": 0,
+          "losses": 8,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "1v5",
+          "wins": 0,
+          "losses": 3,
+          "win_pct": 0.0
+        }
+      ],
+      "series_record": {
+        "wins": 2,
+        "losses": 0
+      },
+      "form": [
+        {
+          "opponent": "PXL",
+          "map": "Split",
+          "score": "13-2",
+          "result": "W"
+        },
+        {
+          "opponent": "PXL",
+          "map": "Corrode",
+          "score": "13-8",
+          "result": "W"
+        },
+        {
+          "opponent": "JL",
+          "map": "Abyss",
+          "score": "13-4",
+          "result": "W"
+        },
+        {
+          "opponent": "JL",
+          "map": "Haven",
+          "score": "13-9",
+          "result": "W"
+        }
+      ]
+    },
+    {
+      "name": "Misa Esports",
+      "tag": "MISA",
+      "maps": [
+        {
+          "map": "Haven",
+          "comp": [
+            "Cypher",
+            "Neon",
+            "Omen",
+            "Sova",
+            "Yoru"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Cypher",
+                "Neon",
+                "Omen",
+                "Sova",
+                "Yoru"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.529,
+              "atk_rW_pct": 0.706,
+              "def_rW_pct": 0.353,
+              "pistol_rW_pct": 0.5,
+              "pistol_atk_rW_pct": 1.0,
+              "pistol_def_rW_pct": 0.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.529,
+          "atk_rW_pct": 0.706,
+          "def_rW_pct": 0.353,
+          "pistol_rW_pct": 0.5,
+          "pistol_atk_rW_pct": 1.0,
+          "pistol_def_rW_pct": 0.0,
+          "gun_rW_pct": 0.571,
+          "gun_atk_rW_pct": 0.667,
+          "gun_def_rW_pct": 0.462,
+          "antieco_rW_pct": 0.5,
+          "antieco_atk_rW_pct": 1.0,
+          "antieco_def_rW_pct": 0.0,
+          "eco_rW_pct": 0.0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0.0,
+          "post_scens": 14,
+          "post_per_map": 14.0,
+          "post_rW_pct": 0.857,
+          "ret_scens": 13,
+          "ret_per_map": 13.0,
+          "ret_rW_pct": 0.154,
+          "post_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 3,
+              "pct": 0.75
+            },
+            "B": {
+              "scens": 1,
+              "wins": 1,
+              "pct": 1.0
+            },
+            "C": {
+              "scens": 9,
+              "wins": 8,
+              "pct": 0.889
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 6,
+              "wins": 2,
+              "pct": 0.333
+            },
+            "B": {
+              "scens": 2,
+              "wins": 0,
+              "pct": 0.0
+            },
+            "C": {
+              "scens": 5,
+              "wins": 0,
+              "pct": 0.0
+            }
+          },
+          "post_rank": 2,
+          "post_rW_event_avg": 0.811,
+          "ret_rank": 3,
+          "ret_rW_event_avg": 0.485
+        },
+        {
+          "map": "Pearl",
+          "comp": [
+            "Astra",
+            "KAY/O",
+            "Killjoy",
+            "Tejo",
+            "Waylay"
+          ],
+          "comp_count": 1,
+          "comps": [
+            {
+              "comp": [
+                "Astra",
+                "KAY/O",
+                "Killjoy",
+                "Tejo",
+                "Waylay"
+              ],
+              "comp_count": 1,
+              "plays": 1,
+              "wins": 1,
+              "losses": 0,
+              "rW_pct": 0.542,
+              "atk_rW_pct": 0.5,
+              "def_rW_pct": 0.583,
+              "pistol_rW_pct": 0.5,
+              "pistol_atk_rW_pct": 0.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 1,
+          "wins": 1,
+          "losses": 0,
+          "rW_pct": 0.542,
+          "atk_rW_pct": 0.5,
+          "def_rW_pct": 0.583,
+          "pistol_rW_pct": 0.5,
+          "pistol_atk_rW_pct": 0.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.55,
+          "gun_atk_rW_pct": 0.6,
+          "gun_def_rW_pct": 0.5,
+          "antieco_rW_pct": 0.5,
+          "antieco_atk_rW_pct": 0.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 7,
+          "post_per_map": 7.0,
+          "post_rW_pct": 0.857,
+          "ret_scens": 9,
+          "ret_per_map": 9.0,
+          "ret_rW_pct": 0.444,
+          "post_by_site": {
+            "A": {
+              "scens": 4,
+              "wins": 4,
+              "pct": 1.0
+            },
+            "B": {
+              "scens": 3,
+              "wins": 2,
+              "pct": 0.667
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 5,
+              "wins": 2,
+              "pct": 0.4
+            },
+            "B": {
+              "scens": 4,
+              "wins": 2,
+              "pct": 0.5
+            }
+          },
+          "post_rank": 2,
+          "post_rW_event_avg": 0.839,
+          "ret_rank": 2,
+          "ret_rW_event_avg": 0.315
+        },
+        {
+          "map": "Split",
+          "comp": [
+            "Breach",
+            "Fade",
+            "Omen",
+            "Viper",
+            "Waylay"
+          ],
+          "comp_count": 2,
+          "comps": [
+            {
+              "comp": [
+                "Breach",
+                "Fade",
+                "Omen",
+                "Viper",
+                "Waylay"
+              ],
+              "comp_count": 2,
+              "plays": 2,
+              "wins": 2,
+              "losses": 0,
+              "rW_pct": 0.65,
+              "atk_rW_pct": 0.619,
+              "def_rW_pct": 0.684,
+              "pistol_rW_pct": 0.5,
+              "pistol_atk_rW_pct": 0.0,
+              "pistol_def_rW_pct": 1.0
+            }
+          ],
+          "plays": 2,
+          "wins": 2,
+          "losses": 0,
+          "rW_pct": 0.65,
+          "atk_rW_pct": 0.619,
+          "def_rW_pct": 0.684,
+          "pistol_rW_pct": 0.5,
+          "pistol_atk_rW_pct": 0.0,
+          "pistol_def_rW_pct": 1.0,
+          "gun_rW_pct": 0.688,
+          "gun_atk_rW_pct": 0.765,
+          "gun_def_rW_pct": 0.6,
+          "antieco_rW_pct": 0.5,
+          "antieco_atk_rW_pct": 0.0,
+          "antieco_def_rW_pct": 1.0,
+          "eco_rW_pct": 0,
+          "eco_atk_rW_pct": 0,
+          "eco_def_rW_pct": 0,
+          "post_scens": 14,
+          "post_per_map": 7.0,
+          "post_rW_pct": 0.929,
+          "ret_scens": 10,
+          "ret_per_map": 5.0,
+          "ret_rW_pct": 0.4,
+          "post_by_site": {
+            "A": {
+              "scens": 9,
+              "wins": 8,
+              "pct": 0.889
+            },
+            "B": {
+              "scens": 5,
+              "wins": 5,
+              "pct": 1.0
+            }
+          },
+          "ret_by_site": {
+            "A": {
+              "scens": 6,
+              "wins": 1,
+              "pct": 0.167
+            },
+            "B": {
+              "scens": 4,
+              "wins": 3,
+              "pct": 0.75
+            }
+          },
+          "post_rank": 2,
+          "post_rW_event_avg": 0.943,
+          "ret_rank": 3,
+          "ret_rW_event_avg": 0.657
+        }
+      ],
+      "allMaps": {
+        "map": "All Maps",
+        "comp": [],
+        "comp_count": 0,
+        "plays": 4,
+        "wins": 4,
+        "losses": 0,
+        "rW_pct": 0.582,
+        "atk_rW_pct": 0.62,
+        "def_rW_pct": 0.542,
+        "pistol_rW_pct": 0.5,
+        "pistol_atk_rW_pct": 0.25,
+        "pistol_def_rW_pct": 0.75,
+        "gun_rW_pct": 0.613,
+        "gun_atk_rW_pct": 0.69,
+        "gun_def_rW_pct": 0.526,
+        "antieco_rW_pct": 0.5,
+        "antieco_atk_rW_pct": 0.25,
+        "antieco_def_rW_pct": 0.75,
+        "eco_rW_pct": 0.0,
+        "eco_atk_rW_pct": 0,
+        "eco_def_rW_pct": 0.0,
+        "post_scens": 35,
+        "post_per_map": 8.8,
+        "post_rW_pct": 0.886,
+        "ret_scens": 32,
+        "ret_per_map": 8.0,
+        "ret_rW_pct": 0.312,
+        "post_by_site": {
+          "A": {
+            "scens": 17,
+            "wins": 15,
+            "pct": 0.882
+          },
+          "B": {
+            "scens": 9,
+            "wins": 8,
+            "pct": 0.889
+          },
+          "C": {
+            "scens": 9,
+            "wins": 8,
+            "pct": 0.889
+          }
+        },
+        "ret_by_site": {
+          "A": {
+            "scens": 17,
+            "wins": 5,
+            "pct": 0.294
+          },
+          "B": {
+            "scens": 10,
+            "wins": 5,
+            "pct": 0.5
+          },
+          "C": {
+            "scens": 5,
+            "wins": 0,
+            "pct": 0.0
+          }
+        },
+        "post_rank": 2,
+        "post_rW_event_avg": 0.87,
+        "ret_rank": 3,
+        "ret_rW_event_avg": 0.415
+      },
+      "players": [
+        "Elite",
+        "pAura",
+        "QutionerX",
+        "burzzy",
+        "Brave"
+      ],
+      "xvy": [
+        {
+          "situation": "5v1",
+          "wins": 7,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v2",
+          "wins": 18,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v3",
+          "wins": 30,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "5v4",
+          "wins": 44,
+          "losses": 10,
+          "win_pct": 0.8148148148148148
+        },
+        {
+          "situation": "5v5",
+          "wins": 57,
+          "losses": 41,
+          "win_pct": 0.5816326530612245
+        },
+        {
+          "situation": "4v1",
+          "wins": 13,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "4v2",
+          "wins": 26,
+          "losses": 1,
+          "win_pct": 0.9629629629629629
+        },
+        {
+          "situation": "4v3",
+          "wins": 33,
+          "losses": 4,
+          "win_pct": 0.8918918918918919
+        },
+        {
+          "situation": "4v4",
+          "wins": 27,
+          "losses": 20,
+          "win_pct": 0.574468085106383
+        },
+        {
+          "situation": "4v5",
+          "wins": 13,
+          "losses": 31,
+          "win_pct": 0.29545454545454547
+        },
+        {
+          "situation": "3v1",
+          "wins": 30,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "3v2",
+          "wins": 30,
+          "losses": 2,
+          "win_pct": 0.9375
+        },
+        {
+          "situation": "3v3",
+          "wins": 21,
+          "losses": 10,
+          "win_pct": 0.6774193548387096
+        },
+        {
+          "situation": "3v4",
+          "wins": 6,
+          "losses": 22,
+          "win_pct": 0.21428571428571427
+        },
+        {
+          "situation": "3v5",
+          "wins": 0,
+          "losses": 21,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "2v1",
+          "wins": 24,
+          "losses": 0,
+          "win_pct": 1.0
+        },
+        {
+          "situation": "2v2",
+          "wins": 11,
+          "losses": 7,
+          "win_pct": 0.6111111111111112
+        },
+        {
+          "situation": "2v3",
+          "wins": 5,
+          "losses": 15,
+          "win_pct": 0.25
+        },
+        {
+          "situation": "2v4",
+          "wins": 1,
+          "losses": 24,
+          "win_pct": 0.04
+        },
+        {
+          "situation": "2v5",
+          "wins": 0,
+          "losses": 14,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "1v1",
+          "wins": 7,
+          "losses": 1,
+          "win_pct": 0.875
+        },
+        {
+          "situation": "1v2",
+          "wins": 1,
+          "losses": 10,
+          "win_pct": 0.09090909090909091
+        },
+        {
+          "situation": "1v3",
+          "wins": 0,
+          "losses": 19,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "1v4",
+          "wins": 0,
+          "losses": 21,
+          "win_pct": 0.0
+        },
+        {
+          "situation": "1v5",
+          "wins": 0,
+          "losses": 4,
+          "win_pct": 0.0
+        }
+      ],
+      "series_record": {
+        "wins": 2,
+        "losses": 0
+      },
+      "form": [
+        {
+          "opponent": "SGE",
+          "map": "Split",
+          "score": "13-8",
+          "result": "W"
+        },
+        {
+          "opponent": "SGE",
+          "map": "Haven",
+          "score": "18-16",
+          "result": "W"
+        },
+        {
+          "opponent": "TL",
+          "map": "Split",
+          "score": "13-6",
+          "result": "W"
+        },
+        {
+          "opponent": "TL",
+          "map": "Pearl",
+          "score": "13-11",
+          "result": "W"
+        }
+      ]
+    }
+  ],
+  "players": [
+    {
+      "ign": "TakaS",
+      "team": "Mandatory",
+      "acs_split": 216,
+      "acs_year": 216,
+      "adr": 140.4,
+      "rounds": 110,
+      "kills": 88,
+      "deaths": 71,
+      "assists": 28,
+      "fk": 17,
+      "fd": 11,
+      "kd": 1.239,
+      "kad": 1.634,
+      "first_pct": 0.607,
+      "fk_pct": 0.1545,
+      "fd_pct": 0.1,
+      "first_conversion": 0.607,
+      "clutch_scens": 5,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.745,
+      "awp_pct": 0.102,
+      "vlr_rating": 1.111,
+      "agents": [
+        {
+          "agent": "Waylay",
+          "picks": 58,
+          "matches": 3,
+          "pct": 50.0
+        },
+        {
+          "agent": "Neon",
+          "picks": 31,
+          "matches": 2,
+          "pct": 33.3
+        },
+        {
+          "agent": "Jett",
+          "picks": 21,
+          "matches": 1,
+          "pct": 16.7
+        }
+      ]
+    },
+    {
+      "ign": "sh1n",
+      "team": "Mandatory",
+      "acs_split": 207,
+      "acs_year": 207,
+      "adr": 130.7,
+      "rounds": 110,
+      "kills": 79,
+      "deaths": 57,
+      "assists": 45,
+      "fk": 17,
+      "fd": 10,
+      "kd": 1.386,
+      "kad": 2.175,
+      "first_pct": 0.63,
+      "fk_pct": 0.1545,
+      "fd_pct": 0.0909,
+      "first_conversion": 0.63,
+      "clutch_scens": 7,
+      "clutches": 4,
+      "clutch_pct": 0.571,
+      "kast": 0.755,
+      "awp_pct": 0.013,
+      "vlr_rating": 1.251,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 56,
+          "matches": 3,
+          "pct": 50.0
+        },
+        {
+          "agent": "Viper",
+          "picks": 31,
+          "matches": 2,
+          "pct": 33.3
+        },
+        {
+          "agent": "Astra",
+          "picks": 23,
+          "matches": 1,
+          "pct": 16.7
+        }
+      ]
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "acs_split": 210,
+      "acs_year": 210,
+      "adr": 149.1,
+      "rounds": 110,
+      "kills": 86,
+      "deaths": 58,
+      "assists": 40,
+      "fk": 15,
+      "fd": 8,
+      "kd": 1.483,
+      "kad": 2.172,
+      "first_pct": 0.652,
+      "fk_pct": 0.1364,
+      "fd_pct": 0.0727,
+      "first_conversion": 0.652,
+      "clutch_scens": 10,
+      "clutches": 1,
+      "clutch_pct": 0.1,
+      "kast": 0.809,
+      "awp_pct": 0.012,
+      "vlr_rating": 1.189,
+      "agents": [
+        {
+          "agent": "Tejo",
+          "picks": 43,
+          "matches": 2,
+          "pct": 33.3
+        },
+        {
+          "agent": "Omen",
+          "picks": 31,
+          "matches": 2,
+          "pct": 33.3
+        },
+        {
+          "agent": "Yoru",
+          "picks": 21,
+          "matches": 1,
+          "pct": 16.7
+        },
+        {
+          "agent": "KAY/O",
+          "picks": 15,
+          "matches": 1,
+          "pct": 16.7
+        }
+      ]
+    },
+    {
+      "ign": "K4davra",
+      "team": "Mandatory",
+      "acs_split": 205,
+      "acs_year": 205,
+      "adr": 139.1,
+      "rounds": 110,
+      "kills": 81,
+      "deaths": 56,
+      "assists": 37,
+      "fk": 9,
+      "fd": 8,
+      "kd": 1.446,
+      "kad": 2.107,
+      "first_pct": 0.529,
+      "fk_pct": 0.0818,
+      "fd_pct": 0.0727,
+      "first_conversion": 0.529,
+      "clutch_scens": 8,
+      "clutches": 1,
+      "clutch_pct": 0.125,
+      "kast": 0.755,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.245,
+      "agents": [
+        {
+          "agent": "Sova",
+          "picks": 90,
+          "matches": 5,
+          "pct": 83.3
+        },
+        {
+          "agent": "KAY/O",
+          "picks": 20,
+          "matches": 1,
+          "pct": 16.7
+        }
+      ]
+    },
+    {
+      "ign": "nataNk",
+      "team": "Mandatory",
+      "acs_split": 201,
+      "acs_year": 201,
+      "adr": 138.3,
+      "rounds": 110,
+      "kills": 82,
+      "deaths": 54,
+      "assists": 30,
+      "fk": 8,
+      "fd": 7,
+      "kd": 1.519,
+      "kad": 2.074,
+      "first_pct": 0.533,
+      "fk_pct": 0.0727,
+      "fd_pct": 0.0636,
+      "first_conversion": 0.533,
+      "clutch_scens": 9,
+      "clutches": 4,
+      "clutch_pct": 0.444,
+      "kast": 0.791,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.251,
+      "agents": [
+        {
+          "agent": "Brimstone",
+          "picks": 35,
+          "matches": 2,
+          "pct": 33.3
+        },
+        {
+          "agent": "Killjoy",
+          "picks": 31,
+          "matches": 2,
+          "pct": 33.3
+        },
+        {
+          "agent": "Cypher",
+          "picks": 23,
+          "matches": 1,
+          "pct": 16.7
+        },
+        {
+          "agent": "Viper",
+          "picks": 21,
+          "matches": 1,
+          "pct": 16.7
+        }
+      ]
+    },
+    {
+      "ign": "Proxh",
+      "team": "Enterprise Esports",
+      "acs_split": 252,
+      "acs_year": 252,
+      "adr": 168.3,
+      "rounds": 94,
+      "kills": 87,
+      "deaths": 60,
+      "assists": 33,
+      "fk": 8,
+      "fd": 5,
+      "kd": 1.45,
+      "kad": 2.0,
+      "first_pct": 0.615,
+      "fk_pct": 0.0851,
+      "fd_pct": 0.0532,
+      "first_conversion": 0.615,
+      "clutch_scens": 12,
+      "clutches": 3,
+      "clutch_pct": 0.25,
+      "kast": 0.84,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.238,
+      "agents": [
+        {
+          "agent": "Astra",
+          "picks": 48,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Brimstone",
+          "picks": 30,
+          "matches": 2,
+          "pct": 40.0
+        },
+        {
+          "agent": "Omen",
+          "picks": 16,
+          "matches": 1,
+          "pct": 20.0
+        }
+      ]
+    },
+    {
+      "ign": "Lime",
+      "team": "Enterprise Esports",
+      "acs_split": 205,
+      "acs_year": 205,
+      "adr": 138.5,
+      "rounds": 94,
+      "kills": 77,
+      "deaths": 55,
+      "assists": 19,
+      "fk": 12,
+      "fd": 5,
+      "kd": 1.4,
+      "kad": 1.745,
+      "first_pct": 0.706,
+      "fk_pct": 0.1277,
+      "fd_pct": 0.0532,
+      "first_conversion": 0.706,
+      "clutch_scens": 10,
+      "clutches": 4,
+      "clutch_pct": 0.4,
+      "kast": 0.872,
+      "awp_pct": 0.182,
+      "vlr_rating": 1.191,
+      "agents": [
+        {
+          "agent": "Tejo",
+          "picks": 48,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Chamber",
+          "picks": 30,
+          "matches": 2,
+          "pct": 40.0
+        },
+        {
+          "agent": "Yoru",
+          "picks": 16,
+          "matches": 1,
+          "pct": 20.0
+        }
+      ]
+    },
+    {
+      "ign": "MAGNUM",
+      "team": "Enterprise Esports",
+      "acs_split": 215,
+      "acs_year": 215,
+      "adr": 152.3,
+      "rounds": 94,
+      "kills": 74,
+      "deaths": 53,
+      "assists": 19,
+      "fk": 9,
+      "fd": 9,
+      "kd": 1.396,
+      "kad": 1.755,
+      "first_pct": 0.5,
+      "fk_pct": 0.0957,
+      "fd_pct": 0.0957,
+      "first_conversion": 0.5,
+      "clutch_scens": 10,
+      "clutches": 3,
+      "clutch_pct": 0.3,
+      "kast": 0.766,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.151,
+      "agents": [
+        {
+          "agent": "Killjoy",
+          "picks": 48,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Viper",
+          "picks": 46,
+          "matches": 2,
+          "pct": 40.0
+        }
+      ]
+    },
+    {
+      "ign": "iluri",
+      "team": "Enterprise Esports",
+      "acs_split": 133,
+      "acs_year": 133,
+      "adr": 91.4,
+      "rounds": 94,
+      "kills": 45,
+      "deaths": 56,
+      "assists": 29,
+      "fk": 4,
+      "fd": 6,
+      "kd": 0.804,
+      "kad": 1.321,
+      "first_pct": 0.4,
+      "fk_pct": 0.0426,
+      "fd_pct": 0.0638,
+      "first_conversion": 0.4,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.809,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.826,
+      "agents": [
+        {
+          "agent": "Fade",
+          "picks": 48,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Skye",
+          "picks": 30,
+          "matches": 2,
+          "pct": 40.0
+        },
+        {
+          "agent": "Tejo",
+          "picks": 16,
+          "matches": 1,
+          "pct": 20.0
+        }
+      ]
+    },
+    {
+      "ign": "kozzy",
+      "team": "Enterprise Esports",
+      "acs_split": 269,
+      "acs_year": 269,
+      "adr": 180.4,
+      "rounds": 94,
+      "kills": 92,
+      "deaths": 55,
+      "assists": 27,
+      "fk": 21,
+      "fd": 15,
+      "kd": 1.673,
+      "kad": 2.164,
+      "first_pct": 0.583,
+      "fk_pct": 0.2234,
+      "fd_pct": 0.1596,
+      "first_conversion": 0.583,
+      "clutch_scens": 5,
+      "clutches": 1,
+      "clutch_pct": 0.2,
+      "kast": 0.787,
+      "awp_pct": 0.011,
+      "vlr_rating": 1.391,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 48,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Waylay",
+          "picks": 46,
+          "matches": 2,
+          "pct": 40.0
+        }
+      ]
+    },
+    {
+      "ign": "Jesse",
+      "team": "UCAM Esports",
+      "acs_split": 221,
+      "acs_year": 221,
+      "adr": 137.4,
+      "rounds": 75,
+      "kills": 64,
+      "deaths": 41,
+      "assists": 43,
+      "fk": 2,
+      "fd": 1,
+      "kd": 1.561,
+      "kad": 2.61,
+      "first_pct": 0.667,
+      "fk_pct": 0.0267,
+      "fd_pct": 0.0133,
+      "first_conversion": 0.667,
+      "clutch_scens": 6,
+      "clutches": 3,
+      "clutch_pct": 0.5,
+      "kast": 0.92,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.371,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 38,
+          "matches": 2,
+          "pct": 50.0
+        },
+        {
+          "agent": "Astra",
+          "picks": 37,
+          "matches": 2,
+          "pct": 50.0
+        }
+      ]
+    },
+    {
+      "ign": "Famsii",
+      "team": "UCAM Esports",
+      "acs_split": 212,
+      "acs_year": 212,
+      "adr": 136.3,
+      "rounds": 75,
+      "kills": 59,
+      "deaths": 55,
+      "assists": 15,
+      "fk": 7,
+      "fd": 12,
+      "kd": 1.073,
+      "kad": 1.345,
+      "first_pct": 0.368,
+      "fk_pct": 0.0933,
+      "fd_pct": 0.16,
+      "first_conversion": 0.368,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.747,
+      "awp_pct": 0.017,
+      "vlr_rating": 0.949,
+      "agents": [
+        {
+          "agent": "Neon",
+          "picks": 75,
+          "matches": 4,
+          "pct": 100.0
+        }
+      ]
+    },
+    {
+      "ign": "BULD",
+      "team": "UCAM Esports",
+      "acs_split": 254,
+      "acs_year": 254,
+      "adr": 168.3,
+      "rounds": 75,
+      "kills": 65,
+      "deaths": 47,
+      "assists": 35,
+      "fk": 5,
+      "fd": 9,
+      "kd": 1.383,
+      "kad": 2.128,
+      "first_pct": 0.357,
+      "fk_pct": 0.0667,
+      "fd_pct": 0.12,
+      "first_conversion": 0.357,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.76,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.267,
+      "agents": [
+        {
+          "agent": "Sova",
+          "picks": 39,
+          "matches": 2,
+          "pct": 50.0
+        },
+        {
+          "agent": "Fade",
+          "picks": 21,
+          "matches": 1,
+          "pct": 25.0
+        },
+        {
+          "agent": "Skye",
+          "picks": 15,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ]
+    },
+    {
+      "ign": "OLIZERA",
+      "team": "UCAM Esports",
+      "acs_split": 212,
+      "acs_year": 212,
+      "adr": 148.7,
+      "rounds": 75,
+      "kills": 62,
+      "deaths": 49,
+      "assists": 20,
+      "fk": 14,
+      "fd": 7,
+      "kd": 1.265,
+      "kad": 1.673,
+      "first_pct": 0.667,
+      "fk_pct": 0.1867,
+      "fd_pct": 0.0933,
+      "first_conversion": 0.667,
+      "clutch_scens": 10,
+      "clutches": 3,
+      "clutch_pct": 0.3,
+      "kast": 0.72,
+      "awp_pct": 0.048,
+      "vlr_rating": 1.095,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 53,
+          "matches": 3,
+          "pct": 75.0
+        },
+        {
+          "agent": "Cypher",
+          "picks": 22,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ]
+    },
+    {
+      "ign": "B1SK",
+      "team": "UCAM Esports",
+      "acs_split": 203,
+      "acs_year": 203,
+      "adr": 128.3,
+      "rounds": 75,
+      "kills": 56,
+      "deaths": 48,
+      "assists": 22,
+      "fk": 9,
+      "fd": 10,
+      "kd": 1.167,
+      "kad": 1.625,
+      "first_pct": 0.474,
+      "fk_pct": 0.12,
+      "fd_pct": 0.1333,
+      "first_conversion": 0.474,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.773,
+      "awp_pct": 0.214,
+      "vlr_rating": 1.064,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 75,
+          "matches": 4,
+          "pct": 100.0
+        }
+      ]
+    },
+    {
+      "ign": "pAura",
+      "team": "Misa Esports",
+      "acs_split": 151,
+      "acs_year": 151,
+      "adr": 112.2,
+      "rounds": 98,
+      "kills": 49,
+      "deaths": 68,
+      "assists": 28,
+      "fk": 9,
+      "fd": 14,
+      "kd": 0.721,
+      "kad": 1.132,
+      "first_pct": 0.391,
+      "fk_pct": 0.0918,
+      "fd_pct": 0.1429,
+      "first_conversion": 0.391,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.724,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.756,
+      "agents": [
+        {
+          "agent": "Breach",
+          "picks": 40,
+          "matches": 2,
+          "pct": 50.0
+        },
+        {
+          "agent": "Sova",
+          "picks": 34,
+          "matches": 1,
+          "pct": 25.0
+        },
+        {
+          "agent": "KAY/O",
+          "picks": 24,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ]
+    },
+    {
+      "ign": "burzzy",
+      "team": "Misa Esports",
+      "acs_split": 171,
+      "acs_year": 171,
+      "adr": 120.4,
+      "rounds": 98,
+      "kills": 62,
+      "deaths": 64,
+      "assists": 47,
+      "fk": 5,
+      "fd": 6,
+      "kd": 0.969,
+      "kad": 1.703,
+      "first_pct": 0.455,
+      "fk_pct": 0.051,
+      "fd_pct": 0.0612,
+      "first_conversion": 0.455,
+      "clutch_scens": 6,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.827,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.986,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 74,
+          "matches": 3,
+          "pct": 75.0
+        },
+        {
+          "agent": "Astra",
+          "picks": 24,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ]
+    },
+    {
+      "ign": "QutionerX",
+      "team": "Misa Esports",
+      "acs_split": 237,
+      "acs_year": 237,
+      "adr": 151.8,
+      "rounds": 98,
+      "kills": 85,
+      "deaths": 73,
+      "assists": 18,
+      "fk": 19,
+      "fd": 9,
+      "kd": 1.164,
+      "kad": 1.411,
+      "first_pct": 0.679,
+      "fk_pct": 0.1939,
+      "fd_pct": 0.0918,
+      "first_conversion": 0.679,
+      "clutch_scens": 12,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.765,
+      "awp_pct": 0.071,
+      "vlr_rating": 1.119,
+      "agents": [
+        {
+          "agent": "Waylay",
+          "picks": 64,
+          "matches": 3,
+          "pct": 75.0
+        },
+        {
+          "agent": "Yoru",
+          "picks": 34,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ]
+    },
+    {
+      "ign": "Brave",
+      "team": "Misa Esports",
+      "acs_split": 206,
+      "acs_year": 206,
+      "adr": 135.2,
+      "rounds": 98,
+      "kills": 70,
+      "deaths": 59,
+      "assists": 19,
+      "fk": 8,
+      "fd": 11,
+      "kd": 1.186,
+      "kad": 1.508,
+      "first_pct": 0.421,
+      "fk_pct": 0.0816,
+      "fd_pct": 0.1122,
+      "first_conversion": 0.421,
+      "clutch_scens": 7,
+      "clutches": 1,
+      "clutch_pct": 0.143,
+      "kast": 0.745,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.095,
+      "agents": [
+        {
+          "agent": "Fade",
+          "picks": 40,
+          "matches": 2,
+          "pct": 50.0
+        },
+        {
+          "agent": "Neon",
+          "picks": 34,
+          "matches": 1,
+          "pct": 25.0
+        },
+        {
+          "agent": "Tejo",
+          "picks": 24,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ]
+    },
+    {
+      "ign": "Elite",
+      "team": "Misa Esports",
+      "acs_split": 218,
+      "acs_year": 218,
+      "adr": 141.6,
+      "rounds": 98,
+      "kills": 75,
+      "deaths": 63,
+      "assists": 24,
+      "fk": 13,
+      "fd": 4,
+      "kd": 1.19,
+      "kad": 1.571,
+      "first_pct": 0.765,
+      "fk_pct": 0.1327,
+      "fd_pct": 0.0408,
+      "first_conversion": 0.765,
+      "clutch_scens": 13,
+      "clutches": 4,
+      "clutch_pct": 0.308,
+      "kast": 0.776,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.129,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 40,
+          "matches": 2,
+          "pct": 50.0
+        },
+        {
+          "agent": "Cypher",
+          "picks": 34,
+          "matches": 1,
+          "pct": 25.0
+        },
+        {
+          "agent": "Killjoy",
+          "picks": 24,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ]
+    }
+  ],
+  "players_by_role": [
+    {
+      "ign": "TakaS",
+      "team": "Mandatory",
+      "acs_split": 216,
+      "acs_year": 216,
+      "adr": 140.4,
+      "rounds": 110,
+      "kills": 88,
+      "deaths": 71,
+      "assists": 28,
+      "fk": 17,
+      "fd": 11,
+      "kd": 1.239,
+      "kad": 1.634,
+      "first_pct": 0.607,
+      "fk_pct": 0.1545,
+      "fd_pct": 0.1,
+      "first_conversion": 0.607,
+      "clutch_scens": 5,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.745,
+      "awp_pct": 0.102,
+      "vlr_rating": 1.111,
+      "agents": [
+        {
+          "agent": "Waylay",
+          "picks": 58,
+          "matches": 3,
+          "pct": 50.0
+        },
+        {
+          "agent": "Neon",
+          "picks": 31,
+          "matches": 2,
+          "pct": 33.3
+        },
+        {
+          "agent": "Jett",
+          "picks": 21,
+          "matches": 1,
+          "pct": 16.7
+        }
+      ],
+      "role": "Duelist"
+    },
+    {
+      "ign": "sh1n",
+      "team": "Mandatory",
+      "acs_split": 207,
+      "acs_year": 207,
+      "adr": 130.7,
+      "rounds": 110,
+      "kills": 79,
+      "deaths": 57,
+      "assists": 45,
+      "fk": 17,
+      "fd": 10,
+      "kd": 1.386,
+      "kad": 2.175,
+      "first_pct": 0.63,
+      "fk_pct": 0.1545,
+      "fd_pct": 0.0909,
+      "first_conversion": 0.63,
+      "clutch_scens": 7,
+      "clutches": 4,
+      "clutch_pct": 0.571,
+      "kast": 0.755,
+      "awp_pct": 0.013,
+      "vlr_rating": 1.251,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 56,
+          "matches": 3,
+          "pct": 50.0
+        },
+        {
+          "agent": "Viper",
+          "picks": 31,
+          "matches": 2,
+          "pct": 33.3
+        },
+        {
+          "agent": "Astra",
+          "picks": 23,
+          "matches": 1,
+          "pct": 16.7
+        }
+      ],
+      "role": "Controller"
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "acs_split": 200,
+      "acs_year": 200,
+      "adr": 150.5,
+      "rounds": 58,
+      "kills": 45,
+      "deaths": 28,
+      "assists": 19,
+      "fk": 8,
+      "fd": 4,
+      "kd": 1.607,
+      "kad": 2.286,
+      "first_pct": 0.667,
+      "fk_pct": 0.1379,
+      "fd_pct": 0.069,
+      "first_conversion": 0.667,
+      "clutch_scens": 4,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.828,
+      "awp_pct": 0.022,
+      "vlr_rating": 1.195,
+      "agents": [
+        {
+          "agent": "Tejo",
+          "picks": 43,
+          "matches": 2,
+          "pct": 66.7
+        },
+        {
+          "agent": "KAY/O",
+          "picks": 15,
+          "matches": 1,
+          "pct": 33.3
+        }
+      ],
+      "role": "Initiator"
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "acs_split": 222,
+      "acs_year": 222,
+      "adr": 139.7,
+      "rounds": 21,
+      "kills": 16,
+      "deaths": 15,
+      "assists": 4,
+      "fk": 4,
+      "fd": 2,
+      "kd": 1.067,
+      "kad": 1.333,
+      "first_pct": 0.667,
+      "fk_pct": 0.1905,
+      "fd_pct": 0.0952,
+      "first_conversion": 0.667,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.619,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.01,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 21,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "role": "Duelist"
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "acs_split": 220,
+      "acs_year": 220,
+      "adr": 152.9,
+      "rounds": 31,
+      "kills": 25,
+      "deaths": 15,
+      "assists": 17,
+      "fk": 3,
+      "fd": 2,
+      "kd": 1.667,
+      "kad": 2.8,
+      "first_pct": 0.6,
+      "fk_pct": 0.0968,
+      "fd_pct": 0.0645,
+      "first_conversion": 0.6,
+      "clutch_scens": 3,
+      "clutches": 1,
+      "clutch_pct": 0.333,
+      "kast": 0.903,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.301,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 31,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "role": "Controller"
+    },
+    {
+      "ign": "K4davra",
+      "team": "Mandatory",
+      "acs_split": 205,
+      "acs_year": 205,
+      "adr": 139.1,
+      "rounds": 110,
+      "kills": 81,
+      "deaths": 56,
+      "assists": 37,
+      "fk": 9,
+      "fd": 8,
+      "kd": 1.446,
+      "kad": 2.107,
+      "first_pct": 0.529,
+      "fk_pct": 0.0818,
+      "fd_pct": 0.0727,
+      "first_conversion": 0.529,
+      "clutch_scens": 8,
+      "clutches": 1,
+      "clutch_pct": 0.125,
+      "kast": 0.755,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.245,
+      "agents": [
+        {
+          "agent": "Sova",
+          "picks": 90,
+          "matches": 5,
+          "pct": 83.3
+        },
+        {
+          "agent": "KAY/O",
+          "picks": 20,
+          "matches": 1,
+          "pct": 16.7
+        }
+      ],
+      "role": "Initiator"
+    },
+    {
+      "ign": "nataNk",
+      "team": "Mandatory",
+      "acs_split": 159,
+      "acs_year": 159,
+      "adr": 119.8,
+      "rounds": 54,
+      "kills": 29,
+      "deaths": 29,
+      "assists": 9,
+      "fk": 4,
+      "fd": 4,
+      "kd": 1.0,
+      "kad": 1.31,
+      "first_pct": 0.5,
+      "fk_pct": 0.0741,
+      "fd_pct": 0.0741,
+      "first_conversion": 0.5,
+      "clutch_scens": 2,
+      "clutches": 1,
+      "clutch_pct": 0.5,
+      "kast": 0.704,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.96,
+      "agents": [
+        {
+          "agent": "Killjoy",
+          "picks": 31,
+          "matches": 2,
+          "pct": 66.7
+        },
+        {
+          "agent": "Cypher",
+          "picks": 23,
+          "matches": 1,
+          "pct": 33.3
+        }
+      ],
+      "role": "Sentinel"
+    },
+    {
+      "ign": "nataNk",
+      "team": "Mandatory",
+      "acs_split": 241,
+      "acs_year": 241,
+      "adr": 156.1,
+      "rounds": 56,
+      "kills": 53,
+      "deaths": 25,
+      "assists": 21,
+      "fk": 4,
+      "fd": 3,
+      "kd": 2.12,
+      "kad": 2.96,
+      "first_pct": 0.571,
+      "fk_pct": 0.0714,
+      "fd_pct": 0.0536,
+      "first_conversion": 0.571,
+      "clutch_scens": 7,
+      "clutches": 3,
+      "clutch_pct": 0.429,
+      "kast": 0.875,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.531,
+      "agents": [
+        {
+          "agent": "Brimstone",
+          "picks": 35,
+          "matches": 2,
+          "pct": 66.7
+        },
+        {
+          "agent": "Viper",
+          "picks": 21,
+          "matches": 1,
+          "pct": 33.3
+        }
+      ],
+      "role": "Controller"
+    },
+    {
+      "ign": "Proxh",
+      "team": "Enterprise Esports",
+      "acs_split": 252,
+      "acs_year": 252,
+      "adr": 168.3,
+      "rounds": 94,
+      "kills": 87,
+      "deaths": 60,
+      "assists": 33,
+      "fk": 8,
+      "fd": 5,
+      "kd": 1.45,
+      "kad": 2.0,
+      "first_pct": 0.615,
+      "fk_pct": 0.0851,
+      "fd_pct": 0.0532,
+      "first_conversion": 0.615,
+      "clutch_scens": 12,
+      "clutches": 3,
+      "clutch_pct": 0.25,
+      "kast": 0.84,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.238,
+      "agents": [
+        {
+          "agent": "Astra",
+          "picks": 48,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Brimstone",
+          "picks": 30,
+          "matches": 2,
+          "pct": 40.0
+        },
+        {
+          "agent": "Omen",
+          "picks": 16,
+          "matches": 1,
+          "pct": 20.0
+        }
+      ],
+      "role": "Controller"
+    },
+    {
+      "ign": "Lime",
+      "team": "Enterprise Esports",
+      "acs_split": 245,
+      "acs_year": 245,
+      "adr": 153.8,
+      "rounds": 16,
+      "kills": 16,
+      "deaths": 8,
+      "assists": 3,
+      "fk": 5,
+      "fd": 0,
+      "kd": 2.0,
+      "kad": 2.375,
+      "first_pct": 1.0,
+      "fk_pct": 0.3125,
+      "fd_pct": 0.0,
+      "first_conversion": 1.0,
+      "clutch_scens": 2,
+      "clutches": 1,
+      "clutch_pct": 0.5,
+      "kast": 0.938,
+      "awp_pct": 0.312,
+      "vlr_rating": 1.365,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 16,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "role": "Duelist"
+    },
+    {
+      "ign": "Lime",
+      "team": "Enterprise Esports",
+      "acs_split": 192,
+      "acs_year": 192,
+      "adr": 136.4,
+      "rounds": 48,
+      "kills": 37,
+      "deaths": 33,
+      "assists": 12,
+      "fk": 3,
+      "fd": 3,
+      "kd": 1.121,
+      "kad": 1.485,
+      "first_pct": 0.5,
+      "fk_pct": 0.0625,
+      "fd_pct": 0.0625,
+      "first_conversion": 0.5,
+      "clutch_scens": 5,
+      "clutches": 1,
+      "clutch_pct": 0.2,
+      "kast": 0.854,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.029,
+      "agents": [
+        {
+          "agent": "Tejo",
+          "picks": 48,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "role": "Initiator"
+    },
+    {
+      "ign": "Lime",
+      "team": "Enterprise Esports",
+      "acs_split": 204,
+      "acs_year": 204,
+      "adr": 133.8,
+      "rounds": 30,
+      "kills": 24,
+      "deaths": 14,
+      "assists": 4,
+      "fk": 4,
+      "fd": 2,
+      "kd": 1.714,
+      "kad": 2.0,
+      "first_pct": 0.667,
+      "fk_pct": 0.1333,
+      "fd_pct": 0.0667,
+      "first_conversion": 0.667,
+      "clutch_scens": 3,
+      "clutches": 2,
+      "clutch_pct": 0.667,
+      "kast": 0.867,
+      "awp_pct": 0.375,
+      "vlr_rating": 1.356,
+      "agents": [
+        {
+          "agent": "Chamber",
+          "picks": 30,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "role": "Sentinel"
+    },
+    {
+      "ign": "MAGNUM",
+      "team": "Enterprise Esports",
+      "acs_split": 232,
+      "acs_year": 232,
+      "adr": 148.7,
+      "rounds": 46,
+      "kills": 39,
+      "deaths": 22,
+      "assists": 14,
+      "fk": 3,
+      "fd": 5,
+      "kd": 1.773,
+      "kad": 2.409,
+      "first_pct": 0.375,
+      "fk_pct": 0.0652,
+      "fd_pct": 0.1087,
+      "first_conversion": 0.375,
+      "clutch_scens": 2,
+      "clutches": 1,
+      "clutch_pct": 0.5,
+      "kast": 0.87,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.294,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 46,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "role": "Controller"
+    },
+    {
+      "ign": "MAGNUM",
+      "team": "Enterprise Esports",
+      "acs_split": 199,
+      "acs_year": 199,
+      "adr": 155.8,
+      "rounds": 48,
+      "kills": 35,
+      "deaths": 31,
+      "assists": 5,
+      "fk": 6,
+      "fd": 4,
+      "kd": 1.129,
+      "kad": 1.29,
+      "first_pct": 0.6,
+      "fk_pct": 0.125,
+      "fd_pct": 0.0833,
+      "first_conversion": 0.6,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.667,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.015,
+      "agents": [
+        {
+          "agent": "Killjoy",
+          "picks": 48,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "role": "Sentinel"
+    },
+    {
+      "ign": "iluri",
+      "team": "Enterprise Esports",
+      "acs_split": 133,
+      "acs_year": 133,
+      "adr": 91.4,
+      "rounds": 94,
+      "kills": 45,
+      "deaths": 56,
+      "assists": 29,
+      "fk": 4,
+      "fd": 6,
+      "kd": 0.804,
+      "kad": 1.321,
+      "first_pct": 0.4,
+      "fk_pct": 0.0426,
+      "fd_pct": 0.0638,
+      "first_conversion": 0.4,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.809,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.826,
+      "agents": [
+        {
+          "agent": "Fade",
+          "picks": 48,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Skye",
+          "picks": 30,
+          "matches": 2,
+          "pct": 40.0
+        },
+        {
+          "agent": "Tejo",
+          "picks": 16,
+          "matches": 1,
+          "pct": 20.0
+        }
+      ],
+      "role": "Initiator"
+    },
+    {
+      "ign": "kozzy",
+      "team": "Enterprise Esports",
+      "acs_split": 269,
+      "acs_year": 269,
+      "adr": 180.4,
+      "rounds": 94,
+      "kills": 92,
+      "deaths": 55,
+      "assists": 27,
+      "fk": 21,
+      "fd": 15,
+      "kd": 1.673,
+      "kad": 2.164,
+      "first_pct": 0.583,
+      "fk_pct": 0.2234,
+      "fd_pct": 0.1596,
+      "first_conversion": 0.583,
+      "clutch_scens": 5,
+      "clutches": 1,
+      "clutch_pct": 0.2,
+      "kast": 0.787,
+      "awp_pct": 0.011,
+      "vlr_rating": 1.391,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 48,
+          "matches": 3,
+          "pct": 60.0
+        },
+        {
+          "agent": "Waylay",
+          "picks": 46,
+          "matches": 2,
+          "pct": 40.0
+        }
+      ],
+      "role": "Duelist"
+    },
+    {
+      "ign": "Jesse",
+      "team": "UCAM Esports",
+      "acs_split": 221,
+      "acs_year": 221,
+      "adr": 137.4,
+      "rounds": 75,
+      "kills": 64,
+      "deaths": 41,
+      "assists": 43,
+      "fk": 2,
+      "fd": 1,
+      "kd": 1.561,
+      "kad": 2.61,
+      "first_pct": 0.667,
+      "fk_pct": 0.0267,
+      "fd_pct": 0.0133,
+      "first_conversion": 0.667,
+      "clutch_scens": 6,
+      "clutches": 3,
+      "clutch_pct": 0.5,
+      "kast": 0.92,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.371,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 38,
+          "matches": 2,
+          "pct": 50.0
+        },
+        {
+          "agent": "Astra",
+          "picks": 37,
+          "matches": 2,
+          "pct": 50.0
+        }
+      ],
+      "role": "Controller"
+    },
+    {
+      "ign": "Famsii",
+      "team": "UCAM Esports",
+      "acs_split": 212,
+      "acs_year": 212,
+      "adr": 136.3,
+      "rounds": 75,
+      "kills": 59,
+      "deaths": 55,
+      "assists": 15,
+      "fk": 7,
+      "fd": 12,
+      "kd": 1.073,
+      "kad": 1.345,
+      "first_pct": 0.368,
+      "fk_pct": 0.0933,
+      "fd_pct": 0.16,
+      "first_conversion": 0.368,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.747,
+      "awp_pct": 0.017,
+      "vlr_rating": 0.949,
+      "agents": [
+        {
+          "agent": "Neon",
+          "picks": 75,
+          "matches": 4,
+          "pct": 100.0
+        }
+      ],
+      "role": "Duelist"
+    },
+    {
+      "ign": "BULD",
+      "team": "UCAM Esports",
+      "acs_split": 254,
+      "acs_year": 254,
+      "adr": 168.3,
+      "rounds": 75,
+      "kills": 65,
+      "deaths": 47,
+      "assists": 35,
+      "fk": 5,
+      "fd": 9,
+      "kd": 1.383,
+      "kad": 2.128,
+      "first_pct": 0.357,
+      "fk_pct": 0.0667,
+      "fd_pct": 0.12,
+      "first_conversion": 0.357,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.76,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.267,
+      "agents": [
+        {
+          "agent": "Sova",
+          "picks": 39,
+          "matches": 2,
+          "pct": 50.0
+        },
+        {
+          "agent": "Fade",
+          "picks": 21,
+          "matches": 1,
+          "pct": 25.0
+        },
+        {
+          "agent": "Skye",
+          "picks": 15,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ],
+      "role": "Initiator"
+    },
+    {
+      "ign": "OLIZERA",
+      "team": "UCAM Esports",
+      "acs_split": 194,
+      "acs_year": 194,
+      "adr": 122.5,
+      "rounds": 22,
+      "kills": 15,
+      "deaths": 17,
+      "assists": 6,
+      "fk": 5,
+      "fd": 2,
+      "kd": 0.882,
+      "kad": 1.235,
+      "first_pct": 0.714,
+      "fk_pct": 0.2273,
+      "fd_pct": 0.0909,
+      "first_conversion": 0.714,
+      "clutch_scens": 2,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.636,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.785,
+      "agents": [
+        {
+          "agent": "Cypher",
+          "picks": 22,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "role": "Sentinel"
+    },
+    {
+      "ign": "OLIZERA",
+      "team": "UCAM Esports",
+      "acs_split": 220,
+      "acs_year": 220,
+      "adr": 159.5,
+      "rounds": 53,
+      "kills": 47,
+      "deaths": 32,
+      "assists": 14,
+      "fk": 9,
+      "fd": 5,
+      "kd": 1.469,
+      "kad": 1.906,
+      "first_pct": 0.643,
+      "fk_pct": 0.1698,
+      "fd_pct": 0.0943,
+      "first_conversion": 0.643,
+      "clutch_scens": 8,
+      "clutches": 3,
+      "clutch_pct": 0.375,
+      "kast": 0.755,
+      "awp_pct": 0.064,
+      "vlr_rating": 1.224,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 53,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "role": "Controller"
+    },
+    {
+      "ign": "B1SK",
+      "team": "UCAM Esports",
+      "acs_split": 203,
+      "acs_year": 203,
+      "adr": 128.3,
+      "rounds": 75,
+      "kills": 56,
+      "deaths": 48,
+      "assists": 22,
+      "fk": 9,
+      "fd": 10,
+      "kd": 1.167,
+      "kad": 1.625,
+      "first_pct": 0.474,
+      "fk_pct": 0.12,
+      "fd_pct": 0.1333,
+      "first_conversion": 0.474,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.773,
+      "awp_pct": 0.214,
+      "vlr_rating": 1.064,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 75,
+          "matches": 4,
+          "pct": 100.0
+        }
+      ],
+      "role": "Duelist"
+    },
+    {
+      "ign": "pAura",
+      "team": "Misa Esports",
+      "acs_split": 151,
+      "acs_year": 151,
+      "adr": 112.2,
+      "rounds": 98,
+      "kills": 49,
+      "deaths": 68,
+      "assists": 28,
+      "fk": 9,
+      "fd": 14,
+      "kd": 0.721,
+      "kad": 1.132,
+      "first_pct": 0.391,
+      "fk_pct": 0.0918,
+      "fd_pct": 0.1429,
+      "first_conversion": 0.391,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.724,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.756,
+      "agents": [
+        {
+          "agent": "Breach",
+          "picks": 40,
+          "matches": 2,
+          "pct": 50.0
+        },
+        {
+          "agent": "Sova",
+          "picks": 34,
+          "matches": 1,
+          "pct": 25.0
+        },
+        {
+          "agent": "KAY/O",
+          "picks": 24,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ],
+      "role": "Initiator"
+    },
+    {
+      "ign": "burzzy",
+      "team": "Misa Esports",
+      "acs_split": 171,
+      "acs_year": 171,
+      "adr": 120.4,
+      "rounds": 98,
+      "kills": 62,
+      "deaths": 64,
+      "assists": 47,
+      "fk": 5,
+      "fd": 6,
+      "kd": 0.969,
+      "kad": 1.703,
+      "first_pct": 0.455,
+      "fk_pct": 0.051,
+      "fd_pct": 0.0612,
+      "first_conversion": 0.455,
+      "clutch_scens": 6,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.827,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.986,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 74,
+          "matches": 3,
+          "pct": 75.0
+        },
+        {
+          "agent": "Astra",
+          "picks": 24,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ],
+      "role": "Controller"
+    },
+    {
+      "ign": "QutionerX",
+      "team": "Misa Esports",
+      "acs_split": 237,
+      "acs_year": 237,
+      "adr": 151.8,
+      "rounds": 98,
+      "kills": 85,
+      "deaths": 73,
+      "assists": 18,
+      "fk": 19,
+      "fd": 9,
+      "kd": 1.164,
+      "kad": 1.411,
+      "first_pct": 0.679,
+      "fk_pct": 0.1939,
+      "fd_pct": 0.0918,
+      "first_conversion": 0.679,
+      "clutch_scens": 12,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.765,
+      "awp_pct": 0.071,
+      "vlr_rating": 1.119,
+      "agents": [
+        {
+          "agent": "Waylay",
+          "picks": 64,
+          "matches": 3,
+          "pct": 75.0
+        },
+        {
+          "agent": "Yoru",
+          "picks": 34,
+          "matches": 1,
+          "pct": 25.0
+        }
+      ],
+      "role": "Duelist"
+    },
+    {
+      "ign": "Brave",
+      "team": "Misa Esports",
+      "acs_split": 209,
+      "acs_year": 209,
+      "adr": 135.7,
+      "rounds": 64,
+      "kills": 48,
+      "deaths": 32,
+      "assists": 13,
+      "fk": 4,
+      "fd": 4,
+      "kd": 1.5,
+      "kad": 1.906,
+      "first_pct": 0.5,
+      "fk_pct": 0.0625,
+      "fd_pct": 0.0625,
+      "first_conversion": 0.5,
+      "clutch_scens": 6,
+      "clutches": 1,
+      "clutch_pct": 0.167,
+      "kast": 0.797,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.236,
+      "agents": [
+        {
+          "agent": "Fade",
+          "picks": 40,
+          "matches": 2,
+          "pct": 66.7
+        },
+        {
+          "agent": "Tejo",
+          "picks": 24,
+          "matches": 1,
+          "pct": 33.3
+        }
+      ],
+      "role": "Initiator"
+    },
+    {
+      "ign": "Brave",
+      "team": "Misa Esports",
+      "acs_split": 200,
+      "acs_year": 200,
+      "adr": 134.3,
+      "rounds": 34,
+      "kills": 22,
+      "deaths": 27,
+      "assists": 6,
+      "fk": 4,
+      "fd": 7,
+      "kd": 0.815,
+      "kad": 1.037,
+      "first_pct": 0.364,
+      "fk_pct": 0.1176,
+      "fd_pct": 0.2059,
+      "first_conversion": 0.364,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.647,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.831,
+      "agents": [
+        {
+          "agent": "Neon",
+          "picks": 34,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "role": "Duelist"
+    },
+    {
+      "ign": "Elite",
+      "team": "Misa Esports",
+      "acs_split": 222,
+      "acs_year": 222,
+      "adr": 144.9,
+      "rounds": 58,
+      "kills": 45,
+      "deaths": 40,
+      "assists": 12,
+      "fk": 8,
+      "fd": 2,
+      "kd": 1.125,
+      "kad": 1.425,
+      "first_pct": 0.8,
+      "fk_pct": 0.1379,
+      "fd_pct": 0.0345,
+      "first_conversion": 0.8,
+      "clutch_scens": 8,
+      "clutches": 3,
+      "clutch_pct": 0.375,
+      "kast": 0.741,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.124,
+      "agents": [
+        {
+          "agent": "Cypher",
+          "picks": 34,
+          "matches": 1,
+          "pct": 50.0
+        },
+        {
+          "agent": "Killjoy",
+          "picks": 24,
+          "matches": 1,
+          "pct": 50.0
+        }
+      ],
+      "role": "Sentinel"
+    },
+    {
+      "ign": "Elite",
+      "team": "Misa Esports",
+      "acs_split": 212,
+      "acs_year": 212,
+      "adr": 136.8,
+      "rounds": 40,
+      "kills": 30,
+      "deaths": 23,
+      "assists": 12,
+      "fk": 5,
+      "fd": 2,
+      "kd": 1.304,
+      "kad": 1.826,
+      "first_pct": 0.714,
+      "fk_pct": 0.125,
+      "fd_pct": 0.05,
+      "first_conversion": 0.714,
+      "clutch_scens": 5,
+      "clutches": 1,
+      "clutch_pct": 0.2,
+      "kast": 0.825,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.135,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 40,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "role": "Controller"
+    }
+  ],
+  "players_by_agent": [
+    {
+      "ign": "TakaS",
+      "team": "Mandatory",
+      "acs_split": 244,
+      "acs_year": 244,
+      "adr": 154.0,
+      "rounds": 58,
+      "kills": 51,
+      "deaths": 37,
+      "assists": 16,
+      "fk": 9,
+      "fd": 5,
+      "kd": 1.378,
+      "kad": 1.811,
+      "first_pct": 0.643,
+      "fk_pct": 0.1552,
+      "fd_pct": 0.0862,
+      "first_conversion": 0.643,
+      "clutch_scens": 4,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.741,
+      "awp_pct": 0.118,
+      "vlr_rating": 1.202,
+      "agents": [
+        {
+          "agent": "Waylay",
+          "picks": 58,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Waylay"
+    },
+    {
+      "ign": "TakaS",
+      "team": "Mandatory",
+      "acs_split": 125,
+      "acs_year": 125,
+      "adr": 90.2,
+      "rounds": 21,
+      "kills": 9,
+      "deaths": 15,
+      "assists": 5,
+      "fk": 2,
+      "fd": 4,
+      "kd": 0.6,
+      "kad": 0.933,
+      "first_pct": 0.333,
+      "fk_pct": 0.0952,
+      "fd_pct": 0.1905,
+      "first_conversion": 0.333,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.571,
+      "awp_pct": 0.222,
+      "vlr_rating": 0.633,
+      "agents": [
+        {
+          "agent": "Jett",
+          "picks": 21,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Jett"
+    },
+    {
+      "ign": "TakaS",
+      "team": "Mandatory",
+      "acs_split": 224,
+      "acs_year": 224,
+      "adr": 149.1,
+      "rounds": 31,
+      "kills": 28,
+      "deaths": 19,
+      "assists": 7,
+      "fk": 6,
+      "fd": 2,
+      "kd": 1.474,
+      "kad": 1.842,
+      "first_pct": 0.75,
+      "fk_pct": 0.1935,
+      "fd_pct": 0.0645,
+      "first_conversion": 0.75,
+      "clutch_scens": 0,
+      "clutches": 0,
+      "clutch_pct": 0,
+      "kast": 0.871,
+      "awp_pct": 0.036,
+      "vlr_rating": 1.262,
+      "agents": [
+        {
+          "agent": "Neon",
+          "picks": 31,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Neon"
+    },
+    {
+      "ign": "sh1n",
+      "team": "Mandatory",
+      "acs_split": 184,
+      "acs_year": 184,
+      "adr": 121.1,
+      "rounds": 23,
+      "kills": 13,
+      "deaths": 16,
+      "assists": 12,
+      "fk": 6,
+      "fd": 0,
+      "kd": 0.812,
+      "kad": 1.562,
+      "first_pct": 1.0,
+      "fk_pct": 0.2609,
+      "fd_pct": 0.0,
+      "first_conversion": 1.0,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.696,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.077,
+      "agents": [
+        {
+          "agent": "Astra",
+          "picks": 23,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Astra"
+    },
+    {
+      "ign": "sh1n",
+      "team": "Mandatory",
+      "acs_split": 185,
+      "acs_year": 185,
+      "adr": 115.9,
+      "rounds": 56,
+      "kills": 36,
+      "deaths": 29,
+      "assists": 22,
+      "fk": 7,
+      "fd": 6,
+      "kd": 1.241,
+      "kad": 2.0,
+      "first_pct": 0.538,
+      "fk_pct": 0.125,
+      "fd_pct": 0.1071,
+      "first_conversion": 0.538,
+      "clutch_scens": 1,
+      "clutches": 1,
+      "clutch_pct": 1.0,
+      "kast": 0.768,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.111,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 56,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Omen"
+    },
+    {
+      "ign": "sh1n",
+      "team": "Mandatory",
+      "acs_split": 262,
+      "acs_year": 262,
+      "adr": 164.6,
+      "rounds": 31,
+      "kills": 30,
+      "deaths": 12,
+      "assists": 11,
+      "fk": 4,
+      "fd": 4,
+      "kd": 2.5,
+      "kad": 3.417,
+      "first_pct": 0.5,
+      "fk_pct": 0.129,
+      "fd_pct": 0.129,
+      "first_conversion": 0.5,
+      "clutch_scens": 3,
+      "clutches": 3,
+      "clutch_pct": 1.0,
+      "kast": 0.774,
+      "awp_pct": 0.033,
+      "vlr_rating": 1.632,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 31,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Viper"
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "acs_split": 149,
+      "acs_year": 149,
+      "adr": 128.9,
+      "rounds": 43,
+      "kills": 25,
+      "deaths": 24,
+      "assists": 9,
+      "fk": 5,
+      "fd": 4,
+      "kd": 1.042,
+      "kad": 1.417,
+      "first_pct": 0.556,
+      "fk_pct": 0.1163,
+      "fd_pct": 0.093,
+      "first_conversion": 0.556,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.767,
+      "awp_pct": 0.04,
+      "vlr_rating": 0.916,
+      "agents": [
+        {
+          "agent": "Tejo",
+          "picks": 43,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Tejo"
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "acs_split": 222,
+      "acs_year": 222,
+      "adr": 139.7,
+      "rounds": 21,
+      "kills": 16,
+      "deaths": 15,
+      "assists": 4,
+      "fk": 4,
+      "fd": 2,
+      "kd": 1.067,
+      "kad": 1.333,
+      "first_pct": 0.667,
+      "fk_pct": 0.1905,
+      "fd_pct": 0.0952,
+      "first_conversion": 0.667,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.619,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.01,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 21,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Yoru"
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "acs_split": 346,
+      "acs_year": 346,
+      "adr": 212.3,
+      "rounds": 15,
+      "kills": 20,
+      "deaths": 4,
+      "assists": 10,
+      "fk": 3,
+      "fd": 0,
+      "kd": 5.0,
+      "kad": 7.5,
+      "first_pct": 1.0,
+      "fk_pct": 0.2,
+      "fd_pct": 0.0,
+      "first_conversion": 1.0,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 1.0,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.994,
+      "agents": [
+        {
+          "agent": "KAY/O",
+          "picks": 15,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "KAY/O"
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "acs_split": 220,
+      "acs_year": 220,
+      "adr": 152.9,
+      "rounds": 31,
+      "kills": 25,
+      "deaths": 15,
+      "assists": 17,
+      "fk": 3,
+      "fd": 2,
+      "kd": 1.667,
+      "kad": 2.8,
+      "first_pct": 0.6,
+      "fk_pct": 0.0968,
+      "fd_pct": 0.0645,
+      "first_conversion": 0.6,
+      "clutch_scens": 3,
+      "clutches": 1,
+      "clutch_pct": 0.333,
+      "kast": 0.903,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.301,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 31,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Omen"
+    },
+    {
+      "ign": "K4davra",
+      "team": "Mandatory",
+      "acs_split": 198,
+      "acs_year": 198,
+      "adr": 136.5,
+      "rounds": 90,
+      "kills": 64,
+      "deaths": 45,
+      "assists": 28,
+      "fk": 8,
+      "fd": 7,
+      "kd": 1.422,
+      "kad": 2.044,
+      "first_pct": 0.533,
+      "fk_pct": 0.0889,
+      "fd_pct": 0.0778,
+      "first_conversion": 0.533,
+      "clutch_scens": 7,
+      "clutches": 1,
+      "clutch_pct": 0.143,
+      "kast": 0.744,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.217,
+      "agents": [
+        {
+          "agent": "Sova",
+          "picks": 90,
+          "matches": 5,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Sova"
+    },
+    {
+      "ign": "K4davra",
+      "team": "Mandatory",
+      "acs_split": 240,
+      "acs_year": 240,
+      "adr": 150.7,
+      "rounds": 20,
+      "kills": 17,
+      "deaths": 11,
+      "assists": 9,
+      "fk": 1,
+      "fd": 1,
+      "kd": 1.545,
+      "kad": 2.364,
+      "first_pct": 0.5,
+      "fk_pct": 0.05,
+      "fd_pct": 0.05,
+      "first_conversion": 0.5,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.8,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.369,
+      "agents": [
+        {
+          "agent": "KAY/O",
+          "picks": 20,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "KAY/O"
+    },
+    {
+      "ign": "nataNk",
+      "team": "Mandatory",
+      "acs_split": 198,
+      "acs_year": 198,
+      "adr": 140.0,
+      "rounds": 23,
+      "kills": 15,
+      "deaths": 14,
+      "assists": 3,
+      "fk": 3,
+      "fd": 3,
+      "kd": 1.071,
+      "kad": 1.286,
+      "first_pct": 0.5,
+      "fk_pct": 0.1304,
+      "fd_pct": 0.1304,
+      "first_conversion": 0.5,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.783,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.078,
+      "agents": [
+        {
+          "agent": "Cypher",
+          "picks": 23,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Cypher"
+    },
+    {
+      "ign": "nataNk",
+      "team": "Mandatory",
+      "acs_split": 272,
+      "acs_year": 272,
+      "adr": 187.3,
+      "rounds": 21,
+      "kills": 23,
+      "deaths": 9,
+      "assists": 1,
+      "fk": 1,
+      "fd": 1,
+      "kd": 2.556,
+      "kad": 2.667,
+      "first_pct": 0.5,
+      "fk_pct": 0.0476,
+      "fd_pct": 0.0476,
+      "first_conversion": 0.5,
+      "clutch_scens": 4,
+      "clutches": 2,
+      "clutch_pct": 0.5,
+      "kast": 0.762,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.655,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 21,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Viper"
+    },
+    {
+      "ign": "nataNk",
+      "team": "Mandatory",
+      "acs_split": 223,
+      "acs_year": 223,
+      "adr": 137.4,
+      "rounds": 35,
+      "kills": 30,
+      "deaths": 16,
+      "assists": 20,
+      "fk": 3,
+      "fd": 2,
+      "kd": 1.875,
+      "kad": 3.125,
+      "first_pct": 0.6,
+      "fk_pct": 0.0857,
+      "fd_pct": 0.0571,
+      "first_conversion": 0.6,
+      "clutch_scens": 3,
+      "clutches": 1,
+      "clutch_pct": 0.333,
+      "kast": 0.943,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.457,
+      "agents": [
+        {
+          "agent": "Brimstone",
+          "picks": 35,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Brimstone"
+    },
+    {
+      "ign": "nataNk",
+      "team": "Mandatory",
+      "acs_split": 131,
+      "acs_year": 131,
+      "adr": 104.9,
+      "rounds": 31,
+      "kills": 14,
+      "deaths": 15,
+      "assists": 6,
+      "fk": 1,
+      "fd": 1,
+      "kd": 0.933,
+      "kad": 1.333,
+      "first_pct": 0.5,
+      "fk_pct": 0.0323,
+      "fd_pct": 0.0323,
+      "first_conversion": 0.5,
+      "clutch_scens": 1,
+      "clutches": 1,
+      "clutch_pct": 1.0,
+      "kast": 0.645,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.872,
+      "agents": [
+        {
+          "agent": "Killjoy",
+          "picks": 31,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Killjoy"
+    },
+    {
+      "ign": "Proxh",
+      "team": "Enterprise Esports",
+      "acs_split": 141,
+      "acs_year": 141,
+      "adr": 92.5,
+      "rounds": 16,
+      "kills": 7,
+      "deaths": 9,
+      "assists": 6,
+      "fk": 0,
+      "fd": 2,
+      "kd": 0.778,
+      "kad": 1.444,
+      "first_pct": 0.0,
+      "fk_pct": 0.0,
+      "fd_pct": 0.125,
+      "first_conversion": 0.0,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.812,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.783,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 16,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Omen"
+    },
+    {
+      "ign": "Proxh",
+      "team": "Enterprise Esports",
+      "acs_split": 248,
+      "acs_year": 248,
+      "adr": 162.6,
+      "rounds": 48,
+      "kills": 44,
+      "deaths": 34,
+      "assists": 19,
+      "fk": 5,
+      "fd": 3,
+      "kd": 1.294,
+      "kad": 1.853,
+      "first_pct": 0.625,
+      "fk_pct": 0.1042,
+      "fd_pct": 0.0625,
+      "first_conversion": 0.625,
+      "clutch_scens": 10,
+      "clutches": 3,
+      "clutch_pct": 0.3,
+      "kast": 0.812,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.296,
+      "agents": [
+        {
+          "agent": "Astra",
+          "picks": 48,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Astra"
+    },
+    {
+      "ign": "Proxh",
+      "team": "Enterprise Esports",
+      "acs_split": 318,
+      "acs_year": 318,
+      "adr": 217.9,
+      "rounds": 30,
+      "kills": 36,
+      "deaths": 17,
+      "assists": 8,
+      "fk": 3,
+      "fd": 0,
+      "kd": 2.118,
+      "kad": 2.588,
+      "first_pct": 1.0,
+      "fk_pct": 0.1,
+      "fd_pct": 0.0,
+      "first_conversion": 1.0,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.9,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.388,
+      "agents": [
+        {
+          "agent": "Brimstone",
+          "picks": 30,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Brimstone"
+    },
+    {
+      "ign": "Lime",
+      "team": "Enterprise Esports",
+      "acs_split": 245,
+      "acs_year": 245,
+      "adr": 153.8,
+      "rounds": 16,
+      "kills": 16,
+      "deaths": 8,
+      "assists": 3,
+      "fk": 5,
+      "fd": 0,
+      "kd": 2.0,
+      "kad": 2.375,
+      "first_pct": 1.0,
+      "fk_pct": 0.3125,
+      "fd_pct": 0.0,
+      "first_conversion": 1.0,
+      "clutch_scens": 2,
+      "clutches": 1,
+      "clutch_pct": 0.5,
+      "kast": 0.938,
+      "awp_pct": 0.312,
+      "vlr_rating": 1.365,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 16,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Yoru"
+    },
+    {
+      "ign": "Lime",
+      "team": "Enterprise Esports",
+      "acs_split": 192,
+      "acs_year": 192,
+      "adr": 136.4,
+      "rounds": 48,
+      "kills": 37,
+      "deaths": 33,
+      "assists": 12,
+      "fk": 3,
+      "fd": 3,
+      "kd": 1.121,
+      "kad": 1.485,
+      "first_pct": 0.5,
+      "fk_pct": 0.0625,
+      "fd_pct": 0.0625,
+      "first_conversion": 0.5,
+      "clutch_scens": 5,
+      "clutches": 1,
+      "clutch_pct": 0.2,
+      "kast": 0.854,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.029,
+      "agents": [
+        {
+          "agent": "Tejo",
+          "picks": 48,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Tejo"
+    },
+    {
+      "ign": "Lime",
+      "team": "Enterprise Esports",
+      "acs_split": 204,
+      "acs_year": 204,
+      "adr": 133.8,
+      "rounds": 30,
+      "kills": 24,
+      "deaths": 14,
+      "assists": 4,
+      "fk": 4,
+      "fd": 2,
+      "kd": 1.714,
+      "kad": 2.0,
+      "first_pct": 0.667,
+      "fk_pct": 0.1333,
+      "fd_pct": 0.0667,
+      "first_conversion": 0.667,
+      "clutch_scens": 3,
+      "clutches": 2,
+      "clutch_pct": 0.667,
+      "kast": 0.867,
+      "awp_pct": 0.375,
+      "vlr_rating": 1.356,
+      "agents": [
+        {
+          "agent": "Chamber",
+          "picks": 30,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Chamber"
+    },
+    {
+      "ign": "MAGNUM",
+      "team": "Enterprise Esports",
+      "acs_split": 232,
+      "acs_year": 232,
+      "adr": 148.7,
+      "rounds": 46,
+      "kills": 39,
+      "deaths": 22,
+      "assists": 14,
+      "fk": 3,
+      "fd": 5,
+      "kd": 1.773,
+      "kad": 2.409,
+      "first_pct": 0.375,
+      "fk_pct": 0.0652,
+      "fd_pct": 0.1087,
+      "first_conversion": 0.375,
+      "clutch_scens": 2,
+      "clutches": 1,
+      "clutch_pct": 0.5,
+      "kast": 0.87,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.294,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 46,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Viper"
+    },
+    {
+      "ign": "MAGNUM",
+      "team": "Enterprise Esports",
+      "acs_split": 199,
+      "acs_year": 199,
+      "adr": 155.8,
+      "rounds": 48,
+      "kills": 35,
+      "deaths": 31,
+      "assists": 5,
+      "fk": 6,
+      "fd": 4,
+      "kd": 1.129,
+      "kad": 1.29,
+      "first_pct": 0.6,
+      "fk_pct": 0.125,
+      "fd_pct": 0.0833,
+      "first_conversion": 0.6,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.667,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.015,
+      "agents": [
+        {
+          "agent": "Killjoy",
+          "picks": 48,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Killjoy"
+    },
+    {
+      "ign": "iluri",
+      "team": "Enterprise Esports",
+      "acs_split": 134,
+      "acs_year": 134,
+      "adr": 86.9,
+      "rounds": 16,
+      "kills": 9,
+      "deaths": 7,
+      "assists": 2,
+      "fk": 2,
+      "fd": 1,
+      "kd": 1.286,
+      "kad": 1.571,
+      "first_pct": 0.667,
+      "fk_pct": 0.125,
+      "fd_pct": 0.0625,
+      "first_conversion": 0.667,
+      "clutch_scens": 0,
+      "clutches": 0,
+      "clutch_pct": 0,
+      "kast": 0.812,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.922,
+      "agents": [
+        {
+          "agent": "Tejo",
+          "picks": 16,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Tejo"
+    },
+    {
+      "ign": "iluri",
+      "team": "Enterprise Esports",
+      "acs_split": 121,
+      "acs_year": 121,
+      "adr": 88.4,
+      "rounds": 48,
+      "kills": 17,
+      "deaths": 36,
+      "assists": 18,
+      "fk": 1,
+      "fd": 3,
+      "kd": 0.472,
+      "kad": 0.972,
+      "first_pct": 0.25,
+      "fk_pct": 0.0208,
+      "fd_pct": 0.0625,
+      "first_conversion": 0.25,
+      "clutch_scens": 7,
+      "clutches": 1,
+      "clutch_pct": 0.143,
+      "kast": 0.75,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.643,
+      "agents": [
+        {
+          "agent": "Fade",
+          "picks": 48,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Fade"
+    },
+    {
+      "ign": "iluri",
+      "team": "Enterprise Esports",
+      "acs_split": 153,
+      "acs_year": 153,
+      "adr": 98.5,
+      "rounds": 30,
+      "kills": 19,
+      "deaths": 13,
+      "assists": 9,
+      "fk": 1,
+      "fd": 2,
+      "kd": 1.462,
+      "kad": 2.154,
+      "first_pct": 0.333,
+      "fk_pct": 0.0333,
+      "fd_pct": 0.0667,
+      "first_conversion": 0.333,
+      "clutch_scens": 1,
+      "clutches": 1,
+      "clutch_pct": 1.0,
+      "kast": 0.9,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.067,
+      "agents": [
+        {
+          "agent": "Skye",
+          "picks": 30,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Skye"
+    },
+    {
+      "ign": "kozzy",
+      "team": "Enterprise Esports",
+      "acs_split": 340,
+      "acs_year": 340,
+      "adr": 234.0,
+      "rounds": 46,
+      "kills": 59,
+      "deaths": 18,
+      "assists": 12,
+      "fk": 9,
+      "fd": 7,
+      "kd": 3.278,
+      "kad": 3.944,
+      "first_pct": 0.562,
+      "fk_pct": 0.1957,
+      "fd_pct": 0.1522,
+      "first_conversion": 0.562,
+      "clutch_scens": 3,
+      "clutches": 1,
+      "clutch_pct": 0.333,
+      "kast": 0.891,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.921,
+      "agents": [
+        {
+          "agent": "Waylay",
+          "picks": 46,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Waylay"
+    },
+    {
+      "ign": "kozzy",
+      "team": "Enterprise Esports",
+      "acs_split": 200,
+      "acs_year": 200,
+      "adr": 129.0,
+      "rounds": 48,
+      "kills": 33,
+      "deaths": 37,
+      "assists": 15,
+      "fk": 12,
+      "fd": 8,
+      "kd": 0.892,
+      "kad": 1.297,
+      "first_pct": 0.6,
+      "fk_pct": 0.25,
+      "fd_pct": 0.1667,
+      "first_conversion": 0.6,
+      "clutch_scens": 2,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.688,
+      "awp_pct": 0.03,
+      "vlr_rating": 0.883,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 48,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Yoru"
+    },
+    {
+      "ign": "Jesse",
+      "team": "UCAM Esports",
+      "acs_split": 198,
+      "acs_year": 198,
+      "adr": 132.0,
+      "rounds": 37,
+      "kills": 28,
+      "deaths": 20,
+      "assists": 19,
+      "fk": 0,
+      "fd": 0,
+      "kd": 1.4,
+      "kad": 2.35,
+      "first_pct": 0,
+      "fk_pct": 0.0,
+      "fd_pct": 0.0,
+      "first_conversion": 0,
+      "clutch_scens": 4,
+      "clutches": 2,
+      "clutch_pct": 0.5,
+      "kast": 0.838,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.268,
+      "agents": [
+        {
+          "agent": "Astra",
+          "picks": 37,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Astra"
+    },
+    {
+      "ign": "Jesse",
+      "team": "UCAM Esports",
+      "acs_split": 243,
+      "acs_year": 243,
+      "adr": 142.7,
+      "rounds": 38,
+      "kills": 36,
+      "deaths": 21,
+      "assists": 24,
+      "fk": 2,
+      "fd": 1,
+      "kd": 1.714,
+      "kad": 2.857,
+      "first_pct": 0.667,
+      "fk_pct": 0.0526,
+      "fd_pct": 0.0263,
+      "first_conversion": 0.667,
+      "clutch_scens": 2,
+      "clutches": 1,
+      "clutch_pct": 0.5,
+      "kast": 1.0,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.471,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 38,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Omen"
+    },
+    {
+      "ign": "Famsii",
+      "team": "UCAM Esports",
+      "acs_split": 212,
+      "acs_year": 212,
+      "adr": 136.3,
+      "rounds": 75,
+      "kills": 59,
+      "deaths": 55,
+      "assists": 15,
+      "fk": 7,
+      "fd": 12,
+      "kd": 1.073,
+      "kad": 1.345,
+      "first_pct": 0.368,
+      "fk_pct": 0.0933,
+      "fd_pct": 0.16,
+      "first_conversion": 0.368,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.747,
+      "awp_pct": 0.017,
+      "vlr_rating": 0.949,
+      "agents": [
+        {
+          "agent": "Neon",
+          "picks": 75,
+          "matches": 4,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Neon"
+    },
+    {
+      "ign": "BULD",
+      "team": "UCAM Esports",
+      "acs_split": 224,
+      "acs_year": 224,
+      "adr": 161.0,
+      "rounds": 39,
+      "kills": 31,
+      "deaths": 25,
+      "assists": 14,
+      "fk": 1,
+      "fd": 3,
+      "kd": 1.24,
+      "kad": 1.8,
+      "first_pct": 0.25,
+      "fk_pct": 0.0256,
+      "fd_pct": 0.0769,
+      "first_conversion": 0.25,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.744,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.178,
+      "agents": [
+        {
+          "agent": "Sova",
+          "picks": 39,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Sova"
+    },
+    {
+      "ign": "BULD",
+      "team": "UCAM Esports",
+      "acs_split": 318,
+      "acs_year": 318,
+      "adr": 199.5,
+      "rounds": 21,
+      "kills": 20,
+      "deaths": 12,
+      "assists": 12,
+      "fk": 2,
+      "fd": 4,
+      "kd": 1.667,
+      "kad": 2.667,
+      "first_pct": 0.333,
+      "fk_pct": 0.0952,
+      "fd_pct": 0.1905,
+      "first_conversion": 0.333,
+      "clutch_scens": 0,
+      "clutches": 0,
+      "clutch_pct": 0,
+      "kast": 0.714,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.458,
+      "agents": [
+        {
+          "agent": "Fade",
+          "picks": 21,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Fade"
+    },
+    {
+      "ign": "BULD",
+      "team": "UCAM Esports",
+      "acs_split": 243,
+      "acs_year": 243,
+      "adr": 143.9,
+      "rounds": 15,
+      "kills": 14,
+      "deaths": 10,
+      "assists": 9,
+      "fk": 2,
+      "fd": 2,
+      "kd": 1.4,
+      "kad": 2.3,
+      "first_pct": 0.5,
+      "fk_pct": 0.1333,
+      "fd_pct": 0.1333,
+      "first_conversion": 0.5,
+      "clutch_scens": 0,
+      "clutches": 0,
+      "clutch_pct": 0,
+      "kast": 0.867,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.234,
+      "agents": [
+        {
+          "agent": "Skye",
+          "picks": 15,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Skye"
+    },
+    {
+      "ign": "OLIZERA",
+      "team": "UCAM Esports",
+      "acs_split": 194,
+      "acs_year": 194,
+      "adr": 122.5,
+      "rounds": 22,
+      "kills": 15,
+      "deaths": 17,
+      "assists": 6,
+      "fk": 5,
+      "fd": 2,
+      "kd": 0.882,
+      "kad": 1.235,
+      "first_pct": 0.714,
+      "fk_pct": 0.2273,
+      "fd_pct": 0.0909,
+      "first_conversion": 0.714,
+      "clutch_scens": 2,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.636,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.785,
+      "agents": [
+        {
+          "agent": "Cypher",
+          "picks": 22,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Cypher"
+    },
+    {
+      "ign": "OLIZERA",
+      "team": "UCAM Esports",
+      "acs_split": 220,
+      "acs_year": 220,
+      "adr": 159.5,
+      "rounds": 53,
+      "kills": 47,
+      "deaths": 32,
+      "assists": 14,
+      "fk": 9,
+      "fd": 5,
+      "kd": 1.469,
+      "kad": 1.906,
+      "first_pct": 0.643,
+      "fk_pct": 0.1698,
+      "fd_pct": 0.0943,
+      "first_conversion": 0.643,
+      "clutch_scens": 8,
+      "clutches": 3,
+      "clutch_pct": 0.375,
+      "kast": 0.755,
+      "awp_pct": 0.064,
+      "vlr_rating": 1.224,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 53,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Viper"
+    },
+    {
+      "ign": "B1SK",
+      "team": "UCAM Esports",
+      "acs_split": 203,
+      "acs_year": 203,
+      "adr": 128.3,
+      "rounds": 75,
+      "kills": 56,
+      "deaths": 48,
+      "assists": 22,
+      "fk": 9,
+      "fd": 10,
+      "kd": 1.167,
+      "kad": 1.625,
+      "first_pct": 0.474,
+      "fk_pct": 0.12,
+      "fd_pct": 0.1333,
+      "first_conversion": 0.474,
+      "clutch_scens": 8,
+      "clutches": 2,
+      "clutch_pct": 0.25,
+      "kast": 0.773,
+      "awp_pct": 0.214,
+      "vlr_rating": 1.064,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 75,
+          "matches": 4,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Yoru"
+    },
+    {
+      "ign": "pAura",
+      "team": "Misa Esports",
+      "acs_split": 93,
+      "acs_year": 93,
+      "adr": 65.5,
+      "rounds": 24,
+      "kills": 6,
+      "deaths": 17,
+      "assists": 9,
+      "fk": 3,
+      "fd": 4,
+      "kd": 0.353,
+      "kad": 0.882,
+      "first_pct": 0.429,
+      "fk_pct": 0.125,
+      "fd_pct": 0.1667,
+      "first_conversion": 0.429,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.625,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.435,
+      "agents": [
+        {
+          "agent": "KAY/O",
+          "picks": 24,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "KAY/O"
+    },
+    {
+      "ign": "pAura",
+      "team": "Misa Esports",
+      "acs_split": 157,
+      "acs_year": 157,
+      "adr": 102.5,
+      "rounds": 40,
+      "kills": 21,
+      "deaths": 25,
+      "assists": 14,
+      "fk": 3,
+      "fd": 7,
+      "kd": 0.84,
+      "kad": 1.4,
+      "first_pct": 0.3,
+      "fk_pct": 0.075,
+      "fd_pct": 0.175,
+      "first_conversion": 0.3,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.8,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.897,
+      "agents": [
+        {
+          "agent": "Breach",
+          "picks": 40,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Breach"
+    },
+    {
+      "ign": "pAura",
+      "team": "Misa Esports",
+      "acs_split": 184,
+      "acs_year": 184,
+      "adr": 156.6,
+      "rounds": 34,
+      "kills": 22,
+      "deaths": 26,
+      "assists": 5,
+      "fk": 3,
+      "fd": 3,
+      "kd": 0.846,
+      "kad": 1.038,
+      "first_pct": 0.5,
+      "fk_pct": 0.0882,
+      "fd_pct": 0.0882,
+      "first_conversion": 0.5,
+      "clutch_scens": 6,
+      "clutches": 2,
+      "clutch_pct": 0.333,
+      "kast": 0.706,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.817,
+      "agents": [
+        {
+          "agent": "Sova",
+          "picks": 34,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Sova"
+    },
+    {
+      "ign": "burzzy",
+      "team": "Misa Esports",
+      "acs_split": 152,
+      "acs_year": 152,
+      "adr": 93.5,
+      "rounds": 24,
+      "kills": 14,
+      "deaths": 14,
+      "assists": 18,
+      "fk": 0,
+      "fd": 1,
+      "kd": 1.0,
+      "kad": 2.286,
+      "first_pct": 0.0,
+      "fk_pct": 0.0,
+      "fd_pct": 0.0417,
+      "first_conversion": 0.0,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.875,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.08,
+      "agents": [
+        {
+          "agent": "Astra",
+          "picks": 24,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Astra"
+    },
+    {
+      "ign": "burzzy",
+      "team": "Misa Esports",
+      "acs_split": 178,
+      "acs_year": 178,
+      "adr": 129.2,
+      "rounds": 74,
+      "kills": 48,
+      "deaths": 50,
+      "assists": 29,
+      "fk": 5,
+      "fd": 5,
+      "kd": 0.96,
+      "kad": 1.54,
+      "first_pct": 0.5,
+      "fk_pct": 0.0676,
+      "fd_pct": 0.0676,
+      "first_conversion": 0.5,
+      "clutch_scens": 3,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.811,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.956,
+      "agents": [
+        {
+          "agent": "Omen",
+          "picks": 74,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Omen"
+    },
+    {
+      "ign": "QutionerX",
+      "team": "Misa Esports",
+      "acs_split": 256,
+      "acs_year": 256,
+      "adr": 166.5,
+      "rounds": 64,
+      "kills": 62,
+      "deaths": 46,
+      "assists": 9,
+      "fk": 15,
+      "fd": 8,
+      "kd": 1.348,
+      "kad": 1.543,
+      "first_pct": 0.652,
+      "fk_pct": 0.2344,
+      "fd_pct": 0.125,
+      "first_conversion": 0.652,
+      "clutch_scens": 7,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.734,
+      "awp_pct": 0.081,
+      "vlr_rating": 1.225,
+      "agents": [
+        {
+          "agent": "Waylay",
+          "picks": 64,
+          "matches": 3,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Waylay"
+    },
+    {
+      "ign": "QutionerX",
+      "team": "Misa Esports",
+      "acs_split": 203,
+      "acs_year": 203,
+      "adr": 124.0,
+      "rounds": 34,
+      "kills": 23,
+      "deaths": 27,
+      "assists": 9,
+      "fk": 4,
+      "fd": 1,
+      "kd": 0.852,
+      "kad": 1.185,
+      "first_pct": 0.8,
+      "fk_pct": 0.1176,
+      "fd_pct": 0.0294,
+      "first_conversion": 0.8,
+      "clutch_scens": 5,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.824,
+      "awp_pct": 0.043,
+      "vlr_rating": 0.918,
+      "agents": [
+        {
+          "agent": "Yoru",
+          "picks": 34,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Yoru"
+    },
+    {
+      "ign": "Brave",
+      "team": "Misa Esports",
+      "acs_split": 186,
+      "acs_year": 186,
+      "adr": 122.3,
+      "rounds": 24,
+      "kills": 15,
+      "deaths": 14,
+      "assists": 5,
+      "fk": 3,
+      "fd": 2,
+      "kd": 1.071,
+      "kad": 1.429,
+      "first_pct": 0.6,
+      "fk_pct": 0.125,
+      "fd_pct": 0.0833,
+      "first_conversion": 0.6,
+      "clutch_scens": 2,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.75,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.957,
+      "agents": [
+        {
+          "agent": "Tejo",
+          "picks": 24,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Tejo"
+    },
+    {
+      "ign": "Brave",
+      "team": "Misa Esports",
+      "acs_split": 223,
+      "acs_year": 223,
+      "adr": 143.7,
+      "rounds": 40,
+      "kills": 33,
+      "deaths": 18,
+      "assists": 8,
+      "fk": 1,
+      "fd": 2,
+      "kd": 1.833,
+      "kad": 2.278,
+      "first_pct": 0.333,
+      "fk_pct": 0.025,
+      "fd_pct": 0.05,
+      "first_conversion": 0.333,
+      "clutch_scens": 4,
+      "clutches": 1,
+      "clutch_pct": 0.25,
+      "kast": 0.825,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.403,
+      "agents": [
+        {
+          "agent": "Fade",
+          "picks": 40,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Fade"
+    },
+    {
+      "ign": "Brave",
+      "team": "Misa Esports",
+      "acs_split": 200,
+      "acs_year": 200,
+      "adr": 134.3,
+      "rounds": 34,
+      "kills": 22,
+      "deaths": 27,
+      "assists": 6,
+      "fk": 4,
+      "fd": 7,
+      "kd": 0.815,
+      "kad": 1.037,
+      "first_pct": 0.364,
+      "fk_pct": 0.1176,
+      "fd_pct": 0.2059,
+      "first_conversion": 0.364,
+      "clutch_scens": 1,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.647,
+      "awp_pct": 0.0,
+      "vlr_rating": 0.831,
+      "agents": [
+        {
+          "agent": "Neon",
+          "picks": 34,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Neon"
+    },
+    {
+      "ign": "Elite",
+      "team": "Misa Esports",
+      "acs_split": 259,
+      "acs_year": 259,
+      "adr": 171.7,
+      "rounds": 24,
+      "kills": 21,
+      "deaths": 18,
+      "assists": 4,
+      "fk": 4,
+      "fd": 0,
+      "kd": 1.167,
+      "kad": 1.389,
+      "first_pct": 1.0,
+      "fk_pct": 0.1667,
+      "fd_pct": 0.0,
+      "first_conversion": 1.0,
+      "clutch_scens": 2,
+      "clutches": 0,
+      "clutch_pct": 0.0,
+      "kast": 0.875,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.158,
+      "agents": [
+        {
+          "agent": "Killjoy",
+          "picks": 24,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Killjoy"
+    },
+    {
+      "ign": "Elite",
+      "team": "Misa Esports",
+      "acs_split": 212,
+      "acs_year": 212,
+      "adr": 136.8,
+      "rounds": 40,
+      "kills": 30,
+      "deaths": 23,
+      "assists": 12,
+      "fk": 5,
+      "fd": 2,
+      "kd": 1.304,
+      "kad": 1.826,
+      "first_pct": 0.714,
+      "fk_pct": 0.125,
+      "fd_pct": 0.05,
+      "first_conversion": 0.714,
+      "clutch_scens": 5,
+      "clutches": 1,
+      "clutch_pct": 0.2,
+      "kast": 0.825,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.135,
+      "agents": [
+        {
+          "agent": "Viper",
+          "picks": 40,
+          "matches": 2,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Viper"
+    },
+    {
+      "ign": "Elite",
+      "team": "Misa Esports",
+      "acs_split": 195,
+      "acs_year": 195,
+      "adr": 126.0,
+      "rounds": 34,
+      "kills": 24,
+      "deaths": 22,
+      "assists": 8,
+      "fk": 4,
+      "fd": 2,
+      "kd": 1.091,
+      "kad": 1.455,
+      "first_pct": 0.667,
+      "fk_pct": 0.1176,
+      "fd_pct": 0.0588,
+      "first_conversion": 0.667,
+      "clutch_scens": 6,
+      "clutches": 3,
+      "clutch_pct": 0.5,
+      "kast": 0.647,
+      "awp_pct": 0.0,
+      "vlr_rating": 1.1,
+      "agents": [
+        {
+          "agent": "Cypher",
+          "picks": 34,
+          "matches": 1,
+          "pct": 100.0
+        }
+      ],
+      "agent": "Cypher"
+    }
+  ],
+  "matches": [
+    {
+      "match_id": "45021724-cf69-4b1c-be00-e033ada8f9f4",
+      "series_id": "8630c7b1",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Pearl",
+      "team1": "Mandatory",
+      "team2": "S2G Esports",
+      "team1_agents": [
+        "Astra",
+        "Cypher",
+        "Sova",
+        "Tejo",
+        "Waylay"
+      ],
+      "team2_agents": [
+        "Astra",
+        "Killjoy",
+        "Neon",
+        "Sova",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 10,
+      "team1_score_at_half": 7,
+      "team2_score_at_half": 5,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 0,
+      "team2_atk_pistol_wins": 1,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 7,
+      "team1_atk_losses": 5,
+      "team1_def_wins": 6,
+      "team1_def_losses": 5,
+      "winner": "Mandatory",
+      "date": "2026-03-22"
+    },
+    {
+      "match_id": "552d7ee1-e6b1-47fc-99b1-d421663f1253",
+      "series_id": "8630c7b1",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Breeze",
+      "team1": "Mandatory",
+      "team2": "S2G Esports",
+      "team1_agents": [
+        "Jett",
+        "Omen",
+        "Sova",
+        "Viper",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Astra",
+        "Neon",
+        "Omen",
+        "Sova",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 8,
+      "team1_score_at_half": 6,
+      "team2_score_at_half": 6,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 6,
+      "team1_atk_losses": 6,
+      "team1_def_wins": 7,
+      "team1_def_losses": 2,
+      "winner": "Mandatory",
+      "date": "2026-03-22"
+    },
+    {
+      "match_id": "8cb578c4-a675-45c7-8405-155b2b80da28",
+      "series_id": "e9bb4ad5",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Haven",
+      "team1": "UCAM Esports",
+      "team2": "Joblife",
+      "team1_agents": [
+        "Astra",
+        "Cypher",
+        "Neon",
+        "Sova",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Cypher",
+        "Neon",
+        "Omen",
+        "Sova",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 9,
+      "team1_score_at_half": 6,
+      "team2_score_at_half": 6,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 6,
+      "team1_atk_losses": 6,
+      "team1_def_wins": 7,
+      "team1_def_losses": 3,
+      "winner": "UCAM Esports",
+      "date": "2026-03-22"
+    },
+    {
+      "match_id": "9abce8ee-7847-4f91-abc3-17d68e077229",
+      "series_id": "e9bb4ad5",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Abyss",
+      "team1": "UCAM Esports",
+      "team2": "Joblife",
+      "team1_agents": [
+        "Neon",
+        "Omen",
+        "Sova",
+        "Viper",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Astra",
+        "Harbor",
+        "KAY/O",
+        "Tejo",
+        "Waylay"
+      ],
+      "team1_score": 13,
+      "team2_score": 4,
+      "team1_score_at_half": 8,
+      "team2_score_at_half": 4,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 8,
+      "team1_atk_losses": 4,
+      "team1_def_wins": 5,
+      "team1_def_losses": 0,
+      "winner": "UCAM Esports",
+      "date": "2026-03-22"
+    },
+    {
+      "match_id": "fe848444-9df2-4991-97d6-f88c2b06646d",
+      "series_id": "dd5453fc",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Corrode",
+      "team1": "Mandatory",
+      "team2": "GnG Amazigh",
+      "team1_agents": [
+        "Brimstone",
+        "KAY/O",
+        "Omen",
+        "Sova",
+        "Waylay"
+      ],
+      "team2_agents": [
+        "Fade",
+        "Neon",
+        "Omen",
+        "Viper",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 2,
+      "team1_score_at_half": 11,
+      "team2_score_at_half": 1,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 11,
+      "team1_atk_losses": 1,
+      "team1_def_wins": 2,
+      "team1_def_losses": 1,
+      "winner": "Mandatory",
+      "date": "2026-03-21"
+    },
+    {
+      "match_id": "225163c0-ece4-4477-a611-327fb837230e",
+      "series_id": "dd5453fc",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Haven",
+      "team1": "Mandatory",
+      "team2": "GnG Amazigh",
+      "team1_agents": [
+        "Killjoy",
+        "Neon",
+        "Omen",
+        "Sova",
+        "Viper"
+      ],
+      "team2_agents": [
+        "Killjoy",
+        "Neon",
+        "Omen",
+        "Sova",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 4,
+      "team1_score_at_half": 9,
+      "team2_score_at_half": 3,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 0,
+      "team2_atk_pistol_wins": 1,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 9,
+      "team1_atk_losses": 3,
+      "team1_def_wins": 4,
+      "team1_def_losses": 1,
+      "winner": "Mandatory",
+      "date": "2026-03-21"
+    },
+    {
+      "match_id": "22607544-de81-49bc-8f37-85c70f596d0b",
+      "series_id": "f483d9cf",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Split",
+      "team1": "Enterprise Esports",
+      "team2": "FOKUS",
+      "team1_agents": [
+        "Omen",
+        "Tejo",
+        "Viper",
+        "Waylay",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Fade",
+        "Neon",
+        "Omen",
+        "Viper",
+        "Waylay"
+      ],
+      "team1_score": 13,
+      "team2_score": 3,
+      "team1_score_at_half": 9,
+      "team2_score_at_half": 3,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 4,
+      "team1_atk_losses": 0,
+      "team1_def_wins": 9,
+      "team1_def_losses": 3,
+      "winner": "Enterprise Esports",
+      "date": "2026-03-20"
+    },
+    {
+      "match_id": "25d172f7-f241-41ad-bddd-dde81c56e5a1",
+      "series_id": "f483d9cf",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Pearl",
+      "team1": "Enterprise Esports",
+      "team2": "FOKUS",
+      "team1_agents": [
+        "Astra",
+        "Fade",
+        "Killjoy",
+        "Tejo",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Astra",
+        "Killjoy",
+        "Neon",
+        "Sova",
+        "Waylay"
+      ],
+      "team1_score": 9,
+      "team2_score": 13,
+      "team1_score_at_half": 2,
+      "team2_score_at_half": 10,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 0,
+      "team2_atk_pistol_wins": 1,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 7,
+      "team1_atk_losses": 3,
+      "team1_def_wins": 2,
+      "team1_def_losses": 10,
+      "winner": "FOKUS",
+      "date": "2026-03-20"
+    },
+    {
+      "match_id": "995243f6-943b-4ea3-98f0-2be7a292c796",
+      "series_id": "f483d9cf",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Bind",
+      "team1": "Enterprise Esports",
+      "team2": "FOKUS",
+      "team1_agents": [
+        "Brimstone",
+        "Chamber",
+        "Skye",
+        "Viper",
+        "Waylay"
+      ],
+      "team2_agents": [
+        "Brimstone",
+        "Fade",
+        "Raze",
+        "Viper",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 2,
+      "team1_score_at_half": 10,
+      "team2_score_at_half": 2,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 3,
+      "team1_atk_losses": 0,
+      "team1_def_wins": 10,
+      "team1_def_losses": 2,
+      "winner": "Enterprise Esports",
+      "date": "2026-03-20"
+    },
+    {
+      "match_id": "5cadffcf-1f28-4e7e-9eaf-ed57375868b4",
+      "series_id": "460573e1",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Pearl",
+      "team1": "Misa Esports",
+      "team2": "Team Liquid Academy",
+      "team1_agents": [
+        "Astra",
+        "KAY/O",
+        "Killjoy",
+        "Tejo",
+        "Waylay"
+      ],
+      "team2_agents": [
+        "Astra",
+        "Fade",
+        "Sage",
+        "Vyse",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 11,
+      "team1_score_at_half": 7,
+      "team2_score_at_half": 5,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 6,
+      "team1_atk_losses": 6,
+      "team1_def_wins": 7,
+      "team1_def_losses": 5,
+      "winner": "Misa Esports",
+      "date": "2026-03-20"
+    },
+    {
+      "match_id": "ea6e413d-f95f-404d-a8f6-7da51c5befdf",
+      "series_id": "460573e1",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Split",
+      "team1": "Misa Esports",
+      "team2": "Team Liquid Academy",
+      "team1_agents": [
+        "Breach",
+        "Fade",
+        "Omen",
+        "Viper",
+        "Waylay"
+      ],
+      "team2_agents": [
+        "Fade",
+        "Omen",
+        "Raze",
+        "Viper",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 6,
+      "team1_score_at_half": 7,
+      "team2_score_at_half": 5,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 7,
+      "team1_atk_losses": 5,
+      "team1_def_wins": 6,
+      "team1_def_losses": 1,
+      "winner": "Misa Esports",
+      "date": "2026-03-20"
+    },
+    {
+      "match_id": "47977248-3e6c-4721-a2a8-60fca030c393",
+      "series_id": "bfe96e1a",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Abyss",
+      "team1": "Mandatory",
+      "team2": "MIR",
+      "team1_agents": [
+        "Brimstone",
+        "KAY/O",
+        "Omen",
+        "Tejo",
+        "Waylay"
+      ],
+      "team2_agents": [
+        "Astra",
+        "Sova",
+        "Veto",
+        "Waylay",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 7,
+      "team1_score_at_half": 8,
+      "team2_score_at_half": 4,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 8,
+      "team1_atk_losses": 4,
+      "team1_def_wins": 5,
+      "team1_def_losses": 3,
+      "winner": "Mandatory",
+      "date": "2026-03-19"
+    },
+    {
+      "match_id": "65177388-7b7f-4740-ad96-1d38a0309ac4",
+      "series_id": "bfe96e1a",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Haven",
+      "team1": "Mandatory",
+      "team2": "MIR",
+      "team1_agents": [
+        "Killjoy",
+        "Neon",
+        "Omen",
+        "Sova",
+        "Viper"
+      ],
+      "team2_agents": [
+        "Cypher",
+        "Neon",
+        "Omen",
+        "Sova",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 1,
+      "team1_score_at_half": 11,
+      "team2_score_at_half": 1,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 11,
+      "team1_atk_losses": 1,
+      "team1_def_wins": 2,
+      "team1_def_losses": 0,
+      "winner": "Mandatory",
+      "date": "2026-03-19"
+    },
+    {
+      "match_id": "5e8c7871-73b1-4f22-ac3a-779f6682cd63",
+      "series_id": "b05577f6",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Bind",
+      "team1": "Enterprise Esports",
+      "team2": "Bar\u00e7a eSports",
+      "team1_agents": [
+        "Brimstone",
+        "Chamber",
+        "Skye",
+        "Viper",
+        "Waylay"
+      ],
+      "team2_agents": [
+        "Brimstone",
+        "Neon",
+        "Skye",
+        "Viper",
+        "Waylay"
+      ],
+      "team1_score": 13,
+      "team2_score": 2,
+      "team1_score_at_half": 10,
+      "team2_score_at_half": 2,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 3,
+      "team1_atk_losses": 0,
+      "team1_def_wins": 10,
+      "team1_def_losses": 2,
+      "winner": "Enterprise Esports",
+      "date": "2026-03-19"
+    },
+    {
+      "match_id": "a23565be-b405-40d6-8c9d-bdc7592ccbaf",
+      "series_id": "b05577f6",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Pearl",
+      "team1": "Enterprise Esports",
+      "team2": "Bar\u00e7a eSports",
+      "team1_agents": [
+        "Astra",
+        "Fade",
+        "Killjoy",
+        "Tejo",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Astra",
+        "Cypher",
+        "Sova",
+        "Tejo",
+        "Waylay"
+      ],
+      "team1_score": 14,
+      "team2_score": 12,
+      "team1_score_at_half": 7,
+      "team2_score_at_half": 5,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 8,
+      "team1_atk_losses": 5,
+      "team1_def_wins": 6,
+      "team1_def_losses": 7,
+      "winner": "Enterprise Esports",
+      "date": "2026-03-19"
+    },
+    {
+      "match_id": "c8d0a2ff-529e-4c34-ab6f-02535841d196",
+      "series_id": "bc3f56e3",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Corrode",
+      "team1": "UCAM Esports",
+      "team2": "Pixel Lumina",
+      "team1_agents": [
+        "Fade",
+        "Neon",
+        "Omen",
+        "Viper",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Astra",
+        "Iso",
+        "Skye",
+        "Viper",
+        "Waylay"
+      ],
+      "team1_score": 13,
+      "team2_score": 8,
+      "team1_score_at_half": 6,
+      "team2_score_at_half": 6,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 7,
+      "team1_atk_losses": 2,
+      "team1_def_wins": 6,
+      "team1_def_losses": 6,
+      "winner": "UCAM Esports",
+      "date": "2026-03-19"
+    },
+    {
+      "match_id": "1ac7f08d-1f04-4c5c-98ad-c1f5f3ec75d9",
+      "series_id": "bc3f56e3",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Split",
+      "team1": "UCAM Esports",
+      "team2": "Pixel Lumina",
+      "team1_agents": [
+        "Astra",
+        "Neon",
+        "Skye",
+        "Viper",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Fade",
+        "Omen",
+        "Raze",
+        "Viper",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 2,
+      "team1_score_at_half": 10,
+      "team2_score_at_half": 2,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 10,
+      "team1_atk_losses": 2,
+      "team1_def_wins": 3,
+      "team1_def_losses": 0,
+      "winner": "UCAM Esports",
+      "date": "2026-03-19"
+    },
+    {
+      "match_id": "1c4f285c-f4e1-411a-94ae-48bdd9a50167",
+      "series_id": "b73f4cbf",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Haven",
+      "team1": "Misa Esports",
+      "team2": "Eintracht Frankfurt",
+      "team1_agents": [
+        "Cypher",
+        "Neon",
+        "Omen",
+        "Sova",
+        "Yoru"
+      ],
+      "team2_agents": [
+        "Killjoy",
+        "Neon",
+        "Omen",
+        "Sova",
+        "Viper"
+      ],
+      "team1_score": 18,
+      "team2_score": 16,
+      "team1_score_at_half": 4,
+      "team2_score_at_half": 8,
+      "team1_atk_pistol_wins": 1,
+      "team1_def_pistol_wins": 0,
+      "team2_atk_pistol_wins": 1,
+      "team2_def_pistol_wins": 0,
+      "team1_atk_wins": 12,
+      "team1_atk_losses": 5,
+      "team1_def_wins": 6,
+      "team1_def_losses": 11,
+      "winner": "Misa Esports",
+      "date": "2026-03-19"
+    },
+    {
+      "match_id": "0cafb898-666e-4980-a856-61772ca83ff4",
+      "series_id": "b73f4cbf",
+      "event": "VCL EMEA 2026 Stage 1",
+      "map": "Split",
+      "team1": "Misa Esports",
+      "team2": "Eintracht Frankfurt",
+      "team1_agents": [
+        "Breach",
+        "Fade",
+        "Omen",
+        "Viper",
+        "Waylay"
+      ],
+      "team2_agents": [
+        "Fade",
+        "Neon",
+        "Omen",
+        "Viper",
+        "Yoru"
+      ],
+      "team1_score": 13,
+      "team2_score": 8,
+      "team1_score_at_half": 7,
+      "team2_score_at_half": 5,
+      "team1_atk_pistol_wins": 0,
+      "team1_def_pistol_wins": 1,
+      "team2_atk_pistol_wins": 0,
+      "team2_def_pistol_wins": 1,
+      "team1_atk_wins": 6,
+      "team1_atk_losses": 3,
+      "team1_def_wins": 7,
+      "team1_def_losses": 5,
+      "winner": "Misa Esports",
+      "date": "2026-03-19"
+    }
+  ],
+  "leaderboards": {
+    "acs": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 216,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 210,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 207,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 205,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 201,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 207.8
+    },
+    "kills": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 88,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 86,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 82,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 81,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 79,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 83.2
+    },
+    "deaths": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 54,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 56,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 57,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 58,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 71,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 59.2
+    },
+    "assists": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 45,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 40,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 37,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 30,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 28,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 36.0
+    },
+    "kd": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 1.519,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 1.483,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 1.446,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 1.386,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 1.239,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 1.415
+    },
+    "kast": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 0.809,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 0.791,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 0.755,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 0.755,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 0.745,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 0.771
+    },
+    "fk": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 17,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 17,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 15,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 9,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 8,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 13.2
+    },
+    "fd": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 7,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 8,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 8,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 10,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 11,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 8.8
+    },
+    "fk_pct": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 0.1545,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 0.1545,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 0.1364,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 0.0818,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 0.0727,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 0.12
+    },
+    "fd_pct": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 0.0636,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 0.0727,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 0.0727,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 0.0909,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 0.1,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 0.08
+    },
+    "cl_pct": {
+      "entries": [
+        {
+          "rank": 1,
+          "ign": "sh1n",
+          "team": "Mandatory",
+          "value": 0.571,
+          "rounds": 110
+        },
+        {
+          "rank": 2,
+          "ign": "nataNk",
+          "team": "Mandatory",
+          "value": 0.444,
+          "rounds": 110
+        },
+        {
+          "rank": 3,
+          "ign": "K4davra",
+          "team": "Mandatory",
+          "value": 0.125,
+          "rounds": 110
+        },
+        {
+          "rank": 4,
+          "ign": "Sevire",
+          "team": "Mandatory",
+          "value": 0.1,
+          "rounds": 110
+        },
+        {
+          "rank": 5,
+          "ign": "TakaS",
+          "team": "Mandatory",
+          "value": 0.0,
+          "rounds": 110
+        }
+      ],
+      "tournament_avg": 0.248
+    }
+  },
+  "agent_stats": [
+    {
+      "ign": "K4davra",
+      "team": "Mandatory",
+      "agent": "Sova",
+      "rounds": 90,
+      "casts_grenade": 55,
+      "casts_grenade_per_round": 0.611,
+      "kills_grenade": 0,
+      "casts_ability1": 77,
+      "casts_ability1_per_round": 0.856,
+      "kills_ability1": 1,
+      "casts_ability2": 111,
+      "casts_ability2_per_round": 1.233,
+      "kills_ability2": 0,
+      "casts_ultimate": 10,
+      "casts_ultimate_per_round": 0.111,
+      "kills_ultimate": 2
+    },
+    {
+      "ign": "sh1n",
+      "team": "Mandatory",
+      "agent": "Omen",
+      "rounds": 56,
+      "casts_grenade": 54,
+      "casts_grenade_per_round": 0.964,
+      "kills_grenade": 0,
+      "casts_ability1": 27,
+      "casts_ability1_per_round": 0.482,
+      "kills_ability1": 0,
+      "casts_ability2": 111,
+      "casts_ability2_per_round": 1.982,
+      "kills_ability2": 0,
+      "casts_ultimate": 5,
+      "casts_ultimate_per_round": 0.089,
+      "kills_ultimate": 0
+    },
+    {
+      "ign": "Sevire",
+      "team": "Mandatory",
+      "agent": "Omen",
+      "rounds": 31,
+      "casts_grenade": 24,
+      "casts_grenade_per_round": 0.774,
+      "kills_grenade": 0,
+      "casts_ability1": 16,
+      "casts_ability1_per_round": 0.516,
+      "kills_ability1": 0,
+      "casts_ability2": 66,
+      "casts_ability2_per_round": 2.129,
+      "kills_ability2": 0,
+      "casts_ultimate": 4,
+      "casts_ultimate_per_round": 0.129,
+      "kills_ultimate": 0
+    },
+    {
+      "ign": "Proxh",
+      "team": "Enterprise Esports",
+      "agent": "Omen",
+      "rounds": 16,
+      "casts_grenade": 8,
+      "casts_grenade_per_round": 0.5,
+      "kills_grenade": 0,
+      "casts_ability1": 10,
+      "casts_ability1_per_round": 0.625,
+      "kills_ability1": 0,
+      "casts_ability2": 29,
+      "casts_ability2_per_round": 1.812,
+      "kills_ability2": 0,
+      "casts_ultimate": 1,
+      "casts_ultimate_per_round": 0.062,
+      "kills_ultimate": 0
+    },
+    {
+      "ign": "BULD",
+      "team": "UCAM Esports",
+      "agent": "Sova",
+      "rounds": 39,
+      "casts_grenade": 22,
+      "casts_grenade_per_round": 0.564,
+      "kills_grenade": 0,
+      "casts_ability1": 23,
+      "casts_ability1_per_round": 0.59,
+      "kills_ability1": 0,
+      "casts_ability2": 38,
+      "casts_ability2_per_round": 0.974,
+      "kills_ability2": 0,
+      "casts_ultimate": 5,
+      "casts_ultimate_per_round": 0.128,
+      "kills_ultimate": 1
+    },
+    {
+      "ign": "Jesse",
+      "team": "UCAM Esports",
+      "agent": "Omen",
+      "rounds": 38,
+      "casts_grenade": 19,
+      "casts_grenade_per_round": 0.5,
+      "kills_grenade": 0,
+      "casts_ability1": 27,
+      "casts_ability1_per_round": 0.711,
+      "kills_ability1": 0,
+      "casts_ability2": 81,
+      "casts_ability2_per_round": 2.132,
+      "kills_ability2": 0,
+      "casts_ultimate": 2,
+      "casts_ultimate_per_round": 0.053,
+      "kills_ultimate": 0
+    },
+    {
+      "ign": "burzzy",
+      "team": "Misa Esports",
+      "agent": "Omen",
+      "rounds": 74,
+      "casts_grenade": 79,
+      "casts_grenade_per_round": 1.068,
+      "kills_grenade": 0,
+      "casts_ability1": 56,
+      "casts_ability1_per_round": 0.757,
+      "kills_ability1": 0,
+      "casts_ability2": 179,
+      "casts_ability2_per_round": 2.419,
+      "kills_ability2": 0,
+      "casts_ultimate": 8,
+      "casts_ultimate_per_round": 0.108,
+      "kills_ultimate": 0
+    },
+    {
+      "ign": "pAura",
+      "team": "Misa Esports",
+      "agent": "Sova",
+      "rounds": 34,
+      "casts_grenade": 21,
+      "casts_grenade_per_round": 0.618,
+      "kills_grenade": 0,
+      "casts_ability1": 20,
+      "casts_ability1_per_round": 0.588,
+      "kills_ability1": 0,
+      "casts_ability2": 35,
+      "casts_ability2_per_round": 1.029,
+      "kills_ability2": 0,
+      "casts_ultimate": 3,
+      "casts_ultimate_per_round": 0.088,
+      "kills_ultimate": 1
+    }
+  ],
+  "ability_names": {
+    "Sova": {
+      "grenade": "Owl Drone",
+      "ability1": "Shock Bolt",
+      "ability2": "Recon Bolt",
+      "ultimate": "Hunter's Fury"
+    },
+    "Raze": {
+      "grenade": "Boom Bot",
+      "ability1": "Blast Pack",
+      "ability2": "Paint Shells",
+      "ultimate": "Showstopper"
+    },
+    "Omen": {
+      "grenade": "Shrouded Step",
+      "ability1": "Paranoia",
+      "ability2": "Dark Cover",
+      "ultimate": "From the Shadows"
+    }
+  }
+}
