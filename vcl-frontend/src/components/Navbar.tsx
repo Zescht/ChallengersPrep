@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
 import { useTheme } from '../context/ThemeContext'
+import { useFilter } from '../context/FilterContext'
 import SearchBar from './SearchBar'
 
 export default function Navbar() {
@@ -10,6 +11,7 @@ export default function Navbar() {
   const location = useLocation()
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const hoverTimeout = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const { playoffOnly, clDataOnly, setPlayoffOnly, setClDataOnly } = useFilter()
 
   const firstTeam = data?.teams
     ? [...data.teams].sort((a, b) => a.name.localeCompare(b.name))[0]?.name
@@ -95,6 +97,31 @@ export default function Navbar() {
         </div>
       </div>
       <div className="flex items-center gap-3">
+        <button
+          onClick={() => setPlayoffOnly(!playoffOnly)}
+          className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-widest transition-colors ${
+            playoffOnly
+              ? 'bg-primary/20 text-primary border border-primary/30'
+              : 'text-text-dim hover:text-text hover:bg-white/5'
+          }`}
+          title="Show only playoff teams"
+        >
+          Playoff-Teams
+        </button>
+        <button
+          onClick={() => setClDataOnly(!clDataOnly)}
+          disabled={!playoffOnly}
+          className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-widest transition-colors ${
+            clDataOnly
+              ? 'bg-primary/20 text-primary border border-primary/30'
+              : playoffOnly
+                ? 'text-text-dim hover:text-text hover:bg-white/5'
+                : 'text-text-dim/30 cursor-not-allowed'
+          }`}
+          title={playoffOnly ? 'Show only Challengers playoff data' : 'Enable Playoff-Teams first'}
+        >
+          CL Data Only
+        </button>
         <SearchBar />
         <button
           onClick={toggleTheme}
