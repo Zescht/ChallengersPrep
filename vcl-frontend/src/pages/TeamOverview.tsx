@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
 import TeamSelector from '../components/TeamSelector'
 import FormStrip from '../components/FormStrip'
@@ -21,6 +21,7 @@ const TEAM_LOGOS: Record<string, string> = {
 export default function TeamOverview() {
   const { name } = useParams<{ name: string }>()
   const { data, averages } = useStats()
+  const navigate = useNavigate()
 
   const teamName = decodeURIComponent(name || '')
   const team = data?.teams.find(t => t.name === teamName)
@@ -31,8 +32,15 @@ export default function TeamOverview() {
     }
   }, [team])
 
+  useEffect(() => {
+    if (data && !data.teams.find(t => t.name === teamName)) {
+      const first = [...data.teams].sort((a, b) => a.name.localeCompare(b.name))[0]
+      if (first) navigate(`/team/${encodeURIComponent(first.name)}`, { replace: true })
+    }
+  }, [data, teamName, navigate])
+
   if (!data || !averages) return null
-  if (!team) return <div className="p-8 text-error">Team not found: {teamName}</div>
+  if (!team) return null
 
   const teamPlayers = data.players.filter(p => p.team === team.name)
   const mapRows = [...team.maps].sort((a, b) => a.map.localeCompare(b.map))
