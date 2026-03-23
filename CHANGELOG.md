@@ -20,6 +20,23 @@ This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
 
 ---
 
+## [0.8.0] - 2026-03-23
+
+### Added
+- **Versus page overhaul**: full Team vs Team and Player vs Player comparison modes
+- **Team VS header**: team logos, map/series records, rW%, form strips in a mirrored card layout with gradient accents
+- **Map Pool Dominance**: side-by-side horizontal bars per map with rW%, W-L records, and delta badges
+- **Head-to-Head History**: table of previous meetings (date, map, score, winner) sorted by recency
+- **Pistol Win Rate comparison**: proportional split bar with attack/defense breakdown cards
+- **Tactical Execution cards**: post-plant and retake rW% with event rank, side-by-side layout
+- **Roster Comparison**: dual roster tables with agent icons, ACS, K/D, KAST, FK/r, CL%
+- **Player VS mode**: mirrored player cards with team logos, stat comparison table (winner highlighting), and agent pool display
+- **Team logos in Versus**: inline `TEAM_LOGOS` map using `BASE_URL`-aware paths
+
+### Changed
+- Removed `XvYMatrix` import from Versus page (unused)
+- Versus page constrained to `max-w-7xl` with centered layout
+
 ## [0.7.0] - 2026-03-21
 
 ### Added
