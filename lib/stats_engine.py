@@ -77,6 +77,7 @@ def compute_team_stats(matches, team_tag, team_name):
     xvy_accum = defaultdict(lambda: {'wins': 0, 'total': 0})
     pp_accum = defaultdict(lambda: {'plants': 0, 'wins': 0, 'losses': 0})
     plant_time_accum = defaultdict(list)  # map_name -> [plantRoundTimeMillis, ...]
+    plant_time_by_site = defaultdict(list)  # (map_name, site) -> [plantRoundTimeMillis, ...]
     def _new_accum():
         return {
             'name': '', 'team': team_name, 'agents': Counter(), 'rounds': 0,
@@ -180,6 +181,7 @@ def compute_team_stats(matches, team_tag, team_name):
                     prt = rr.get('plantRoundTime')
                     if prt and prt > 0:
                         plant_time_accum[md.map].append(prt)
+                        plant_time_by_site[(md.map, site)].append(prt)
 
             # Per-round player stats
             all_kills_in_round = []
@@ -538,6 +540,15 @@ def compute_team_stats(matches, team_tag, team_name):
             avg_ms = sum(times) / len(times)
             plant_time_rows[map_name] = round(avg_ms / 1000, 1)
 
+    # Build avg plant time per map per site
+    plant_time_site_rows = {}  # map_name -> { site -> avg_seconds }
+    for (map_name, site), times in plant_time_by_site.items():
+        if times and site != '?':
+            if map_name not in plant_time_site_rows:
+                plant_time_site_rows[map_name] = {}
+            avg_ms = sum(times) / len(times)
+            plant_time_site_rows[map_name][site] = round(avg_ms / 1000, 1)
+
     return {
         'match_rows': match_rows,
         'round_econ_rows': round_econ_rows,
@@ -548,4 +559,5 @@ def compute_team_stats(matches, team_tag, team_name):
         'player_agent_rows': player_agent_rows,
         'ability_rows': ability_rows,
         'plant_time_rows': plant_time_rows,
+        'plant_time_site_rows': plant_time_site_rows,
     }

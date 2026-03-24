@@ -198,6 +198,28 @@ export function retakeColor(value: number): string {
   }
 }
 
+/** Retake-only color scale: 0% = red, 25% = yellow, 40%+ = green */
+export function retakeOnlyColor(value: number): string {
+  if (isNaN(value)) return 'transparent'
+
+  const pos = getCSSVar('--theme-heat-positive', '161, 255, 194')
+  const neg = getCSSVar('--theme-heat-negative', '255, 113, 108')
+
+  const clamped = Math.max(0, Math.min(0.4, value))
+
+  if (clamped <= 0.25) {
+    const t = clamped / 0.25
+    const curved = Math.pow(1 - t, CURVE_POWER)
+    const opacity = (curved * MAX_OPACITY).toFixed(3)
+    return `rgba(${neg}, ${opacity})`
+  } else {
+    const t = (clamped - 0.25) / 0.15
+    const curved = Math.pow(t, CURVE_POWER)
+    const opacity = (curved * MAX_OPACITY).toFixed(3)
+    return `rgba(${pos}, ${opacity})`
+  }
+}
+
 /** K/D color scale: 0.8 = red, 1.0 = yellow, 1.2+ = green */
 export function kdColor(value: number): string {
   if (isNaN(value)) return 'transparent'

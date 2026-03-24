@@ -7,7 +7,7 @@ import AgentIcon from '../components/AgentIcon'
 import StatCell from '../components/StatCell'
 import XvYMatrix from '../components/XvYMatrix'
 import { formatPct, formatRatio } from '../utils/format'
-import { fkColor, fkfdColor, clColor, opColor, adrColor, aprColor, retakeColor, kdColor } from '../utils/colors'
+import { fkColor, fkfdColor, clColor, opColor, adrColor, aprColor, retakeColor, retakeOnlyColor, kdColor } from '../utils/colors'
 import { generateTalkingPoints } from '../utils/talkingPoints'
 import type { MapStats, CompStats, Player } from '../types'
 
@@ -68,16 +68,6 @@ export default function TeamOverview() {
           <div>
             <div className="flex items-center gap-4">
               <TeamSelector currentTeam={team.name} />
-            </div>
-            <div className="flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.2em] text-outline mt-1.5">
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary"></span>
-                VCL EMEA 2026
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
-                Stage 1
-              </span>
             </div>
           </div>
         </div>
@@ -177,18 +167,19 @@ export default function TeamOverview() {
               <thead className="bg-surface-container/60">
                 <tr>
                   <th className="px-3 py-2 scannable-label text-left">Map</th>
-                  <th className="px-2 py-2 scannable-label text-center thick-sep">Scens</th>
-                  <th className="px-2 py-2 scannable-label text-center">/Map</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep cursor-help" title="Amount of post-plant scenarios">Scens</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help" title="Average amount of scenarios per map">/Map</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep w-[100px] cursor-help" title="Average time to plant the spike (in seconds)">Avg Plant</th>
                   <th className="px-2 py-2 scannable-label text-center thick-sep">WIN%</th>
-                  <th className="px-2 py-2 scannable-label text-center">Avg</th>
-                  <th className="px-2 py-2 scannable-label text-center thick-sep">Rk</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help" title="Average win rate of all teams in the competition">Avg</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep cursor-help" title="Rank compared to other teams in the competition">Rk</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
                 {mapRows.map(ms => (
-                  <PostPlantRow key={ms.map} ms={ms} siteAvgs={averages.perMapSiteAvgs[ms.map]} type="post" />
+                  <PostPlantRow key={ms.map} ms={ms} siteAvgs={averages.perMapSiteAvgs[ms.map]} type="post" showPlantTime />
                 ))}
-                <PostPlantRow ms={team.allMaps} siteAvgs={averages.siteAvgs} isAggregate type="post" />
+                <PostPlantRow ms={team.allMaps} siteAvgs={averages.siteAvgs} isAggregate type="post" showPlantTime />
               </tbody>
             </table>
           </div>
@@ -204,11 +195,11 @@ export default function TeamOverview() {
               <thead className="bg-surface-container/60">
                 <tr>
                   <th className="px-3 py-2 scannable-label text-left">Map</th>
-                  <th className="px-2 py-2 scannable-label text-center thick-sep">Scens</th>
-                  <th className="px-2 py-2 scannable-label text-center">/Map</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep cursor-help" title="Amount of retake scenarios">Scens</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help" title="Average amount of scenarios per map">/Map</th>
                   <th className="px-2 py-2 scannable-label text-center thick-sep">WIN%</th>
-                  <th className="px-2 py-2 scannable-label text-center">Avg</th>
-                  <th className="px-2 py-2 scannable-label text-center thick-sep">Rk</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help" title="Average win rate of all teams in the competition">Avg</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep cursor-help" title="Rank compared to other teams in the competition">Rk</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -384,7 +375,7 @@ function CompRow({ c, avgs }: { c: CompStats; avgs: Record<string, { mean: numbe
   )
 }
 
-function PostPlantRow({ ms, siteAvgs, isAggregate = false, type }: { ms: MapStats; siteAvgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; type: 'post' | 'ret' }) {
+function PostPlantRow({ ms, siteAvgs, isAggregate = false, type, showPlantTime = false }: { ms: MapStats; siteAvgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; type: 'post' | 'ret'; showPlantTime?: boolean }) {
   const [expanded, setExpanded] = useState(false)
   const sa = siteAvgs || {}
   const rowClass = isAggregate ? 'bg-surface-container-high/40 border-t border-white/10' : 'hover:bg-white/5 transition-colors'
@@ -396,6 +387,7 @@ function PostPlantRow({ ms, siteAvgs, isAggregate = false, type }: { ms: MapStat
   const rank = type === 'post' ? ms.post_rank : ms.ret_rank
   const bySite = type === 'post' ? ms.post_by_site : ms.ret_by_site
   const sites = bySite ? Object.keys(bySite).filter(s => s !== '?').sort() : []
+  const colorFn = type === 'post' ? retakeColor : retakeOnlyColor
   const hasSites = sites.length > 0
 
   return (
@@ -413,7 +405,12 @@ function PostPlantRow({ ms, siteAvgs, isAggregate = false, type }: { ms: MapStat
         </td>
         <td className="px-2 py-2 text-center font-table text-xs text-on-surface font-bold thick-sep">{scens}</td>
         <td className="px-2 py-2 text-center font-table text-xs text-on-surface font-bold">{formatRatio(perMap)}</td>
-        <StatCell value={rwPct} format={formatPct} customColor={retakeColor} className="thick-sep" />
+        {showPlantTime && (
+          <td className="px-2 py-2 text-center font-table text-xs text-on-surface font-bold thick-sep">
+            {ms.avg_plant_time != null ? `${ms.avg_plant_time.toFixed(1)}s` : '—'}
+          </td>
+        )}
+        <StatCell value={rwPct} format={formatPct} customColor={colorFn} className="thick-sep" />
         <td className="px-2 py-2 text-center font-table text-xs text-on-surface-variant font-bold">{formatPct(avg)}</td>
         <td className="px-2 py-2 text-center font-table text-xs text-on-surface font-bold thick-sep">{rank}</td>
       </tr>
@@ -422,6 +419,7 @@ function PostPlantRow({ ms, siteAvgs, isAggregate = false, type }: { ms: MapStat
         const siteStatKey = `${type}_${site}`
         const siteStats = sa[siteStatKey]
         const siteAvg = siteStats?.mean ?? 0
+        const sitePlantTime = showPlantTime && ms.plant_time_by_site ? ms.plant_time_by_site[site] : undefined
         return (
           <tr key={site} className="bg-white/3 dark:bg-white/3" style={{ backgroundColor: 'var(--theme-site-expand-bg, rgba(255,255,255,0.03))' }}>
             <td className="pl-8 pr-3 py-1.5 text-left font-table text-xs text-on-surface whitespace-nowrap">
@@ -429,7 +427,12 @@ function PostPlantRow({ ms, siteAvgs, isAggregate = false, type }: { ms: MapStat
             </td>
             <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold thick-sep">{sd.scens}</td>
             <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold">{ms.plays > 0 ? formatRatio(sd.scens / ms.plays) : '—'}</td>
-            <StatCell value={sd.pct} format={formatPct} customColor={retakeColor} className="thick-sep" />
+            {showPlantTime && (
+              <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold thick-sep">
+                {sitePlantTime != null ? `${sitePlantTime.toFixed(1)}s` : '—'}
+              </td>
+            )}
+            <StatCell value={sd.pct} format={formatPct} customColor={colorFn} className="thick-sep" />
             <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold">{formatPct(siteAvg)}</td>
             <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface font-bold thick-sep">—</td>
           </tr>

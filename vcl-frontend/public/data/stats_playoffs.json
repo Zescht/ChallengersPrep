@@ -87,7 +87,11 @@
           "post_rW_event_avg": 0.764,
           "ret_rank": 2,
           "ret_rW_event_avg": 0.7,
-          "avg_plant_time": 58.9
+          "avg_plant_time": 58.9,
+          "plant_time_by_site": {
+            "A": 65.7,
+            "B": 52.2
+          }
         },
         {
           "map": "Breeze",
@@ -172,7 +176,11 @@
           "post_rW_event_avg": 0.75,
           "ret_rank": 1,
           "ret_rW_event_avg": 0.667,
-          "avg_plant_time": 56.0
+          "avg_plant_time": 56.0,
+          "plant_time_by_site": {
+            "A": 49.3,
+            "B": 62.8
+          }
         },
         {
           "map": "Corrode",
@@ -252,7 +260,11 @@
           "post_rW_event_avg": 1.0,
           "ret_rank": 1,
           "ret_rW_event_avg": 0.375,
-          "avg_plant_time": 60.3
+          "avg_plant_time": 60.3,
+          "plant_time_by_site": {
+            "A": 63.8,
+            "B": 58.0
+          }
         },
         {
           "map": "Haven",
@@ -342,7 +354,12 @@
           "post_rW_event_avg": 0.811,
           "ret_rank": 1,
           "ret_rW_event_avg": 0.485,
-          "avg_plant_time": 58.9
+          "avg_plant_time": 58.9,
+          "plant_time_by_site": {
+            "A": 60.0,
+            "C": 60.6,
+            "B": 54.5
+          }
         },
         {
           "map": "Pearl",
@@ -427,7 +444,11 @@
           "post_rW_event_avg": 0.839,
           "ret_rank": 1,
           "ret_rW_event_avg": 0.315,
-          "avg_plant_time": 65.0
+          "avg_plant_time": 65.0,
+          "plant_time_by_site": {
+            "A": 60.0,
+            "B": 82.7
+          }
         }
       ],
       "allMaps": {
@@ -491,14 +512,15 @@
         "post_rW_event_avg": 0.87,
         "ret_rank": 1,
         "ret_rW_event_avg": 0.415,
-        "avg_plant_time": null
+        "avg_plant_time": null,
+        "plant_time_by_site": null
       },
       "players": [
         "TakaS",
-        "nataNk",
+        "Sevire",
         "K4davra",
-        "sh1n",
-        "Sevire"
+        "nataNk",
+        "sh1n"
       ],
       "xvy": [
         {
@@ -776,7 +798,11 @@
           "post_rW_event_avg": 1.0,
           "ret_rank": 1,
           "ret_rW_event_avg": 0.556,
-          "avg_plant_time": 65.5
+          "avg_plant_time": 65.5,
+          "plant_time_by_site": {
+            "A": 43.8,
+            "B": 72.7
+          }
         },
         {
           "map": "Pearl",
@@ -861,7 +887,11 @@
           "post_rW_event_avg": 0.839,
           "ret_rank": 3,
           "ret_rW_event_avg": 0.315,
-          "avg_plant_time": 63.3
+          "avg_plant_time": 63.3,
+          "plant_time_by_site": {
+            "A": 57.8,
+            "B": 71.1
+          }
         },
         {
           "map": "Split",
@@ -946,7 +976,11 @@
           "post_rW_event_avg": 0.943,
           "ret_rank": 2,
           "ret_rW_event_avg": 0.657,
-          "avg_plant_time": 66.0
+          "avg_plant_time": 66.0,
+          "plant_time_by_site": {
+            "A": 33.5,
+            "B": 82.2
+          }
         }
       ],
       "allMaps": {
@@ -1005,12 +1039,13 @@
         "post_rW_event_avg": 0.87,
         "ret_rank": 4,
         "ret_rW_event_avg": 0.415,
-        "avg_plant_time": null
+        "avg_plant_time": null,
+        "plant_time_by_site": null
       },
       "players": [
+        "Proxh",
         "MAGNUM",
         "iluri",
-        "Proxh",
         "kozzy",
         "Lime"
       ],
@@ -1285,7 +1320,11 @@
           "post_rW_event_avg": 0.764,
           "ret_rank": 1,
           "ret_rW_event_avg": 0.7,
-          "avg_plant_time": 56.6
+          "avg_plant_time": 56.6,
+          "plant_time_by_site": {
+            "B": 54.7,
+            "A": 61.9
+          }
         },
         {
           "map": "Corrode",
@@ -1370,7 +1409,11 @@
           "post_rW_event_avg": 1.0,
           "ret_rank": 2,
           "ret_rW_event_avg": 0.375,
-          "avg_plant_time": 58.7
+          "avg_plant_time": 58.7,
+          "plant_time_by_site": {
+            "A": 56.4,
+            "B": 60.3
+          }
         },
         {
           "map": "Haven",
@@ -1460,7 +1503,12 @@
           "post_rW_event_avg": 0.811,
           "ret_rank": 2,
           "ret_rW_event_avg": 0.485,
-          "avg_plant_time": 60.7
+          "avg_plant_time": 60.7,
+          "plant_time_by_site": {
+            "C": 53.2,
+            "A": 62.0,
+            "B": 85.1
+          }
         },
         {
           "map": "Split",
@@ -1545,7 +1593,11 @@
           "post_rW_event_avg": 0.943,
           "ret_rank": 1,
           "ret_rW_event_avg": 0.657,
-          "avg_plant_time": 57.4
+          "avg_plant_time": 57.4,
+          "plant_time_by_site": {
+            "B": 44.1,
+            "A": 63.1
+          }
         }
       ],
       "allMaps": {
@@ -1614,14 +1666,15 @@
         "post_rW_event_avg": 0.87,
         "ret_rank": 2,
         "ret_rW_event_avg": 0.415,
-        "avg_plant_time": null
+        "avg_plant_time": null,
+        "plant_time_by_site": null
       },
       "players": [
-        "BULD",
-        "OLIZERA",
-        "Famsii",
         "Jesse",
-        "B1SK"
+        "Famsii",
+        "B1SK",
+        "BULD",
+        "OLIZERA"
       ],
       "xvy": [
         {
@@ -1903,7 +1956,12 @@
           "post_rW_event_avg": 0.811,
           "ret_rank": 3,
           "ret_rW_event_avg": 0.485,
-          "avg_plant_time": 48.9
+          "avg_plant_time": 48.9,
+          "plant_time_by_site": {
+            "C": 46.7,
+            "B": 91.3,
+            "A": 43.2
+          }
         },
         {
           "map": "Pearl",
@@ -1988,7 +2046,11 @@
           "post_rW_event_avg": 0.839,
           "ret_rank": 2,
           "ret_rW_event_avg": 0.315,
-          "avg_plant_time": 68.1
+          "avg_plant_time": 68.1,
+          "plant_time_by_site": {
+            "A": 75.9,
+            "B": 57.8
+          }
         },
         {
           "map": "Split",
@@ -2073,7 +2135,11 @@
           "post_rW_event_avg": 0.943,
           "ret_rank": 3,
           "ret_rW_event_avg": 0.657,
-          "avg_plant_time": 56.0
+          "avg_plant_time": 56.0,
+          "plant_time_by_site": {
+            "A": 52.0,
+            "B": 63.2
+          }
         }
       ],
       "allMaps": {
@@ -2142,13 +2208,14 @@
         "post_rW_event_avg": 0.87,
         "ret_rank": 3,
         "ret_rW_event_avg": 0.415,
-        "avg_plant_time": null
+        "avg_plant_time": null,
+        "plant_time_by_site": null
       },
       "players": [
-        "Brave",
         "QutionerX",
-        "burzzy",
         "pAura",
+        "Brave",
+        "burzzy",
         "Elite"
       ],
       "xvy": [

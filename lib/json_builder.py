@@ -50,7 +50,7 @@ def _compute_series_record(match_rows, team_name):
     return s_wins, s_losses
 
 
-def _build_map_stats(match_rows, econ_rows, pp_rows, team_name, plant_time_rows=None):
+def _build_map_stats(match_rows, econ_rows, pp_rows, team_name, plant_time_rows=None, plant_time_site_rows=None):
     """Build per-map stats array + allMaps aggregate."""
     # Group matches by map
     map_matches = defaultdict(list)
@@ -225,6 +225,7 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name, plant_time_rows=
             'ret_rank': 0,
             'ret_rW_event_avg': 0,
             'avg_plant_time': plant_time_rows.get(map_name) if plant_time_rows else None,
+            'plant_time_by_site': plant_time_site_rows.get(map_name) if plant_time_site_rows else None,
         }
         maps_list.append(map_obj)
 
@@ -289,6 +290,7 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name, plant_time_rows=
         'ret_rank': 0,
         'ret_rW_event_avg': 0,
         'avg_plant_time': None,  # not meaningful for allMaps aggregate
+        'plant_time_by_site': None,
     }
 
     return maps_list, all_maps_obj
@@ -493,7 +495,8 @@ def build_stats_json(all_team_data):
 
         maps_list, all_maps_obj = _build_map_stats(
             td['match_rows'], td['round_econ_rows'], td['post_plant_rows'], td['name'],
-            plant_time_rows=td.get('plant_time_rows')
+            plant_time_rows=td.get('plant_time_rows'),
+            plant_time_site_rows=td.get('plant_time_site_rows')
         )
         s_wins, s_losses = _compute_series_record(td['match_rows'], td['name'])
         form = _compute_form(td['match_rows'], td['name'])

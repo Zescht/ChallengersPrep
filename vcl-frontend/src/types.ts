@@ -54,6 +54,7 @@ export interface MapStats {
   ret_rank: number
   ret_by_site: Record<string, SiteStats>
   avg_plant_time?: number | null
+  plant_time_by_site?: Record<string, number> | null
 }
 
 export interface XvYEntry {
