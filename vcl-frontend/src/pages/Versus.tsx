@@ -5,7 +5,8 @@ import AgentIcon from '../components/AgentIcon'
 import FormStrip from '../components/FormStrip'
 import { formatPct, formatRatio, formatCount } from '../utils/format'
 import { getFirstBanPick, VETO_DATA } from '../data/vetoData'
-import type { Team, Player, StatsData, Match, MapStats } from '../types'
+import { resolveCompPlayers } from '../utils/agentPlayers'
+import type { Team, Player, StatsData, Match, MapStats, AgentPlayer } from '../types'
 
 const TEAM_LOGOS: Record<string, string> = {
   FKS: 'fks.png', SGE: 'sge.png', JL: 'jl.png', MDR: 'mdr.png',
@@ -378,9 +379,10 @@ function TeamDropdown({ teams, value, onChange, exclude }: {
 
 /* ─── Map Pool Dominance ─── */
 
-function MapDetailPanel({ mapStats, color, agentPlayerMap = {} }: { mapStats: MapStats | undefined; color: 'primary' | 'secondary'; agentPlayerMap?: Record<string, string> }) {
+function MapDetailPanel({ mapStats, color, teamAgentData = [] }: { mapStats: MapStats | undefined; color: 'primary' | 'secondary'; teamAgentData?: AgentPlayer[] }) {
   if (!mapStats) return <div className="text-text-dim text-xs italic">No data</div>
 
+  const compMap = resolveCompPlayers(mapStats.comp, teamAgentData)
   const stats = [
     { label: 'Overall', value: formatPct(mapStats.rW_pct) },
     { label: 'Attack', value: formatPct(mapStats.atk_rW_pct) },
@@ -395,7 +397,7 @@ function MapDetailPanel({ mapStats, color, agentPlayerMap = {} }: { mapStats: Ma
       {/* Comp */}
       <div className="flex items-center gap-1 mb-2">
         {mapStats.comp.slice(0, 5).map((agent, i) => (
-          <AgentIcon key={i} agent={agent} size={22} tooltip={agentPlayerMap[agent]} />
+          <AgentIcon key={i} agent={agent} size={22} tooltip={compMap[agent]} />
         ))}
       </div>
       {/* Stats grid */}
@@ -411,25 +413,13 @@ function MapDetailPanel({ mapStats, color, agentPlayerMap = {} }: { mapStats: Ma
   )
 }
 
-function buildAgentPlayerMap(data: StatsData, teamName: string): Record<string, string> {
-  const map: Record<string, string> = {}
-  const rounds: Record<string, number> = {}
-  for (const ap of (data.players_by_agent ?? []).filter(p => p.team === teamName)) {
-    if (!map[ap.agent] || ap.rounds > rounds[ap.agent]) {
-      map[ap.agent] = ap.ign
-      rounds[ap.agent] = ap.rounds
-    }
-  }
-  return map
-}
-
 function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: StatsData }) {
   const [expanded, setExpanded] = useState<string | null>(null)
   const allMaps = new Set([...teamA.maps.map(m => m.map), ...teamB.maps.map(m => m.map)])
   const sortedMaps = [...allMaps].sort()
 
-  const agentMapA = buildAgentPlayerMap(data, teamA.name)
-  const agentMapB = buildAgentPlayerMap(data, teamB.name)
+  const teamAgentDataA = (data.players_by_agent ?? []).filter(p => p.team === teamA.name)
+  const teamAgentDataB = (data.players_by_agent ?? []).filter(p => p.team === teamB.name)
 
   const vetoA = teamA.tag ? getFirstBanPick(teamA.tag) : { firstBan: null, firstPick: null }
   const vetoB = teamB.tag ? getFirstBanPick(teamB.tag) : { firstBan: null, firstPick: null }
@@ -521,11 +511,11 @@ function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: S
                 <div className="grid grid-cols-[80px_1fr_80px_1fr] gap-3 mt-1 mb-2">
                   <div />
                   <div className="bg-surface-container rounded-lg p-3 border border-primary/10">
-                    <MapDetailPanel mapStats={mA} color="primary" agentPlayerMap={agentMapA} />
+                    <MapDetailPanel mapStats={mA} color="primary" teamAgentData={teamAgentDataA} />
                   </div>
                   <div />
                   <div className="bg-surface-container rounded-lg p-3 border border-secondary/10">
-                    <MapDetailPanel mapStats={mB} color="secondary" agentPlayerMap={agentMapB} />
+                    <MapDetailPanel mapStats={mB} color="secondary" teamAgentData={teamAgentDataB} />
                   </div>
                 </div>
               )}

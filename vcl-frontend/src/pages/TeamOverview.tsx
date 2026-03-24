@@ -9,7 +9,8 @@ import XvYMatrix from '../components/XvYMatrix'
 import { formatPct, formatRatio } from '../utils/format'
 import { fkColor, fkfdColor, clColor, opColor, adrColor, aprColor, retakeColor, retakeOnlyColor, kdColor } from '../utils/colors'
 import { generateTalkingPoints } from '../utils/talkingPoints'
-import type { MapStats, CompStats, Player } from '../types'
+import { resolveCompPlayers } from '../utils/agentPlayers'
+import type { MapStats, CompStats, Player, AgentPlayer } from '../types'
 
 const TEAM_LOGOS: Record<string, string> = {
   FKS: 'fks.png', SGE: 'sge.png', JL: 'jl.png', MDR: 'mdr.png',
@@ -43,15 +44,7 @@ export default function TeamOverview() {
   if (!team) return null
 
   const teamPlayers = data.players.filter(p => p.team === team.name)
-  // Build agent → player name lookup for this team (most rounds = primary)
-  const agentPlayerMap: Record<string, string> = {}
-  const agentPlayerRounds: Record<string, number> = {}
-  for (const ap of (data.players_by_agent ?? []).filter(p => p.team === team.name)) {
-    if (!agentPlayerMap[ap.agent] || ap.rounds > agentPlayerRounds[ap.agent]) {
-      agentPlayerMap[ap.agent] = ap.ign
-      agentPlayerRounds[ap.agent] = ap.rounds
-    }
-  }
+  const teamAgentData = (data.players_by_agent ?? []).filter(p => p.team === team.name)
   const mapRows = [...team.maps].sort((a, b) => a.map.localeCompare(b.map))
   const talkingPoints = generateTalkingPoints(team, data, averages)
 
@@ -155,9 +148,9 @@ export default function TeamOverview() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {mapRows.map((ms, i) => (
-                  <MapStatsRow key={ms.map} ms={ms} avgs={averages.perMap[ms.map]} highlight={i === 0} agentPlayerMap={agentPlayerMap} />
+                  <MapStatsRow key={ms.map} ms={ms} avgs={averages.perMap[ms.map]} highlight={i === 0} teamAgentData={teamAgentData} />
                 ))}
-                <MapStatsRow ms={team.allMaps} avgs={averages.team} isAggregate agentPlayerMap={agentPlayerMap} />
+                <MapStatsRow ms={team.allMaps} avgs={averages.team} isAggregate teamAgentData={teamAgentData} />
               </tbody>
             </table>
           </div>
@@ -290,7 +283,7 @@ export default function TeamOverview() {
 
 /* ──── Sub-components ──── */
 
-function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false, agentPlayerMap = {} }: { ms: MapStats; avgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; highlight?: boolean; agentPlayerMap?: Record<string, string> }) {
+function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false, teamAgentData = [] }: { ms: MapStats; avgs?: Record<string, { mean: number; std: number }>; isAggregate?: boolean; highlight?: boolean; teamAgentData?: AgentPlayer[] }) {
   const [expanded, setExpanded] = useState(false)
   const a = avgs || {}
   const hasComps = !isAggregate && ms.comps && ms.comps.length > 1
@@ -308,9 +301,9 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false, agentPl
         </td>
         <td className="px-2 py-2.5 text-center">
           <div className="flex gap-0.5 justify-center">
-            {ms.comp.slice(0, 5).map((agent, i) => (
-              <AgentIcon key={i} agent={agent} size={16} tooltip={agentPlayerMap[agent]} />
-            ))}
+            {(() => { const m = resolveCompPlayers(ms.comp, teamAgentData); return ms.comp.slice(0, 5).map((agent, i) => (
+              <AgentIcon key={i} agent={agent} size={16} tooltip={m[agent]} />
+            )); })()}
           </div>
         </td>
         <td className="px-2 py-2.5 text-center font-table text-xs text-on-surface">{ms.comp_count || ''}</td>
@@ -339,21 +332,22 @@ function MapStatsRow({ ms, avgs, isAggregate = false, highlight = false, agentPl
         <StatCell value={ms.eco_def_rW_pct} mean={a.eco_def_rW_pct?.mean} std={a.eco_def_rW_pct?.std} format={formatPct} />
       </tr>
       {expanded && ms.comps?.map((c, i) => (
-        <CompRow key={i} c={c} avgs={a} agentPlayerMap={agentPlayerMap} />
+        <CompRow key={i} c={c} avgs={a} teamAgentData={teamAgentData} />
       ))}
     </Fragment>
   )
 }
 
-function CompRow({ c, avgs, agentPlayerMap = {} }: { c: CompStats; avgs: Record<string, { mean: number; std: number }>; agentPlayerMap?: Record<string, string> }) {
+function CompRow({ c, avgs, teamAgentData = [] }: { c: CompStats; avgs: Record<string, { mean: number; std: number }>; teamAgentData?: AgentPlayer[] }) {
   const a = avgs
+  const compMap = resolveCompPlayers(c.comp, teamAgentData)
   return (
     <tr className="bg-surface-container/10">
       <td className="px-3 py-1.5 text-left text-xs text-text-dim pl-8"></td>
       <td className="px-2 py-1.5 text-center">
         <div className="flex gap-0.5 justify-center">
           {c.comp.slice(0, 5).map((agent, i) => (
-            <AgentIcon key={i} agent={agent} size={14} tooltip={agentPlayerMap[agent]} />
+            <AgentIcon key={i} agent={agent} size={14} tooltip={compMap[agent]} />
           ))}
         </div>
       </td>
