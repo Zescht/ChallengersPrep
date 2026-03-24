@@ -349,6 +349,9 @@ def _build_player(pr):
         'clutch_pct': pr['clutch_pct'],
         'kast': pr['kast'],
         'awp_pct': pr['op_pct'],
+        'op_rounds': pr.get('op_rounds', 0),
+        'op_rounds_won': pr.get('op_rounds_won', 0),
+        'op_rw_pct': pr.get('op_rw_pct', 0),
         'vlr_rating': pr.get('vlr_rating', 0),
         'agents': agents,
     }

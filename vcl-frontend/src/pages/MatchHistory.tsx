@@ -24,6 +24,30 @@ export default function MatchHistory() {
 
   const teams = [...data.teams].sort((a, b) => a.name.localeCompare(b.name))
 
+  // Build agent → player lookup for this team (most rounds = primary)
+  const agentPlayerMap: Record<string, string> = {}
+  const agentPlayerRounds: Record<string, number> = {}
+  for (const ap of (data.players_by_agent ?? []).filter(p => p.team === teamName)) {
+    if (!agentPlayerMap[ap.agent] || ap.rounds > agentPlayerRounds[ap.agent]) {
+      agentPlayerMap[ap.agent] = ap.ign
+      agentPlayerRounds[ap.agent] = ap.rounds
+    }
+  }
+
+  // Build agent → player lookup for all teams (for opponent comps)
+  const allTeamAgentMaps: Record<string, Record<string, string>> = {}
+  for (const t of data.teams) {
+    const m: Record<string, string> = {}
+    const r: Record<string, number> = {}
+    for (const ap of (data.players_by_agent ?? []).filter(p => p.team === t.name)) {
+      if (!m[ap.agent] || ap.rounds > r[ap.agent]) {
+        m[ap.agent] = ap.ign
+        r[ap.agent] = ap.rounds
+      }
+    }
+    allTeamAgentMaps[t.name] = m
+  }
+
   // Filter matches for this team, sorted newest first
   const teamMatches = data.matches
     .filter(m => m.team1 === teamName || m.team2 === teamName)
@@ -103,7 +127,7 @@ export default function MatchHistory() {
                 <td className="px-2 py-1.5 align-top">
                   <div className="flex gap-0.5">
                     {teamAgents.map((agent, i) => (
-                      <AgentIcon key={i} agent={agent} size={16} />
+                      <AgentIcon key={i} agent={agent} size={16} tooltip={agentPlayerMap[agent]} />
                     ))}
                   </div>
                   {isExpanded && (
@@ -119,7 +143,7 @@ export default function MatchHistory() {
                       <div className="flex items-center gap-1">
                         <span className="text-text-dim">Opponent comp:</span>
                         {oppAgents.map((agent, i) => (
-                          <AgentIcon key={i} agent={agent} size={16} />
+                          <AgentIcon key={i} agent={agent} size={16} tooltip={allTeamAgentMaps[opponent]?.[agent]} />
                         ))}
                       </div>
                     </div>

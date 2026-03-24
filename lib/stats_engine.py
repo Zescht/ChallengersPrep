@@ -85,6 +85,7 @@ def compute_team_stats(matches, team_tag, team_name):
             'total_damage': 0,
             'first_kills': 0, 'first_deaths': 0,
             'operator_kills': 0, 'total_kills_for_awp': 0,
+            'op_rounds': 0, 'op_rounds_won': 0,
             'clutch_wins': 0, 'clutch_attempts': 0,
             'kast_rounds': 0, 'maps_played': 0,
             'vlr_rating_sum': 0.0, 'vlr_rating_rounds': 0,
@@ -291,6 +292,14 @@ def compute_team_stats(matches, team_tag, team_name):
                         if slot:
                             ability_accum[(puuid, agent)][f'kills_{slot}'] += 1
 
+                # Track rounds where player had the Operator
+                round_weapon = ps.get('economy', {}).get('weapon', '').upper()
+                if round_weapon == OPERATOR_UUID:
+                    for t in targets:
+                        t['op_rounds'] += 1
+                        if won:
+                            t['op_rounds_won'] += 1
+
                 # KAST
                 has_kill = kill_count > 0
                 has_assist = assists > 0
@@ -474,6 +483,9 @@ def compute_team_stats(matches, team_tag, team_name):
             'kast': round(pa['kast_rounds'] / pa['rounds'], 3) if pa['rounds'] > 0 else 0,
             'op_kills': pa['operator_kills'],
             'op_pct': round(pa['operator_kills'] / pa['total_kills_for_awp'], 3) if pa['total_kills_for_awp'] > 0 else 0,
+            'op_rounds': pa['op_rounds'],
+            'op_rounds_won': pa['op_rounds_won'],
+            'op_rw_pct': round(pa['op_rounds_won'] / pa['op_rounds'], 3) if pa['op_rounds'] > 0 else 0,
             'vlr_rating': round(pa['vlr_rating_sum'] / pa['vlr_rating_rounds'], 3) if pa['vlr_rating_rounds'] > 0 else 0,
             'maps': pa['maps_played'],
             'agents': dict(pa['agents']),

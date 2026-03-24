@@ -516,11 +516,11 @@
         "plant_time_by_site": null
       },
       "players": [
-        "TakaS",
-        "Sevire",
-        "K4davra",
         "nataNk",
-        "sh1n"
+        "sh1n",
+        "Sevire",
+        "TakaS",
+        "K4davra"
       ],
       "xvy": [
         {
@@ -1043,11 +1043,11 @@
         "plant_time_by_site": null
       },
       "players": [
+        "iluri",
         "Proxh",
         "MAGNUM",
-        "iluri",
-        "kozzy",
-        "Lime"
+        "Lime",
+        "kozzy"
       ],
       "xvy": [
         {
@@ -1670,11 +1670,11 @@
         "plant_time_by_site": null
       },
       "players": [
-        "Jesse",
-        "Famsii",
         "B1SK",
-        "BULD",
-        "OLIZERA"
+        "Famsii",
+        "OLIZERA",
+        "Jesse",
+        "BULD"
       ],
       "xvy": [
         {
@@ -2212,10 +2212,10 @@
         "plant_time_by_site": null
       },
       "players": [
-        "QutionerX",
-        "pAura",
         "Brave",
         "burzzy",
+        "QutionerX",
+        "pAura",
         "Elite"
       ],
       "xvy": [
@@ -2426,6 +2426,9 @@
       "clutch_pct": 0.0,
       "kast": 0.745,
       "awp_pct": 0.102,
+      "op_rounds": 8,
+      "op_rounds_won": 7,
+      "op_rw_pct": 0.875,
       "vlr_rating": 1.111,
       "agents": [
         {
@@ -2471,6 +2474,9 @@
       "clutch_pct": 0.571,
       "kast": 0.755,
       "awp_pct": 0.013,
+      "op_rounds": 1,
+      "op_rounds_won": 1,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.251,
       "agents": [
         {
@@ -2516,6 +2522,9 @@
       "clutch_pct": 0.1,
       "kast": 0.809,
       "awp_pct": 0.012,
+      "op_rounds": 2,
+      "op_rounds_won": 2,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.189,
       "agents": [
         {
@@ -2567,6 +2576,9 @@
       "clutch_pct": 0.125,
       "kast": 0.755,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.245,
       "agents": [
         {
@@ -2606,6 +2618,9 @@
       "clutch_pct": 0.444,
       "kast": 0.791,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.251,
       "agents": [
         {
@@ -2657,6 +2672,9 @@
       "clutch_pct": 0.25,
       "kast": 0.84,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.238,
       "agents": [
         {
@@ -2702,6 +2720,9 @@
       "clutch_pct": 0.4,
       "kast": 0.872,
       "awp_pct": 0.182,
+      "op_rounds": 21,
+      "op_rounds_won": 15,
+      "op_rw_pct": 0.714,
       "vlr_rating": 1.191,
       "agents": [
         {
@@ -2747,6 +2768,9 @@
       "clutch_pct": 0.3,
       "kast": 0.766,
       "awp_pct": 0.0,
+      "op_rounds": 1,
+      "op_rounds_won": 1,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.151,
       "agents": [
         {
@@ -2786,6 +2810,9 @@
       "clutch_pct": 0.25,
       "kast": 0.809,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.826,
       "agents": [
         {
@@ -2831,6 +2858,9 @@
       "clutch_pct": 0.2,
       "kast": 0.787,
       "awp_pct": 0.011,
+      "op_rounds": 3,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0.0,
       "vlr_rating": 1.391,
       "agents": [
         {
@@ -2870,6 +2900,9 @@
       "clutch_pct": 0.5,
       "kast": 0.92,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.371,
       "agents": [
         {
@@ -2909,6 +2942,9 @@
       "clutch_pct": 0.0,
       "kast": 0.747,
       "awp_pct": 0.017,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.949,
       "agents": [
         {
@@ -2942,6 +2978,9 @@
       "clutch_pct": 0.0,
       "kast": 0.76,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.267,
       "agents": [
         {
@@ -2987,6 +3026,9 @@
       "clutch_pct": 0.3,
       "kast": 0.72,
       "awp_pct": 0.048,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.095,
       "agents": [
         {
@@ -3026,6 +3068,9 @@
       "clutch_pct": 0.25,
       "kast": 0.773,
       "awp_pct": 0.214,
+      "op_rounds": 18,
+      "op_rounds_won": 11,
+      "op_rw_pct": 0.611,
       "vlr_rating": 1.064,
       "agents": [
         {
@@ -3059,6 +3104,9 @@
       "clutch_pct": 0.25,
       "kast": 0.724,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.756,
       "agents": [
         {
@@ -3104,6 +3152,9 @@
       "clutch_pct": 0.0,
       "kast": 0.827,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.986,
       "agents": [
         {
@@ -3143,6 +3194,9 @@
       "clutch_pct": 0.0,
       "kast": 0.765,
       "awp_pct": 0.071,
+      "op_rounds": 12,
+      "op_rounds_won": 6,
+      "op_rw_pct": 0.5,
       "vlr_rating": 1.119,
       "agents": [
         {
@@ -3182,6 +3236,9 @@
       "clutch_pct": 0.143,
       "kast": 0.745,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.095,
       "agents": [
         {
@@ -3227,6 +3284,9 @@
       "clutch_pct": 0.308,
       "kast": 0.776,
       "awp_pct": 0.0,
+      "op_rounds": 1,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0.0,
       "vlr_rating": 1.129,
       "agents": [
         {
@@ -3274,6 +3334,9 @@
       "clutch_pct": 0.0,
       "kast": 0.745,
       "awp_pct": 0.102,
+      "op_rounds": 8,
+      "op_rounds_won": 7,
+      "op_rw_pct": 0.875,
       "vlr_rating": 1.111,
       "agents": [
         {
@@ -3320,6 +3383,9 @@
       "clutch_pct": 0.571,
       "kast": 0.755,
       "awp_pct": 0.013,
+      "op_rounds": 1,
+      "op_rounds_won": 1,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.251,
       "agents": [
         {
@@ -3366,6 +3432,9 @@
       "clutch_pct": 0.0,
       "kast": 0.828,
       "awp_pct": 0.022,
+      "op_rounds": 2,
+      "op_rounds_won": 2,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.195,
       "agents": [
         {
@@ -3406,6 +3475,9 @@
       "clutch_pct": 0.0,
       "kast": 0.619,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.01,
       "agents": [
         {
@@ -3440,6 +3512,9 @@
       "clutch_pct": 0.333,
       "kast": 0.903,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.301,
       "agents": [
         {
@@ -3474,6 +3549,9 @@
       "clutch_pct": 0.125,
       "kast": 0.755,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.245,
       "agents": [
         {
@@ -3514,6 +3592,9 @@
       "clutch_pct": 0.5,
       "kast": 0.704,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.96,
       "agents": [
         {
@@ -3554,6 +3635,9 @@
       "clutch_pct": 0.429,
       "kast": 0.875,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.531,
       "agents": [
         {
@@ -3594,6 +3678,9 @@
       "clutch_pct": 0.25,
       "kast": 0.84,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.238,
       "agents": [
         {
@@ -3640,6 +3727,9 @@
       "clutch_pct": 0.5,
       "kast": 0.938,
       "awp_pct": 0.312,
+      "op_rounds": 8,
+      "op_rounds_won": 6,
+      "op_rw_pct": 0.75,
       "vlr_rating": 1.365,
       "agents": [
         {
@@ -3674,6 +3764,9 @@
       "clutch_pct": 0.2,
       "kast": 0.854,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.029,
       "agents": [
         {
@@ -3708,6 +3801,9 @@
       "clutch_pct": 0.667,
       "kast": 0.867,
       "awp_pct": 0.375,
+      "op_rounds": 13,
+      "op_rounds_won": 9,
+      "op_rw_pct": 0.692,
       "vlr_rating": 1.356,
       "agents": [
         {
@@ -3742,6 +3838,9 @@
       "clutch_pct": 0.5,
       "kast": 0.87,
       "awp_pct": 0.0,
+      "op_rounds": 1,
+      "op_rounds_won": 1,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.294,
       "agents": [
         {
@@ -3776,6 +3875,9 @@
       "clutch_pct": 0.25,
       "kast": 0.667,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.015,
       "agents": [
         {
@@ -3810,6 +3912,9 @@
       "clutch_pct": 0.25,
       "kast": 0.809,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.826,
       "agents": [
         {
@@ -3856,6 +3961,9 @@
       "clutch_pct": 0.2,
       "kast": 0.787,
       "awp_pct": 0.011,
+      "op_rounds": 3,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0.0,
       "vlr_rating": 1.391,
       "agents": [
         {
@@ -3896,6 +4004,9 @@
       "clutch_pct": 0.5,
       "kast": 0.92,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.371,
       "agents": [
         {
@@ -3936,6 +4047,9 @@
       "clutch_pct": 0.0,
       "kast": 0.747,
       "awp_pct": 0.017,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.949,
       "agents": [
         {
@@ -3970,6 +4084,9 @@
       "clutch_pct": 0.0,
       "kast": 0.76,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.267,
       "agents": [
         {
@@ -4016,6 +4133,9 @@
       "clutch_pct": 0.0,
       "kast": 0.636,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.785,
       "agents": [
         {
@@ -4050,6 +4170,9 @@
       "clutch_pct": 0.375,
       "kast": 0.755,
       "awp_pct": 0.064,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.224,
       "agents": [
         {
@@ -4084,6 +4207,9 @@
       "clutch_pct": 0.25,
       "kast": 0.773,
       "awp_pct": 0.214,
+      "op_rounds": 18,
+      "op_rounds_won": 11,
+      "op_rw_pct": 0.611,
       "vlr_rating": 1.064,
       "agents": [
         {
@@ -4118,6 +4244,9 @@
       "clutch_pct": 0.25,
       "kast": 0.724,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.756,
       "agents": [
         {
@@ -4164,6 +4293,9 @@
       "clutch_pct": 0.0,
       "kast": 0.827,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.986,
       "agents": [
         {
@@ -4204,6 +4336,9 @@
       "clutch_pct": 0.0,
       "kast": 0.765,
       "awp_pct": 0.071,
+      "op_rounds": 12,
+      "op_rounds_won": 6,
+      "op_rw_pct": 0.5,
       "vlr_rating": 1.119,
       "agents": [
         {
@@ -4244,6 +4379,9 @@
       "clutch_pct": 0.167,
       "kast": 0.797,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.236,
       "agents": [
         {
@@ -4284,6 +4422,9 @@
       "clutch_pct": 0.0,
       "kast": 0.647,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.831,
       "agents": [
         {
@@ -4318,6 +4459,9 @@
       "clutch_pct": 0.375,
       "kast": 0.741,
       "awp_pct": 0.0,
+      "op_rounds": 1,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0.0,
       "vlr_rating": 1.124,
       "agents": [
         {
@@ -4358,6 +4502,9 @@
       "clutch_pct": 0.2,
       "kast": 0.825,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.135,
       "agents": [
         {
@@ -4394,6 +4541,9 @@
       "clutch_pct": 0.0,
       "kast": 0.741,
       "awp_pct": 0.118,
+      "op_rounds": 4,
+      "op_rounds_won": 4,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.202,
       "agents": [
         {
@@ -4428,6 +4578,9 @@
       "clutch_pct": 0.0,
       "kast": 0.571,
       "awp_pct": 0.222,
+      "op_rounds": 4,
+      "op_rounds_won": 3,
+      "op_rw_pct": 0.75,
       "vlr_rating": 0.633,
       "agents": [
         {
@@ -4462,6 +4615,9 @@
       "clutch_pct": 0,
       "kast": 0.871,
       "awp_pct": 0.036,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.262,
       "agents": [
         {
@@ -4496,6 +4652,9 @@
       "clutch_pct": 0.0,
       "kast": 0.696,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.077,
       "agents": [
         {
@@ -4530,6 +4689,9 @@
       "clutch_pct": 1.0,
       "kast": 0.768,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.111,
       "agents": [
         {
@@ -4564,6 +4726,9 @@
       "clutch_pct": 1.0,
       "kast": 0.774,
       "awp_pct": 0.033,
+      "op_rounds": 1,
+      "op_rounds_won": 1,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.632,
       "agents": [
         {
@@ -4598,6 +4763,9 @@
       "clutch_pct": 0.0,
       "kast": 0.767,
       "awp_pct": 0.04,
+      "op_rounds": 2,
+      "op_rounds_won": 2,
+      "op_rw_pct": 1.0,
       "vlr_rating": 0.916,
       "agents": [
         {
@@ -4632,6 +4800,9 @@
       "clutch_pct": 0.0,
       "kast": 0.619,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.01,
       "agents": [
         {
@@ -4666,6 +4837,9 @@
       "clutch_pct": 0.0,
       "kast": 1.0,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.994,
       "agents": [
         {
@@ -4700,6 +4874,9 @@
       "clutch_pct": 0.333,
       "kast": 0.903,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.301,
       "agents": [
         {
@@ -4734,6 +4911,9 @@
       "clutch_pct": 0.143,
       "kast": 0.744,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.217,
       "agents": [
         {
@@ -4768,6 +4948,9 @@
       "clutch_pct": 0.0,
       "kast": 0.8,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.369,
       "agents": [
         {
@@ -4802,6 +4985,9 @@
       "clutch_pct": 0.0,
       "kast": 0.783,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.078,
       "agents": [
         {
@@ -4836,6 +5022,9 @@
       "clutch_pct": 0.5,
       "kast": 0.762,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.655,
       "agents": [
         {
@@ -4870,6 +5059,9 @@
       "clutch_pct": 0.333,
       "kast": 0.943,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.457,
       "agents": [
         {
@@ -4904,6 +5096,9 @@
       "clutch_pct": 1.0,
       "kast": 0.645,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.872,
       "agents": [
         {
@@ -4938,6 +5133,9 @@
       "clutch_pct": 0.0,
       "kast": 0.812,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.783,
       "agents": [
         {
@@ -4972,6 +5170,9 @@
       "clutch_pct": 0.3,
       "kast": 0.812,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.296,
       "agents": [
         {
@@ -5006,6 +5207,9 @@
       "clutch_pct": 0.0,
       "kast": 0.9,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.388,
       "agents": [
         {
@@ -5040,6 +5244,9 @@
       "clutch_pct": 0.5,
       "kast": 0.938,
       "awp_pct": 0.312,
+      "op_rounds": 8,
+      "op_rounds_won": 6,
+      "op_rw_pct": 0.75,
       "vlr_rating": 1.365,
       "agents": [
         {
@@ -5074,6 +5281,9 @@
       "clutch_pct": 0.2,
       "kast": 0.854,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.029,
       "agents": [
         {
@@ -5108,6 +5318,9 @@
       "clutch_pct": 0.667,
       "kast": 0.867,
       "awp_pct": 0.375,
+      "op_rounds": 13,
+      "op_rounds_won": 9,
+      "op_rw_pct": 0.692,
       "vlr_rating": 1.356,
       "agents": [
         {
@@ -5142,6 +5355,9 @@
       "clutch_pct": 0.5,
       "kast": 0.87,
       "awp_pct": 0.0,
+      "op_rounds": 1,
+      "op_rounds_won": 1,
+      "op_rw_pct": 1.0,
       "vlr_rating": 1.294,
       "agents": [
         {
@@ -5176,6 +5392,9 @@
       "clutch_pct": 0.25,
       "kast": 0.667,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.015,
       "agents": [
         {
@@ -5210,6 +5429,9 @@
       "clutch_pct": 0,
       "kast": 0.812,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.922,
       "agents": [
         {
@@ -5244,6 +5466,9 @@
       "clutch_pct": 0.143,
       "kast": 0.75,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.643,
       "agents": [
         {
@@ -5278,6 +5503,9 @@
       "clutch_pct": 1.0,
       "kast": 0.9,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.067,
       "agents": [
         {
@@ -5312,6 +5540,9 @@
       "clutch_pct": 0.333,
       "kast": 0.891,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.921,
       "agents": [
         {
@@ -5346,6 +5577,9 @@
       "clutch_pct": 0.0,
       "kast": 0.688,
       "awp_pct": 0.03,
+      "op_rounds": 3,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0.0,
       "vlr_rating": 0.883,
       "agents": [
         {
@@ -5380,6 +5614,9 @@
       "clutch_pct": 0.5,
       "kast": 0.838,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.268,
       "agents": [
         {
@@ -5414,6 +5651,9 @@
       "clutch_pct": 0.5,
       "kast": 1.0,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.471,
       "agents": [
         {
@@ -5448,6 +5688,9 @@
       "clutch_pct": 0.0,
       "kast": 0.747,
       "awp_pct": 0.017,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.949,
       "agents": [
         {
@@ -5482,6 +5725,9 @@
       "clutch_pct": 0.0,
       "kast": 0.744,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.178,
       "agents": [
         {
@@ -5516,6 +5762,9 @@
       "clutch_pct": 0,
       "kast": 0.714,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.458,
       "agents": [
         {
@@ -5550,6 +5799,9 @@
       "clutch_pct": 0,
       "kast": 0.867,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.234,
       "agents": [
         {
@@ -5584,6 +5836,9 @@
       "clutch_pct": 0.0,
       "kast": 0.636,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.785,
       "agents": [
         {
@@ -5618,6 +5873,9 @@
       "clutch_pct": 0.375,
       "kast": 0.755,
       "awp_pct": 0.064,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.224,
       "agents": [
         {
@@ -5652,6 +5910,9 @@
       "clutch_pct": 0.25,
       "kast": 0.773,
       "awp_pct": 0.214,
+      "op_rounds": 18,
+      "op_rounds_won": 11,
+      "op_rw_pct": 0.611,
       "vlr_rating": 1.064,
       "agents": [
         {
@@ -5686,6 +5947,9 @@
       "clutch_pct": 0.0,
       "kast": 0.625,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.435,
       "agents": [
         {
@@ -5720,6 +5984,9 @@
       "clutch_pct": 0.0,
       "kast": 0.8,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.897,
       "agents": [
         {
@@ -5754,6 +6021,9 @@
       "clutch_pct": 0.333,
       "kast": 0.706,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.817,
       "agents": [
         {
@@ -5788,6 +6058,9 @@
       "clutch_pct": 0.0,
       "kast": 0.875,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.08,
       "agents": [
         {
@@ -5822,6 +6095,9 @@
       "clutch_pct": 0.0,
       "kast": 0.811,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.956,
       "agents": [
         {
@@ -5856,6 +6132,9 @@
       "clutch_pct": 0.0,
       "kast": 0.734,
       "awp_pct": 0.081,
+      "op_rounds": 8,
+      "op_rounds_won": 5,
+      "op_rw_pct": 0.625,
       "vlr_rating": 1.225,
       "agents": [
         {
@@ -5890,6 +6169,9 @@
       "clutch_pct": 0.0,
       "kast": 0.824,
       "awp_pct": 0.043,
+      "op_rounds": 4,
+      "op_rounds_won": 1,
+      "op_rw_pct": 0.25,
       "vlr_rating": 0.918,
       "agents": [
         {
@@ -5924,6 +6206,9 @@
       "clutch_pct": 0.0,
       "kast": 0.75,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.957,
       "agents": [
         {
@@ -5958,6 +6243,9 @@
       "clutch_pct": 0.25,
       "kast": 0.825,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.403,
       "agents": [
         {
@@ -5992,6 +6280,9 @@
       "clutch_pct": 0.0,
       "kast": 0.647,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 0.831,
       "agents": [
         {
@@ -6026,6 +6317,9 @@
       "clutch_pct": 0.0,
       "kast": 0.875,
       "awp_pct": 0.0,
+      "op_rounds": 1,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0.0,
       "vlr_rating": 1.158,
       "agents": [
         {
@@ -6060,6 +6354,9 @@
       "clutch_pct": 0.2,
       "kast": 0.825,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.135,
       "agents": [
         {
@@ -6094,6 +6391,9 @@
       "clutch_pct": 0.5,
       "kast": 0.647,
       "awp_pct": 0.0,
+      "op_rounds": 0,
+      "op_rounds_won": 0,
+      "op_rw_pct": 0,
       "vlr_rating": 1.1,
       "agents": [
         {

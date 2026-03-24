@@ -112,6 +112,9 @@ export interface Player {
   clutch_pct: number
   kast: number
   awp_pct: number
+  op_rounds: number
+  op_rounds_won: number
+  op_rw_pct: number
   vlr_rating: number
   agents: AgentPick[]
 }

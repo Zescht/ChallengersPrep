@@ -116,6 +116,7 @@ export default function Leaderboards() {
   const [roleFilter, setRoleFilter] = useState<string | null>(null)
   const [roleStats, setRoleStats] = useState(false)
   const [clExpanded, setClExpanded] = useState(false)
+  const [opExpanded, setOpExpanded] = useState(false)
   const [expandedPlayers, setExpandedPlayers] = useState<Set<string>>(new Set())
 
   const togglePlayerExpand = (ign: string) => {
@@ -173,6 +174,9 @@ export default function Leaderboards() {
   const extraSortGetters: Record<string, (p: Player) => number> = {
     cl_atmp: p => p.clutch_scens,
     cl_won: p => p.clutches,
+    op_rnds: p => p.op_rounds,
+    op_won: p => p.op_rounds_won,
+    op_rw: p => p.op_rw_pct,
   }
 
   const handleSort = (key: string) => {
@@ -298,6 +302,16 @@ export default function Leaderboards() {
                           {clExpanded ? '−' : '+'}
                         </span>
                       )}
+                      {c.key === 'op_pct' && (
+                        <span
+                          onClick={(e) => { e.stopPropagation(); setOpExpanded(v => !v) }}
+                          className="ml-1 w-4 h-4 border border-white/10 rounded cursor-pointer text-text-dim hover:text-on-surface hover:border-white/20 transition-colors"
+                          title={opExpanded ? 'Collapse OP round stats' : 'Expand OP round stats'}
+                          style={{ display: 'inline-grid', placeItems: 'center', fontSize: '12px', fontWeight: 700, lineHeight: 1 }}
+                        >
+                          {opExpanded ? '−' : '+'}
+                        </span>
+                      )}
                     </th>
                     {c.key === 'cl' && clExpanded && (
                       <>
@@ -306,6 +320,19 @@ export default function Leaderboards() {
                         </th>
                         <th className="px-2 py-2 scannable-label text-center select-none">
                           <SortHeader label="WON" sortId="cl_won" />
+                        </th>
+                      </>
+                    )}
+                    {c.key === 'op_pct' && opExpanded && (
+                      <>
+                        <th className="px-2 py-2 scannable-label text-center select-none">
+                          <SortHeader label="RNDS" sortId="op_rnds" />
+                        </th>
+                        <th className="px-2 py-2 scannable-label text-center select-none">
+                          <SortHeader label="WON" sortId="op_won" />
+                        </th>
+                        <th className="px-2 py-2 scannable-label text-center select-none">
+                          <SortHeader label="rW%" sortId="op_rw" />
                         </th>
                       </>
                     )}
@@ -389,6 +416,13 @@ export default function Leaderboards() {
                                 <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{p.clutches}</td>
                               </>
                             )}
+                            {c.key === 'op_pct' && opExpanded && (
+                              <>
+                                <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{p.op_rounds}</td>
+                                <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{p.op_rounds_won}</td>
+                                <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{formatPct(p.op_rw_pct)}</td>
+                              </>
+                            )}
                           </Fragment>
                         )
                       })}
@@ -427,6 +461,13 @@ export default function Leaderboards() {
                                 <>
                                   <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{ap.clutch_scens}</td>
                                   <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{ap.clutches}</td>
+                                </>
+                              )}
+                              {c.key === 'op_pct' && opExpanded && (
+                                <>
+                                  <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{ap.op_rounds}</td>
+                                  <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{ap.op_rounds_won}</td>
+                                  <td className="px-2 py-1.5 text-center font-table text-xs text-on-surface">{formatPct(ap.op_rw_pct)}</td>
                                 </>
                               )}
                             </Fragment>

@@ -326,7 +326,7 @@ function TeamVsTeam({ teams, teamAName, teamBName, onChangeA, onChangeB, data }:
       {tA && tB && (
         <>
           {/* Map Pool Dominance */}
-          <MapPoolBars teamA={tA} teamB={tB} />
+          <MapPoolBars teamA={tA} teamB={tB} data={data} />
 
           {/* Head-to-Head History */}
           <HeadToHead teamA={tA} teamB={tB} matches={data.matches} />
@@ -378,7 +378,7 @@ function TeamDropdown({ teams, value, onChange, exclude }: {
 
 /* ─── Map Pool Dominance ─── */
 
-function MapDetailPanel({ mapStats, color }: { mapStats: MapStats | undefined; color: 'primary' | 'secondary' }) {
+function MapDetailPanel({ mapStats, color, agentPlayerMap = {} }: { mapStats: MapStats | undefined; color: 'primary' | 'secondary'; agentPlayerMap?: Record<string, string> }) {
   if (!mapStats) return <div className="text-text-dim text-xs italic">No data</div>
 
   const stats = [
@@ -395,7 +395,7 @@ function MapDetailPanel({ mapStats, color }: { mapStats: MapStats | undefined; c
       {/* Comp */}
       <div className="flex items-center gap-1 mb-2">
         {mapStats.comp.slice(0, 5).map((agent, i) => (
-          <AgentIcon key={i} agent={agent} size={22} />
+          <AgentIcon key={i} agent={agent} size={22} tooltip={agentPlayerMap[agent]} />
         ))}
       </div>
       {/* Stats grid */}
@@ -411,10 +411,25 @@ function MapDetailPanel({ mapStats, color }: { mapStats: MapStats | undefined; c
   )
 }
 
-function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
+function buildAgentPlayerMap(data: StatsData, teamName: string): Record<string, string> {
+  const map: Record<string, string> = {}
+  const rounds: Record<string, number> = {}
+  for (const ap of (data.players_by_agent ?? []).filter(p => p.team === teamName)) {
+    if (!map[ap.agent] || ap.rounds > rounds[ap.agent]) {
+      map[ap.agent] = ap.ign
+      rounds[ap.agent] = ap.rounds
+    }
+  }
+  return map
+}
+
+function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: StatsData }) {
   const [expanded, setExpanded] = useState<string | null>(null)
   const allMaps = new Set([...teamA.maps.map(m => m.map), ...teamB.maps.map(m => m.map)])
   const sortedMaps = [...allMaps].sort()
+
+  const agentMapA = buildAgentPlayerMap(data, teamA.name)
+  const agentMapB = buildAgentPlayerMap(data, teamB.name)
 
   const vetoA = teamA.tag ? getFirstBanPick(teamA.tag) : { firstBan: null, firstPick: null }
   const vetoB = teamB.tag ? getFirstBanPick(teamB.tag) : { firstBan: null, firstPick: null }
@@ -506,11 +521,11 @@ function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
                 <div className="grid grid-cols-[80px_1fr_80px_1fr] gap-3 mt-1 mb-2">
                   <div />
                   <div className="bg-surface-container rounded-lg p-3 border border-primary/10">
-                    <MapDetailPanel mapStats={mA} color="primary" />
+                    <MapDetailPanel mapStats={mA} color="primary" agentPlayerMap={agentMapA} />
                   </div>
                   <div />
                   <div className="bg-surface-container rounded-lg p-3 border border-secondary/10">
-                    <MapDetailPanel mapStats={mB} color="secondary" />
+                    <MapDetailPanel mapStats={mB} color="secondary" agentPlayerMap={agentMapB} />
                   </div>
                 </div>
               )}
