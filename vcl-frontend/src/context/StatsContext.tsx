@@ -5,6 +5,8 @@ import type { StatsData, TournamentAverages } from '../types'
 interface StatsContextValue {
   data: StatsData | null
   averages: TournamentAverages | null
+  fullData: StatsData | null
+  playoffData: StatsData | null
   loading: boolean
   error: string | null
 }
@@ -12,6 +14,8 @@ interface StatsContextValue {
 const StatsContext = createContext<StatsContextValue>({
   data: null,
   averages: null,
+  fullData: null,
+  playoffData: null,
   loading: true,
   error: null,
 })
@@ -212,7 +216,7 @@ export function StatsProvider({ children }: { children: ReactNode }) {
   }, [fullData, playoffData, fullAverages, playoffOnly, clDataOnly])
 
   return (
-    <StatsContext.Provider value={{ data, averages, loading, error }}>
+    <StatsContext.Provider value={{ data, averages, fullData, playoffData, loading, error }}>
       {children}
     </StatsContext.Provider>
   )

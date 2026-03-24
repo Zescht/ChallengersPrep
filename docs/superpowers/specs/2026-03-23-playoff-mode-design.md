@@ -23,7 +23,7 @@ Client-side filter on the existing `stats.json`. When active:
 - **Leaderboards:** only players from the 4 playoff teams appear. Percentile rankings recomputed within this filtered pool. Tournament averages recomputed for 4 teams only.
 - **Versus:** Team dropdowns restricted to 4 teams. Player dropdowns restricted to players on those 4 teams.
 - **History/Matches:** filtered to matches involving at least one playoff team.
-- **Averages:** all tournament averages (team stats, player stats, per-map stats, XvY, site averages) recomputed for the 4-team pool. Color scales stay the same.
+- **Averages:** unchanged — still computed from the full 14-team league. Color scales stay the same.
 
 ### Mode 2: "CL Data Only" (ON/OFF, requires Mode 1)
 
@@ -119,16 +119,15 @@ interface FilterState {
 
 - Loads both `stats.json` and `stats_playoffs.json` on mount.
 - Reads `clDataOnly` from FilterContext to decide which dataset is active.
-- When `playoffOnly` is on (but `clDataOnly` off): uses `stats.json` but exposes filtered data (4 teams only) and recomputed averages.
+- When `playoffOnly` is on (but `clDataOnly` off): uses `stats.json` but exposes filtered data (4 teams only). Averages remain from full 14-team league.
 - When `clDataOnly` is on: uses `stats_playoffs.json` directly.
 - Exposes same `{ data, averages }` shape — consuming components don't need changes.
 
 ### Average Recomputation
 
 When Mode 1 is active (filtering stats.json to 4 teams):
-- `computeAverages()` runs on the filtered dataset (4 teams, their players, their matches).
-- This happens in StatsContext when the filter state changes.
-- No changes to `computeAverages()` function itself — just called with filtered input.
+- Averages stay the same — still computed from the full 14-team `stats.json`.
+- Only the exposed `data` (teams, players, matches) is filtered for visibility.
 
 When Mode 2 is active:
 - `stats_playoffs.json` already contains only playoff data.

@@ -50,7 +50,7 @@ def _compute_series_record(match_rows, team_name):
     return s_wins, s_losses
 
 
-def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
+def _build_map_stats(match_rows, econ_rows, pp_rows, team_name, plant_time_rows=None):
     """Build per-map stats array + allMaps aggregate."""
     # Group matches by map
     map_matches = defaultdict(list)
@@ -224,6 +224,7 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
             'post_rW_event_avg': 0,
             'ret_rank': 0,
             'ret_rW_event_avg': 0,
+            'avg_plant_time': plant_time_rows.get(map_name) if plant_time_rows else None,
         }
         maps_list.append(map_obj)
 
@@ -287,6 +288,7 @@ def _build_map_stats(match_rows, econ_rows, pp_rows, team_name):
         'post_rW_event_avg': 0,
         'ret_rank': 0,
         'ret_rW_event_avg': 0,
+        'avg_plant_time': None,  # not meaningful for allMaps aggregate
     }
 
     return maps_list, all_maps_obj

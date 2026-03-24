@@ -20,6 +20,44 @@ This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
 
 ---
 
+## [0.9.0] - 2026-03-24 — Playoff Mode & Map Vetoes
+
+### Context & Goals
+VCL EMEA 2026 Stage 1 has reached playoffs. Only 4 teams remain: **MISA**, **Enterprise (EP)**, **UCAM**, and **Mandatory (MDR)**. This version adds a full playoff mode to the dashboard, map veto data from Liquipedia, and updates match data with 19 new playoff maps.
+
+### Added
+- **Playoff mode frontend**: two navbar toggles — "Playoff-Teams" (filters to 4 teams) and "CL Data Only" (swaps to Challengers-only dataset)
+- **FilterContext**: manages `playoffOnly` and `clDataOnly` booleans with localStorage persistence
+- **Dual dataset loading**: StatsContext loads both `stats.json` and `stats_playoffs.json`, switches based on mode
+- **Auto-redirect**: navigates to first available team when current team is filtered out by playoff mode
+- **Map veto data**: `vetoData.ts` with full veto history for all 4 playoff teams sourced from Liquipedia
+- **Veto labels on Versus page**: "FIRST BAN" / "FIRST PICK" badges on map pool bars per team
+- **CL Data Only toggle on Versus roster**: per-section toggle to compare rosters using playoff-only stats
+- **Plant time tracking**: `stats_engine.py` now computes average plant time per map per team
+- `DATABASE_STRUCTURE.md` — full documentation of the data pipeline, raw JSONL format, stats.json schema, and constants
+- `Playoff_New_Matches.xlsx` — catalog of 19 newly fetched playoff maps
+- `build_new_playoff_matches.py`, `build_mdr_vetoes.py`, `build_sge_matches.py` — data export utility scripts
+- `MDR_Map_Vetoes_2026.xlsx`, `SGE_Included_Matches.xlsx` — exported data references
+- `veto_data.py` — Python source for veto data collection
+- Playoff mode design spec and implementation plan (`docs/superpowers/`)
+- `--playoff` pipeline flag in `build_json.py` to generate `stats_playoffs.json`
+
+### Changed
+- StatsContext now exposes `fullData` and `playoffData` alongside filtered `data`
+- Versus page roster comparison: larger text, bigger agent icons, team logos sized up
+- Navbar toggle styling: `text-on-surface` replaces `text-text-dim` for better contrast
+- Playoff mode averages remain computed from full 14-team league (design decision — keeps color scales consistent)
+- Updated raw data for 4 playoff teams with new matches:
+  - MISA: 24 → 28 maps (+4: vs SGE, TL)
+  - EP: 32 → 36 maps (+5: vs BAR, FKS)
+  - UCAM: 51 → 55 maps (+4: vs PXL, JL)
+  - MDR: 32 → 38 maps (+6: vs M1R, GNG, S2G)
+
+### Data Quality Notes
+- MDR vs M1R Haven (13-1) — flagged as potential forfeit/tech issue, included in raw data pending review
+
+---
+
 ## [0.8.0] - 2026-03-23
 
 ### Added

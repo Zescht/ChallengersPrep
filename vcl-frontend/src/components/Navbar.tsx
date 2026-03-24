@@ -44,7 +44,7 @@ export default function Navbar() {
     `px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-widest transition-colors ${
       active
         ? 'bg-primary/10 text-primary'
-        : 'text-text-dim hover:text-text hover:bg-white/5'
+        : 'text-on-surface hover:bg-white/5'
     }`
 
   return (
@@ -80,7 +80,7 @@ export default function Navbar() {
                   className={`block px-4 py-2 text-[11px] font-bold uppercase tracking-widest transition-colors ${
                     location.pathname === '/leaderboards/agents'
                       ? 'bg-primary/10 text-primary'
-                      : 'text-text-dim hover:text-text hover:bg-white/5'
+                      : 'text-on-surface hover:bg-white/5'
                   }`}
                 >
                   Agent Stats
@@ -102,7 +102,7 @@ export default function Navbar() {
           className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-widest transition-colors ${
             playoffOnly
               ? 'bg-primary/20 text-primary border border-primary/30'
-              : 'text-text-dim hover:text-text hover:bg-white/5'
+              : 'text-on-surface hover:bg-white/5'
           }`}
           title="Show only playoff teams"
         >
@@ -115,8 +115,8 @@ export default function Navbar() {
             clDataOnly
               ? 'bg-primary/20 text-primary border border-primary/30'
               : playoffOnly
-                ? 'text-text-dim hover:text-text hover:bg-white/5'
-                : 'text-text-dim/30 cursor-not-allowed'
+                ? 'text-on-surface hover:bg-white/5'
+                : 'text-on-surface/30 cursor-not-allowed'
           }`}
           title={playoffOnly ? 'Show only Challengers playoff data' : 'Enable Playoff-Teams first'}
         >

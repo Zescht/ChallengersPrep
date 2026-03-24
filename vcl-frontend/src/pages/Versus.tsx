@@ -4,6 +4,7 @@ import { useStats } from '../context/StatsContext'
 import AgentIcon from '../components/AgentIcon'
 import FormStrip from '../components/FormStrip'
 import { formatPct, formatRatio, formatCount } from '../utils/format'
+import { getFirstBanPick } from '../data/vetoData'
 import type { Team, Player, StatsData, Match } from '../types'
 
 const TEAM_LOGOS: Record<string, string> = {
@@ -163,9 +164,9 @@ function TeamVsTeam({ teams, teamAName, teamBName, onChangeA, onChangeB, data }:
 
 function TeamLogo({ tag }: { tag?: string }) {
   const logo = tag ? TEAM_LOGOS[tag] : undefined
-  if (!logo) return <div className="w-14 h-14 rounded-xl bg-surface-container-highest border border-white/10" />
+  if (!logo) return <div className="w-20 self-stretch rounded-xl bg-surface-container-highest border border-white/10" />
   return (
-    <div className="w-14 h-14 bg-surface-container-highest rounded-xl flex items-center justify-center p-2 border border-white/10">
+    <div className="w-20 self-stretch bg-surface-container-highest rounded-xl flex items-center justify-center p-2.5 border border-white/10">
       <img src={`${import.meta.env.BASE_URL}logos/${logo}`} alt={tag} className="w-full h-full object-contain" />
     </div>
   )
@@ -196,6 +197,9 @@ function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
   const allMaps = new Set([...teamA.maps.map(m => m.map), ...teamB.maps.map(m => m.map)])
   const sortedMaps = [...allMaps].sort()
 
+  const vetoA = teamA.tag ? getFirstBanPick(teamA.tag) : { firstBan: null, firstPick: null }
+  const vetoB = teamB.tag ? getFirstBanPick(teamB.tag) : { firstBan: null, firstPick: null }
+
   return (
     <section className="bg-surface-container-low rounded-xl p-5 border border-white/5">
       <div className="flex justify-between items-center mb-4">
@@ -213,11 +217,14 @@ function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
           const bRW = mB?.rW_pct ?? 0
           const delta = aRW - bRW
 
+          const aLabel = vetoA.firstBan === mapName ? 'FIRST BAN' : vetoA.firstPick === mapName ? 'FIRST PICK' : null
+          const bLabel = vetoB.firstBan === mapName ? 'FIRST BAN' : vetoB.firstPick === mapName ? 'FIRST PICK' : null
+
           return (
             <div key={mapName} className="grid grid-cols-[80px_1fr_80px_1fr] items-center gap-3">
               <div className="text-sm font-bold uppercase tracking-wider text-on-surface">{mapName}</div>
 
-              {/* Team A bar */}
+              {/* Team A bar + veto label */}
               <div className="h-7 bg-surface-container-highest rounded-full overflow-hidden relative">
                 <div
                   className="h-full bg-primary rounded-full transition-all duration-500"
@@ -227,6 +234,13 @@ function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
                   {mA ? formatPct(aRW) : '-'}
                   {mA && <span className="text-white/80 ml-1">({mA.wins}-{mA.losses})</span>}
                 </span>
+                {aLabel && (
+                  <span className={`absolute inset-y-0 right-2.5 flex items-center text-[11px] font-black uppercase tracking-wider ${
+                    aLabel === 'FIRST BAN' ? 'text-red-500' : 'text-on-surface'
+                  }`}>
+                    {aLabel}
+                  </span>
+                )}
               </div>
 
               {/* Delta */}
@@ -238,7 +252,7 @@ function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
                 </span>
               </div>
 
-              {/* Team B bar */}
+              {/* Team B bar + veto label */}
               <div className="h-7 bg-surface-container-highest rounded-full overflow-hidden relative">
                 <div
                   className="h-full bg-secondary rounded-full transition-all duration-500"
@@ -248,6 +262,13 @@ function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
                   {mB ? formatPct(bRW) : '-'}
                   {mB && <span className="text-white/80 ml-1">({mB.wins}-{mB.losses})</span>}
                 </span>
+                {bLabel && (
+                  <span className={`absolute inset-y-0 right-2.5 flex items-center text-[11px] font-black uppercase tracking-wider ${
+                    bLabel === 'FIRST BAN' ? 'text-red-500' : 'text-on-surface'
+                  }`}>
+                    {bLabel}
+                  </span>
+                )}
               </div>
             </div>
           )
@@ -398,8 +419,13 @@ function PostPlantCards({ teamA, teamB }: { teamA: Team; teamB: Team }) {
 /* ─── Player Roster Comparison ─── */
 
 function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team; players: Player[] }) {
-  const pA = players.filter(p => p.team === teamA.name)
-  const pB = players.filter(p => p.team === teamB.name)
+  const { fullData, playoffData } = useStats()
+  const [clOnly, setClOnly] = useState(false)
+
+  // When CL Only is on and playoff data exists, use playoff players; otherwise use passed-in players
+  const activePlayers = (clOnly && playoffData) ? playoffData.players : players
+  const pA = activePlayers.filter(p => p.team === teamA.name)
+  const pB = activePlayers.filter(p => p.team === teamB.name)
 
   const statCols = [
     { label: 'ACS', get: (p: Player) => formatCount(p.acs_split) },
@@ -414,15 +440,15 @@ function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team;
       <div className="bg-surface-container-low rounded-xl overflow-hidden border border-white/5">
         <div className={`px-4 py-2.5 bg-surface-container-high/60 border-b border-white/5 flex items-center gap-2`}>
           <TeamLogo tag={team.tag} />
-          <h4 className="font-headline font-bold text-xs uppercase tracking-tight text-on-surface">{team.name}</h4>
+          <h4 className="font-headline font-bold text-sm uppercase tracking-tight text-on-surface">{team.name}</h4>
         </div>
         <table className="w-full text-sm">
           <thead>
             <tr className="bg-surface-container/60">
-              <th className="px-3 py-2 text-left text-text-muted text-xs uppercase tracking-wider font-medium">Player</th>
-              <th className="px-2 py-2 text-center text-text-muted text-xs uppercase tracking-wider font-medium">Agents</th>
+              <th className="px-3 py-2 text-left text-text-muted text-sm uppercase tracking-wider font-medium">Player</th>
+              <th className="px-2 py-2 text-center text-text-muted text-sm uppercase tracking-wider font-medium">Agents</th>
               {statCols.map(c => (
-                <th key={c.label} className="px-2 py-2 text-right text-text-muted text-xs uppercase tracking-wider font-medium">{c.label}</th>
+                <th key={c.label} className="px-2 py-2 text-right text-text-muted text-sm uppercase tracking-wider font-medium">{c.label}</th>
               ))}
             </tr>
           </thead>
@@ -430,19 +456,19 @@ function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team;
             {roster.map(p => (
               <tr key={p.ign} className="border-t border-white/5 hover:bg-white/3 transition-colors">
                 <td className="px-3 py-2">
-                  <Link to={`/player/${encodeURIComponent(p.ign)}`} className="text-player-link hover:underline font-bold text-xs">
+                  <Link to={`/player/${encodeURIComponent(p.ign)}`} className="text-player-link hover:underline font-bold text-sm">
                     {p.ign}
                   </Link>
                 </td>
                 <td className="px-2 py-2">
                   <div className="flex gap-0.5 justify-center">
                     {[...p.agents].sort((a, b) => b.pct - a.pct).slice(0, 3).map(a => (
-                      <AgentIcon key={a.agent} agent={a.agent} size={16} />
+                      <AgentIcon key={a.agent} agent={a.agent} size={18} />
                     ))}
                   </div>
                 </td>
                 {statCols.map(c => (
-                  <td key={c.label} className="px-2 py-2 text-right font-table text-xs text-on-surface">{c.get(p)}</td>
+                  <td key={c.label} className="px-2 py-2 text-right font-table text-sm text-on-surface">{c.get(p)}</td>
                 ))}
               </tr>
             ))}
@@ -454,7 +480,21 @@ function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team;
 
   return (
     <section>
-      <h3 className="font-headline font-bold text-sm uppercase tracking-tight text-on-surface mb-3">Player Rosters</h3>
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="font-headline font-bold text-sm uppercase tracking-tight text-on-surface">Player Rosters</h3>
+        {playoffData && (
+          <button
+            onClick={() => setClOnly(!clOnly)}
+            className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-widest transition-colors ${
+              clOnly
+                ? 'bg-primary/20 text-primary border border-primary/30'
+                : 'text-on-surface hover:bg-white/5'
+            }`}
+          >
+            CL Data Only
+          </button>
+        )}
+      </div>
       <div className="grid grid-cols-2 gap-4">
         <RosterTable team={teamA} roster={pA} />
         <RosterTable team={teamB} roster={pB} />

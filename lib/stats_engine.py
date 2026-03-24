@@ -76,6 +76,7 @@ def compute_team_stats(matches, team_tag, team_name):
     econ_accum = defaultdict(lambda: {'w': 0, 'l': 0})
     xvy_accum = defaultdict(lambda: {'wins': 0, 'total': 0})
     pp_accum = defaultdict(lambda: {'plants': 0, 'wins': 0, 'losses': 0})
+    plant_time_accum = defaultdict(list)  # map_name -> [plantRoundTimeMillis, ...]
     def _new_accum():
         return {
             'name': '', 'team': team_name, 'agents': Counter(), 'rounds': 0,
@@ -174,6 +175,11 @@ def compute_team_stats(matches, team_tag, team_name):
                     pp_accum[pp_key]['wins'] += 1
                 else:
                     pp_accum[pp_key]['losses'] += 1
+                # Track plant time when team planted (attack side)
+                if planter in team_puuids:
+                    prt = rr.get('plantRoundTime')
+                    if prt and prt > 0:
+                        plant_time_accum[md.map].append(prt)
 
             # Per-round player stats
             all_kills_in_round = []
@@ -525,6 +531,13 @@ def compute_team_stats(matches, team_tag, team_name):
 
     print(f"  {team_name} ({team_tag}): {len(matches)} valid maps, {len(player_rows)} players")
 
+    # Build avg plant time per map (convert ms to seconds)
+    plant_time_rows = {}
+    for map_name, times in plant_time_accum.items():
+        if times:
+            avg_ms = sum(times) / len(times)
+            plant_time_rows[map_name] = round(avg_ms / 1000, 1)
+
     return {
         'match_rows': match_rows,
         'round_econ_rows': round_econ_rows,
@@ -534,4 +547,5 @@ def compute_team_stats(matches, team_tag, team_name):
         'player_role_rows': player_role_rows,
         'player_agent_rows': player_agent_rows,
         'ability_rows': ability_rows,
+        'plant_time_rows': plant_time_rows,
     }
