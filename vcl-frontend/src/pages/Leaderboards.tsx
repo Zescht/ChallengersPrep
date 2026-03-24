@@ -1,6 +1,7 @@
 import { Fragment, useState, useMemo, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
+import { useFilter } from '../context/FilterContext'
 import { formatRatio, formatPct } from '../utils/format'
 import AgentIcon from '../components/AgentIcon'
 import type { Player, AgentPlayer } from '../types'
@@ -108,6 +109,7 @@ const COLUMNS: Column[] = [
 
 export default function Leaderboards() {
   const { data } = useStats()
+  const { clDataOnly } = useFilter()
   const [sortKey, setSortKey] = useState('acs')
   const [sortAsc, setSortAsc] = useState(false)
   const [teamFilter, setTeamFilter] = useState<string | null>(null)
@@ -154,14 +156,14 @@ export default function Leaderboards() {
       ? (data.players_by_role ?? []).filter(p => (p as Player & { role?: string }).role === roleFilter)
       : data.players
     const eligible = source
-      .filter(p => p.rounds >= MIN_ROUNDS)
+      .filter(p => clDataOnly || p.rounds >= MIN_ROUNDS)
       .filter(p => !roleFilter || useRole || playerPlaysRole(p, roleFilter!))
     const map = new Map<string, number[]>()
     for (const c of COLUMNS) {
       map.set(c.key, eligible.map(p => c.getValue(p)))
     }
     return map
-  }, [data, roleFilter, roleStats])
+  }, [data, roleFilter, roleStats, clDataOnly])
 
   if (!data) return null
 
@@ -192,7 +194,7 @@ export default function Leaderboards() {
     : data.players
 
   const players = playerSource
-    .filter(p => p.rounds >= MIN_ROUNDS)
+    .filter(p => clDataOnly || p.rounds >= MIN_ROUNDS)
     .filter(p => !roleFilter || useRoleData || playerPlaysRole(p, roleFilter))
     .sort((a, b) => {
       const va = sortGetter(a)
@@ -263,7 +265,7 @@ export default function Leaderboards() {
             </label>
           )}
         </div>
-        <span className="text-text-dim text-[10px] font-bold uppercase tracking-[0.15em]">Min {MIN_ROUNDS} rounds</span>
+        {!clDataOnly && <span className="text-text-dim text-[10px] font-bold uppercase tracking-[0.15em]">Min {MIN_ROUNDS} rounds</span>}
       </section>
 
       {/* ── Leaderboard Table ── */}

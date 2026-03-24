@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import { useStats } from '../context/StatsContext'
+import { useFilter } from '../context/FilterContext'
 import AgentIcon from '../components/AgentIcon'
 import type { AgentStat } from '../types'
 
@@ -66,6 +67,7 @@ function percentileToColor(pct: number): string {
 
 export default function AgentStats() {
   const { data } = useStats()
+  const { clDataOnly } = useFilter()
   const [agentFilter, setAgentFilter] = useState<string>('Sova')
   const [sortKey, setSortKey] = useState('casts_ability2_per_round')
   const [sortAsc, setSortAsc] = useState(false)
@@ -113,7 +115,7 @@ export default function AgentStats() {
   const players = useMemo(() => {
     if (!data) return []
     return data.agent_stats
-      .filter(p => p.agent === agentFilter && p.rounds >= MIN_ROUNDS)
+      .filter(p => p.agent === agentFilter && (clDataOnly || p.rounds >= MIN_ROUNDS))
       .sort((a, b) => {
         const col = columns.find(c => c.key === sortKey)
         if (!col) return 0
@@ -121,7 +123,7 @@ export default function AgentStats() {
         const vb = col.getValue(b)
         return sortAsc ? va - vb : vb - va
       })
-  }, [data, agentFilter, sortKey, sortAsc, columns])
+  }, [data, agentFilter, sortKey, sortAsc, columns, clDataOnly])
 
   // Percentile values per column
   const colValues = useMemo(() => {
@@ -174,7 +176,7 @@ export default function AgentStats() {
             ))}
           </select>
         </div>
-        <span className="text-text-dim text-xs">Min {MIN_ROUNDS} rounds on agent</span>
+        {!clDataOnly && <span className="text-text-dim text-xs">Min {MIN_ROUNDS} rounds on agent</span>}
       </div>
 
       {/* Table */}
