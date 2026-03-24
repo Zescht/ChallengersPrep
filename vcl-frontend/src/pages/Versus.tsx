@@ -5,7 +5,6 @@ import AgentIcon from '../components/AgentIcon'
 import FormStrip from '../components/FormStrip'
 import { formatPct, formatRatio, formatCount } from '../utils/format'
 import { getFirstBanPick, VETO_DATA } from '../data/vetoData'
-import type { VetoMatch } from '../data/vetoData'
 import type { Team, Player, StatsData, Match, MapStats } from '../types'
 
 const TEAM_LOGOS: Record<string, string> = {
@@ -664,7 +663,7 @@ function PostPlantCards({ teamA, teamB }: { teamA: Team; teamB: Team }) {
 /* ─── Player Roster Comparison ─── */
 
 function RosterComparison({ teamA, teamB, players }: { teamA: Team; teamB: Team; players: Player[] }) {
-  const { fullData, playoffData } = useStats()
+  const { playoffData } = useStats()
   const [clOnly, setClOnly] = useState(false)
 
   // When CL Only is on and playoff data exists, use playoff players; otherwise use passed-in players
