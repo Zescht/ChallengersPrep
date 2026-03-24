@@ -20,6 +20,24 @@ This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
 
 ---
 
+## [0.9.1] - 2026-03-24 — Veto Modal, Map Detail Panels & Team Links
+
+### Added
+- **Veto Modal**: full veto history table for 4 playoff teams — date/event, opponent, score, all 7 veto steps (Ban1, Ban2, Pick1, Pick2, Ban3, Ban4, Decider) with color-coded chips (red bans, green picks, blue decider), team/opponent box styling, group dividers
+- **Map Detail Panels**: expandable panels on Versus map pool — click map name to see comp icons, Overall/Attack/Defense rW%, Post-Plant rW%, Retake rW%, Avg Plant Time for both teams
+- **Team Links**: 3 external link buttons per team in Versus header — VLR, Liquipedia, and Vetoes (opens modal); URL mappings for all 14 teams
+- **Hidden Players**: `HIDDEN_PLAYERS` set in StatsContext filters players (e.g. "swagzor") at load time without database changes
+- **Plant time pipeline**: `stats_engine.py` tracks `plantRoundTime` per map, `json_builder.py` outputs `avg_plant_time` to JSON
+- **Veto labels**: "FIRST BAN" / "FIRST PICK" badges on map pool bars computed from veto data
+- **CL Data Only toggle** on Versus roster comparison section
+
+### Changed
+- Team logos on Versus page: 120×120px container with reduced padding for larger logo display
+- Map bar text: white with drop shadow for readability across both themes
+- Versus roster table: larger text (text-sm), bigger agent icons (18px), team logos (w-20)
+
+---
+
 ## [0.9.0] - 2026-03-24 — Playoff Mode & Map Vetoes
 
 ### Context & Goals

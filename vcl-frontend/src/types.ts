@@ -53,6 +53,7 @@ export interface MapStats {
   ret_rW_event_avg: number
   ret_rank: number
   ret_by_site: Record<string, SiteStats>
+  avg_plant_time?: number | null
 }
 
 export interface XvYEntry {

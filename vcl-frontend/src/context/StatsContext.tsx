@@ -166,6 +166,22 @@ function filterPlayoffData(data: StatsData): StatsData {
   }
 }
 
+/** Players to hide from the frontend (still in the database) */
+const HIDDEN_PLAYERS = new Set(['swagzor'])
+
+function filterHiddenPlayers(data: StatsData): StatsData {
+  return {
+    ...data,
+    players: data.players.filter(p => !HIDDEN_PLAYERS.has(p.ign)),
+    players_by_role: data.players_by_role?.filter(p => !HIDDEN_PLAYERS.has(p.ign)),
+    players_by_agent: data.players_by_agent?.filter(p => !HIDDEN_PLAYERS.has(p.ign)),
+    teams: data.teams.map(t => ({
+      ...t,
+      players: t.players.filter(ign => !HIDDEN_PLAYERS.has(ign)),
+    })),
+  }
+}
+
 export function StatsProvider({ children }: { children: ReactNode }) {
   const { playoffOnly, clDataOnly } = useFilter()
   const [fullData, setFullData] = useState<StatsData | null>(null)
@@ -185,7 +201,9 @@ export function StatsProvider({ children }: { children: ReactNode }) {
         .then(r => r.ok ? r.json() : null)
         .catch(() => null),
     ])
-      .then(([full, playoff]: [StatsData, StatsData | null]) => {
+      .then(([rawFull, rawPlayoff]: [StatsData, StatsData | null]) => {
+        const full = filterHiddenPlayers(rawFull)
+        const playoff = rawPlayoff ? filterHiddenPlayers(rawPlayoff) : null
         setFullData(full)
         setPlayoffData(playoff)
         setFullAverages(computeAverages(full))

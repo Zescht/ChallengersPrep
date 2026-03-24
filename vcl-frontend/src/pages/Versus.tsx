@@ -4,14 +4,49 @@ import { useStats } from '../context/StatsContext'
 import AgentIcon from '../components/AgentIcon'
 import FormStrip from '../components/FormStrip'
 import { formatPct, formatRatio, formatCount } from '../utils/format'
-import { getFirstBanPick } from '../data/vetoData'
-import type { Team, Player, StatsData, Match } from '../types'
+import { getFirstBanPick, VETO_DATA } from '../data/vetoData'
+import type { VetoMatch } from '../data/vetoData'
+import type { Team, Player, StatsData, Match, MapStats } from '../types'
 
 const TEAM_LOGOS: Record<string, string> = {
   FKS: 'fks.png', SGE: 'sge.png', JL: 'jl.png', MDR: 'mdr.png',
   EP: 'ep.png', TL: 'tl.png', PXL: 'pxl.png', M1R: 'm1r.png',
   BAR: 'bar.png', UCAM: 'ucam.png', MISA: 'misa.png', S2G: 's2g.png',
   STS: 'sts.png', GNG: 'gng.png',
+}
+
+const TEAM_VLR: Record<string, string> = {
+  FKS: 'https://www.vlr.gg/team/7721/fokus',
+  SGE: 'https://www.vlr.gg/team/14498/eintracht-frankfurt',
+  JL: 'https://www.vlr.gg/team/10622/joblife',
+  MDR: 'https://www.vlr.gg/team/7495/mandatory',
+  EP: 'https://www.vlr.gg/team/876/enterprise-esports',
+  TL: 'https://www.vlr.gg/team/21038/team-liquid-academy',
+  PXL: 'https://www.vlr.gg/team/21072/pixel-lumina',
+  M1R: 'https://www.vlr.gg/team/21084/mir',
+  BAR: 'https://www.vlr.gg/team/12793/barça-esports',
+  UCAM: 'https://www.vlr.gg/team/11055/ucam-esports',
+  MISA: 'https://www.vlr.gg/team/16125/misa-esports',
+  S2G: 'https://www.vlr.gg/team/9551/s2g-esports',
+  STS: 'https://www.vlr.gg/team/21076/stallions-esports',
+  GNG: 'https://www.vlr.gg/team/21083/gng-amazigh',
+}
+
+const TEAM_LIQUIPEDIA: Record<string, string> = {
+  FKS: 'https://liquipedia.net/valorant/FOKUS',
+  SGE: 'https://liquipedia.net/valorant/Eintracht_Frankfurt',
+  JL: 'https://liquipedia.net/valorant/Joblife',
+  MDR: 'https://liquipedia.net/valorant/Mandatory',
+  EP: 'https://liquipedia.net/valorant/Enterprise_Esports',
+  TL: 'https://liquipedia.net/valorant/Team_Liquid_Academy',
+  PXL: 'https://liquipedia.net/valorant/Pixel_Lumina',
+  M1R: 'https://liquipedia.net/valorant/MIR_(European_Team)',
+  BAR: 'https://liquipedia.net/valorant/Bar%C3%A7a_eSports',
+  UCAM: 'https://liquipedia.net/valorant/UCAM_Esports',
+  MISA: 'https://liquipedia.net/valorant/Misa_Esports',
+  S2G: 'https://liquipedia.net/valorant/S2G_Esports',
+  STS: 'https://liquipedia.net/valorant/Stallions_Esports',
+  GNG: 'https://liquipedia.net/valorant/GnG_Amazigh',
 }
 
 type Mode = 'team' | 'player'
@@ -74,6 +109,155 @@ export default function Versus() {
   )
 }
 
+/* ─── Veto Modal ─── */
+
+function VetoModal({ tag, onClose }: { tag: string; onClose: () => void }) {
+  const matches = VETO_DATA[tag]
+  if (!matches) return null
+
+  const sorted = [...matches].sort((a, b) => b.date.localeCompare(a.date))
+
+  /** Render a ban/pick/decider veto chip */
+  function VetoChip({ step, type }: { step: [string, string, string]; type: 'ban' | 'pick' | 'decider' }) {
+    const isTeam = step[1] === tag
+    // Team's actions get white bg, opponent's get light grey bg
+    const bgClass = (isTeam || type === 'decider') ? 'bg-white' : 'bg-gray-200'
+    const textColor = type === 'ban' ? 'text-red-400' : type === 'pick' ? 'text-green-700' : 'text-blue-700'
+
+    return (
+      <div className="text-center">
+        <div className={`inline-flex items-center justify-center w-[65px] py-1 rounded border border-gray-300 ${bgClass}`}>
+          <span className={`text-[11px] font-headline font-bold uppercase ${textColor}`}>{step[2]}</span>
+        </div>
+        {type !== 'decider' && (
+          <div className={`text-[10px] mt-0.5 font-bold uppercase ${isTeam ? 'text-on-surface' : 'text-text-muted'}`}>
+            {isTeam ? tag : 'OPP'}
+          </div>
+        )}
+        {type === 'decider' && (
+          <div className="text-[10px] mt-0.5 text-text-muted font-medium uppercase">Remaining</div>
+        )}
+      </div>
+    )
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center" onClick={onClose}>
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+      <div
+        className="relative bg-surface-container-low rounded-xl border border-white/10 shadow-2xl w-full max-w-5xl max-h-[85vh] overflow-hidden flex flex-col"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex justify-between items-center px-6 py-4 border-b border-white/5">
+          <h2 className="font-headline font-bold text-lg uppercase tracking-tight text-on-surface">
+            {tag} — Veto History
+          </h2>
+          <button onClick={onClose} className="text-text-dim hover:text-on-surface transition-colors text-xl leading-none">&times;</button>
+        </div>
+
+        {/* Table */}
+        <div className="overflow-auto flex-1">
+          <table className="w-full text-left border-collapse">
+            <thead className="sticky top-0 z-10">
+              <tr className="bg-gray-300 border-b border-gray-400">
+                <th className="px-4 py-3 text-xs font-headline font-bold uppercase tracking-widest text-black">Date / Event</th>
+                <th className="px-4 py-3 text-xs font-headline font-bold uppercase tracking-widest text-black">Opponent</th>
+                <th className="px-4 py-3 text-xs font-headline font-bold uppercase tracking-widest text-black border-r-2 border-gray-400">Score</th>
+                <th className="px-2 py-3 text-xs font-headline font-bold uppercase tracking-widest text-red-500 text-center">Ban 1</th>
+                <th className="px-2 py-3 text-xs font-headline font-bold uppercase tracking-widest text-red-500 text-center border-r-2 border-gray-400">Ban 2</th>
+                <th className="px-2 py-3 text-xs font-headline font-bold uppercase tracking-widest text-green-700 text-center">Pick 1</th>
+                <th className="px-2 py-3 text-xs font-headline font-bold uppercase tracking-widest text-green-700 text-center border-r-2 border-gray-400">Pick 2</th>
+                <th className="px-2 py-3 text-xs font-headline font-bold uppercase tracking-widest text-red-500 text-center">Ban 3</th>
+                <th className="px-2 py-3 text-xs font-headline font-bold uppercase tracking-widest text-red-500 text-center border-r-2 border-gray-400">Ban 4</th>
+                <th className="px-4 py-3 text-xs font-headline font-bold uppercase tracking-widest text-blue-700 text-center">Decider</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sorted.map((m, i) => {
+                // Map vetoes by position (index 0-6 in the veto array)
+                const steps = m.vetoes
+                const decider = steps.find(([a]) => a === 'Decider')
+                // Steps 0-1: bans, 2-3: picks, 4-5: second bans (or picks in Bo5), 6: decider
+                const slot = (idx: number) => steps[idx] as [string, string, string] | undefined
+                const chipType = (step: [string, string, string]): 'ban' | 'pick' | 'decider' =>
+                  step[0] === 'Decider' ? 'decider' : step[0].startsWith('Ban') ? 'ban' : 'pick'
+
+                const [sA, sB] = m.score.split('-').map(Number)
+
+                const dateObj = new Date(m.date)
+                const dateStr = dateObj.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }).toUpperCase()
+
+                return (
+                  <tr key={i} className="border-b border-white/10 hover:bg-surface-container-high/50 transition-colors">
+                    <td className="px-4 py-3">
+                      <div className="font-headline font-bold text-sm text-on-surface">{dateStr}</div>
+                      <div className="text-[10px] text-text-muted uppercase tracking-tight mt-0.5 max-w-[160px] truncate">{m.tournament}</div>
+                    </td>
+                    <td className="px-4 py-3">
+                      <span className="font-headline font-bold text-sm text-on-surface">{m.opponent}</span>
+                    </td>
+                    <td className="px-4 py-3 border-r-2 border-white/10">
+                      <div className="flex items-center gap-1.5">
+                        <span className="font-headline font-extrabold text-base text-on-surface">{sA}</span>
+                        <span className="text-on-surface text-xs">-</span>
+                        <span className="font-headline font-extrabold text-base text-on-surface">{sB}</span>
+                        <span className="ml-1 text-[10px] bg-surface-container-highest px-1.5 py-0.5 rounded text-text-muted">{m.format}</span>
+                      </div>
+                    </td>
+                    <td className="px-2 py-3">{slot(0) && <VetoChip step={slot(0)!} type={chipType(slot(0)!)} />}</td>
+                    <td className="px-2 py-3 border-r-2 border-white/10">{slot(1) && <VetoChip step={slot(1)!} type={chipType(slot(1)!)} />}</td>
+                    <td className="px-2 py-3">{slot(2) && <VetoChip step={slot(2)!} type={chipType(slot(2)!)} />}</td>
+                    <td className="px-2 py-3 border-r-2 border-white/10">{slot(3) && <VetoChip step={slot(3)!} type={chipType(slot(3)!)} />}</td>
+                    <td className="px-2 py-3">{slot(4) && <VetoChip step={slot(4)!} type={chipType(slot(4)!)} />}</td>
+                    <td className="px-2 py-3 border-r-2 border-white/10">{slot(5) && <VetoChip step={slot(5)!} type={chipType(slot(5)!)} />}</td>
+                    <td className="px-4 py-3">{decider && <VetoChip step={decider} type="decider" />}</td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+/* ─── Team External Links ─── */
+
+function TeamLinks({ tag, align }: { tag: string; align: 'left' | 'right' }) {
+  const [showVeto, setShowVeto] = useState(false)
+  const hasVeto = !!VETO_DATA[tag]
+
+  const btnClass = "px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider border transition-colors hover:bg-white/5"
+
+  return (
+    <>
+      <div className={`flex gap-1.5 mt-2 ${align === 'right' ? 'justify-end' : 'justify-start'}`}>
+        {TEAM_VLR[tag] && (
+          <a href={TEAM_VLR[tag]} target="_blank" rel="noopener noreferrer"
+            className={`${btnClass} text-text-muted border-white/10 hover:text-on-surface`}>
+            VLR
+          </a>
+        )}
+        {TEAM_LIQUIPEDIA[tag] && (
+          <a href={TEAM_LIQUIPEDIA[tag]} target="_blank" rel="noopener noreferrer"
+            className={`${btnClass} text-text-muted border-white/10 hover:text-on-surface`}>
+            Liquipedia
+          </a>
+        )}
+        {hasVeto && (
+          <button onClick={() => setShowVeto(true)}
+            className={`${btnClass} text-tertiary border-tertiary/20 hover:bg-tertiary/10`}>
+            Vetoes
+          </button>
+        )}
+      </div>
+      {showVeto && <VetoModal tag={tag} onClose={() => setShowVeto(false)} />}
+    </>
+  )
+}
+
 /* ─── Team vs Team ─── */
 
 function TeamVsTeam({ teams, teamAName, teamBName, onChangeA, onChangeB, data }: {
@@ -104,6 +288,7 @@ function TeamVsTeam({ teams, teamAName, teamBName, onChangeA, onChangeB, data }:
                   </div>
                   <div className="text-lg font-bold text-primary mt-0.5">{formatPct(tA.allMaps.rW_pct)} rW%</div>
                   <div className="flex justify-end mt-2"><FormStrip form={tA.form} /></div>
+                  {tA.tag && <TeamLinks tag={tA.tag} align="right" />}
                 </>
               )}
             </div>
@@ -131,6 +316,7 @@ function TeamVsTeam({ teams, teamAName, teamBName, onChangeA, onChangeB, data }:
                   </div>
                   <div className="text-lg font-bold text-secondary mt-0.5">{formatPct(tB.allMaps.rW_pct)} rW%</div>
                   <div className="flex justify-start mt-2"><FormStrip form={tB.form} /></div>
+                  {tB.tag && <TeamLinks tag={tB.tag} align="left" />}
                 </>
               )}
             </div>
@@ -164,10 +350,10 @@ function TeamVsTeam({ teams, teamAName, teamBName, onChangeA, onChangeB, data }:
 
 function TeamLogo({ tag }: { tag?: string }) {
   const logo = tag ? TEAM_LOGOS[tag] : undefined
-  if (!logo) return <div className="w-20 self-stretch rounded-xl bg-surface-container-highest border border-white/10" />
+  if (!logo) return <div className="w-[120px] h-[120px] rounded-xl bg-surface-container-highest border border-white/10" />
   return (
-    <div className="w-20 self-stretch bg-surface-container-highest rounded-xl flex items-center justify-center p-2.5 border border-white/10">
-      <img src={`${import.meta.env.BASE_URL}logos/${logo}`} alt={tag} className="w-full h-full object-contain" />
+    <div className="w-[120px] h-[120px] bg-surface-container-highest rounded-xl flex items-center justify-center p-1.5 border border-white/10">
+      <img src={`${import.meta.env.BASE_URL}logos/${logo}`} alt={tag} className="max-w-full max-h-full object-contain" />
     </div>
   )
 }
@@ -193,7 +379,41 @@ function TeamDropdown({ teams, value, onChange, exclude }: {
 
 /* ─── Map Pool Dominance ─── */
 
+function MapDetailPanel({ mapStats, color }: { mapStats: MapStats | undefined; color: 'primary' | 'secondary' }) {
+  if (!mapStats) return <div className="text-text-dim text-xs italic">No data</div>
+
+  const stats = [
+    { label: 'Overall', value: formatPct(mapStats.rW_pct) },
+    { label: 'Attack', value: formatPct(mapStats.atk_rW_pct) },
+    { label: 'Defense', value: formatPct(mapStats.def_rW_pct) },
+    { label: 'Post-Plant', value: formatPct(mapStats.post_rW_pct) },
+    { label: 'Retake', value: formatPct(mapStats.ret_rW_pct) },
+    { label: 'Avg Plant', value: mapStats.avg_plant_time != null ? `${mapStats.avg_plant_time}s` : '-' },
+  ]
+
+  return (
+    <div>
+      {/* Comp */}
+      <div className="flex items-center gap-1 mb-2">
+        {mapStats.comp.slice(0, 5).map((agent, i) => (
+          <AgentIcon key={i} agent={agent} size={22} />
+        ))}
+      </div>
+      {/* Stats grid */}
+      <div className="grid grid-cols-3 gap-x-4 gap-y-1">
+        {stats.map(s => (
+          <div key={s.label} className="flex justify-between items-baseline gap-2">
+            <span className="text-[10px] uppercase tracking-wider text-text-muted">{s.label}</span>
+            <span className={`text-xs font-bold text-${color}`}>{s.value}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
+  const [expanded, setExpanded] = useState<string | null>(null)
   const allMaps = new Set([...teamA.maps.map(m => m.map), ...teamB.maps.map(m => m.map)])
   const sortedMaps = [...allMaps].sort()
 
@@ -209,67 +429,92 @@ function MapPoolBars({ teamA, teamB }: { teamA: Team; teamB: Team }) {
           <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-secondary" /> {teamB.tag}</span>
         </div>
       </div>
-      <div className="space-y-3">
+      <div className="space-y-1">
         {sortedMaps.map(mapName => {
           const mA = teamA.maps.find(m => m.map === mapName)
           const mB = teamB.maps.find(m => m.map === mapName)
           const aRW = mA?.rW_pct ?? 0
           const bRW = mB?.rW_pct ?? 0
           const delta = aRW - bRW
+          const isExpanded = expanded === mapName
 
           const aLabel = vetoA.firstBan === mapName ? 'FIRST BAN' : vetoA.firstPick === mapName ? 'FIRST PICK' : null
           const bLabel = vetoB.firstBan === mapName ? 'FIRST BAN' : vetoB.firstPick === mapName ? 'FIRST PICK' : null
 
           return (
-            <div key={mapName} className="grid grid-cols-[80px_1fr_80px_1fr] items-center gap-3">
-              <div className="text-sm font-bold uppercase tracking-wider text-on-surface">{mapName}</div>
+            <div key={mapName}>
+              <div
+                className={`grid grid-cols-[80px_1fr_80px_1fr] items-center gap-3 py-1.5 px-1 -mx-1 rounded-lg cursor-pointer transition-colors ${
+                  isExpanded ? 'bg-white/5' : 'hover:bg-white/3'
+                }`}
+                onClick={() => setExpanded(isExpanded ? null : mapName)}
+              >
+                <div className="text-sm font-bold uppercase tracking-wider text-on-surface flex items-center gap-1.5">
+                  <span className={`text-[10px] text-text-dim transition-transform ${isExpanded ? 'rotate-90' : ''}`}>&#9654;</span>
+                  {mapName}
+                </div>
 
-              {/* Team A bar + veto label */}
-              <div className="h-7 bg-surface-container-highest rounded-full overflow-hidden relative">
-                <div
-                  className="h-full bg-primary rounded-full transition-all duration-500"
-                  style={{ width: `${Math.max(aRW * 100, 2)}%` }}
-                />
-                <span className="absolute inset-y-0 left-2.5 flex items-center text-xs font-bold text-white">
-                  {mA ? formatPct(aRW) : '-'}
-                  {mA && <span className="text-white/80 ml-1">({mA.wins}-{mA.losses})</span>}
-                </span>
-                {aLabel && (
-                  <span className={`absolute inset-y-0 right-2.5 flex items-center text-[11px] font-black uppercase tracking-wider ${
-                    aLabel === 'FIRST BAN' ? 'text-red-500' : 'text-on-surface'
-                  }`}>
-                    {aLabel}
+                {/* Team A bar + veto label */}
+                <div className="h-7 bg-surface-container-highest rounded-full overflow-hidden relative">
+                  <div
+                    className="h-full bg-primary rounded-full transition-all duration-500"
+                    style={{ width: `${Math.max(aRW * 100, 2)}%` }}
+                  />
+                  <span className="absolute inset-y-0 left-2.5 flex items-center text-xs font-bold text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                    {mA ? formatPct(aRW) : '-'}
+                    {mA && <span className="text-white/80 ml-1">({mA.wins}-{mA.losses})</span>}
                   </span>
-                )}
-              </div>
+                  {aLabel && (
+                    <span className={`absolute inset-y-0 right-2.5 flex items-center text-[11px] font-black uppercase tracking-wider ${
+                      aLabel === 'FIRST BAN' ? 'text-red-500' : 'text-on-surface'
+                    }`}>
+                      {aLabel}
+                    </span>
+                  )}
+                </div>
 
-              {/* Delta */}
-              <div className="flex justify-center">
-                <span className={`text-xs font-bold px-2 py-0.5 rounded border ${
-                  delta > 0.01 ? 'text-primary border-primary/20' : delta < -0.01 ? 'text-secondary border-secondary/20' : 'text-text-dim border-white/10'
-                }`}>
-                  {delta > 0 ? '+' : ''}{(delta * 100).toFixed(0)}%
-                </span>
-              </div>
-
-              {/* Team B bar + veto label */}
-              <div className="h-7 bg-surface-container-highest rounded-full overflow-hidden relative">
-                <div
-                  className="h-full bg-secondary rounded-full transition-all duration-500"
-                  style={{ width: `${Math.max(bRW * 100, 2)}%` }}
-                />
-                <span className="absolute inset-y-0 left-2.5 flex items-center text-xs font-bold text-white">
-                  {mB ? formatPct(bRW) : '-'}
-                  {mB && <span className="text-white/80 ml-1">({mB.wins}-{mB.losses})</span>}
-                </span>
-                {bLabel && (
-                  <span className={`absolute inset-y-0 right-2.5 flex items-center text-[11px] font-black uppercase tracking-wider ${
-                    bLabel === 'FIRST BAN' ? 'text-red-500' : 'text-on-surface'
+                {/* Delta */}
+                <div className="flex justify-center">
+                  <span className={`text-xs font-bold px-2 py-0.5 rounded border ${
+                    delta > 0.01 ? 'text-primary border-primary/20' : delta < -0.01 ? 'text-secondary border-secondary/20' : 'text-text-dim border-white/10'
                   }`}>
-                    {bLabel}
+                    {delta > 0 ? '+' : ''}{(delta * 100).toFixed(0)}%
                   </span>
-                )}
+                </div>
+
+                {/* Team B bar + veto label */}
+                <div className="h-7 bg-surface-container-highest rounded-full overflow-hidden relative">
+                  <div
+                    className="h-full bg-secondary rounded-full transition-all duration-500"
+                    style={{ width: `${Math.max(bRW * 100, 2)}%` }}
+                  />
+                  <span className="absolute inset-y-0 left-2.5 flex items-center text-xs font-bold text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.3)]">
+                    {mB ? formatPct(bRW) : '-'}
+                    {mB && <span className="text-white/80 ml-1">({mB.wins}-{mB.losses})</span>}
+                  </span>
+                  {bLabel && (
+                    <span className={`absolute inset-y-0 right-2.5 flex items-center text-[11px] font-black uppercase tracking-wider ${
+                      bLabel === 'FIRST BAN' ? 'text-red-500' : 'text-on-surface'
+                    }`}>
+                      {bLabel}
+                    </span>
+                  )}
+                </div>
               </div>
+
+              {/* Expanded detail panel */}
+              {isExpanded && (
+                <div className="grid grid-cols-[80px_1fr_80px_1fr] gap-3 mt-1 mb-2">
+                  <div />
+                  <div className="bg-surface-container rounded-lg p-3 border border-primary/10">
+                    <MapDetailPanel mapStats={mA} color="primary" />
+                  </div>
+                  <div />
+                  <div className="bg-surface-container rounded-lg p-3 border border-secondary/10">
+                    <MapDetailPanel mapStats={mB} color="secondary" />
+                  </div>
+                </div>
+              )}
             </div>
           )
         })}

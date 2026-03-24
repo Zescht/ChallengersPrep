@@ -492,7 +492,8 @@ def build_stats_json(all_team_data):
         merged_players = _merge_player_rows(td['player_rows'])
 
         maps_list, all_maps_obj = _build_map_stats(
-            td['match_rows'], td['round_econ_rows'], td['post_plant_rows'], td['name']
+            td['match_rows'], td['round_econ_rows'], td['post_plant_rows'], td['name'],
+            plant_time_rows=td.get('plant_time_rows')
         )
         s_wins, s_losses = _compute_series_record(td['match_rows'], td['name'])
         form = _compute_form(td['match_rows'], td['name'])
