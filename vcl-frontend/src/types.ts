@@ -128,6 +128,8 @@ export interface Match {
   team2: string
   team1_agents: string[]
   team2_agents: string[]
+  team1_agent_players?: Record<string, string>
+  team2_agent_players?: Record<string, string>
   team1_score: number
   team2_score: number
   team1_score_at_half: number

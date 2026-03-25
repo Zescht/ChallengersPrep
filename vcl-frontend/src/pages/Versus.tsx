@@ -330,9 +330,7 @@ function TeamVsTeam({ teams, teamAName, teamBName, onChangeA, onChangeB, data }:
           <MapPoolBars teamA={tA} teamB={tB} data={data} />
 
           {/* Head-to-Head History */}
-          <HeadToHead teamA={tA} teamB={tB} matches={data.matches} />
-
-          {/* Pistol Win Rate + Post-Plant & Retake side by side */}
+{/* Pistol Win Rate + Post-Plant & Retake side by side */}
           <div className="grid grid-cols-2 gap-6">
             <PistolComparison teamA={tA} teamB={tB} />
             <PostPlantCards teamA={tA} teamB={tB} />
@@ -385,11 +383,11 @@ function MapDetailPanel({ mapStats, color, teamAgentData = [] }: { mapStats: Map
   const compMap = resolveCompPlayers(mapStats.comp, teamAgentData)
   const stats = [
     { label: 'Overall', value: formatPct(mapStats.rW_pct) },
+    { label: 'Avg Plant', value: mapStats.avg_plant_time != null ? `${mapStats.avg_plant_time}s` : '-' },
     { label: 'Attack', value: formatPct(mapStats.atk_rW_pct) },
-    { label: 'Defense', value: formatPct(mapStats.def_rW_pct) },
     { label: 'Post-Plant', value: formatPct(mapStats.post_rW_pct) },
     { label: 'Retake', value: formatPct(mapStats.ret_rW_pct) },
-    { label: 'Avg Plant', value: mapStats.avg_plant_time != null ? `${mapStats.avg_plant_time}s` : '-' },
+    { label: 'Defense', value: formatPct(mapStats.def_rW_pct) },
   ]
 
   return (
@@ -404,8 +402,8 @@ function MapDetailPanel({ mapStats, color, teamAgentData = [] }: { mapStats: Map
       <div className="grid grid-cols-3 gap-x-4 gap-y-1">
         {stats.map(s => (
           <div key={s.label} className="flex justify-between items-baseline gap-2">
-            <span className="text-[10px] uppercase tracking-wider text-text-muted">{s.label}</span>
-            <span className={`text-xs font-bold text-${color}`}>{s.value}</span>
+            <span className="text-[11px] uppercase tracking-wider text-black">{s.label}</span>
+            <span className={`text-[13px] font-bold text-${color}`}>{s.value}</span>
           </div>
         ))}
       </div>
@@ -413,8 +411,61 @@ function MapDetailPanel({ mapStats, color, teamAgentData = [] }: { mapStats: Map
   )
 }
 
+const NAME_TO_TAG: Record<string, string> = {
+  'FOKUS': 'FKS', 'Eintracht Frankfurt': 'SGE', 'Joblife': 'JL', 'Mandatory': 'MDR',
+  'Enterprise Esports': 'EP', 'Team Liquid Academy': 'TL', 'Pixel Lumina': 'PXL',
+  'MIR': 'M1R', 'Barça eSports': 'BAR', 'Bar\u00e7a eSports': 'BAR',
+  'UCAM Esports': 'UCAM', 'Misa Esports': 'MISA', 'S2G Esports': 'S2G',
+  'Stallions Esports': 'STS', 'GnG Amazigh': 'GNG',
+}
+
+function MapHistoryPanel({ team, mapName, matches, allTeams, side }: { team: Team; mapName: string; matches: Match[]; allTeams: Team[]; side: 'left' | 'right' }) {
+  const mapMatches = matches
+    .filter(m => m.map === mapName && (m.team1 === team.name || m.team2 === team.name))
+    .sort((a, b) => b.date.localeCompare(a.date))
+
+  if (mapMatches.length === 0) return <div className="text-text-dim text-xs italic p-2">No matches on this map</div>
+
+  return (
+    <div className="space-y-1 max-h-[400px] overflow-y-auto pr-1">
+      {mapMatches.map((m, i) => {
+        const isTeam1 = m.team1 === team.name
+        const oppName = isTeam1 ? m.team2 : m.team1
+        const oppTag = NAME_TO_TAG[oppName] ?? oppName
+        const agents = isTeam1 ? m.team1_agents : m.team2_agents
+        const agentPlayers = isTeam1 ? (m.team1_agent_players ?? {}) : (m.team2_agent_players ?? {})
+        const teamScore = isTeam1 ? m.team1_score : m.team2_score
+        const oppScore = isTeam1 ? m.team2_score : m.team1_score
+        const won = m.winner === team.name
+
+        return (
+          <div key={i} className={`flex items-center gap-2 py-1.5 px-2 rounded-md ${won ? 'bg-green-500/5' : 'bg-red-500/5'} hover:bg-white/5 transition-colors`}>
+            {/* vs. OPP */}
+            <span className="text-[11px] text-text-muted whitespace-nowrap shrink-0">
+              vs. <span className="font-bold text-on-surface">{oppTag}</span>
+            </span>
+
+            {/* Agent comp icons */}
+            <div className="flex items-center gap-0.5 shrink-0">
+              {(agents ?? []).slice(0, 5).map((agent, j) => (
+                <AgentIcon key={j} agent={agent} size={16} tooltip={agentPlayers[agent]} />
+              ))}
+            </div>
+
+            {/* Score */}
+            <span className={`text-xs font-bold whitespace-nowrap shrink-0 ${won ? 'text-green-600' : 'text-red-400'}`}>
+              {teamScore}–{oppScore}
+            </span>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: StatsData }) {
   const [expanded, setExpanded] = useState<string | null>(null)
+  const [historyPanel, setHistoryPanel] = useState<{ map: string; side: 'A' | 'B' } | null>(null)
   const allMaps = new Set([...teamA.maps.map(m => m.map), ...teamB.maps.map(m => m.map)])
   const sortedMaps = [...allMaps].sort()
 
@@ -425,13 +476,30 @@ function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: S
   const vetoB = teamB.tag ? getFirstBanPick(teamB.tag) : { firstBan: null, firstPick: null }
 
   return (
-    <section className="bg-surface-container-low rounded-xl p-5 border border-white/5">
-      <div className="flex justify-between items-center mb-4">
+    <section className="bg-surface-container-low rounded-xl p-5 border border-white/5 relative">
+      {/* History panel — floats into page margin, doesn't affect layout */}
+      {historyPanel && (() => {
+        const isA = historyPanel.side === 'A'
+        const team = isA ? teamA : teamB
+        const color = isA ? 'primary' : 'secondary'
+        return (
+          <div
+            className={`absolute top-0 w-[260px] bg-surface-container-low rounded-xl border p-4 shadow-xl z-10 ${
+              isA ? 'right-full mr-4 border-primary/20' : 'left-full ml-4 border-secondary/20'
+            }`}
+          >
+            <div className="flex justify-between items-center mb-3">
+              <h4 className={`font-headline font-bold text-sm uppercase tracking-tight text-${color}`}>History</h4>
+              <button onClick={() => setHistoryPanel(null)} className="text-text-dim hover:text-on-surface text-lg leading-none">&times;</button>
+            </div>
+            <div className="text-[10px] uppercase tracking-wider text-text-muted mb-2">{team.tag} on {historyPanel.map}</div>
+            <MapHistoryPanel team={team} mapName={historyPanel.map} matches={data.matches} allTeams={data.teams} side={isA ? 'right' : 'left'} />
+          </div>
+        )
+      })()}
+
+      <div className="mb-4">
         <h3 className="font-headline font-bold text-sm uppercase tracking-tight text-on-surface">Map Pool</h3>
-        <div className="flex gap-4 text-xs uppercase tracking-wider text-text-muted">
-          <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-primary" /> {teamA.tag}</span>
-          <span className="flex items-center gap-1.5"><span className="w-2 h-2 rounded-full bg-secondary" /> {teamB.tag}</span>
-        </div>
       </div>
       <div className="space-y-1">
         {sortedMaps.map(mapName => {
@@ -451,7 +519,7 @@ function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: S
                 className={`grid grid-cols-[80px_1fr_80px_1fr] items-center gap-3 py-1.5 px-1 -mx-1 rounded-lg cursor-pointer transition-colors ${
                   isExpanded ? 'bg-white/5' : 'hover:bg-white/3'
                 }`}
-                onClick={() => setExpanded(isExpanded ? null : mapName)}
+                onClick={() => { setExpanded(isExpanded ? null : mapName); setHistoryPanel(null) }}
               >
                 <div className="text-sm font-bold uppercase tracking-wider text-on-surface flex items-center gap-1.5">
                   <span className={`text-[10px] text-text-dim transition-transform ${isExpanded ? 'rotate-90' : ''}`}>&#9654;</span>
@@ -512,10 +580,30 @@ function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: S
                   <div />
                   <div className="bg-surface-container rounded-lg p-3 border border-primary/10">
                     <MapDetailPanel mapStats={mA} color="primary" teamAgentData={teamAgentDataA} />
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setHistoryPanel(historyPanel?.map === mapName && historyPanel.side === 'A' ? null : { map: mapName, side: 'A' }) }}
+                      className={`mt-2 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider border transition-colors ${
+                        historyPanel?.map === mapName && historyPanel.side === 'A'
+                          ? 'bg-primary/20 text-primary border-primary/30'
+                          : 'text-text-muted border-white/10 hover:text-on-surface hover:bg-white/5'
+                      }`}
+                    >
+                      History
+                    </button>
                   </div>
                   <div />
                   <div className="bg-surface-container rounded-lg p-3 border border-secondary/10">
                     <MapDetailPanel mapStats={mB} color="secondary" teamAgentData={teamAgentDataB} />
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setHistoryPanel(historyPanel?.map === mapName && historyPanel.side === 'B' ? null : { map: mapName, side: 'B' }) }}
+                      className={`mt-2 px-2 py-1 rounded text-[10px] font-bold uppercase tracking-wider border transition-colors ${
+                        historyPanel?.map === mapName && historyPanel.side === 'B'
+                          ? 'bg-secondary/20 text-secondary border-secondary/30'
+                          : 'text-text-muted border-white/10 hover:text-on-surface hover:bg-white/5'
+                      }`}
+                    >
+                      History
+                    </button>
                   </div>
                 </div>
               )}
@@ -529,86 +617,63 @@ function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: S
 
 /* ─── Head-to-Head History ─── */
 
-function HeadToHead({ teamA, teamB, matches }: { teamA: Team; teamB: Team; matches: Match[] }) {
-  const h2h = matches.filter(m =>
-    (m.team1 === teamA.name && m.team2 === teamB.name) ||
-    (m.team1 === teamB.name && m.team2 === teamA.name)
-  ).sort((a, b) => b.date.localeCompare(a.date))
 
-  return (
-    <section className="bg-surface-container-low rounded-xl p-5 border border-white/5">
-      <h3 className="font-headline font-bold text-sm uppercase tracking-tight text-on-surface mb-3">Head-to-Head History</h3>
-      {h2h.length === 0 ? (
-        <p className="text-text-dim text-sm">No previous meetings in dataset.</p>
-      ) : (
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-white/10">
-              <th className="px-3 py-2 text-left text-text-muted text-xs uppercase tracking-wider font-medium">Date</th>
-              <th className="px-3 py-2 text-left text-text-muted text-xs uppercase tracking-wider font-medium">Map</th>
-              <th className="px-3 py-2 text-center text-text-muted text-xs uppercase tracking-wider font-medium">Score</th>
-              <th className="px-3 py-2 text-left text-text-muted text-xs uppercase tracking-wider font-medium">Winner</th>
-            </tr>
-          </thead>
-          <tbody>
-            {h2h.map((m, i) => (
-              <tr key={i} className="border-b border-white/5 hover:bg-white/3 transition-colors">
-                <td className="px-3 py-2 text-text-muted">{m.date}</td>
-                <td className="px-3 py-2 text-on-surface">{m.map}</td>
-                <td className="px-3 py-2 text-center font-table font-bold">{m.team1_score} – {m.team2_score}</td>
-                <td className="px-3 py-2">
-                  <span className={`font-semibold ${m.winner === teamA.name ? 'text-primary' : 'text-secondary'}`}>
-                    {m.winner === teamA.name ? teamA.tag : teamB.tag}
-                  </span>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </section>
-  )
-}
 
 /* ─── Pistol Win Rate ─── */
 
 function PistolComparison({ teamA, teamB }: { teamA: Team; teamB: Team }) {
-  const aPistol = teamA.allMaps.pistol_rW_pct
-  const bPistol = teamB.allMaps.pistol_rW_pct
-  // Proportional bar widths
-  const total = (aPistol || 0) + (bPistol || 0)
-  const aWidth = total > 0 ? (aPistol / total) * 100 : 50
-  const bWidth = 100 - aWidth
-
   return (
     <section className="bg-surface-container-low rounded-xl p-5 border border-white/5">
       <h3 className="font-headline font-bold text-sm uppercase tracking-tight text-on-surface mb-4">Pistol Win Rate</h3>
-      <div className="space-y-3">
-        <div className="flex justify-between text-xs font-bold uppercase tracking-wider text-text-muted">
-          <span>{teamA.tag} <span className="text-primary">{formatPct(aPistol)}</span></span>
-          <span><span className="text-secondary">{formatPct(bPistol)}</span> {teamB.tag}</span>
-        </div>
-        <div className="flex h-3 rounded-full overflow-hidden bg-surface-container-highest">
-          <div className="bg-primary h-full rounded-l-full transition-all duration-500" style={{ width: `${aWidth}%` }} />
-          <div className="bg-secondary h-full rounded-r-full transition-all duration-500" style={{ width: `${bWidth}%` }} />
-        </div>
+      {/* Column headers */}
+      <div className="grid grid-cols-[100px_1fr_1fr] gap-3 mb-2">
+        <div />
+        <div className="text-xs font-bold uppercase tracking-wider text-primary text-center">{teamA.tag}</div>
+        <div className="text-xs font-bold uppercase tracking-wider text-secondary text-center">{teamB.tag}</div>
+      </div>
 
-        {/* Attack / Defense breakdown */}
-        <div className="grid grid-cols-2 gap-3 mt-3">
-          <div className="bg-surface-container rounded-lg p-3 border border-white/5">
-            <div className="text-[10px] uppercase font-bold text-text-dim mb-1">Attack Pistol</div>
-            <div className="flex justify-between text-sm font-table font-bold">
-              <span className="text-primary">{formatPct(teamA.allMaps.pistol_atk_rW_pct)}</span>
-              <span className="text-secondary">{formatPct(teamB.allMaps.pistol_atk_rW_pct)}</span>
-            </div>
-          </div>
-          <div className="bg-surface-container rounded-lg p-3 border border-white/5">
-            <div className="text-[10px] uppercase font-bold text-text-dim mb-1">Defense Pistol</div>
-            <div className="flex justify-between text-sm font-table font-bold">
-              <span className="text-primary">{formatPct(teamA.allMaps.pistol_def_rW_pct)}</span>
-              <span className="text-secondary">{formatPct(teamB.allMaps.pistol_def_rW_pct)}</span>
-            </div>
-          </div>
+      {/* Row 1: Overall Pistol */}
+      <div className="grid grid-cols-[100px_1fr_1fr] gap-3 mb-3">
+        <div className="flex items-center text-sm uppercase font-bold text-black">Overall</div>
+        <div className="bg-surface-container rounded-lg p-3 border border-white/5 text-center">
+          <span className={`text-2xl font-headline font-black ${teamA.allMaps.pistol_rW_pct >= teamB.allMaps.pistol_rW_pct ? 'text-primary' : 'text-on-surface'}`}>
+            {formatPct(teamA.allMaps.pistol_rW_pct)}
+          </span>
+        </div>
+        <div className="bg-surface-container rounded-lg p-3 border border-white/5 text-center">
+          <span className={`text-2xl font-headline font-black ${teamB.allMaps.pistol_rW_pct >= teamA.allMaps.pistol_rW_pct ? 'text-secondary' : 'text-on-surface'}`}>
+            {formatPct(teamB.allMaps.pistol_rW_pct)}
+          </span>
+        </div>
+      </div>
+
+      {/* Row 2: Attack Pistol */}
+      <div className="grid grid-cols-[100px_1fr_1fr] gap-3 mb-3">
+        <div className="flex items-center text-sm uppercase font-bold text-black">Attack</div>
+        <div className="bg-surface-container rounded-lg p-3 border border-white/5 text-center">
+          <span className={`text-2xl font-headline font-black ${teamA.allMaps.pistol_atk_rW_pct >= teamB.allMaps.pistol_atk_rW_pct ? 'text-primary' : 'text-on-surface'}`}>
+            {formatPct(teamA.allMaps.pistol_atk_rW_pct)}
+          </span>
+        </div>
+        <div className="bg-surface-container rounded-lg p-3 border border-white/5 text-center">
+          <span className={`text-2xl font-headline font-black ${teamB.allMaps.pistol_atk_rW_pct >= teamA.allMaps.pistol_atk_rW_pct ? 'text-secondary' : 'text-on-surface'}`}>
+            {formatPct(teamB.allMaps.pistol_atk_rW_pct)}
+          </span>
+        </div>
+      </div>
+
+      {/* Row 3: Defense Pistol */}
+      <div className="grid grid-cols-[100px_1fr_1fr] gap-3">
+        <div className="flex items-center text-sm uppercase font-bold text-black">Defense</div>
+        <div className="bg-surface-container rounded-lg p-3 border border-white/5 text-center">
+          <span className={`text-2xl font-headline font-black ${teamA.allMaps.pistol_def_rW_pct >= teamB.allMaps.pistol_def_rW_pct ? 'text-primary' : 'text-on-surface'}`}>
+            {formatPct(teamA.allMaps.pistol_def_rW_pct)}
+          </span>
+        </div>
+        <div className="bg-surface-container rounded-lg p-3 border border-white/5 text-center">
+          <span className={`text-2xl font-headline font-black ${teamB.allMaps.pistol_def_rW_pct >= teamA.allMaps.pistol_def_rW_pct ? 'text-secondary' : 'text-on-surface'}`}>
+            {formatPct(teamB.allMaps.pistol_def_rW_pct)}
+          </span>
         </div>
       </div>
     </section>

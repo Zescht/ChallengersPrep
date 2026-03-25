@@ -112,6 +112,10 @@ def compute_team_stats(matches, team_tag, team_name):
         comp = sorted([AGENT_MAP.get(p.get('characterId', ''), '?') for p in md.team_players])
         opp_comp = sorted([AGENT_MAP.get(p.get('characterId', ''), '?') for p in md.opp_players])
 
+        # Agent → player name mapping for tooltips
+        comp_players = {AGENT_MAP.get(p.get('characterId', ''), '?'): p.get('gameName', '?') for p in md.team_players}
+        opp_comp_players = {AGENT_MAP.get(p.get('characterId', ''), '?'): p.get('gameName', '?') for p in md.opp_players}
+
         team_first_half = 0
         opp_first_half = 0
         atk_wins = atk_losses = def_wins = def_losses = 0
@@ -411,6 +415,8 @@ def compute_team_stats(matches, team_tag, team_name):
             'team2': md.opp,
             'team1_agents': comp,
             'team2_agents': opp_comp,
+            'team1_agent_players': comp_players,
+            'team2_agent_players': opp_comp_players,
             'team1_score': md.team_score,
             'team2_score': md.opp_score,
             'team1_half': team_first_half,

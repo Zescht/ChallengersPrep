@@ -368,6 +368,8 @@ def _build_match(mr):
         'team2': TAG_TO_NAME.get(mr['team2'], mr['team2']),
         'team1_agents': mr['team1_agents'],
         'team2_agents': mr['team2_agents'],
+        'team1_agent_players': mr.get('team1_agent_players', {}),
+        'team2_agent_players': mr.get('team2_agent_players', {}),
         'team1_score': mr['team1_score'],
         'team2_score': mr['team2_score'],
         'team1_score_at_half': mr['team1_half'],
