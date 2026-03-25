@@ -414,12 +414,12 @@ function MapDetailPanel({ mapStats, color, teamAgentData = [] }: { mapStats: Map
 const NAME_TO_TAG: Record<string, string> = {
   'FOKUS': 'FKS', 'Eintracht Frankfurt': 'SGE', 'Joblife': 'JL', 'Mandatory': 'MDR',
   'Enterprise Esports': 'EP', 'Team Liquid Academy': 'TL', 'Pixel Lumina': 'PXL',
-  'MIR': 'M1R', 'Barça eSports': 'BAR', 'Bar\u00e7a eSports': 'BAR',
+  'MIR': 'M1R', 'Barça eSports': 'BAR',
   'UCAM Esports': 'UCAM', 'Misa Esports': 'MISA', 'S2G Esports': 'S2G',
   'Stallions Esports': 'STS', 'GnG Amazigh': 'GNG',
 }
 
-function MapHistoryPanel({ team, mapName, matches, allTeams, side }: { team: Team; mapName: string; matches: Match[]; allTeams: Team[]; side: 'left' | 'right' }) {
+function MapHistoryPanel({ team, mapName, matches }: { team: Team; mapName: string; matches: Match[] }) {
   const mapMatches = matches
     .filter(m => m.map === mapName && (m.team1 === team.name || m.team2 === team.name))
     .sort((a, b) => b.date.localeCompare(a.date))
@@ -493,7 +493,7 @@ function MapPoolBars({ teamA, teamB, data }: { teamA: Team; teamB: Team; data: S
               <button onClick={() => setHistoryPanel(null)} className="text-text-dim hover:text-on-surface text-lg leading-none">&times;</button>
             </div>
             <div className="text-[10px] uppercase tracking-wider text-text-muted mb-2">{team.tag} on {historyPanel.map}</div>
-            <MapHistoryPanel team={team} mapName={historyPanel.map} matches={data.matches} allTeams={data.teams} side={isA ? 'right' : 'left'} />
+            <MapHistoryPanel team={team} mapName={historyPanel.map} matches={data.matches}  />
           </div>
         )
       })()}
