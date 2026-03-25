@@ -20,6 +20,30 @@ This project uses **Semantic Versioning** (`MAJOR.MINOR.PATCH`):
 
 ---
 
+## [0.9.2] - 2026-03-25 — Map History Panel, Pistol Table & Data Audit
+
+### Added
+- **Map History Panel**: floating side panel on Versus map pool — click "History" on either team's expanded map to see all matches on that map, with opponent tag, agent comp icons (with player name tooltips on hover), and color-coded score (green wins, red losses). Panel floats into empty page margins via absolute positioning — no layout shift.
+- **Per-match agent→player mapping**: `stats_engine.py` now emits `team1_agent_players` / `team2_agent_players` dicts per match; `json_builder.py` passes them through to `stats.json`; `types.ts` updated with optional fields.
+- **NAME_TO_TAG constant**: hardcoded team name abbreviations for reliable display in history panel (all 14 VCL teams).
+- **DATA_GUIDE.md**: interpretation guide for all database/data files — pipeline overview, stat definitions, economy classification, data quality filters, quick-start code snippets.
+- **VCL_Database_Package.zip**: complete data archive (raw JSONL, pipeline code, processed JSON, documentation).
+
+### Changed
+- **Pistol Win Rate**: rebuilt as columnar table matching Tactical Execution layout — row labels (Overall, Attack, Defense) in black, team columns with highlighted winner values.
+- **Map detail panel**: stat order changed to Overall / Avg Plant / Attack / Post-Plant / Retake / Defense; labels bumped to 11px in black; values bumped to 13px.
+- **History panel green scores**: darkened from `green-400` to `green-600` for readability.
+- **File organization**: moved all root `.md` files (except CLAUDE.md) into `docs/project/`.
+- Removed map pool legend (green/purple team dots) and Head-to-Head History section from Versus page.
+
+### Data Audit (Playoff Teams)
+- **EP**: 36/37 maps — 1 missing match returns 404 from API (ghost entry). Effectively complete.
+- **MDR**: 38/38 — complete.
+- **MISA**: 28/28 — complete.
+- **UCAM**: 55/55 — complete.
+
+---
+
 ## [0.9.1] - 2026-03-24 — Veto Modal, Map Detail Panels & Team Links
 
 ### Added
