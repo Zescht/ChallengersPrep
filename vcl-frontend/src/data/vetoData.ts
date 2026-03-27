@@ -1,5 +1,5 @@
 /**
- * Map veto data for playoff teams — sourced from Liquipedia (2026-03-23).
+ * Map veto data for playoff teams — sourced from Liquipedia (2026-03-27).
  * Used to compute first ban / first pick tendencies per team.
  */
 
@@ -27,6 +27,7 @@ const MISA_MATCHES: VetoMatch[] = [
   { date: '2026-03-08', opponent: 'S2G Esports', tournament: 'VCL Türkiye Kickoff Playoffs', score: '3-1', format: 'Bo5 (Advantage)', vetoes: [['Ban 1','MISA','Bind'],['Ban 2','MISA','Corrode'],['Pick 1','MISA','Split'],['Pick 2','S2G Esports','Pearl'],['Pick 3','MISA','Haven'],['Pick 4','S2G Esports','Breeze'],['Decider','-','Abyss']] },
   { date: '2026-03-19', opponent: 'Eintracht Frankfurt', tournament: 'VCL EMEA Stage 1 Group A', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','Eintracht Frankfurt','Corrode'],['Ban 2','MISA','Bind'],['Pick 1','Eintracht Frankfurt','Split'],['Pick 2','MISA','Haven'],['Ban 3','Eintracht Frankfurt','Breeze'],['Ban 4','MISA','Pearl'],['Decider','-','Abyss']] },
   { date: '2026-03-20', opponent: 'Team Liquid Academy', tournament: 'VCL EMEA Stage 1 Group A', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','MISA','Corrode'],['Ban 2','Team Liquid Academy','Abyss'],['Pick 1','MISA','Split'],['Pick 2','Team Liquid Academy','Pearl'],['Ban 3','MISA','Bind'],['Ban 4','Team Liquid Academy','Haven'],['Decider','-','Breeze']] },
+  { date: '2026-03-26', opponent: 'Enterprise Esports', tournament: 'VCL EMEA Stage 1 Playoffs', score: '1-2', format: 'Bo3', vetoes: [['Ban 1','EP','Breeze'],['Ban 2','MISA','Corrode'],['Pick 1','EP','Abyss'],['Pick 2','MISA','Haven'],['Ban 3','EP','Pearl'],['Ban 4','MISA','Bind'],['Decider','-','Split']] },
 ]
 
 const EP_MATCHES: VetoMatch[] = [
@@ -49,6 +50,7 @@ const EP_MATCHES: VetoMatch[] = [
   { date: '2026-03-08', opponent: 'Team Liquid Academy', tournament: 'VCL N//E Stage 1 Playoffs', score: '3-0', format: 'Bo5 (Advantage)', vetoes: [['Ban 1','Team Liquid Academy','Abyss'],['Ban 2','Team Liquid Academy','Bind'],['Pick 1','EP','Split'],['Pick 2','Team Liquid Academy','Corrode'],['Pick 3','EP','Haven'],['Pick 4','Team Liquid Academy','Pearl'],['Decider','-','Breeze']] },
   { date: '2026-03-19', opponent: 'Barça eSports', tournament: 'VCL EMEA Stage 1 Group B', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','EP','Breeze'],['Ban 2','Barça eSports','Corrode'],['Pick 1','EP','Pearl'],['Pick 2','Barça eSports','Bind'],['Ban 3','EP','Haven'],['Ban 4','Barça eSports','Abyss'],['Decider','-','Split']] },
   { date: '2026-03-20', opponent: 'FOKUS', tournament: 'VCL EMEA Stage 1 Group B', score: '2-1', format: 'Bo3', vetoes: [['Ban 1','FOKUS','Haven'],['Ban 2','EP','Breeze'],['Pick 1','FOKUS','Bind'],['Pick 2','EP','Pearl'],['Ban 3','FOKUS','Corrode'],['Ban 4','EP','Abyss'],['Decider','-','Split']] },
+  { date: '2026-03-26', opponent: 'Misa Esports', tournament: 'VCL EMEA Stage 1 Playoffs', score: '2-1', format: 'Bo3', vetoes: [['Ban 1','EP','Breeze'],['Ban 2','MISA','Corrode'],['Pick 1','EP','Abyss'],['Pick 2','MISA','Haven'],['Ban 3','EP','Pearl'],['Ban 4','MISA','Bind'],['Decider','-','Split']] },
 ]
 
 const UCAM_MATCHES: VetoMatch[] = [
@@ -63,6 +65,7 @@ const UCAM_MATCHES: VetoMatch[] = [
   { date: '2026-03-07', opponent: 'Barça eSports', tournament: 'VCL Spain Stage 2 Playoffs', score: '0-2', format: 'Bo3', vetoes: [['Ban 1','UCAM','Breeze'],['Ban 2','Barça eSports','Abyss'],['Pick 1','UCAM','Corrode'],['Pick 2','Barça eSports','Bind'],['Ban 3','UCAM','Split'],['Ban 4','Barça eSports','Pearl'],['Decider','-','Haven']] },
   { date: '2026-03-19', opponent: 'Pixel Lumina', tournament: 'VCL EMEA Stage 1 Group C', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','Pixel Lumina','Abyss'],['Ban 2','UCAM','Breeze'],['Pick 1','Pixel Lumina','Split'],['Pick 2','UCAM','Corrode'],['Ban 3','Pixel Lumina','Haven'],['Ban 4','UCAM','Bind'],['Decider','-','Pearl']] },
   { date: '2026-03-22', opponent: 'Joblife', tournament: 'VCL EMEA Stage 1 Group C', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','Joblife','Corrode'],['Ban 2','UCAM','Breeze'],['Pick 1','Joblife','Abyss'],['Pick 2','UCAM','Haven'],['Ban 3','Joblife','Split'],['Ban 4','UCAM','Bind'],['Decider','-','Pearl']] },
+  { date: '2026-03-26', opponent: 'Mandatory', tournament: 'VCL EMEA Stage 1 Playoffs', score: '2-1', format: 'Bo3', vetoes: [['Ban 1','MDR','Abyss'],['Ban 2','UCAM','Breeze'],['Pick 1','MDR','Corrode'],['Pick 2','UCAM','Bind'],['Ban 3','MDR','Split'],['Ban 4','UCAM','Haven'],['Decider','-','Pearl']] },
 ]
 
 const MDR_MATCHES: VetoMatch[] = [
@@ -80,6 +83,7 @@ const MDR_MATCHES: VetoMatch[] = [
   { date: '2026-03-19', opponent: 'MIR', tournament: 'VCL EMEA Stage 1 Group D', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','MDR','Bind'],['Ban 2','MIR','Corrode'],['Pick 1','MDR','Haven'],['Pick 2','MIR','Abyss'],['Ban 3','MDR','Split'],['Ban 4','MIR','Breeze'],['Decider','-','Pearl']] },
   { date: '2026-03-21', opponent: 'GnG Amazigh', tournament: 'VCL EMEA Stage 1 Group D', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','MDR','Bind'],['Ban 2','GnG Amazigh','Breeze'],['Pick 1','MDR','Haven'],['Pick 2','GnG Amazigh','Corrode'],['Ban 3','MDR','Pearl'],['Ban 4','GnG Amazigh','Abyss'],['Decider','-','Split']] },
   { date: '2026-03-22', opponent: 'S2G Esports', tournament: 'VCL EMEA Stage 1 Group D', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','S2G Esports','Haven'],['Ban 2','MDR','Split'],['Pick 1','S2G Esports','Breeze'],['Pick 2','MDR','Pearl'],['Ban 3','S2G Esports','Abyss'],['Ban 4','MDR','Bind'],['Decider','-','Corrode']] },
+  { date: '2026-03-26', opponent: 'UCAM Esports', tournament: 'VCL EMEA Stage 1 Playoffs', score: '1-2', format: 'Bo3', vetoes: [['Ban 1','MDR','Abyss'],['Ban 2','UCAM','Breeze'],['Pick 1','MDR','Corrode'],['Pick 2','UCAM','Bind'],['Ban 3','MDR','Split'],['Ban 4','UCAM','Haven'],['Decider','-','Pearl']] },
 ]
 
 /** Map team tag to their veto match list */
