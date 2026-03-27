@@ -111,6 +111,14 @@ PLAYOFF_MATCH_IDS = {
     '225163c0-ece4-4477-a611-327fb837230e',
     '47977248-3e6c-4721-a2a8-60fca030c393',
     '65177388-7b7f-4740-ad96-1d38a0309ac4',
+    # EP vs MISA (3 maps, Mar 26)
+    '5d62d424-a04c-49c0-8620-9aff76e2f156',
+    '318a8b6e-36d6-4ba2-8024-bf8675973a65',
+    '7bcd576f-0fe8-4777-af6b-c781cf832861',
+    # MDR vs UCAM (3 maps, Mar 26)
+    'd0e27b16-a4af-4c34-8807-b931bd92927d',
+    '96b68747-35a5-4093-b080-ff799df47e4c',
+    'd9e9f061-ea4f-4fd6-b7ad-9add979afbfd',
 }
 
 VCL_TAGS = {t['tag'] for t in TEAMS}
