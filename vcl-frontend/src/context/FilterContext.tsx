@@ -33,11 +33,10 @@ export function FilterProvider({ children }: { children: ReactNode }) {
 
   const setPlayoffOnly = (v: boolean) => {
     setPlayoffOnlyState(v)
-    if (!v) setClDataOnlyState(false) // turning off Mode 1 auto-disables Mode 2
   }
 
   const setClDataOnly = (v: boolean) => {
-    if (playoffOnly) setClDataOnlyState(v) // Mode 2 only works when Mode 1 is on
+    setClDataOnlyState(v)
   }
 
   return (

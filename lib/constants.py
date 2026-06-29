@@ -67,23 +67,34 @@ WEAPON_MAP = {
 }
 
 TEAMS = [
-    {'tag': 'FKS',  'name': 'FOKUS',                'data_file': 'data/raw/fks_2026_raw_responses.jsonl'},
-    {'tag': 'SGE',  'name': 'Eintracht Frankfurt',  'data_file': 'data/raw/sge_2026_raw_responses.jsonl'},
-    {'tag': 'JL',   'name': 'Joblife',              'data_file': 'data/raw/jl_2026_raw_responses.jsonl'},
-    {'tag': 'MDR',  'name': 'Mandatory',             'data_file': 'data/raw/mdr_2026_raw_responses.jsonl'},
-    {'tag': 'EP',   'name': 'Enterprise Esports',    'data_file': 'data/raw/ep_2026_raw_responses.jsonl'},
-    {'tag': 'TL',   'name': 'Team Liquid Academy',   'data_file': 'data/raw/tl_2026_raw_responses.jsonl'},
-    {'tag': 'PXL',  'name': 'Pixel Lumina',          'data_file': 'data/raw/pxl_2026_raw_responses.jsonl'},
-    {'tag': 'M1R',  'name': 'MIR',                   'data_file': 'data/raw/m1r_2026_raw_responses.jsonl'},
-    {'tag': 'BAR',  'name': 'Barça eSports',         'data_file': 'data/raw/bar_2026_raw_responses.jsonl'},
-    {'tag': 'UCAM', 'name': 'UCAM Esports',          'data_file': 'data/raw/ucam_2026_raw_responses.jsonl'},
-    {'tag': 'MISA', 'name': 'Misa Esports',          'data_file': 'data/raw/misa_2026_raw_responses.jsonl'},
-    {'tag': 'S2G',  'name': 'S2G Esports',           'data_file': 'data/raw/s2g_2026_raw_responses.jsonl'},
-    {'tag': 'STS',  'name': 'Stallions Esports',     'data_file': 'data/raw/sts_2026_raw_responses.jsonl'},
-    {'tag': 'GNG',  'name': 'GnG Amazigh',           'data_file': 'data/raw/gng_2026_raw_responses.jsonl'},
+    {'tag': 'RB',   'name': 'REBORN',               'data_file': 'data/raw/rb_2026_raw_responses.jsonl',
+     'key_players': ['RB reazy', 'RB Kachoww', 'RB hezacoil']},
+    {'tag': 'M1R',  'name': 'MIR',                  'data_file': 'data/raw/m1r_2026_raw_responses.jsonl',
+     'key_players': ['M1R Redgar', 'M1R Bishepss', 'M1R kospa1n']},
+    {'tag': 'EP',   'name': 'Enterprise Esports',    'data_file': 'data/raw/ep_2026_raw_responses.jsonl',
+     'key_players': ['EP MAGNUM', 'EP iluri', 'EP kozzy']},
+    {'tag': 'NVJ',  'name': 'NAVI Junior',           'data_file': 'data/raw/nvj_2026_raw_responses.jsonl',
+     'key_players': ['NVJ Avey', 'NVJ Darxcio', 'NVJ Javelin']},
+    {'tag': 'UCAM', 'name': 'UCAM Esports',          'data_file': 'data/raw/ucam_2026_raw_responses.jsonl',
+     'key_players': ['UCAM Jesse', 'UCAM Famsii', 'UCAM B1SK']},
+    {'tag': 'FKS',  'name': 'FOKUS',                 'data_file': 'data/raw/fks_2026_raw_responses.jsonl',
+     'key_players': ['FKS Pa1ze', 'FKS MOLSI', 'FKS SerialKiller']},
+    {'tag': 'MISA', 'name': 'Misa Esports',          'data_file': 'data/raw/misa_2026_raw_responses.jsonl',
+     'key_players': ['MISA Brave', 'MISA burzzy', 'MISA Elite']},
+    {'tag': 'TLA',  'name': 'Team Liquid Academy',   'data_file': 'data/raw/tla_2026_raw_responses.jsonl',
+     'key_players': ['TLA GSR', 'TLA Prti', 'TLA rexxtoned'],
+     'roster': {'GSR', 'rexxtoned', 'Prti', 'Yohpa', 'Wanzeru'}},
+    {'tag': 'JL',   'name': 'Joblife',               'data_file': 'data/raw/jl_2026_raw_responses.jsonl',
+     'key_players': ['JL chiwa', 'JL runneR', 'JL Doma']},
+    {'tag': 'BAR',  'name': 'Barça eSports',         'data_file': 'data/raw/bar_2026_raw_responses.jsonl',
+     'key_players': ['BAR Guardy', 'BAR stonezy', 'BAR globeX']},
+    {'tag': 'MDR',  'name': 'Mandatory',             'data_file': 'data/raw/mdr_2026_raw_responses.jsonl',
+     'key_players': ['MDR TakaS', 'MDR kAdavra', 'MDR nataNk']},
+    {'tag': 'BJK',  'name': 'Beşiktaş Esports',     'data_file': 'data/raw/bjk_2026_raw_responses.jsonl',
+     'key_players': ['BJK oroni', 'BJK Docent', 'BJK influx']},
 ]
 
-PLAYOFF_TAGS = {'EP', 'MDR', 'MISA', 'UCAM'}
+PLAYOFF_TAGS = set()  # No Stage 3 playoffs yet
 
 PLAYOFF_TEAMS = [t for t in TEAMS if t['tag'] in PLAYOFF_TAGS]
 

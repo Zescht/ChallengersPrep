@@ -51,7 +51,7 @@ export default function Navbar() {
     <nav className="bg-surface-dim/50 backdrop-blur-md border-b border-white/5 px-6 h-14 flex items-center justify-between sticky top-0 z-40">
       <div className="flex items-center gap-10">
         <span className="font-headline font-black text-lg tracking-tight text-on-surface uppercase">
-          VCL <span className="text-primary">Stats</span>
+          CL3 <span className="text-primary">Stats</span>
         </span>
         <div className="flex gap-1">
           {tabs.slice(0, 1).map(tab => (
@@ -110,17 +110,14 @@ export default function Navbar() {
         </button>
         <button
           onClick={() => setClDataOnly(!clDataOnly)}
-          disabled={!playoffOnly}
           className={`px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-widest transition-colors ${
             clDataOnly
               ? 'bg-primary/20 text-primary border border-primary/30'
-              : playoffOnly
-                ? 'text-on-surface hover:bg-white/5'
-                : 'text-on-surface/30 cursor-not-allowed'
+              : `${theme === 'light' ? 'text-black' : 'text-on-surface'} hover:bg-white/5`
           }`}
-          title={playoffOnly ? 'Show only Challengers playoff data' : 'Enable Playoff-Teams first'}
+          title="Show only CL3 data (from June 21)"
         >
-          CL Data Only
+          CL3 Data Only
         </button>
         <SearchBar />
         <button

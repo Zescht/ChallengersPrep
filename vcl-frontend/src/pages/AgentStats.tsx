@@ -13,7 +13,7 @@ const TEAM_LOGOS: Record<string, string> = {
   FKS: 'fks.png', SGE: 'sge.png', JL: 'jl.png', MDR: 'mdr.png',
   EP: 'ep.png', TL: 'tl.png', PXL: 'pxl.png', M1R: 'm1r.png',
   BAR: 'bar.png', UCAM: 'ucam.png', MISA: 'misa.png', S2G: 's2g.png',
-  STS: 'sts.png', GNG: 'gng.png',
+  STS: 'sts.png', GNG: 'gng.png', NVJ: 'nvj.png', RB: 'rb.png',
 }
 
 // Which slots can produce kills per agent

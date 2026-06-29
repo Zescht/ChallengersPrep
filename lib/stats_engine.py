@@ -70,7 +70,7 @@ def classify_round_economy(rr, round_num, team_puuids):
         return 'gun'
 
 
-def compute_team_stats(matches, team_tag, team_name):
+def compute_team_stats(matches, team_tag, team_name, roster=None):
     """Process all matches for a team. Returns structured stat accumulators."""
     match_rows = []
     econ_accum = defaultdict(lambda: {'w': 0, 'l': 0})
@@ -90,6 +90,7 @@ def compute_team_stats(matches, team_tag, team_name):
             'kast_rounds': 0, 'maps_played': 0,
             'vlr_rating_sum': 0.0, 'vlr_rating_rounds': 0,
             'weapons': Counter(),
+            'acs_per_map': [],
         }
     player_accum = defaultdict(_new_accum)
     # Per-role accumulators: role_accum[puuid][role] = same shape as player_accum
@@ -223,7 +224,7 @@ def compute_team_stats(matches, team_tag, team_name):
                 pname = ''
                 for p in md.team_players:
                     if p['puuid'] == puuid:
-                        pname = p['gameName'].replace(f'{team_tag} ', '')
+                        pname = p['gameName'].replace(f'{team_tag} ', '').strip()
                         break
 
                 pa = player_accum[puuid]
@@ -388,6 +389,13 @@ def compute_team_stats(matches, team_tag, team_name):
             player_accum[puuid]['maps_played'] += 1
             role_accum[puuid][role]['maps_played'] += 1
             agent_player_accum[puuid][agent]['maps_played'] += 1
+            p_score = p.get('stats', {}).get('score', 0)
+            p_rounds = p.get('stats', {}).get('roundsPlayed', 0)
+            if p_rounds > 0:
+                map_acs = p_score // p_rounds
+                player_accum[puuid]['acs_per_map'].append(map_acs)
+                role_accum[puuid][role]['acs_per_map'].append(map_acs)
+                agent_player_accum[puuid][agent]['acs_per_map'].append(map_acs)
             vlr_r = p.get('stats', {}).get('vlrRating2')
             rp = p.get('stats', {}).get('roundsPlayed', 0)
             if vlr_r is not None and rp > 0:
@@ -473,7 +481,7 @@ def compute_team_stats(matches, team_tag, team_name):
             'kills': pa['kills'],
             'deaths': pa['deaths'],
             'assists': pa['assists'],
-            'acs': round(pa['score'] / pa['rounds']) if pa['rounds'] > 0 else 0,
+            'acs': round(sum(pa['acs_per_map']) / len(pa['acs_per_map'])) if pa['acs_per_map'] else 0,
             'adr': round(pa['total_damage'] / pa['rounds'], 1) if pa['rounds'] > 0 else 0,
             'fk': fk,
             'fd': fd,
@@ -506,6 +514,8 @@ def compute_team_stats(matches, team_tag, team_name):
     for puuid, pa in player_accum.items():
         if pa['rounds'] == 0:
             continue
+        if roster and pa.get('name') not in roster:
+            continue
         player_rows.append(_build_row(puuid, pa))
 
     # Build per-role player rows
@@ -514,6 +524,8 @@ def compute_team_stats(matches, team_tag, team_name):
         for role_name, ra in roles.items():
             if ra['rounds'] == 0:
                 continue
+            if roster and ra.get('name') not in roster:
+                continue
             player_role_rows.append(_build_row(puuid, ra, role_label=role_name))
 
     # Build per-agent player rows
@@ -521,6 +533,8 @@ def compute_team_stats(matches, team_tag, team_name):
     for puuid, agents in agent_player_accum.items():
         for agent_name, apa in agents.items():
             if apa['rounds'] == 0:
+                continue
+            if roster and apa.get('name') not in roster:
                 continue
             row = _build_row(puuid, apa)
             row['agent'] = agent_name

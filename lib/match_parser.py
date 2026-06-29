@@ -15,7 +15,7 @@ class MatchData:
     ]
 
 
-def load_team_matches(team_tag, team_name, data_file, match_ids=None):
+def load_team_matches(team_tag, team_name, data_file, match_ids=None, from_date=None):
     """Load JSONL, parse each match, resolve Red/Blue to team, filter tech issues.
 
     Returns list of MatchData for valid (non-tech-issue) matches.
@@ -96,7 +96,10 @@ def load_team_matches(team_tag, team_name, data_file, match_ids=None):
         md.team_name = team_name
 
         if not is_tech:
-            if match_ids is None or md.match_id in match_ids:
-                matches.append(md)
+            if match_ids is not None and md.match_id not in match_ids:
+                continue
+            if from_date is not None and md.dt.date() < from_date:
+                continue
+            matches.append(md)
 
     return matches

@@ -46,28 +46,28 @@ x-api-key: <VALOLYTICS_API_KEY>
 - All esports players use tagLine `epval`.
 - A "series" = multiple maps played on the same day vs the same opponent. A "game" typically refers to a series, not a single map.
 
-## VCL EMEA 2026 Stage 1 — Team Registry
+## VCL EMEA 2026 Stage 3 — Team Registry
 
-| # | Team Name | In-Game Tag | Key Player PUUID Resolved |
-|---|-----------|-------------|---------------------------|
-| 1 | Eintracht Frankfurt | **SGE** | SGE musashi |
-| 2 | FOKUS | **FKS** | FKS Serial |
-| 3 | Joblife | **JL** | JL chiwa |
-| 4 | Mandatory | **MDR** | MDR TakaS |
-| 5 | Enterprise Esports | **EP** | EP MAGNUM |
-| 6 | Team Liquid Academy | **TL** | TL Kicks |
-| 7 | Pixel Lumina | **PXL** | PXL elllement |
-| 8 | MIR | **M1R** | M1R Redgar |
-| 9 | Barça eSports | **BAR** | BAR Stonezy |
-| 10 | UCAM Esports | **UCAM** | UCAM Jesse |
-| 11 | Misa Esports | **MISA** | MISA Brave |
-| 12 | S2G Esports | **S2G** | S2G reazy |
-| 13 | Stallions Esports | **STS** | STS Avvix |
-| 14 | GnG Amazigh | **GNG** | GNG LOOP |
+All 12 teams are in `lib/constants.py` as the single source of truth. Each entry has `tag`, `name`, `key_players` (3 players for union collection), `data_file`, and optionally `roster` (allowlist for teams with roster changes).
 
-### Other Known Tags (opponents from qualifiers/scrims)
-- **ATN** — unknown org (roster overlaps with VAL: prayy moved ATN→VAL)
-- **6GPA**, **DXG**, **RZN**, **AX**, **BJK** (Beşiktaş), **BDX**, **VIT** (Vitality), **ECO**, **TOG**, **VAL**, **VR2**, **KC**, **GX**, **FUT**, **BONK**
+| Tag | Team Name | Notes |
+|-----|-----------|-------|
+| **RB** | REBORN | formerly S2G reazy's team |
+| **M1R** | MIR | |
+| **EP** | Enterprise Esports | 6 players in data — roster change mid-season, not yet investigated |
+| **NVJ** | NAVI Junior | |
+| **UCAM** | UCAM Esports | |
+| **FKS** | FOKUS | |
+| **MISA** | Misa Esports | only 5 maps — joined league late or missing early data |
+| **TLA** | Team Liquid Academy | tag is TLA (not TL as in Stage 1); has `roster` allowlist to exclude old TL players |
+| **JL** | Joblife | |
+| **BAR** | Barça eSports | |
+| **MDR** | Mandatory | only 5 maps — may be missing early data |
+| **BJK** | Beşiktaş Esports | |
+
+### Known Unresolved Player Names
+- `FKS SerialKiller` — returns 404, likely `FKS Serial` or similar
+- `MDR kAdavra` — returns 404, casing issue; other 2 players confirmed complete coverage
 
 ## Match Data Structure
 
@@ -159,18 +159,33 @@ VLR/
 
 ## Workflow: Adding a New Team
 
-1. Find a core player's Riot ID (from existing match data or Liquipedia)
-2. Resolve PUUID: `GET /api/riot/account/v1/accounts/by-riot-id/esports/{name}/epval`
-3. Get match history: `GET /api/riot/match/v1/matchlists/by-puuid/esports/{puuid}`
-4. Filter to 2026 matches
-5. Fetch each match detail via curl (not Python urllib): `GET /api/matches/esports/{matchId}`
-6. Save as JSONL file in `data/raw/{tag}_2026_raw_responses.jsonl`
-7. Verify completeness by checking if the player was in all team matches (cross-reference with other roster members if needed)
+1. Add entry to `lib/constants.py` TEAMS list:
+   ```python
+   {'tag': 'XYZ', 'name': 'Team Name', 'data_file': 'data/raw/xyz_2026_raw_responses.jsonl',
+    'key_players': ['XYZ Player1', 'XYZ Player2', 'XYZ Player3']}
+   ```
+2. Run `python collect_stage3.py` — resolves 3 PUUIDs, unions match histories, fetches all unique matches
+3. Run `python scripts/build_json.py` — always writes both `stats.json` and `stats_playoffs.json`
+
+**That's it. `lib/constants.py` is the only file to edit.**
+
+If a team has roster change contamination (old players leaking in), add a `roster` set to the team config:
+```python
+'roster': {'Player1', 'Player2', 'Player3', 'Player4', 'Player5'}
+```
 
 ## Weapon UUID Mapping
 
 Weapon UUIDs appear in `finishingDamage.damageItem` and `economy.weapon`. These need to be mapped to human-readable names for AWP% and weapon stats. Mapping is still TODO — plan is to identify UUIDs from match data by cross-referencing known weapon behaviors.
 
-## Current Task
+## Data Pipeline
 
-Building a FOKUS stats spreadsheet (.xlsx) matching the VCL3 Stats template structure, populated entirely from Valolytics API data. This serves as the proof-of-concept before scaling to all 14 teams.
+```
+collect_stage3.py          →  data/raw/{tag}_2026_raw_responses.jsonl  (one per team)
+scripts/build_json.py      →  vcl-frontend/public/data/stats.json          (all dates, 12 teams)
+                           →  vcl-frontend/public/data/stats_playoffs.json  (June 21+, 12 teams)
+```
+
+- `collect_stage3.py` — unions match IDs from 3 players per team; retries on 429 rate limits
+- `build_json.py` — always writes both files; CL3 cutoff is `CL3_START = datetime.date(2026, 6, 21)`
+- Both scripts need `sys.stdout.reconfigure(encoding='utf-8')` for Beşiktaş on Windows

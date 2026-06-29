@@ -16,7 +16,7 @@ const TEAM_LOGOS: Record<string, string> = {
   FKS: 'fks.png', SGE: 'sge.png', JL: 'jl.png', MDR: 'mdr.png',
   EP: 'ep.png', TL: 'tl.png', PXL: 'pxl.png', M1R: 'm1r.png',
   BAR: 'bar.png', UCAM: 'ucam.png', MISA: 'misa.png', S2G: 's2g.png',
-  STS: 'sts.png', GNG: 'gng.png',
+  STS: 'sts.png', GNG: 'gng.png', NVJ: 'nvj.png', RB: 'rb.png',
 }
 
 export default function TeamOverview() {
@@ -125,8 +125,8 @@ export default function TeamOverview() {
                 <tr>
                   <th className="px-3 py-2 scannable-label text-left">Map</th>
                   <th className="px-2 py-2 scannable-label text-center">Comp</th>
-                  <th className="px-2 py-2 scannable-label text-center">x</th>
-                  <th className="px-2 py-2 scannable-label text-center thick-sep">P</th>
+                  <th className="px-2 py-2 scannable-label text-center cursor-help" title="Amount of times this comp was played">CP</th>
+                  <th className="px-2 py-2 scannable-label text-center thick-sep cursor-help" title="Amount of times this map was played">P</th>
                   <th className="px-2 py-2 scannable-label text-center">W</th>
                   <th className="px-2 py-2 scannable-label text-center">L</th>
                   <th className="px-2 py-2 scannable-label text-center thick-sep">rW%</th>
