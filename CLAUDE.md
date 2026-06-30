@@ -48,22 +48,18 @@ x-api-key: <VALOLYTICS_API_KEY>
 
 ## VCL EMEA 2026 Stage 3 — Team Registry
 
-All 12 teams are in `lib/constants.py` as the single source of truth. Each entry has `tag`, `name`, `key_players` (3 players for union collection), `data_file`, and optionally `roster` (allowlist for teams with roster changes).
+8 active teams are in `lib/constants.py` as the single source of truth. Each entry has `tag`, `name`, `key_players` (3 players for union collection), `data_file`, and optionally `roster` (allowlist for teams with roster changes).
 
 | Tag | Team Name | Notes |
 |-----|-----------|-------|
 | **RB** | REBORN | formerly S2G reazy's team |
 | **M1R** | MIR | |
-| **EP** | Enterprise Esports | 6 players in data — roster change mid-season, not yet investigated |
-| **NVJ** | NAVI Junior | |
-| **UCAM** | UCAM Esports | |
-| **FKS** | FOKUS | |
-| **MISA** | Misa Esports | only 5 maps — joined league late or missing early data |
-| **TLA** | Team Liquid Academy | tag is TLA (not TL as in Stage 1); has `roster` allowlist to exclude old TL players |
-| **JL** | Joblife | |
-| **BAR** | Barça eSports | |
-| **MDR** | Mandatory | only 5 maps — may be missing early data |
-| **BJK** | Beşiktaş Esports | |
+| **EP** | Enterprise Esports | 6 players in full view — roster change mid-season; all players intentionally included |
+| **NVJ** | NAVI Junior | 6 players in full view — same reason |
+| **FKS** | FOKUS | 7 players in full view — same reason |
+| **MISA** | Misa Esports | |
+| **JL** | Joblife | 6 players in full view — same reason |
+| **MDR** | Mandatory | |
 
 ### Known Unresolved Player Names
 - `FKS SerialKiller` — returns 404, likely `FKS Serial` or similar
@@ -182,8 +178,8 @@ Weapon UUIDs appear in `finishingDamage.damageItem` and `economy.weapon`. These 
 
 ```
 collect_stage3.py          →  data/raw/{tag}_2026_raw_responses.jsonl  (one per team)
-scripts/build_json.py      →  vcl-frontend/public/data/stats.json          (all dates, 12 teams)
-                           →  vcl-frontend/public/data/stats_playoffs.json  (June 21+, 12 teams)
+scripts/build_json.py      →  vcl-frontend/public/data/stats.json          (Apr 1+, 8 teams — CL3 toggle OFF)
+                           →  vcl-frontend/public/data/stats_playoffs.json  (Jun 21+, 8 teams — CL3 toggle ON)
 ```
 
 - `collect_stage3.py` — unions match IDs from 3 players per team; retries on 429 rate limits
