@@ -75,23 +75,14 @@ TEAMS = [
      'key_players': ['EP MAGNUM', 'EP iluri', 'EP kozzy']},
     {'tag': 'NVJ',  'name': 'NAVI Junior',           'data_file': 'data/raw/nvj_2026_raw_responses.jsonl',
      'key_players': ['NVJ Avey', 'NVJ Darxcio', 'NVJ Javelin']},
-    {'tag': 'UCAM', 'name': 'UCAM Esports',          'data_file': 'data/raw/ucam_2026_raw_responses.jsonl',
-     'key_players': ['UCAM Jesse', 'UCAM Famsii', 'UCAM B1SK']},
     {'tag': 'FKS',  'name': 'FOKUS',                 'data_file': 'data/raw/fks_2026_raw_responses.jsonl',
      'key_players': ['FKS Pa1ze', 'FKS MOLSI', 'FKS SerialKiller']},
     {'tag': 'MISA', 'name': 'Misa Esports',          'data_file': 'data/raw/misa_2026_raw_responses.jsonl',
      'key_players': ['MISA Brave', 'MISA burzzy', 'MISA Elite']},
-    {'tag': 'TLA',  'name': 'Team Liquid Academy',   'data_file': 'data/raw/tla_2026_raw_responses.jsonl',
-     'key_players': ['TLA GSR', 'TLA Prti', 'TLA rexxtoned'],
-     'roster': {'GSR', 'rexxtoned', 'Prti', 'Yohpa', 'Wanzeru'}},
     {'tag': 'JL',   'name': 'Joblife',               'data_file': 'data/raw/jl_2026_raw_responses.jsonl',
      'key_players': ['JL chiwa', 'JL runneR', 'JL Doma']},
-    {'tag': 'BAR',  'name': 'Barça eSports',         'data_file': 'data/raw/bar_2026_raw_responses.jsonl',
-     'key_players': ['BAR Guardy', 'BAR stonezy', 'BAR globeX']},
     {'tag': 'MDR',  'name': 'Mandatory',             'data_file': 'data/raw/mdr_2026_raw_responses.jsonl',
      'key_players': ['MDR TakaS', 'MDR kAdavra', 'MDR nataNk']},
-    {'tag': 'BJK',  'name': 'Beşiktaş Esports',     'data_file': 'data/raw/bjk_2026_raw_responses.jsonl',
-     'key_players': ['BJK oroni', 'BJK Docent', 'BJK influx']},
 ]
 
 PLAYOFF_TAGS = set()  # No Stage 3 playoffs yet
