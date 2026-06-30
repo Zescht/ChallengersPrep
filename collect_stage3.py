@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Collect Stage 3 match data (from 2026-05-17) for 4 teams via Valolytics API."""
+"""Collect match data (from 2026-04-01) for all teams via Valolytics API."""
 
 import json
 import subprocess
@@ -15,8 +15,8 @@ from lib.constants import TEAMS
 API_BASE = 'https://api.valolytics.gg'
 API_KEY = '<VALOLYTICS_API_KEY>'
 
-# 2026-05-17 00:00:00 UTC in milliseconds
-CUTOFF_MS = int(datetime.datetime(2026, 5, 17, tzinfo=datetime.timezone.utc).timestamp() * 1000)
+# 2026-04-01 00:00:00 UTC in milliseconds
+CUTOFF_MS = int(datetime.datetime(2026, 4, 1, tzinfo=datetime.timezone.utc).timestamp() * 1000)
 
 
 def curl_get(url, retries=3):
@@ -72,7 +72,7 @@ def get_match_history(puuid):
 
 def filter_from_cutoff(history):
     filtered = [m for m in history if m.get('gameStartTimeMillis', 0) >= CUTOFF_MS]
-    print(f"    -> {len(filtered)} matches from 2026-05-17 onwards")
+    print(f"    -> {len(filtered)} matches from 2026-04-01 onwards")
     return filtered
 
 
@@ -154,7 +154,7 @@ def verify(team):
 
 
 def main():
-    print(f"Stage 3 data collection — cutoff: 2026-05-17 ({CUTOFF_MS} ms)")
+    print(f"Data collection — cutoff: 2026-04-01 ({CUTOFF_MS} ms)")
     print(f"Teams: {', '.join(t['name'] for t in TEAMS)}\n")
 
     results = {}

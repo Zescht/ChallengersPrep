@@ -14,11 +14,12 @@ from lib.match_parser import load_team_matches
 from lib.stats_engine import compute_team_stats
 from lib.json_builder import build_stats_json
 
-CL3_START = datetime.date(2026, 6, 21)
+FULL_START = datetime.date(2026, 4, 1)
+CL3_START  = datetime.date(2026, 6, 21)
 
 OUTPUTS = [
-    {'label': 'Full',  'from_date': None,       'path': 'vcl-frontend/public/data/stats.json'},
-    {'label': 'CL3',   'from_date': CL3_START,  'path': 'vcl-frontend/public/data/stats_playoffs.json'},
+    {'label': 'Full',  'from_date': FULL_START,  'path': 'vcl-frontend/public/data/stats.json'},
+    {'label': 'CL3',   'from_date': CL3_START,   'path': 'vcl-frontend/public/data/stats_playoffs.json'},
 ]
 
 
@@ -56,7 +57,7 @@ def main():
     for cfg in OUTPUTS:
         label = cfg['label']
         from_date = cfg['from_date']
-        date_str = f"from {from_date}" if from_date else "all dates"
+        date_str = f"from {from_date}" if from_date else "all dates (no filter)"
         print(f"[{label}] {date_str}")
         build(from_date, cfg['path'])
     print("\nDone.")
