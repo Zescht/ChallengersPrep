@@ -127,6 +127,23 @@ const NVJ_MATCHES: VetoMatch[] = [
   { date: '2026-06-24', opponent: 'Mandatory', tournament: 'VCL EMEA Stage 3', score: '2-1', format: 'Bo3', vetoes: [['Ban 1','MDR','Split'],['Ban 2','NVJ','Lotus'],['Pick 1','MDR','Haven'],['Pick 2','NVJ','Ascent'],['Ban 3','MDR','Fracture'],['Ban 4','NVJ','Pearl'],['Decider','-','Breeze']] },
 ]
 
+const FKS_MATCHES: VetoMatch[] = [
+  { date: '2026-04-05', opponent: 'ALTERNATE aTTaX', tournament: 'VCL DACH Stage 2 Week 1', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','FKS','Haven'],['Ban 2','ALTERNATE aTTaX','Pearl'],['Pick 1','FKS','Breeze'],['Pick 2','ALTERNATE aTTaX','Bind'],['Ban 3','FKS','Fracture'],['Ban 4','ALTERNATE aTTaX','Lotus'],['Decider','-','Split']] },
+  { date: '2026-04-07', opponent: 'AKA HERO', tournament: 'VCL DACH Stage 2 Week 2', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','FKS','Haven'],['Ban 2','AKA HERO','Pearl'],['Pick 1','FKS','Breeze'],['Pick 2','AKA HERO','Lotus'],['Ban 3','FKS','Fracture'],['Ban 4','AKA HERO','Bind'],['Decider','-','Split']] },
+  { date: '2026-04-12', opponent: 'Eintracht Frankfurt', tournament: 'VCL DACH Stage 2 Week 2', score: '0-2', format: 'Bo3', vetoes: [['Ban 1','FKS','Haven'],['Ban 2','Eintracht Frankfurt','Fracture'],['Pick 1','FKS','Breeze'],['Pick 2','Eintracht Frankfurt','Lotus'],['Ban 3','FKS','Bind'],['Ban 4','Eintracht Frankfurt','Pearl'],['Decider','-','Split']] },
+  { date: '2026-04-14', opponent: 'Dortmund eSports', tournament: 'VCL DACH Stage 2 Week 3', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','FKS','Haven'],['Ban 2','Dortmund eSports','Breeze'],['Pick 1','FKS','Bind'],['Pick 2','Dortmund eSports','Fracture'],['Ban 3','FKS','Pearl'],['Ban 4','Dortmund eSports','Split'],['Decider','-','Lotus']] },
+  { date: '2026-04-18', opponent: 'RIZON', tournament: 'VCL DACH Stage 2 Week 3', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','RIZON','Fracture'],['Ban 2','FKS','Haven'],['Pick 1','RIZON','Lotus'],['Pick 2','FKS','Bind'],['Ban 3','RIZON','Pearl'],['Ban 4','FKS','Breeze'],['Decider','-','Split']] },
+  { date: '2026-04-25', opponent: 'CGN Esports', tournament: 'VCL DACH Stage 2 Week 4', score: '1-2', format: 'Bo3', vetoes: [['Ban 1','FKS','Haven'],['Ban 2','CGN Esports','Lotus'],['Pick 1','FKS','Breeze'],['Pick 2','CGN Esports','Split'],['Ban 3','FKS','Pearl'],['Ban 4','CGN Esports','Bind'],['Decider','-','Fracture']] },
+  { date: '2026-04-26', opponent: 'eSports Cologne', tournament: 'VCL DACH Stage 2 Week 4', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','FKS','Haven'],['Ban 2','eSports Cologne','Breeze'],['Pick 1','FKS','Bind'],['Pick 2','eSports Cologne','Lotus'],['Ban 3','FKS','Fracture'],['Ban 4','eSports Cologne','Split'],['Decider','-','Pearl']] },
+  { date: '2026-05-09', opponent: 'Eintracht Frankfurt', tournament: 'VCL DACH Stage 2 Playoffs', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','FKS','Fracture'],['Ban 2','Eintracht Frankfurt','Breeze'],['Pick 1','FKS','Pearl'],['Pick 2','Eintracht Frankfurt','Lotus'],['Ban 3','FKS','Split'],['Ban 4','Eintracht Frankfurt','Bind'],['Decider','-','Haven']] },
+  { date: '2026-05-10', opponent: 'CGN Esports', tournament: 'VCL DACH Stage 2 Playoffs', score: '2-3', format: 'Bo5', vetoes: [['Ban 1','CGN Esports','Pearl'],['Ban 2','FKS','Fracture'],['Pick 1','CGN Esports','Split'],['Pick 2','FKS','Breeze'],['Pick 3','CGN Esports','Lotus'],['Pick 4','FKS','Haven'],['Decider','-','Bind']] },
+  { date: '2026-05-19', opponent: 'REBORN', tournament: 'VCL EMEA Stage 2 Group B', score: '1-2', format: 'Bo3', vetoes: [['Ban 1','FKS','Fracture'],['Ban 2','REBORN','Pearl'],['Pick 1','FKS','Haven'],['Pick 2','REBORN','Split'],['Ban 3','FKS','Ascent'],['Ban 4','REBORN','Lotus'],['Decider','-','Breeze']] },
+  { date: '2026-05-20', opponent: 'Enterprise Esports', tournament: 'VCL EMEA Stage 2 Group B', score: '2-0', format: 'Bo3', vetoes: [['Ban 1','EP','Breeze'],['Ban 2','FKS','Fracture'],['Pick 1','EP','Ascent'],['Pick 2','FKS','Haven'],['Ban 3','EP','Lotus'],['Ban 4','FKS','Split'],['Decider','-','Pearl']] },
+  { date: '2026-06-23', opponent: 'MIR', tournament: 'VCL EMEA Stage 3 Group C', score: '1-2', format: 'Bo3', vetoes: [['Ban 1','FKS','Fracture'],['Ban 2','MIR','Haven'],['Pick 1','FKS','Lotus'],['Pick 2','MIR','Pearl'],['Ban 3','FKS','Ascent'],['Ban 4','MIR','Split'],['Decider','-','Breeze']] },
+  { date: '2026-06-25', opponent: 'Pixel Lumina', tournament: 'VCL EMEA Stage 3 Group C', score: '2-1', format: 'Bo3', vetoes: [['Ban 1','Pixel Lumina','Fracture'],['Ban 2','FKS','Lotus'],['Pick 1','Pixel Lumina','Pearl'],['Pick 2','FKS','Haven'],['Ban 3','Pixel Lumina','Breeze'],['Ban 4','FKS','Ascent'],['Decider','-','Split']] },
+  { date: '2026-06-29', opponent: 'UCAM Esports', tournament: 'VCL EMEA Stage 3 Group C', score: '2-1', format: 'Bo3', vetoes: [['Ban 1','FKS','Fracture'],['Ban 2','UCAM','Breeze'],['Pick 1','FKS','Split'],['Pick 2','UCAM','Haven'],['Ban 3','FKS','Lotus'],['Ban 4','UCAM','Ascent'],['Decider','-','Pearl']] },
+]
+
 /** Map team tag to their veto match list */
 const VETO_DATA: Record<string, VetoMatch[]> = {
   MISA: MISA_MATCHES,
@@ -134,10 +151,11 @@ const VETO_DATA: Record<string, VetoMatch[]> = {
   UCAM: UCAM_MATCHES,
   MDR: MDR_MATCHES,
   NVJ: NVJ_MATCHES,
+  FKS: FKS_MATCHES,
 }
 
 /** Team tags used in veto data (may differ from opponent full names) */
-const TEAM_TAGS_IN_VETOES = ['MISA', 'EP', 'UCAM', 'MDR', 'NVJ']
+const TEAM_TAGS_IN_VETOES = ['MISA', 'EP', 'UCAM', 'MDR', 'NVJ', 'FKS']
 
 /**
  * Compute the most common first ban and first pick for a team.
