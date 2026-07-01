@@ -2,6 +2,7 @@
 
 import json
 import datetime
+from collections import Counter
 from .constants import AGENT_MAP
 
 
@@ -52,6 +53,7 @@ def load_team_matches(team_tag, team_name, data_file, match_ids=None, from_date=
         # Second pass: assign players by teamId (not name prefix)
         team_players = []
         opp_players = []
+        opp_tag_counts = Counter()
         for p in m['players']:
             if p.get('isObserver'):
                 continue
@@ -60,9 +62,13 @@ def load_team_matches(team_tag, team_name, data_file, match_ids=None, from_date=
             else:
                 name = p.get('gameName', '')
                 tag = name.split(' ')[0] if ' ' in name else name
-                if opp_tag is None and tag:
-                    opp_tag = tag
+                if tag:
+                    opp_tag_counts[tag] += 1
                 opp_players.append(p)
+        # Use the majority tag, not just whichever player happens to be listed
+        # first — a single substitute/alt-tagged player can otherwise mislabel
+        # the whole match (e.g. a "BONK sizo" sub on an NVJ roster).
+        opp_tag = opp_tag_counts.most_common(1)[0][0] if opp_tag_counts else None
 
         opp_team_id = 'Blue' if team_id == 'Red' else 'Red'
         team_score = opp_score = 0

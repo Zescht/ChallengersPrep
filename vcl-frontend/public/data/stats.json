@@ -998,11 +998,11 @@
         "plant_time_by_site": null
       },
       "players": [
-        "Kachoww",
-        "batujnax",
-        "Deadink",
         "reazy",
-        "hezacoil"
+        "batujnax",
+        "hezacoil",
+        "Deadink",
+        "Kachoww"
       ],
       "xvy": [
         {
@@ -1158,7 +1158,7 @@
       ],
       "series_record": {
         "wins": 16,
-        "losses": 2
+        "losses": 1
       },
       "form": [
         {
@@ -2059,11 +2059,11 @@
         "plant_time_by_site": null
       },
       "players": [
-        "Redgar",
-        "reblyik",
-        "kospa1n",
         "Raz",
-        "Bishepss"
+        "kospa1n",
+        "Bishepss",
+        "Redgar",
+        "reblyik"
       ],
       "xvy": [
         {
@@ -2218,7 +2218,7 @@
         }
       ],
       "series_record": {
-        "wins": 11,
+        "wins": 10,
         "losses": 8
       },
       "form": [
@@ -3183,12 +3183,12 @@
         "plant_time_by_site": null
       },
       "players": [
-        "kozzy",
         "paTiTek",
-        "Lime",
         "Proxh",
-        "MAGNUM",
-        "iluri"
+        "kozzy",
+        "iluri",
+        "Lime",
+        "MAGNUM"
       ],
       "xvy": [
         {
@@ -4108,10 +4108,10 @@
       },
       "players": [
         "k9lyos",
-        "Javelin",
-        "Kolosha",
         "sizo",
+        "Kolosha",
         "Avey",
+        "Javelin",
         "Darxcio"
       ],
       "xvy": [
@@ -5283,13 +5283,13 @@
         "plant_time_by_site": null
       },
       "players": [
-        "cullum",
-        "Serial",
-        "shinnok",
-        "YaBoiLewis",
-        "pyrolll",
         "MOLSI",
-        "pa1ze"
+        "shinnok",
+        "pyrolll",
+        "pa1ze",
+        "YaBoiLewis",
+        "Serial",
+        "cullum"
       ],
       "xvy": [
         {
@@ -6245,10 +6245,10 @@
       },
       "players": [
         "pAura",
-        "QutionerX",
         "Elite",
+        "Brave",
         "burzzy",
-        "Brave"
+        "QutionerX"
       ],
       "xvy": [
         {
@@ -7495,11 +7495,11 @@
         "plant_time_by_site": null
       },
       "players": [
-        "Enzo",
         "Doma",
-        "kamyk",
-        "chiwa",
+        "Enzo",
         "UNFAKE",
+        "chiwa",
+        "kamyk",
         "runneR"
       ],
       "xvy": [
@@ -8506,11 +8506,11 @@
         "plant_time_by_site": null
       },
       "players": [
-        "nataNk",
-        "sh1n",
-        "Sevire",
         "K4davra",
-        "TakaS"
+        "Sevire",
+        "nataNk",
+        "TakaS",
+        "sh1n"
       ],
       "xvy": [
         {
@@ -26559,11 +26559,11 @@
     },
     {
       "match_id": "fd991ea5-c5f3-4af8-b086-1d0457c85a3e",
-      "series_id": "68638c3a",
+      "series_id": "a74fc054",
       "event": "VCL EMEA 2026 Stage 1",
       "map": "Haven",
       "team1": "REBORN",
-      "team2": "BONK",
+      "team2": "NAVI Junior",
       "team1_agents": [
         "Cypher",
         "Jett",
@@ -26604,7 +26604,7 @@
       "team1_atk_losses": 9,
       "team1_def_wins": 8,
       "team1_def_losses": 4,
-      "winner": "BONK",
+      "winner": "NAVI Junior",
       "date": "2026-05-25"
     },
     {
@@ -34159,11 +34159,11 @@
     },
     {
       "match_id": "c633c36e-caa0-4613-b52d-fc4df648a192",
-      "series_id": "563143ed",
+      "series_id": "209b0daf",
       "event": "VCL EMEA 2026 Stage 1",
       "map": "Lotus",
       "team1": "MIR",
-      "team2": "EVOP",
+      "team2": "EVO",
       "team1_agents": [
         "Fade",
         "Neon",
