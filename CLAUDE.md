@@ -21,6 +21,7 @@ All requests use `x-api-key` header only:
 ```
 x-api-key: <VALOLYTICS_API_KEY>
 ```
+The key lives in the gitignored `.env` (template: `.env.example`) and is loaded via `lib/api_key.py`. **Never paste the key into tracked files.**
 
 ### Endpoints (base: `https://api.valolytics.gg`)
 

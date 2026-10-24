@@ -8,6 +8,8 @@ All requests require the `x-api-key` header:
 x-api-key: <VALOLYTICS_API_KEY>
 ```
 
+The key is stored in the gitignored `.env` at the repo root (see `.env.example`) and loaded by `lib/api_key.py`.
+
 No other auth mechanism (Bearer token, cookies, etc.) — just this header.
 
 ## Base URL

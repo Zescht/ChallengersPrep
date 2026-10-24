@@ -7,8 +7,11 @@ import sys
 import time
 import os
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from lib.api_key import load_api_key
+
 API_BASE = 'https://api.valolytics.gg'
-API_KEY = '<VALOLYTICS_API_KEY>'
+API_KEY = load_api_key()
 
 # Teams to collect (tag, full name, key player gameName)
 # Already have: FKS, SGE, EP

@@ -11,9 +11,10 @@ import datetime
 sys.stdout.reconfigure(encoding='utf-8')
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib.constants import TEAMS
+from lib.api_key import load_api_key
 
 API_BASE = 'https://api.valolytics.gg'
-API_KEY = '<VALOLYTICS_API_KEY>'
+API_KEY = load_api_key()
 
 # 2026-04-01 00:00:00 UTC in milliseconds
 CUTOFF_MS = int(datetime.datetime(2026, 4, 1, tzinfo=datetime.timezone.utc).timestamp() * 1000)
